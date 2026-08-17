@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/list"
+        android:title="@string/list"
+        android:icon="@drawable/sort"
+        android:alphabeticShortcut="i">
+      <menu>
+        <item android:id="@id/action_sort"
+            android:title="@string/sorting"
+            android:alphabeticShortcut="s"/>
+        <item android:id="@+id/refresh"
+             android:title="@string/refresh"
+             android:alphabeticShortcut="r"/>
+        <item android:id="@+id/sel_dlg"
+             android:title="@string/sel_dlg"
+             android:alphabeticShortcut="+"/>
+        <item android:id="@+id/swap"
+             android:title="@string/swap"
+             android:alphabeticShortcut="u"/>
+        </menu>
+    </item>
+
+    <item android:id="@+id/new_item"
+          android:title="@string/new_item"/>
+    <item android:id="@+id/oth_sh_this"
+         android:title="@string/oth_sh_this"/>
+    <item android:id="@+id/toggle_panels_mode"
+          android:title="@string/toggle_panels_mode"/>
+    <item android:id="@+id/rescan"
+         android:title="@string/rescan"/>
+    <item android:id="@+id/softkbd"
+         android:title="@string/softkbd"/>
+    <item android:id="@+id/prefs"
+          android:title="@string/prefs"/>
+
+    <item android:id="@+id/help"
+        android:title="@string/help"
+        android:icon="@drawable/info">        
+      <menu>
+        <item android:id="@+id/keys"
+            android:title="@string/keys"/>
+        <item android:id="@+id/online"
+            android:title="@string/online_help"/>
+        <item android:id="@+id/donate"
+            android:title="@string/donate"/>
+        <item android:id="@+id/about"
+            android:title="@string/about"/>
+        </menu>
+    </item>
+
+    <item android:id="@+id/exit"
+          android:title="@string/F10"/>
+</menu>

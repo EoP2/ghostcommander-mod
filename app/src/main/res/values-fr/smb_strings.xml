@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Rien à lire</string>
+    <string name="nothing_returned">Partage Samba inaccessible\n%s</string>
+    <string name="malformed_url">URL malformée : \n%s</string>
+    <string name="msbrowse_err">Impossible d\'avoir la liste des domaines/groupes de travail.\nIndiquez explicitement le domaine, tel que\n \"smb://votre_domaine/\".</string>
+    <string name="connect_err">Connexion impossible à :\n%s</string>
+    <string name="broken_pipe">Connexion au serveur rompue. Retournez à \"/sdcard\" et réessayez.</string>
+    <!-- statuses -->
+    <!-- prefs -->
+</resources>

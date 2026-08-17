@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_select"
+          android:title="@string/select"
+          android:showAsAction="always">
+          <menu>
+              <item android:id="@id/sel_dlg"
+                    android:title="@string/sel_dlg"/>
+              <item android:id="@+id/sel_between"
+                    android:title="@string/select_between"
+                  />
+              <item android:id="@id/compare"
+                    android:title="@string/compare"
+                  />
+              <item android:id="@+id/search"
+                    android:title="@string/search_file"/>
+              <item android:id="@id/filter"
+                    android:title="@string/filter"
+                    android:checkable="true"
+                  />
+              <item android:id="@id/hidden"
+                    android:title="@string/hidden"
+                    android:checkable="true"
+                  />
+          </menu>
+    </item>
+    <item android:id="@+id/action_sort"
+          android:title="@string/sorting"
+          android:showAsAction="always"/>
+    <item android:id="@+id/action_nav"
+          android:title="@string/go_button"
+          android:showAsAction="always">
+      <menu>
+        <item android:id="@+id/home"
+              android:title="@string/home"/>
+        <item android:id="@+id/favs"
+              android:title="@string/favs"/>
+        <item android:id="@+id/add_fav"
+              android:title="@string/add_fav"/>
+        <item android:id="@+id/action_back"
+              android:title="@string/go_up"/>
+        <item android:id="@+id/enter"
+              android:title="@string/enter"/>
+        <item android:id="@+id/totop"
+              android:title="@string/go_top"/>
+        <item android:id="@+id/tobot"
+              android:title="@string/go_end"/>
+        <item android:id="@+id/trashcan"
+         android:title="@string/trashcan"/>
+        </menu>
+    </item>
+</menu>

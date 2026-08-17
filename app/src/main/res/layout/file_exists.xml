@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/msg_text"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dip"
+        android:text=" !!!!!!!!"
+        />
+
+    <TextView
+        android:id="@+id/conflict_details"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="20dip"
+        android:text=" sssssss"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="10dip"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/replace_this"
+            />
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/yes_replace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dip"
+            android:layout_weight="1"
+            android:text="@string/dialog_replace"
+            />
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/no_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_skip" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/replace_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_replace_old"
+            />
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/replace_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dip"
+            android:layout_weight="1"
+            android:text="@string/dialog_replace_all"
+            />
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/skip_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dip"
+            android:layout_weight="1"
+            android:text="@string/dialog_skip_all"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

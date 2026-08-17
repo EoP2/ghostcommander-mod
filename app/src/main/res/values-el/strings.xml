@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="file">Νέο</string>
+  <string name="location">Τοποθεσία</string>
+  <string name="list">Λίστα</string>
+  <string name="app">Εφαρμογή</string>
+  <string name="help">Βοήθεια</string>
+  <string name="F1">Βοήθεια</string>
+  <string name="F2">Μετονομασία</string>
+  <string name="F3">Προβολή</string>
+  <string name="F4">Επεξεργασία</string>
+  <string name="SF4">Αρχείο</string>
+  <string name="F5">Αντιγραφή</string>
+  <string name="F6">Μετακίνηση</string>
+  <string name="F7">MkDir</string>
+  <string name="F8">Διαγραφή</string>
+  <string name="F9">Ρυθμίσεις</string>
+  <string name="F10">Έξοδος</string>
+  <string name="oth_sh_this">Εμφάνιση του ίδιου φακέλου</string>
+  <string name="oth_sh_dir">Άνοιγμα \"%s\" σε άλλο πίνακα</string>
+  <string name="eq">Ίδιο</string>
+  <string name="change">Μεταβολή</string>
+  <string name="tgl">Εναλλαγή</string>
+  <string name="sz">Πληροφορίες</string>
+  <string name="dirsz">Μεγέθη Φακέλων </string>
+  <string name="refresh">Ανανέωση</string>
+  <string name="swap">Ανταλαγή</string>
+  <string name="compare">Συγκρίνω</string>
+  <string name="filter">Φίλτρο</string>
+  <string name="filter_canceled">Το φίλτρο ακυρώθηκε</string>
+  <string name="enter">Αλλαγή τοποθεσίας</string>
+  <string name="home">Σπίτι</string>
+  <string name="softkbd">Πληκτρολόγιο</string>
+  <string name="enter_b">Τοποθεσία</string>
+  <string name="add_fav">Προσθήκη στα αγαπημένα</string>
+  <string name="add_fav_b">Προσθέστε τα αγαπημένα</string>
+  <string name="remount_b">Επανασυναρμολόγηση /σύστημα</string>
+  <string name="remount">Ξανανεβαίνω</string>
+  <string name="hidden">Κρυφό</string>
+  <string name="rescan">Εκ νέου σάρωση μέσων</string>
+  <string name="favs">Αγαπημένα</string>
+  <string name="df_dnl">Λήψεις</string>
+  <string name="df_cam">Κάμερα</string>
+  <string name="df_pic">Εικόνες</string>
+  <string name="df_mus">Μουσική</string>
+  <string name="df_mov">Ταινίες</string>
+  <string name="local">Τοπικός αποθηκευτικός χώρος</string>
+  <string name="temp">Προσωρινή αποθήκευση</string>
+  <string name="external">Εξωτερική κάρτα</string>
+  <string name="media">Κατάστημα Πολυμέσων</string>
+  <string name="ftp">Ιστοσελίδα FTP</string>
+  <string name="sftp">Ιστοσελίδα SFTP</string>
+  <string name="smb">Κοινή χρήση των Windows</string>
+  <string name="plugins">Αναζήτηση πρόσθετων</string>
+  <string name="root">Λειτουργία διαχειριστή (root)</string>
+  <string name="mount">Προσάρτηση σημείων</string>
+  <string name="mount_b">Προσάρτηση</string>
+  <string name="apps">Εφαρμογές</string>
+  <string name="exit">Έξοδος</string>
+  <string name="forget">Ξεχάστε</string>
+  <string name="favs_descr">Προβάλετε και διαχειριστείτε τη λίστα των αγαπημένων σας φακέλων και τοποθεσιών</string>
+  <string name="local_descr">Περιηγηθείτε, οργανώστε και τροποποιήστε τα περιεχόμενα του κύριου συστήματος αρχείων</string>
+  <string name="temp_descr">Άμεση πρόσβαση σε προσωρινό φάκελο</string>
+  <string name="external_descr">Πρόσβαση σε αρχεία στην κάρτα SD που έχει τοποθετηθεί φυσικά.  Μπορεί να είναι μόνο για ανάγνωση σε ορισμένες συσκευές.  Χρησιμοποιήστε τη λειτουργία SAF σε μια τέτοια περίπτωση.</string>
+  <string name="media_descr">Περιηγηθείτε στα αρχεία πολυμέσων σας όπως τα βλέπει το σύστημα.</string>
+  <string name="saf_descr">Παρέχει πρόσβαση με δυνατότητα τροποποίησης στα αρχεία στα οποία απαγορεύεται η εγγενής πρόσβαση</string>
+  <string name="saf_pick">Επιλέξτε τον αντίστοιχο ριζικό φάκελο SAF</string>
+  <string name="saf_picked">Ο ριζικός φάκελος SAF έχει επιλεγεί και είναι έτοιμος για χρήση</string>
+  <string name="ftp_descr">Σύνδεση σε διακομιστή FTP</string>
+  <string name="sftp_descr">Σύνδεση σε διακομιστή SSH FTP (sftp)</string>
+  <string name="smb_descr">Σύνδεση σε κοινόχρηστους φακέλους των Windows</string>
+  <string name="plugins_descr">Αναζητήστε περισσότερες προσθήκες Ghost Commander</string>
+  <string name="root_descr">Μόνο για συσκευές με root: διαχείριση κρίσιμων αρχείων συστήματος.  Προχωρήστε μόνο εάν ξέρετε τι κάνετε</string>
+  <string name="mount_descr">Εμφανίστε μια λίστα με όλα τα σημεία προσάρτησης.  Τοποθετήστε τα ξανά στη λειτουργία \"rw\" και μετά επιστρέψτε στη λειτουργία \"ro\" μετά από αλλαγές.  Προχωρήστε με προσοχή</string>
+  <string name="apps_descr">Προβολή και διαχείριση εγκατεστημένων πακέτων</string>
+  <string name="exit_descr">Κλείσιμο εφαρμογής</string>
+  <string name="shortcut">Προσθήκη συντόμευσης στην Αρχική οθόνη</string>
+  <string name="enter_ftp">Σύνδεση σε FTP</string>
+  <string name="enter_smb">Σύνδεση στο Windows PC</string>
+  <string name="search_file">Αναζήτηση</string>
+  <string name="replace">Αντικατάσταση</string>
+  <string name="menu">Μενού</string>
+  <string name="sort_by_name">Κατά Όνομα</string>
+  <string name="sort_by_ext">Κατά Επέκταση</string>
+  <string name="sort_by_size">Κατά Μέγεθος</string>
+  <string name="sort_by_date">Κατά Ημερομηνία</string>
+  <string name="select_all">Επιλογή όλων</string>
+  <string name="unselect_all">Κατάργηση επιλογής όλων</string>
+  <string name="select_b">Επιλογή</string>
+  <string name="unselect_b">Μη επιλεγμένο</string>
+  <string name="select_between">Επιλέξτε μεταξύ</string>
+  <string name="select2">Παρακαλώ επιλέξτε τουλάχιστον 2 στοιχεία</string>
+  <string name="toggle_panels_mode">Αλλαγή λειτουργίας panels</string>
+  <string name="prefs">Ρυθμίσεις</string>
+  <string name="save_prefs">Αντίγραφο ασφαλείας ρυθμίσεων</string>
+  <string name="rest_prefs">Επαναφορά ρυθμίσεων</string>
+  <string name="save_log">Αποθήκευση καταγραφής σε αρχείο</string>
+  <string name="prefs_saved">Οι προτιμήσεις σας έχουν αποθηκευτεί</string>
+  <string name="prefs_restr">Οι προτιμήσεις σας έχουν αποκατασταθεί. Παρακαλώ επανεκκινήστε την εφαρμογή.</string>
+  <string name="about">Σχετικά</string>
+  <string name="keys">Σύντομη βοήθεια</string>
+  <string name="new_file">Δημιουργία νέου αρχείου κειμένου</string>
+  <string name="new_folder">Δημιουργία νέου φακέλου</string>
+  <string name="new_zip">Δημιουργία νέου αρχείου ZIP</string>
+  <string name="go_button">Μετάβαση</string>
+  <string name="show_size">Πληροφορίες</string>
+  <string name="checksum">Άθροισμα</string>
+  <string name="send_to">Αποστολή στο&#8230;</string>
+  <string name="open_with">Άνοιγμα με&#8230;</string>
+  <string name="open">Άνοιγμα</string>
+  <string name="open_as">Άνοιγμα ως&#8230;</string>
+  <string name="open_native">Άνοιγμα ως εγγενής</string>
+  <string name="copy_name">Αντιγραφή ονόματος στο πρόχειρο</string>
+  <string name="fav_fld">Προσθήκη \"%s\" στα αγαπημένα</string>
+  <string name="create_zip">Δημιουργία νέου αρχείου ZIP</string>
+  <string name="create_zip_title">Δημιουργία αρχείου ZIP</string>
+  <string name="extract_zip">Εξαγωγή ZIP</string>
+  <string name="touch">Άγγιγμα</string>
+  <string name="set_date">Αλλαγή Ημερομηνίας</string>
+  <string name="file_name">Αρχείο</string>
+  <string name="wait">περίμενε&#8230;</string>
+  <string name="fail">ΑΠΕΤΥΧΕ</string>
+  <string name="failed">Σφάλμα:\n</string>
+  <string name="default_uri_cmnt">Προεπιλεγμένη τοποθεσία</string>
+  <string name="default_color">Προεπιλογή</string>
+  <string name="base_color">Χρώμα βάσης</string>
+  <string name="typemasks">Μάσκες αρχείων</string>
+  <string name="color_sample">Δείγμα</string>
+  <string name="add_new_type">Προσθήκη νέου</string>
+  <string name="fav_comment">Σχόλιο:</string>
+  <string name="fav_dialog">Επεξεργασία αγαπημένων</string>
+  <string name="dialog_yes">Ναι</string>
+  <string name="dialog_no">Όχι</string>
+  <string name="dialog_ok">Εντάξει</string>
+  <string name="dialog_cancel">Ακύρωση</string>
+  <string name="dialog_close">Κλείσιμο</string>
+  <string name="dialog_exit">Έξοδος</string>
+  <string name="dialog_browse">Περιήγηση</string>
+  <string name="dialog_abort">Διακοπή</string>
+  <string name="dialog_retry">Επανάληψη</string>
+  <string name="dialog_ignore">Αγνόηση</string>
+  <string name="dialog_replace_all">Αντικαταστήστε τα όλα</string>
+  <string name="dialog_replace_old">Αντικαταστήστε το παλιό</string>
+  <string name="dialog_skip_all">Παράλειψη όλων</string>
+  <string name="replace_this">Αντικατάσταση αυτού?</string>
+  <string name="source">Πηγή</string>
+  <string name="destination">Προορισμός</string>
+  <string name="dialog_select">Επιλογή</string>
+  <string name="dialog_unselect">Μη επιλεγμένο</string>
+  <string name="filemask">Μάσκα αρχείου:</string>
+  <string name="for_files">Αρχεία</string>
+  <string name="for_dirs">Φακέλοι</string>
+  <string name="in_subf">Υποφάκελοι</string>
+  <string name="content">Περιεχόμενο:</string>
+  <string name="bigger_than">Μεγαλύτερο\nαπό:</string>
+  <string name="smaller_than">Μικρότερο\nαπό:</string>
+  <string name="mod_after">Μετά</string>
+  <string name="mod_before">Πριν</string>
+  <string name="show_matched">Εμφάνιση αντιστοιχισμένου</string>
+  <string name="hide_matched">Απόκρυψη αντιστοιχισμένου</string>
+  <string name="launch">Εκκίνηση</string>
+  <string name="operation">Λειτουργίες</string>
+  <string name="view_title">Προβολή</string>
+  <string name="edit_title">Επεξεργασία</string>
+  <string name="newf_title">Δημιουργία φακέλου</string>
+  <string name="newf_prompt">Όνομα του νέου αρχείου:</string>
+  <string name="mkdir_title">Δημιουργία φακέλου</string>
+  <string name="mkdir_prompt">Όνομα του νέου φακέλου:</string>
+  <string name="search_title">Αναζήτηση</string>
+  <string name="search_prompt">Κριτήρια αναζήτησης:</string>
+  <string name="rename_title">Μετονομασία</string>
+  <string name="mult_rename_title">Μετονομασία πολλαπλών</string>
+  <string name="copy_title">Αντιγραφή</string>
+  <string name="move_title">Μετακίνηση</string>
+  <string name="send_title">Αποστολή στο&#8230;</string>
+  <string name="open_title">Άνοιγμα με...</string>
+  <string name="search">Αναζήτηση (regex):</string>
+  <string name="replace_to">Αντικατάσταση με:</string>
+  <string name="preview">Προεπισκόπηση</string>
+  <string name="mult_rename_help" formatted="false">Χρησιμοποιήστε τυπικές κανονικές εκφράσεις για την αναζήτηση μοτίβων συμβολοσειρών σε ονόματα αρχείων και αντικαταστήστε αυτά που βρέθηκαν.\n
+Στην αντικατάσταση συμβολοσειρά χρησιμοποιήστε πίσω αναφορά όπως $1 για να ανατρέξετε σε μια ομάδα αναζήτησης που σημειώνεται με παρένθεση.\n
+Χρησιμοποίησε \\$ για το σύμβολο \'$\'.\n
+Χρησιμοποιήστε \%# για έναν μετρητή αρχείων, \%## με 2 ψηφία και ούτω καθεξής.</string>
+  <string name="find_str">Συμβολοσειρά αναζήτησης:</string>
+  <string name="regex">Κανονική έκφραση</string>
+  <string name="whole_words">Ολόκληρες λέξεις</string>
+  <string name="backwards">Πίσω</string>
+  <string name="case_sensitive">Διάκριση Πεζών/ Κεφαλαίων</string>
+  <string name="not_found">Η αναζήτηση έχει ολοκληρωθεί</string>
+  <string name="copy_err">Τίποτα για αντιγραφή</string>
+  <string name="rename_err">Αδυναμία μετονομασίας</string>
+  <string name="edit_err">Μη επεξεργάσιμο</string>
+  <string name="no_items">Δεν υπάρχουν έγκυρα αρχεία για να ολοκληρωθεί η λειτουργία</string>
+  <string name="inv_dest">Μη έγκυρος προορισμός</string>
+  <string name="inv_path">Μη έγκυρη διαδρομή</string>
+  <string name="find_on_fs_only">Η δυνατότητα αναζήτησης δεν υποστηρίζεται εδώ.</string>
+  <string name="on_fs_only">Αυτή η δυνατότητα λειτουργεί μόνο στο τοπικό σύστημα αρχείων.</string>
+  <string name="op_not_alwd">Λειτουργία \"%1$s\" δεν επιτρέπεται - επιλέξτε κάτι πρώτο</string>
+  <string name="oper_item_to">%1$s \"%2$s\" σε:</string>
+  <string name="login_title">Σύνδεση</string>
+  <string name="delete_title">Διαγραφή</string>
+  <string name="delete_err">Τίποτα για διαγραφή</string>
+  <string name="delete_q">Διαγραφή \"%1$s\"?</string>
+  <string name="rescan_q">Είστε βέβαιοι ότι θέλετε να κάνετε την αναζήτηση και πάλι?</string>
+  <string name="search_done">Η αναζήτηση ολοκληρώθηκε</string>
+  <string name="done">Τέλος</string>
+  <string name="interrupted">Διακόπηκε</string>
+  <string name="cant_copy_to_itself">Αδυναμία αντιγραφής του φακέλου \"%s\" στον εαυτό του ή κάτω</string>
+  <string name="too_deep_hierarchy">Η ιεραρχία αρχείων είναι πολύ βαθιά</string>
+  <string name="nothing_found">Δεν βρέθηκαν αρχεία</string>
+  <string name="preparing">Προετοιμασία&#8230;</string>
+  <string name="copying">Αντιγραφή\n\"%s\"&#8230;</string>
+  <string name="copied_f">Αντιγράφηκε\n\"%s\"</string>
+  <string name="deleting">Διαγραφή\n\"%s\"&#8230;</string>
+  <string name="deleting_a">Διαγραφή&#8230;</string>
+  <string name="fail_del">Το αρχείο \"%1$s\" δεν ολοκληρώθηκε, διαγράφοντας&#8230;</string>
+  <string name="unpacking">Αποσυσκευασία \n\"%s\"&#8230;</string>
+  <string name="unpacked_p">Αποσυμπιεσμένο \n\"%s\"</string>
+  <string name="packing">Συσκευασία \n\"%s\"&#8230;</string>
+  <string name="retrieving">Ανάκτηση&#8230;\n\"%s\"</string>
+  <string name="uploading">Μεταφόρτωση&#8230;\n\"%s\"</string>
+  <string name="uploaded_p">Ανέβηκε \n\"%s\"</string>
+  <string name="loading">Φόρτωση&#8230;</string>
+  <string name="second">σ</string>
+  <string name="canceled">Ακυρώθηκε</string>
+  <string name="oom_err">Μη διαθέσιμη μνήμη</string>
+  <string name="unkn_err">Άγνωστο σφάλμα</string>
+  <string name="cant_md">Δεν είναι δυνατή η δημιουργία φακέλου \"%s\"</string>
+  <string name="cant_cd">Αδύνατη η περιήγηση στο φάκελο \"%s\"</string>
+  <string name="file_exist">Αρχείο \"%s\" υπάρχει ήδη</string>
+  <string name="sec_err">Πρόβλημα ασφαλείας\n%s</string>
+  <string name="not_accs">Το αρχείο δεν είναι προσβάσιμο\n%s</string>
+  <string name="acc_err">Σφάλμα πρόσβασης στο αρχείο \"%1$s\"\n %2$s</string>
+  <string name="rtexcept">Σφάλμα στο αρχείο \"%1$s\"\n %2$s</string>
+  <string name="cant_move">Δεν είναι δυνατή η μετακίνηση αρχείου \"%s\"</string>
+  <string name="cant_create">Δεν είναι δυνατή η δημιουργία αρχείου \"%1$s\"\n%2$s</string>
+  <string name="cant_del">Δεν είναι δυνατή η διαγραφή του \"%1$s\"</string>
+  <string name="dest_wrtble">Βεβαιωθείτε ότι ο φάκελος \"%s\" είναι εγγράψιμος</string>
+  <string name="copied">αντιγράφηκε</string>
+  <string name="moved">μετακινήθηκε</string>
+  <string name="deleted">διαγράφηκε</string>
+  <string name="downloaded">κατεβασμένο</string>
+  <string name="uploaded">μεταφορτώθηκε</string>
+  <string name="packed">συσκευασμένο</string>
+  <string name="unpacked">μη συσκευασμένο</string>
+  <string name="remounted">Αφαιρέθηκε \"%1$s\" προς \"%2$s\"</string>
+  <string name="tried_to_exec">Προσπάθησε να εκτελέσει \"%s\"</string>
+  <string name="item">στοιχείο</string>
+  <string name="items">αντικείμενα</string>
+  <string name="were">ήταν</string>
+  <string name="was">ήταν</string>
+  <string name="nothing">Τίποτα</string>
+  <string name="report_0"><![CDATA[ Τίποτα δεν ήταν ]]></string>
+  <string name="report_1"><![CDATA[ Ένα στοιχείο ήταν ]]></string>
+  <string name="report_m"><![CDATA[ %1$d στοιχεία ήταν ]]></string>
+  <string name="sz_folder"><![CDATA[<b>Φάκελος:</b> <small>%1$s</small>\n%2$d αρχεία ]]></string>
+  <string name="sz_dirnum"><![CDATA[σε %1$d υποφάκελο%2$s]]></string>
+  <string name="sz_dirsfx_p">Ευρετήριο</string>
+  <string name="sz_file"><![CDATA[<b>Αρχείο:</b>\"<small>%s</small>\"]]></string>
+  <string name="sz_files"><![CDATA[<b>Αρχεία:</b> %d ]]></string>
+  <string name="sz_Nbytes"><![CDATA[\n<b>Μέγεθος:</b>%1$s]]></string>
+  <string name="sz_bytes">(<small>%d B</small>)</string>
+  <string name="sz_lastmod"><![CDATA[\n<b>Τελευταία τροποποίηση:</b> ]]></string>
+  <string name="sz_created"><![CDATA[\n<b>Δημιουργήθηκε:</b> ]]></string>
+  <string name="sz_access"><![CDATA[\n<b>Πρόσβαση:</b> ]]></string>
+  <string name="sz_total"><![CDATA[<b>Σύνολο:</b> %1$s\n<b>Δωρεάν:</b> %2$s]]></string>
+  <string name="busy">Απασχολημένο!</string>
+  <string name="cd_title">Μετάβαση</string>
+  <string name="not_supported">Αυτή η λειτουργία δεν υποστηρίζεται</string>
+  <string name="select_some">Καμία επιλογή δεν έγινε</string>
+  <string name="select">Επιλογή</string>
+  <string name="error">Σφάλμα</string>
+  <string name="info">Πληροφορίες</string>
+  <string name="confirm">Επιβεβαίωση</string>
+  <string name="alert">Ειδοποίηση</string>
+  <string name="progress">Πρόοδος</string>
+  <string name="inprogress">Μια λειτουργία αρχείου βρίσκεται σε εξέλιξη</string>
+  <string name="server">Διακομιστής:</string>
+  <string name="path">Διαδρομή:</string>
+  <string name="active">Ενεργό</string>
+  <string name="domain">Τομέας:</string>
+  <string name="username">Όνομα Χρήστη:</string>
+  <string name="password">Κωδικός:</string>
+  <string name="encrypted">Κρυπτογραφημένο</string>
+  <string name="command">Εντολή:</string>
+  <string name="use_busybox">αποσχολημένο κουτί</string>
+  <string name="user">Χρήστης</string>
+  <string name="group">Ομάδα</string>
+  <string name="other">Άλλο</string>
+  <string name="connect">Συνδεθείτε με</string>
+  <string name="cancel">Ακύρωση</string>
+  <string name="ftp_connected">Συνδέθηκε με το \"%1$s\",\n Συνδέθηκε ως \"%2$s\"</string>
+  <string name="ftp_upload_failed">Η μεταφόρτωση του \"%1$s\" απέτυχε.\n αρχείο καταγραφής FTP:\n\n%2$s</string>
+  <string name="ftp_mkdir_failed">Αποτυχία δημιουργίας φακέλου \"%1$s\".\n FTP log:\n\n\"%2$s\</string>
+  <string name="ftp_nologin">Δεν είστε συνδεδεμένοι!</string>
+  <string name="data_settings">Λίστες αρχείων</string>
+  <string name="layout_settings">Εμφάνιση</string>
+  <string name="input_settings">Εισαγωγή</string>
+  <string name="selection_zone_setup">Περιοχή επιλογής</string>
+  <string name="summary_selection_zone_setup">Προσαρμόστε τον τρόπο επιλογής των αρχείων και των φακέλων</string>
+  <string name="sel_onright">Επιλέξτε στα δεξιά</string>
+  <string name="show_confirm">Επιβεβαιώσεις</string>
+  <string name="summary_show_confirm">Εμφάνιση ενός μηνύματος μετά από ορισμένες λειτουργίες</string>
+  <string name="prefs_label">Ρυθμίσεις</string>
+  <string name="filetypes_label">Χρώματα κατά τύπο</string>
+  <string name="editor_label">Επεξεργαστής Κειμένου</string>
+  <string name="pictvw_label">Προβολέας Εικόνων</string>
+  <string name="textvw_label">Προβολέας Κειμένου</string>
+  <string name="perms_label">chmod / chown</string>
+  <string name="advanced">Προχωρημένα</string>
+  <string name="advanced_settings">Διάφορα</string>
+  <string name="summary_advanced_settings">Επιπλέον ρυθμίσεις για προχωρημένους χρήστες</string>
+  <string name="remote_open_size">Όριο μεγέθους αρχείου</string>
+  <string name="summary_remote_open_size">Μέγιστο μέγεθος απομακρυσμένου αρχείου επιτρέπεται να ανοίξει τοπικά</string>
+  <string name="compare_content">Σύγκριση περιεχομένου</string>
+  <string name="summary_compare_content">Σύγκριση περιεχομένων αρχείων για αρχεία με παρόμοια ονόματα και μεγέθη</string>
+  <string name="send_content">Αποστολή χρησιμοποιώντας τον πάροχο περιεχομένου</string>
+  <string name="summary_send_content">Προσπαθήστε να αποεπιλέξτε αν το αρχείο αποστολής της εφαρμογής σας δεν εφαρμόζει το ContentResolver</string>
+  <string name="open_content">Άνοιγμα χρησιμοποιώντας τον πάροχο περιεχομένου</string>
+  <string name="summary_open_content">Προσπαθήστε να ανοίξετε ένα αρχείο μέσω του παρόχου περιεχομένου και όχι ως κανονικό αρχείο.</string>
+  <string name="panels_mode">Πάνελ δίπλα-δίπλα</string>
+  <string name="summary_panels_mode">Εμφάνιση και των δύο πινάκων δίπλα-πλάι σε χωρισμένη προβολή οθόνης</string>
+  <string name="two_lines">Δύο γραμμές σε μια γραμμή</string>
+  <string name="summary_two_lines">Εμφάνιση ιδιοτήτων αρχείου κάτω από τα ονόματα αρχείων</string>
+  <string name="show_icons">Ενεργοποίηση εικονιδίων</string>
+  <string name="summary_show_icons">Εμφάνιση εικονιδίων αρχείου και φακέλου αντί μόνο του κειμένου</string>
+  <string name="toolbar_settings">Γραμμή Εργαλείων</string>
+  <string name="summary_toolbar_settings">Προσαρμόστε τη γραμμή εργαλείων στο κάτω μέρος της οθόνης</string>
+  <string name="show_actionbar">Ενεργοποίηση Μπάρας Ενεργειών</string>
+  <string name="summary_show_actionbar">Εμφάνιση της γραμμής ενεργειών στο επάνω μέρος της οθόνης. Απαιτείται επανεκκίνηση</string>
+  <string name="show_toolbar">Ενεργοποίηση γραμμής εργαλείων</string>
+  <string name="summary_show_toolbar">Εμφάνιση της γραμμής εργαλείων στο κάτω μέρος της οθόνης</string>
+  <string name="show_hotkeys">Εμφάνιση πλήκτρων hot</string>
+  <string name="summary_show_hotkeys">Εμφάνιση συντομεύσεων πλήκτρων hot key σε συγκεκριμένα κουμπιά</string>
+  <string name="toolbar_preference">Προσαρμογή της γραμμής εργαλείων</string>
+  <string name="summary_toolbar_preference">Επιλέξτε ποια κουμπιά θα εμφανίζονται, επεξεργαστείτε και να τα οργανώσετε</string>
+  <string name="tblist_label">Προσαρμογή της γραμμής εργαλείων</string>
+  <string name="finger_friendly">Δάχτυλο-φιλικό</string>
+  <string name="summary_finger_friendly">Μεγέθυνση των στοιχείων διεπαφής χρήστη</string>
+  <string name="prevent_root">Προειδοποίηση κατά την αποχώρηση του /sdcard</string>
+  <string name="summary_prevent_root">Προβάλετε μια προειδοποίηση όταν πηγαίνετε στο ριζικό φάκελο μιας συσκευής</string>
+  <string name="show_root">Εμφάνιση προηγμένων στοιχείων αρχικής οθόνης</string>
+  <string name="summary_show_root">Αρχική προβολή θα περιλαμβάνει \"Root mode\", \"Mount points\" και \"Media Store\"</string>
+  <string name="root_root">Αυτόματη λειτουργία ρίζας (Root)</string>
+  <string name="summary_root_root">Εναλλαγή στη λειτουργία root όταν πηγαίνετε στο ριζικό φάκελο μιας συσκευής</string>
+  <string name="thumbnails">Ενεργοποίηση μικρογραφιών</string>
+  <string name="summary_thumbnails">Εμφάνιση μικρογραφιών για εικόνες αντί για εικονίδια</string>
+  <string name="thumbnails_size">Μέγεθος μικρογραφίας</string>
+  <string name="summary_thumbnails_size">Ορίστε την τιμή ποσοστού σε σχέση με το μέγεθος του εικονιδίου</string>
+  <string name="font_size">Μέγεθος γραμματοσειράς</string>
+  <string name="summary_font_size">Ορίστε το μέγεθος της γραμματοσειράς</string>
+  <string name="left_panel_settings">Αριστερό πάνελ</string>
+  <string name="right_panel_settings">Δεξιό πάνελ</string>
+  <string name="detailed_view_SbS">Λεπτομερής λειτουργία side-by-side</string>
+  <string name="summary_detailed_view_SbS">Εμφάνιση μεγέθους και ημερομηνίας για αρχεία σε λειτουργία side-by-side</string>
+  <string name="detailed_view_Ovr">Λεπτομερής λειτουργία με επικάλυψη</string>
+  <string name="summary_detailed_view_Ovr">Εμφάνιση μεγέθους και ημερομηνίας για αρχεία σε λειτουργία με επικάλυψη</string>
+  <string name="sorting">Μέθοδος διαλογής</string>
+  <string name="summary_sorting">Επιλέξτε τον τρόπο ταξινόμησης αρχείων και φακέλων</string>
+  <string name="sort_case">Παράβλεψη πεζών στην ταξινόμηση</string>
+  <string name="summary_sort_case">Σημειώστε αυτό για να αγνοήσετε την ευαισθησία πεζών-κεφαλαίων στο αρχείο και το φάκελο ταξινόμησης</string>
+  <string name="show_hidden">Εμφάνιση κρυφών αρχείων</string>
+  <string name="summary_show_hidden">Εμφάνιση αρχείων και φακέλων με μια προηγούμενη τελεία στα ονόματά τους</string>
+  <string name="compatibility_settings">Κουμπιά υλικού</string>
+  <string name="summary_compatibility_settings">Προσαρμόστε την αντικατάσταση των λειτουργιών του κουμπιού υλικού</string>
+  <string name="panels_sliding">Ενεργοποίηση συρόμενης χειρονομίας</string>
+  <string name="summary_panels_sliding">Εναλλαγή πινάκων με μια οριζόντια χειρονομία κύλισης</string>
+  <string name="arrow_mode">Παράκαμψη των πλήκτρων βέλους</string>
+  <string name="summary_arrow_mode">Αριστερά/δεξιά βέλη εκτελούν εναλλαγή/επιλογή</string>
+  <string name="volume_mode">Παράκαμψη πλήκτρων έντασης</string>
+  <string name="summary_volume_mode">Τα κουμπιά έντασης εκτελούν εναλλαγή/επιλογή</string>
+  <string name="exit_on_back">Έξοδοι πίσω πλήκτρου</string>
+  <string name="summary_exit_on_back">Το κουμπί \"Πίσω\" κλείνει την εφαρμογή</string>
+  <string name="colors">Χρώματα</string>
+  <string name="summary_colors">Τροποποίηση χρωμάτων φόντου και προσκηνίου</string>
+  <string name="bgr_color_picker">Φόντο</string>
+  <string name="summary_bgr_color_picker">Επιλέξτε ένα χρώμα για το κύριο φόντο</string>
+  <string name="fgr_color_picker">Προσκήνιο</string>
+  <string name="summary_fgr_color_picker">Επιλέξτε ένα χρώμα για τα ονόματα και τις ιδιότητες αρχείων</string>
+  <string name="cur_color_picker">Εστίαση</string>
+  <string name="summary_cur_color_picker">Επιλέξτε ένα χρώμα για τα στοιχεία στην εστίαση</string>
+  <string name="sel_color_picker">Επιλεγμένο φόντο</string>
+  <string name="summary_sel_color_picker">Επιλέξτε ένα χρώμα φόντου για τα επιλεγμένα αρχεία και τον τρέχοντα τίτλο του πίνακα</string>
+  <string name="sfg_color_picker">Προσκήνιο επιλογής</string>
+  <string name="summary_sfg_color_picker">Επιλέξτε ένα χρώμα κειμένου για τα επιλεγμένα αρχεία και τον τρέχοντα τίτλο του πίνακα</string>
+  <string name="ttl_color_picker">Τίτλος πίνακα</string>
+  <string name="summary_ttl_color_picker">Επιλέξτε ένα χρώμα φόντου για τον τίτλο του πίνακα</string>
+  <string name="btn_color_picker">Κουμπιά</string>
+  <string name="summary_btn_color_picker">Επιλέξτε ένα χρώμα φόντου για τα κουμπιά</string>
+  <string name="pick_color">Ορισμός χρώματος</string>
+  <string name="color">Χρώμα</string>
+  <string name="color_themes">Θέματα</string>
+  <string name="summary_color_themes">Επαναφορά όλων των προσαρμοσμένων χρωμάτων σε ένα επιλεγμένο θέμα</string>
+  <string name="language">Γλώσσα</string>
+  <string name="summary_language">Παράκαμψη της γλώσσας συστήματος</string>
+  <string name="restart_to_apply_lang">Επανεκκινήστε την εφαρμογή για να εφαρμόσετε τη νέα γλώσσα</string>
+  <string name="editor_activity">Προσαρμοσμένος επεξεργαστής κειμένου</string>
+  <string name="summary_editor_activity">Εισάγετε το όνομα δραστηριότητας ενός εξωτερικού επεξεργαστή κειμένου</string>
+  <string name="busybox_location">Διαδρομή προς το BusyBox</string>
+  <string name="summary_busybox_location">Καθορίστε την τοποθεσία του εκτελέσιμου BusyBox</string>
+  <string name="su_location">Διαδρομή προς su</string>
+  <string name="summary_su_location">Καθορίστε την τοποθεσία του εκτελέσιμου su</string>
+  <string name="cpmv_err_ign">Παράβλεψη σφαλμάτων δικαιωμάτων κατά την αντιγραφή/μετακίνηση</string>
+  <string name="summary_cpmv_err_ign">Καταστολή σφαλμάτων λειτουργίας ρίζας όταν ένα αρχείο αντιγράφεται σε ένα σύστημα αρχείων που δεν υποστηρίζει δικαιώματα.</string>
+  <string name="foreground_service">Εκτελεί λειτουργίες αρχείου σε μια υπηρεσία προσκηνίου</string>
+  <string name="summary_foreground_service">Εάν όταν η κατάσταση αναστολής λειτουργίας της συσκευής διακόπτει μια λειτουργία αρχείου, δοκιμάστε να ενεργοποιήσετε αυτήν την επιλογή. Ένα εικονίδιο ειδοποίησης θα εμφανίζεται όλη την ώρα που η εφαρμογή είναι ενεργή.</string>
+  <string name="show_scrollbars">Οι πίνακες αρχείων έχουν γραμμή κύλισης</string>
+  <string name="summary_show_scrollbars">Αποεπιλέξτε για να απενεργοποιήσετε τις γραμμές κύλισης των πινάκων αρχείων.</string>
+  <string name="scan_all">Σάρωση όλων των αρχείων</string>
+  <string name="summary_scan_all">Αποεπιλογή για σάρωση μόνο αρχείων πολυμέσων</string>
+  <string name="execute_command">Εκτέλεση εντολής</string>
+  <string name="nothing_to_open">Τίποτα για άνοιγμα</string>
+  <string name="remind_to_save">Μην ξεχάσετε να αποθηκεύσετε τις αλλαγές σας</string>
+  <string name="saved">\"%1$s\" αποθηκεύτηκε.</string>
+  <string name="not_saved">Αποθήκευση αλλαγών?</string>
+  <string name="save">Αποθήκευση</string>
+  <string name="save_as">Αποθήκευση ως&#8230;</string>
+  <string name="revert">Επαναφορά</string>
+  <string name="wrap">Αναδίπλωση μακριών γραμμών</string>
+  <string name="go_up">Γονικός</string>
+  <string name="go_top">Πάνω</string>
+  <string name="go_end">Κάτω</string>
+  <string name="go_next">Επόμενο</string>
+  <string name="go_prev">Προηγούμενο</string>
+  <string name="rot_right">Περιστροφή δεξιόστροφα</string>
+  <string name="rot_left">Περιστροφή αριστερόστροφα</string>
+  <string name="encoding">Κωδικοποίηση:</string>
+  <string name="encoding_set">Η νέα κωδικοποίηση είναι \"%1$s\", παρακαλώ ανανεώστε το αρχείο. Αν το αποθηκεύσετε τώρα, η κωδικοποίηση του αρχείου θα μετατραπεί.</string>
+  <string name="no_such_file">Δεν υπάρχει τέτοιο αρχείο \"%1$s\"</string>
+  <string name="too_big_file">Το αρχείο \"%1$s\" είναι πολύ μεγάλο</string>
+  <string name="binary_file">Το αρχείο \"%1$s\" είναι δυαδικό και μπορείτε να το καταστρέψετε. Επεξεργαστείτε με δική σας ευθύνη.</string>
+  <string name="cant_open_dir">\"%1$s\" είναι ένας φάκελος</string>
+  <string name="cant_view_empt">Αρχείο \"%1$s\" είναι άδειο</string>
+  <string name="cant_open">Αδυναμία ανοίγματος του αρχείου</string>
+  <string name="cant_save">Αδυναμία αποθήκευσης του αρχείου</string>
+  <string name="nav_warn">Ανοίγετε ένα φάκελο συστήματος που μπορεί να μην είναι προσβάσιμος. Συνέχεια?</string>
+  <string name="no_such_folder">Ο φάκελος \"%1$s\" δεν είναι διαθέσιμος.</string>
+  <string name="fav_added">\"%1$s\" προστέθηκε στα αγαπημένα σας</string>
+  <string name="no_root">Χωρίς ρίζα?</string>
+  <string name="run_command">Εκτέλεση Εντολής</string>
+  <string name="manage">Διαχείριση</string>
+  <string name="shortcuts">Συντομεύσεις</string>
+  <string name="pkg_name">Όνομα πακέτου</string>
+  <string name="version">Έκδοση</string>
+  <string name="version_code">Κώδικας έκδοσης</string>
+  <string name="target_sdk">Target SDK</string>
+  <string name="min_sdk">Ελάχιστο SDK</string>
+  <string name="data_dir">Δεδομένα</string>
+  <string name="inst_date">Ημερομηνία</string>
+  <string name="pkg_size">Μέγεθος</string>
+  <string name="process">Όνομα διεργασίας</string>
+  <string name="app_class">Κλάση εφαρμογής</string>
+  <string name="affinity">Συνάφεια Εργασίας</string>
+  <string name="permissions">Δικαιώματα</string>
+  <string name="flags">Σημαίες</string>
+  <string name="not_exported">Η δραστηριότητα δεν εξάγεται</string>
+  <string name="manage_all_files">Θα μεταφερθείτε στις ρυθμίσεις επιπέδου συστήματος όπου θα πρέπει να επιτρέψετε στον Διοικητή Ghost να διαχειρίζεται όλα τα αρχεία.
+Χωρίς αυτό οι ικανότητες των εφαρμογών θα είναι περιορισμένες.</string>
+  <string name="donate">Δωρεά</string>
+  <string name="online_help">Online βοήθεια</string>
+  <string name="donation">Μια μικρή δωρεά θα υποστηρίξει περαιτέρω ανάπτυξη.\n
+Πατήστε \"ΟΚ\" για να μεταφερθείτε στον ιστότοπο PayPal.\n
+\"Ακύρωση\" για να συνεχίσετε να απολαύσετε τον διαχειριστή αρχείων «Φάντασμα» δωρεάν.\n</string>
+  <string name="about_text"><![CDATA[<h1>Διοικητής φάντασμα v%1$s</h1>
+<h4>Ένας διαχειριστής αρχείων από το Ghost Squared.</h4>
+<p>Στον Ιστό:<br/>
+<a href="https://sites.google.com/site/ghostcommander1/">Ιστοσελίδα</a><br/>
+<a href="http://sourceforge.net/projects/ghostcommander/">Πηγαίος κώδικας</a><br/>
+Βοήθεια <a href="https://crowdin.com/project/ghost-commander">μεταφράζει</a> στη γλώσσα σας.
+</p>
+<p>Παρακαλούμε στείλτε email bugs/suggestions στο:<br/><a href="mailto:ghost.sq2@gmail.com">ghost.sq2@gmail. om</a></p>
+%2$s
+<p>Όπως αυτή η εφαρμογή? Εξετάστε μια <a href="market://search?q=pname:com.ghostsq.commander.donate">\"δωρεά\" έκδοση</a>.
+%3$s
+</p>
+<h3>DISCLAIMER:</h3>
+<p>
+Χρησιμοποιώντας αυτό το λογισμικό, συμφωνείτε με τους ακόλουθους όρους:
+Ο συγγραφέας αυτού του λογισμικού δεν ευθύνεται για οποιαδήποτε βλάβη, απώλεια πληροφοριών/δεδομένων,
+επακόλουθες ζημιές ή οποιαδήποτε ζητήματα που οφείλονται ή θα μπορούσαν να προκληθούν από τη χρήση αυτού του λογισμικού.
+Συμφωνείτε να χρησιμοποιήσετε αυτό το λογισμικό με δική σας ευθύνη. Αν δεν συμφωνείτε με τους παραπάνω όρους,
+παύσει αμέσως να χρησιμοποιεί αυτό το λογισμικό και να το απεγκαταστήσει.</p>]]></string>
+  <string name="keys_text"><![CDATA[<h3>ΕΠΙΛΟΓΗ ΑΡΧΕΙΩΝ</h3>
+ <p>
+ Για να επιλέξετε αρχεία και φακέλους, πατήστε <b>δεξιά</b> των σειρών τους και ανοίξτε τα πατώντας <b>αριστερά</b>.
+ Αυτό είναι σωστό, η μία πλευρά θα ενεργοποιήσει τα στοιχεία και η άλλη θα τα επιλέξει.
+ </p>
+ <h3>ΑΝΤΙΓΡΑΦΗ ΚΑΙ ΜΕΤΑΚΙΝΗΣΗ</h3>
+ <p>
+ Αντιγράψτε ή μετακινήστε αρχεία και φακέλους επιλέγοντας πρώτα τον προορισμό-στόχο σε ένα πλαίσιο και, στη συνέχεια, σύρετε (ή πραγματοποιήστε εναλλαγή) πίσω στον άλλο πίνακα και επιλέξτε τα στοιχεία που θέλετε να μεταφέρετε.  Στη συνέχεια, εκτελέστε την επιθυμητή λειτουργία.
+ </p>
+ <h3>ΕΞΩΤΕΡΙΚΕΣ ΚΑΡΤΕΣ ΚΑΙ OTG USB</h3>
+ <p>
+ Σε συσκευές με Android 11 (R) σε νεότερο, θα σας ζητηθεί να ενεργοποιήσετε την εφαρμογή Ghost Commander για τη διαχείριση όλων των αρχείων στις ρυθμίσεις συστήματος.
+ Αφού γίνει αυτό, τα αρχεία στους εξωτερικούς τόμους (όπως το USB OTG) θα πρέπει να είναι πλήρως προσβάσιμα στην εγγενή λειτουργία.
+ Σε παλαιότερα συστήματα, άμεση πρόσβαση εγγραφής στα αρχεία μιας εξωτερικής μονάδας δίσκου
+ απαγορεύεται.  Εάν η έκδοση λειτουργικού συστήματος της συσκευής σας είναι 5 ή μεγαλύτερη, χρησιμοποιήστε το \"Πλαίσιο πρόσβασης αποθήκευσης\"
+ Λειτουργία (SAF) για να κάνετε αλλαγές στα αρχεία σε τέτοιες τοποθεσίες.<br/>
+ Η λειτουργία SAF σάς ζητά την επιθυμητή θέση κατά την πρώτη πρόσβαση και απομνημονεύει την επιλογή
+ αργότερα.  Για να κάνετε ξανά μια επιλογή (π.χ. σε περίπτωση που είχε τοποθετηθεί διαφορετική μονάδα δίσκου),
+ πατήστε παρατεταμένα το στοιχείο SAF στην οθόνη \"home:\" και μετά επιλέξτε \"Open\".
+ </p>
+ <h3>ΑΡΧΕΙΑ ZIP</h3>
+ <p>
+ Το Ghost Commander μπορεί να χειριστεί τα αρχεία ZIP σαν να ήταν
+ φακέλους.  Άλλοι τύποι αρχειοθέτησης δεν υποστηρίζονται.
+ </p>
+ <h3>ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ ΤΟΠΟΘΕΣΙΑΣ</h3>
+ <p>
+ Για να εισαγάγετε μια τοποθεσία με μη αυτόματο τρόπο (και για να δείτε μια αναπτυσσόμενη λίστα με τη δική σας
+ αγαπημένα), πατήστε παρατεταμένα την κεφαλίδα του πίνακα για να ανοίξετε την τοποθεσία
+ συντάκτης.\n
+ Μπορείτε να εισαγάγετε URI πόρων στο πρόγραμμα επεξεργασίας τοποθεσίας με μη αυτόματο τρόπο ως
+ ακολουθεί:
+ </p><p>
+ <b>ftp://</b><i>host.com</i><b>/</b><i>φάκελος</i><br/>
+ - Ανώνυμο FTP
+ </p><p>
+ <b>ftp://</b><i>χρήστης</i><b>:</b><i>pass</i><b>@</b><i>ftp_host</i  ><b>/</b><i>φάκελος</i><br/>
+ - Πιστοποιημένο FTP
+ </p><p>
+ <b>sftp://</b><i>χρήστης</i><b>:</b><i>pass</i><b>@</b><i>sftp_host</i  ><b>/</b><i>φάκελος</i><br/>
+ - SSH FTP <br/>
+ Εάν διαθέτετε ένα αρχείο ιδιωτικού κλειδιού ελέγχου ταυτότητας, θα χρειαστεί να το φορτώσετε στο SFTP Keys Manger.
+ Για αυτό, πατήστε παρατεταμένα το στοιχείο SFTP στην οθόνη \"home:\" και, στη συνέχεια, επιλέξτε \"Settings\" -> \"PEM Keys manager\".
+ Ορίστε το όνομα κλειδιού σας ως το ακριβές όνομα κεντρικού υπολογιστή με τον οποίο σκοπεύετε να συνδεθείτε.
+ Στην περίπτωση του ελέγχου ταυτότητας κλειδιού, ο κωδικός πρόσβασης χρήστη θα είναι η φράση πρόσβασης στο αρχείο κλειδιού σας.
+ </p><p>
+ Ένα τυπικό <a href="https://www.man7.org/linux/man-pages/man5/ssh_config.5.html">ssh_config</a>
+  Το αρχείο θα μπορούσε να χρησιμοποιηθεί για τη λεπτή ρύθμιση του sftp.  Εάν υπάρχει το αρχείο /sdcard/.GhostCommander/ssh_config
+ Οι γραμμές του θα αναλυθούν και θα εφαρμοστούν στη διαμόρφωση του πελάτη.
+ (Ωστόσο, δεν υποστηρίζονται όλες οι επιλογές)
+ </p><p>
+ <b>smb://</b><i>τομέας</i><b>;</b><i>χρήστης</i><b>:</b><i>pass</i  ><b>@</b><i>διακομιστής</i><b>/</b><i>κοινή χρήση</i><br/>
+ - Κοινή χρήση Windows (με προσθήκη)
+ </p><p>
+ <b>root:/</b><i>path/to/folder</i><br/>
+ - Λειτουργία ρίζας<br/>
+ Χρησιμοποιώντας τις λειτουργίες root mode (superuser) του Ghost
+ Το Commander απαιτεί προσοχή και θα λειτουργήσει μόνο σε μια συσκευή με root.
+ Επίσης, το BusyBox θα πρέπει να εγκατασταθεί με τη διαδρομή του καθορισμένη στις ρυθμίσεις.<br/>
+ Για να εμφανίσετε το βασικό στοιχείο στην οθόνη \"home:\", ενεργοποιήστε αυτήν την επιλογή στις ρυθμίσεις της εφαρμογής.
+ </p>
+ <h3>ΠΡΟΣΘΕΤΑ</h3>
+ <p>
+ Τα πρόσθετα, τα οποία πρέπει να εγκατασταθούν χωριστά, παρέχουν πρόσβαση
+ κοινόχρηστους φακέλους Windows, SSH File Transfer Protocol, WebDAV, καθώς και
+ Υπηρεσίες αποθήκευσης cloud: Box, Dropbox και Google Drive.
+ </p>
+ <h3>ΠΛΗΚΤΡΑ ΠΡΟΣΟΧΗΣ</h3>
+ <p>(Για συσκευές με πληκτρολόγιο)<br/>
+ <b><i>VolumeUp</i></b> - Επιλέξτε αρχεία και φακέλους<br/>
+ <b><i>VolumeDn</i></b> - Εναλλαγή μεταξύ των πλαισίων<br/>
+ <b>+</b>, <b>-</b> - Επιλέξτε ή αποεπιλέξτε στοιχεία στον τρέχοντα φάκελο<br/>
+ <b>(</b>, <b>)</b> - Εισαγάγετε μια τοποθεσία με μη αυτόματο τρόπο και δείτε τα αγαπημένα σας<br/>
+ <b>*</b> - Προσθέστε τον τρέχοντα φάκελο στα αγαπημένα σας<br/>
+ <b>\"</b> - Εμφάνιση λεπτομερών πληροφοριών για τα επιλεγμένα στοιχεία<br/>
+ <b>=</b> - Εμφάνιση της ίδιας θέσης στον άλλο πίνακα (συγχρονισμός)<br/>
+ <b>1</b> - Βοήθεια<br/>
+ <b>2</b> - Μετονομάστε το επιλεγμένο στοιχείο<br/>
+ <b>4</b> - Επεξεργασία επιλεγμένου στοιχείου<br/>
+ <b>5</b> - Αντιγράψτε επιλεγμένα στοιχεία<br/>
+ <b>6</b> - Μετακίνηση επιλεγμένων στοιχείων<br/>
+ <b>7</b> - Δημιουργήστε έναν νέο φάκελο<br/>
+ <b>8</b> - Διαγραφή επιλεγμένων αντικειμένων<br/>
+ <b>9</b> - Ανοίξτε τις προτιμήσεις/ρυθμίσεις<br/>
+ <b>0</b> - Κλείστε την εφαρμογή<br/>
+ <b>[A-z]</b> - Γρήγορη αναζήτηση<br/>
+ </p>
+ <p>
+ <a href="https://sites.google.com/site/ghostcommander1/info">Περισσότερη βοήθεια στο διαδίκτυο…</a>
+ </p>]]></string>
+  <string name="license_text"><![CDATA[Αυτό το πρόγραμμα είναι ένα δωρεάν λογισμικό:
+  μπορείτε να το αναδιανείμετε ή/και να το τροποποιήσετε, σύμφωνα με τους όρους της Γενικής Δημόσιας Άδειας GNU όπως αυτή δημοσιεύτηκε από το Ίδρυμα Ελεύθερου Λογισμικού:
+  είτε της έκδοσης 2 της Άδειας, ή (κατ\' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης.
+
+Αυτό το πρόγραμμα διανέμεται με την ελπίδα ότι θα είναι χρήσιμο, αλλά ΧΩΡΙΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ: χωρίς ακόμα να υποννοείται η εγγύηση της
+ΕΜΠΟΡΙΚΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΕΝΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Δείτε τη Γενική Δημόσια Άδεια GNU για περισσότερες λεπτομέρειες.
+
+Ένα πλήρες αντίγραφο της Γενικής Δημόσιας Άδειας GNU έχει συμπεριληφθεί μαζί με αυτό το πρόγραμμα.
+]]></string>
+</resources>

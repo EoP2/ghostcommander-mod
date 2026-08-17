@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sorting">
+        <item>Efter namn</item>
+        <item>Efter filändelsen</item>
+        <item>Efter storlek</item>
+        <item>Efter datum</item>
+    </string-array>
+    <string-array name="panels_mode">
+        <item>Ja</item>
+        <item>Nej</item>
+        <item>Auto</item>
+    </string-array>
+    <string-array name="language">
+        <item>Standard</item>
+        <item>Tjeckiska</item>
+        <item>Danska</item>
+        <item>Tyska</item>
+        <item>Engelska</item>
+        <item>Spanska</item>
+        <item>Filipino</item>
+        <item>Franska</item>
+        <item>Italienska</item>
+        <item>Ungerska</item>
+        <item>Polska</item>
+        <item>Portugisiska</item>
+        <item>Slovenska</item>
+        <item>Svenska</item>
+        <item>Turkiska</item>
+        <item>Vitryska</item>
+        <item>Bulgariska</item>
+        <item>Ryska</item>
+        <item>Serbiska</item>
+        <item>Ukrainska</item>
+        <item>Grekiska</item>
+        <item>Koreanska</item>
+        <item>Förenklad kinesiska</item>
+        <item>Traditionell kinesiska</item>
+        <item>Japanska</item>
+    </string-array>
+    <string-array name="encoding">
+        <item>Standard</item>
+        <item>Windows-1250\n\t  Central European</item>
+        <item>Windows-1251\n\t  Cyrillic</item>
+        <item>Windows-1252\n\t  Western Latin</item>
+        <item>Windows-1253\n\t  Greek</item>
+        <item>UTF-8\n\t   8bit Unicode</item>
+        <item>UTF-16BE\n\t  16bit big-endian</item>
+        <item>UTF-16LE\n\t  16bit little-endian</item>
+        <item>UTF-16\n\t  16bit Unicode</item>
+        <item>KOI8-R\n\t  Russian UNIX</item>
+        <item>Cp866\n\t  Russian DOS</item>
+        <item>Shift_JIS\n\t  Japanese Shift_JIS</item>
+        <item>EUC-JP\n\t  Japanese EUC-JP</item>
+        <item>EUC-KR\n\t  Korean EUC-KR</item>
+        <item>ISO-2022-JP\n\t  Japanese iso-2022</item>
+        <item>ISO-2022-KR\n\t  Korean iso-2022</item>
+        <item>ISO-2022-CN\n\t  Chinese iso-2022</item>
+        <item>GB18030\n\t  Chinese 国家标准</item>
+        <item>HZ-GB-2312\n\t  Chinese 汉字</item>
+    </string-array>
+    <string-array name="color_themes">
+        <item>Mörkt</item>
+        <item>Ljust</item>
+        <item>Norton</item>
+        <item>Automatisk</item>
+    </string-array>
+</resources>

@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="file">Створити</string>
+  <string name="location">Адреса</string>
+  <string name="list">Список</string>
+  <string name="app">Застосунок</string>
+  <string name="help">Довідка</string>
+  <string name="F1">Як?</string>
+  <string name="F2">Перейм.</string>
+  <string name="F3">Див.</string>
+  <string name="F4">Ред.</string>
+  <string name="SF4">Файл</string>
+  <string name="F5">Коп.</string>
+  <string name="F6">Посун.</string>
+  <string name="F7">Тека</string>
+  <string name="F8">Стерти</string>
+  <string name="F9">Парам.</string>
+  <string name="F10">Вийти</string>
+  <string name="oth_sh_this">Ця ж тека</string>
+  <string name="oth_sh_dir">Відкрити \"%s\" в іншій панелі</string>
+  <string name="eq">Ця ж</string>
+  <string name="change">Інша</string>
+  <string name="tgl">Перемкнути</string>
+  <string name="sz">Інфо</string>
+  <string name="dirsz">Вага тек</string>
+  <string name="refresh">Оновити</string>
+  <string name="swap">Навпаки</string>
+  <string name="compare">Порівняти</string>
+  <string name="filter">Фільтр</string>
+  <string name="filter_canceled">Фільтр скасовано</string>
+  <string name="enter">Змінити адресу</string>
+  <string name="home">Домівка</string>
+    <string name="softkbd">Клавіатура</string>
+  <string name="enter_b">Адреса</string>
+  <string name="add_fav">Додати в улюблені</string>
+  <string name="add_fav_b">Улюблене</string>
+  <string name="remount_b">Перемонт. /system</string>
+  <string name="remount">Перемонт.</string>
+  <string name="hidden">Сховані</string>
+  <string name="rescan">Пересканувати медіа</string>
+  <string name="install">Встановити</string>
+  <string name="favs">Улюблені</string>
+  <string name="df_dnl">Завантаження</string>
+  <string name="df_cam">Камера</string>
+  <string name="df_pic">Зображення</string>
+  <string name="df_mus">Музика</string>
+  <string name="df_mov">Відео</string>
+  <string name="local">Локальне сховище</string>
+  <string name="temp">Тимчасове сховище</string>
+  <string name="external">Зовнішня карта</string>
+  <string name="media">Медіасховище</string>
+  <string name="saf">Storage Access Framework</string>
+  <string name="ftp">FTP-сайт</string>
+  <string name="sftp">SFTP-сайт</string>
+  <string name="smb">Спільне Windows</string>
+  <string name="plugins">Оглянути плагіни</string>
+  <string name="root">Root-режим</string>
+  <string name="mount">Точки монтування</string>
+  <string name="mount_b">Монт.</string>
+  <string name="apps">Застосунки</string>
+  <string name="exit">Вийти</string>
+  <string name="forget">Забути</string>
+  <string name="favs_descr">Переглянути й редагувати список улюблених тек і сайтів</string>
+  <string name="local_descr">Оглянути, впорядкувати й редагувати вміст головної файлової системи</string>
+  <string name="temp_descr">Напряму зайти до тимчасової теки</string>
+  <string name="external_descr">Дістатися файлів фізично вставленої SD-карти. На деяких пристроях її можливо лише читати. У такому разі скористайтеся SAF-режимом.</string>
+  <string name="media_descr">Оглянути медіафайли, як їх бачить система.</string>
+  <string name="saf_descr">Отримати доступ, зокрема на запис, до файлів, яких не дістатись напряму</string>
+  <string name="saf_pick">Оберіть відповідну кореневу теку SAF.</string>
+  <string name="saf_picked">Коренева тека SAF обрана й готова до використання.</string>
+  <string name="pick_mode">Оберіть файл</string>
+  <string name="ftp_descr">З\'єднатися з сервером FTP</string>
+  <string name="sftp_descr">З\'єднатися з сервером SSH FTP (sftp)</string>
+  <string name="smb_descr">З\'єднатися зі спільними теками Windows</string>
+  <string name="plugins_descr">Знайти інші плагіни Ghost Commander</string>
+  <string name="root_descr">Лише для пристроїв із root: ризиковано керувати файлами системи. Продовжуйте лише якщо знаєте, що робите.</string>
+  <string name="mount_descr">Перелічити всі точки монтування. Перемонтуйте їх у режимі \"rw\" і поверніть режим \"ro\" після змін. Будьте обачні.</string>
+  <string name="apps_descr">Переглянути й налаштувати встановлені пакунки</string>
+  <string name="exit_descr">Закрити застосунок</string>
+  <string name="shortcut">Закріпити на головному екрані</string>
+  <string name="enter_ftp">З\'єднатися з FTP</string>
+  <string name="enter_smb">З\'єднатися з Windows-пристроєм</string>
+  <string name="search_file">Шукати</string>
+  <string name="replace">Замінити</string>
+  <string name="menu">Меню</string>
+  <string name="sort_by_name">За назвою</string>
+  <string name="sort_by_ext">За суфіксом</string>
+  <string name="sort_by_size">За вагою</string>
+  <string name="sort_by_date">За датою</string>
+  <string name="sort_by_adate">За датою доступу</string>
+  <string name="select_all">Обрати всі</string>
+  <string name="unselect_all">Зняти весь вибір</string>
+  <string name="select_b">Обрати</string>
+  <string name="unselect_b">Зняти</string>
+  <string name="select_between">Обрати проміжні</string>
+  <string name="select2">Оберіть принаймні два елементи</string>
+  <string name="toggle_panels_mode">Змінити режим панелей</string>
+  <string name="prefs">Параметри</string>
+  <string name="save_prefs">Зберегти параметри</string>
+  <string name="rest_prefs">Відновити параметри</string>
+  <string name="save_log">Зберегти файл журналу</string>
+  <string name="prefs_saved">Параметри збережено</string>
+  <string name="prefs_restr">Параметри відновлено. Перезапустіть застосунок.</string>
+  <string name="about">Про застосунок</string>
+  <string name="keys">Коротка довідка</string>
+  <string name="new_file">Створити текстовий файл</string>
+  <string name="new_folder">Створити теку</string>
+  <string name="new_zip">Створити ZIP-файл</string>
+  <string name="go_button">Перейти</string>
+  <string name="show_size">Інфо</string>
+  <string name="checksum">Контрольна сума</string>
+  <string name="send_to">Поділитися&#8230;</string>
+  <string name="open_with">Відкрити у&#8230;</string>
+  <string name="open">Вiдкрити</string>
+  <string name="open_as">Відкрити як&#8230;</string>
+  <string name="open_native">Відкрити напряму</string>
+  <string name="copy_name">Копіювати назву в буфер</string>
+  <string name="fav_fld">Додати \"%s\" в улюблені</string>
+  <string name="create_zip">Створити ZIP-файл</string>
+  <string name="create_zip_title">Створити ZIP-файл</string>
+  <string name="extract_zip">Видобути ZIP</string>
+  <string name="open_zip">Відкрити як ZIP</string>
+  <string name="touch">Зараз</string>
+  <string name="set_date">Змінити дату</string>
+  <string name="file_name">Файл</string>
+  <string name="wait">хвилинку&#8230;</string>
+  <string name="fail">ЗБІЙ</string>
+  <string name="failed">Помилка:\n</string>
+  <string name="unkhost">Невідомий хост «%s»</string>
+  <string name="default_uri_cmnt">Типова адреса</string>
+  <string name="default_color">Типово</string>
+  <string name="base_color">Базовий колір</string>
+  <string name="typemasks">Файлові маски</string>
+  <string name="color_sample">Зразок</string>
+  <string name="add_new_type">Додати</string>
+  <string name="fav_comment">Коментар:</string>
+  <string name="fav_dialog">Редагувати улюблене</string>
+  <string name="dialog_yes">Так</string>
+  <string name="dialog_no">Ні</string>
+  <string name="dialog_ok">Гаразд</string>
+  <string name="dialog_cancel">Скасувати</string>
+  <string name="dialog_close">Закрити</string>
+  <string name="dialog_exit">Вийти</string>
+  <string name="dialog_browse">Огляд</string>
+  <string name="dialog_abort">Припинити</string>
+  <string name="dialog_retry">Повторити</string>
+  <string name="dialog_ignore">Нехтувати</string>
+  <string name="dialog_replace_all">Замінити всі</string>
+  <string name="dialog_replace_old">Замінити старі</string>
+  <string name="dialog_skip_all">Пропустити всі</string>
+  <string name="replace_this">Замінити це?</string>
+  <string name="source">Звідки</string>
+  <string name="destination">Куди</string>
+  <string name="dialog_select">Обрати</string>
+  <string name="dialog_unselect">Зняти вибір</string>
+  <string name="filemask">Файлова маска:</string>
+  <string name="for_files">Файли</string>
+  <string name="for_dirs">Теки</string>
+  <string name="in_subf">Підтеки</string>
+  <string name="content">Вміст:</string>
+  <string name="bigger_than">Більші\nза:</string>
+  <string name="smaller_than">Менші\nза:</string>
+  <string name="mod_after">Пізніше</string>
+  <string name="mod_before">Раніше</string>
+  <string name="show_matched">Показати збіжні</string>
+  <string name="hide_matched">Сховати збіжні</string>
+  <string name="launch">Запустити</string>
+  <string name="operation">Дії</string>
+  <string name="view_title">Перегляд</string>
+  <string name="edit_title">Редагувати</string>
+  <string name="newf_title">Створити файл</string>
+  <string name="newf_prompt">Назва нового файлу:</string>
+  <string name="mkdir_title">Створити теку</string>
+  <string name="mkdir_prompt">Назва нової теки:</string>
+  <string name="search_title">Шукати</string>
+  <string name="search_prompt">Умова пошуку:</string>
+  <string name="rename_title">Перейменувати</string>
+  <string name="mult_rename_title">Перейменувати кілька</string>
+  <string name="copy_title">Копіювати</string>
+  <string name="move_title">Посунути</string>
+  <string name="send_title">Поділитися&#8230;</string>
+  <string name="open_title">Відкрити у&#8230;</string>
+  <string name="to_copy">&#160;</string>
+  <string name="to_move">&#160;</string>
+  <string name="to_rename">&#160;</string>
+  <string name="search">Пошук (regex):</string>
+  <string name="replace_to">Замінити на:</string>
+  <string name="preview">Попередній перегляд</string>
+  <string name="to_trash">Посунути до смітника</string>
+  <string name="trashcan">Смітник</string>
+  <string name="mult_rename_help" formatted="false">Використайте стандартні регулярні вирази, щоб знайти шаблон у назвах файлів і замінити знайдене.\n
+У рядку заміни, зворотне посилання $1 підставить вміст перших дужок (...) рядка-шаблона.\n
+\\$ - знак $.\n
+\%# - лічильник файлів, \%## - двоцифровий тощо.</string>
+  <string name="find_str">Шукати рядок:</string>
+  <string name="regex">Регулярний вираз</string>
+  <string name="whole_words">Цілі слова</string>
+  <string name="backwards">Зворотний напрям</string>
+  <string name="case_sensitive">Враховувати регістр</string>
+  <string name="not_found">Пошук завершено</string>
+  <string name="copy_err">Нічого копіювати</string>
+  <string name="rename_err">Не вдалося перейменувати</string>
+  <string name="edit_err">Не вдається редагувати</string>
+  <string name="no_items">Дії треба файли</string>
+  <string name="inv_dest">Хибна ціль</string>
+  <string name="inv_path">Хибний шлях</string>
+  <string name="find_on_fs_only">Пошук тут не підтримується.</string>
+  <string name="on_fs_only">Це працює лише в локальній файловій системі.</string>
+  <string name="op_not_alwd">\"%1$s\" не дозволено - спершу оберіть щось</string>
+  <string name="oper_item_to">%1$s \"%2$s\" до:</string>
+  <string name="login_title">Увійти</string>
+  <string name="delete_title">Стерти</string>
+  <string name="delete_err">Нічого стирати</string>
+  <string name="delete_q">Стерти \"%1$s\"?</string>
+  <string name="rescan_q">Точно повторити пошук?</string>
+  <string name="search_done">Пошук завершено</string>
+  <string name="done">Готово</string>
+  <string name="interrupted">Перервано</string>
+  <string name="cant_copy_to_itself">Не можна копіювати теку \"%s\" до неї ж чи підтеки</string>
+  <string name="too_deep_hierarchy">Ієрархія файлів надто глибока</string>
+  <string name="nothing_found">Файлів не знайдено</string>
+  <string name="preparing">Підготовка&#8230;</string>
+  <string name="copying">Копіювання\n\"%s\"&#8230;</string>
+  <string name="copied_f">Скопійовано\n\"%s\"</string>
+  <string name="deleting">Стирання\n\"%s\"&#8230;</string>
+  <string name="deleting_a">Стирання&#8230;</string>
+  <string name="fail_del">Стирання незавершеного файлу \"%1$s\"&#8230;</string>
+  <string name="unpacking">Видобуток \n\"%s\"&#8230;</string>
+  <string name="unpacked_p">Видобуто \n\"%s\"</string>
+  <string name="packing">Пакування \n\"%s\"&#8230;</string>
+  <string name="retrieving">Отримання&#8230;\n\"%s\"</string>
+  <string name="uploading">Вивантаження&#8230;\n\"%s\"</string>
+  <string name="uploaded_p">Вивантажено \n\"%s\"</string>
+  <string name="loading">Завантаження&#8230;</string>
+  <string name="second">с</string>
+  <string name="canceled">Скасовано</string>
+  <string name="oom_err">Бракує пам\'яті</string>
+  <string name="unkn_err">Невідома помилка</string>
+  <string name="cant_md">Не вдалося створити теку \"%s\"</string>
+  <string name="cant_cd">Не вдалося оглянути теку \"%s\"</string>
+  <string name="file_exist">Файл \"%s\" вже існує</string>
+  <string name="sec_err">Проблема безпеки\n%s</string>
+  <string name="not_accs">Файл недоступний\n%s</string>
+  <string name="acc_err">Помилка доступу до файлу \"%1$s\"\n %2$s</string>
+  <string name="rtexcept">Помилка для файлу \"%1$s\"\n %2$s</string>
+  <string name="cant_move">Не вдалося посунути файл \"%s\"</string>
+  <string name="cant_create">Не вдалося створити файл \"%1$s\"\n%2$s</string>
+  <string name="cant_del">Не вдалося стерти \"%1$s\"</string>
+  <string name="dest_wrtble">Переконайтеся, що тека \"%s\" записна</string>
+  <string name="copied">скопійовано</string>
+  <string name="moved">посунуто</string>
+  <string name="deleted">стерто</string>
+  <string name="downloaded">завантажено</string>
+  <string name="uploaded">вивантажено</string>
+  <string name="packed">запаковано</string>
+  <string name="unpacked">видобуто</string>
+  <string name="remounted">Перемонтовано \"%1$s\" як \"%2$s\"</string>
+  <string name="tried_to_exec">Спробувано виконання \"%s\"</string>
+  <string name="verb_plural_sfx">&#160;</string>
+  <string name="item">шт.</string>
+  <string name="items">шт.</string>
+  <string name="items24">&#160;</string>
+  <string name="were">було</string>
+  <string name="was">було</string>
+  <string name="nothing">Нічого не</string>
+  <string name="report_0"><![CDATA[ Нічого не було ]]></string>
+  <string name="report_1"><![CDATA[ 1 шт. було ]]></string>
+  <string name="report_24">&#160;</string>
+  <string name="report_m"><![CDATA[ %1$d шт. було ]]></string>
+  <string name="sz_folder"><![CDATA[<b>Тека:</b> <small>%1$s</small>\n%2$d ф. ]]></string>
+  <string name="sz_dirnum"><![CDATA[ і %1$d підтек(и)%2$s]]></string>
+  <string name="sz_dirsfx_s"></string>
+  <string name="sz_dirsfx_p"></string>
+  <string name="sz_file"><![CDATA[<b>Файл:</b> \"<small>%s</small>\"]]></string>
+  <string name="sz_files"><![CDATA[<b>Файлів:</b> %d ]]></string>
+  <string name="sz_Nbytes"><![CDATA[\n<b>Вага:</b> %1$s]]></string>
+  <string name="sz_bytes">&#160;(<small>%d Б</small>)</string>
+  <string name="sz_lastmod"><![CDATA[ \n<b>Остання зміна:</b> ]]></string>
+  <string name="sz_created"><![CDATA[\n<b>Створення:</b> ]]></string>
+  <string name="sz_access"><![CDATA[\n<b>Доступ:</b> ]]></string>
+  <string name="sz_total"><![CDATA[<b>Усього:</b> %1$s\n<b>Вільно:</b> %2$s]]></string>
+  <string name="busy">Використовується!</string>
+  <string name="cd_title">Перейти</string>
+  <string name="not_supported">Дія не підтримується</string>
+  <string name="select_some">Нічого не обрано</string>
+  <string name="select">Обрати</string>
+  <string name="error">Помилка</string>
+  <string name="info">Інформація</string>
+  <string name="confirm">Точно?</string>
+  <string name="alert">Увага</string>
+  <string name="progress">Поступ</string>
+  <string name="inprogress">Файл у роботі</string>
+  <string name="server">Сервер:</string>
+  <string name="path">Шлях:</string>
+  <string name="active">Актив.</string>
+  <string name="domain">Домен:</string>
+  <string name="username">Користувач:</string>
+  <string name="password">Пароль:</string>
+  <string name="encrypted">Шифрування</string>
+  <string name="command">Команда:</string>
+  <string name="use_busybox">busybox</string>
+  <string name="user">Користувач</string>
+  <string name="group">Група</string>
+  <string name="other">Інші</string>
+  <string name="connect">З\'єднатися з</string>
+  <string name="cancel">Скасувати</string>
+  <string name="ftp_connected">З\'єднано з \"%1$s\"\n Від імені \"%2$s\"</string>
+  <string name="ftp_upload_failed">Не вдалося вивантажити \"%1$s\".\n Журнал FTP:\n\n%2$s</string>
+  <string name="ftp_mkdir_failed">Не вдалося створити теку \"%1$s\".\n Журнал FTP:\n\n\"%2$s\</string>
+  <string name="ftp_nologin">Ви не авторизовані!</string>
+  <string name="data_settings">Списки файлів</string>
+  <string name="layout_settings">Вигляд</string>
+  <string name="input_settings">Введення</string>
+  <string name="selection_zone_setup">Зона обрання</string>
+  <string name="summary_selection_zone_setup">Налаштувати, як обирати файли й теки</string>
+  <string name="sel_onright">Обрати праворуч</string>
+  <string name="highlight_zones">Підсвітити</string>
+  <string name="show_confirm">Підтвердження</string>
+  <string name="summary_show_confirm">Перепитати, чи виконати певні дії</string>
+  <string name="prefs_label">Параметри</string>
+  <string name="filetypes_label">Кольори за типом</string>
+  <string name="editor_label">Редактор тексту</string>
+  <string name="pictvw_label">Перегляд зображень</string>
+  <string name="textvw_label">Перегляд тексту</string>
+  <string name="perms_label">chmod / chown</string>
+  <string name="advanced">Додатково</string>
+  <string name="advanced_settings">Різне</string>
+  <string name="summary_advanced_settings">Більше параметрів досвідченим користувачам</string>
+  <string name="remote_open_size">Поріг ваги файлу</string>
+  <string name="summary_remote_open_size">Відкривати локально віддалені файли, не більші за…</string>
+  <string name="compare_content">Порівняти вміст</string>
+  <string name="summary_compare_content">Порівняти вміст файлів, схожих назвою й вагою</string>
+  <string name="send_content">Поширити провайдером вмісту</string>
+  <string name="summary_send_content">Вимкніть, якщо застосунок поширення не надає ContentResolver</string>
+  <string name="open_content">Відкрити провайдером вмісту</string>
+  <string name="summary_open_content">Спробувати відкрити файл через контент-провайдер, не напряму.</string>
+  <string name="panels_mode">Панелі пліч-о-пліч</string>
+  <string name="summary_panels_mode">Показати дві панелі одним розділеним екраном</string>
+  <string name="two_lines">По два рядки</string>
+  <string name="summary_two_lines">Показати атрибути файлу під назвою</string>
+  <string name="icons">Піктограми файлів</string>
+  <string name="show_icons">Увімкнути піктограми</string>
+  <string name="summary_show_icons">Показати піктограми файлів і тек, не лише текст</string>
+  <string name="toolbar_settings">Кнопки</string>
+  <string name="summary_toolbar_settings">Налаштувати кнопки внизу екрана</string>
+  <string name="show_actionbar">Увімкнути панель дій</string>
+  <string name="summary_show_actionbar">Показати панель дій угорі екрана. Потрібен перезапуск.</string>
+  <string name="show_toolbar">Увімкнути кнопки</string>
+  <string name="summary_show_toolbar">Показати кнопки внизу екрана</string>
+  <string name="show_hotkeys">Показати гарячі клавіші</string>
+  <string name="summary_show_hotkeys">Показати комбінації клавіш на певних кнопках</string>
+  <string name="show_emoji">Піктограми</string>
+  <string name="summary_show_emoji">Емодзі на кнопках</string>
+  <string name="show_caption">Текст</string>
+  <string name="summary_show_caption">Підписати кнопки</string>
+  <string name="toolbar_preference">Налаштувати кнопки</string>
+  <string name="summary_toolbar_preference">Обрати кнопки для показу, редагувати й упорядкувати їх</string>
+  <string name="tblist_label">Налаштувати кнопки</string>
+  <string name="finger_friendly">Зручний дотик</string>
+  <string name="summary_finger_friendly">Збільшити засоби взаємодії</string>
+  <string name="prevent_root">Застерегти про вихід із /sdcard</string>
+  <string name="summary_prevent_root">Попередити при виході в кореневу теку пристрою</string>
+  <string name="show_root">Показати додаткові пункти домівки</string>
+  <string name="summary_show_root">Додати домівці \"Root-режим\", \"Точки монтування\" й \"Медіасховище\"</string>
+  <string name="root_root">Автоматичний root-режим</string>
+  <string name="summary_root_root">Увімкнути root-режим при відкритті кореневої теки пристрою</string>
+  <string name="thumbnails">Увімкнути мініатюри</string>
+  <string name="summary_thumbnails">Показати мініатюри зображень, не піктограми</string>
+  <string name="pdf_preview">Огляд PDF</string>
+  <string name="summary_pdf_preview">Показати мініатюри PDF-файлів</string>
+  <string name="thumbnails_size">Розмір мініатюр</string>
+  <string name="summary_thumbnails_size">Встановити відсоток розміру піктограми</string>
+  <string name="font_size">Розмір шрифту</string>
+  <string name="summary_font_size">Встановити розмір шрифту</string>
+  <string name="left_panel_settings">Ліва панель</string>
+  <string name="right_panel_settings">Права панель</string>
+  <string name="detailed_view_SbS">Детальний режим пліч-о-пліч</string>
+  <string name="summary_detailed_view_SbS">Показати вагу й дату файлу в режимі пліч-о-пліч</string>
+  <string name="detailed_view_Ovr">Детальний режим перекриття</string>
+  <string name="summary_detailed_view_Ovr">Показати вагу й дату файлу в режимі перекриття</string>
+  <string name="sorting">Порядок</string>
+  <string name="summary_sorting">Обрати, як упорядкувати файли й теки</string>
+  <string name="sort_case">Нехтувати регістром</string>
+  <string name="summary_sort_case">Упорядкувати файли й теки без огляду на розмір літер</string>
+  <string name="show_hidden">Показати сховані файли</string>
+  <string name="summary_show_hidden">Показати файли й теки, назву яких починає крапка</string>
+  <string name="compatibility_settings">Кнопки пристрою</string>
+  <string name="summary_compatibility_settings">Замінити типову поведінку кнопок пристрою</string>
+  <string name="panels_sliding">Увімкнути жест гортання</string>
+  <string name="summary_panels_sliding">Перемкнути панель гортанням убік</string>
+  <string name="arrow_mode">Захопити клавіші стрілок</string>
+  <string name="summary_arrow_mode">Гортати лівою стрілкою, обрати правою</string>
+  <string name="volume_mode">Захопити кнопки гучності</string>
+  <string name="summary_volume_mode">Гортати стишенням, обрати наростанням</string>
+  <string name="exit_on_back">Вийти кнопкою Назад</string>
+  <string name="summary_exit_on_back">Закрити застосунок кнопкою Назад</string>
+  <string name="colors">Кольори</string>
+  <string name="summary_colors">Змінити кольори тла й тексту</string>
+  <string name="bgr_color_picker">Тло</string>
+  <string name="summary_bgr_color_picker">Забарвити основне тло</string>
+  <string name="fgr_color_picker">Текст</string>
+  <string name="summary_fgr_color_picker">Забарвити назви й атрибути файлів</string>
+  <string name="cur_color_picker">Фокус</string>
+  <string name="summary_cur_color_picker">Забарвити сфокусоване</string>
+  <string name="sel_color_picker">Тло обраного</string>
+  <string name="summary_sel_color_picker">Забарвити тло обраних файлів і заголовку поточної панелі</string>
+  <string name="sfg_color_picker">Текст обраного</string>
+  <string name="summary_sfg_color_picker">Забарвити текст обраних файлів і заголовку поточної панелі</string>
+  <string name="ttl_color_picker">Заголовок панелі</string>
+  <string name="summary_ttl_color_picker">Забарвити тло заголовку панелі</string>
+  <string name="btn_color_picker">Кнопки</string>
+  <string name="summary_btn_color_picker">Забарвити тло кнопок</string>
+  <string name="pick_color">Забарвити</string>
+  <string name="color">Колір</string>
+  <string name="color_themes">Теми</string>
+  <string name="summary_color_themes">Замінити всі кольори обраною темою</string>
+  <string name="language">Мова</string>
+  <string name="summary_language">Використати несистемну мову</string>
+  <string name="restart_to_apply_lang">Перезапустіть застосунок, щоб увімкнути мову</string>
+  <string name="editor_activity">Свій редактор тексту</string>
+  <string name="summary_editor_activity">Ввести назву Activity зовнішнього редактора тексту</string>
+  <string name="busybox_location">Шлях BusyBox</string>
+  <string name="summary_busybox_location">Вказати адресу виконуваного файлу BusyBox</string>
+  <string name="su_location">Шлях su</string>
+  <string name="summary_su_location">Вказати адресу виконуваного файлу su</string>
+  <string name="cpmv_err_ign">Нехтувати помилками зміни прав</string>
+  <string name="summary_cpmv_err_ign">Глушити помилки chmod і chown, копіюючи на файлову систему без підтримки дозволів.</string>
+  <string name="foreground_service">Високий пріоритет дій із файлами</string>
+  <string name="summary_foreground_service">Якщо сон пристрою перешкоджає діям із файлами, оберіть цей параметр. Під час роботи програми весь час буде видно піктограму сповіщення.</string>
+  <string name="system_notifications">Сповіщення застосунку</string>
+  <string name="summary_system_notifications">Дозволити чи заборонити певні категорії сповіщень.</string>
+  <string name="show_scrollbars">Бігунок гортання файлів</string>
+  <string name="summary_show_scrollbars">Вимкніть, щоб при гортанні файлових панелей не з\'являвся бігунок.</string>
+  <string name="sort_by_access_date">Сортувати за датою доступу</string>
+  <string name="summary_sort_by_access_date">Дозволити сортування за датою доступу до файлу</string>
+  <string name="scan_all">Сканувати всі файли</string>
+  <string name="summary_scan_all">Вимкніть, щоб сканувати лише медіафайли</string>
+  <string name="execute_command">Виконати команду</string>
+  <string name="nothing_to_open">Нічого відкривати</string>
+  <string name="remind_to_save">Не забудьте зберегти зміни</string>
+  <string name="saved">\"%1$s\" збережено.</string>
+  <string name="not_saved">Зберегти зміни?</string>
+  <string name="save">Зберегти</string>
+  <string name="save_as">Зберегти як&#8230;</string>
+  <string name="revert">Відкотити</string>
+  <string name="wrap">Перенести довгі рядки</string>
+  <string name="go_up">Вище</string>
+  <string name="go_top">Перш.</string>
+  <string name="go_end">Ост.</string>
+  <string name="go_next">Далі</string>
+  <string name="go_prev">Назад</string>
+  <string name="rot_right">Обернути праворуч</string>
+  <string name="rot_left">Обернути ліворуч</string>
+  <string name="encoding">Кодування:</string>
+  <string name="encoding_set">Нове кодування - \"%1$s\", перезавантажте файл. Або збережіть, щоб конвертувати.</string>
+  <string name="no_such_file">Файлу \"%1$s\" нема</string>
+  <string name="too_big_file">Файл \"%1$s\" завеликий</string>
+  <string name="binary_file">Двійковий файл \"%1$s\" легко пошкодити. Редагуйте обачно.</string>
+  <string name="cant_open_dir">\"%1$s\" - тека</string>
+  <string name="cant_view_empt">Файл \"%1$s\" порожній</string>
+  <string name="cant_open">Не вдалося відкрити файл</string>
+  <string name="cant_save">Не вдалося зберегти файл</string>
+  <string name="nav_warn">Відкриваєте теку системи - можливо, недоступну. Продовжити?</string>
+  <string name="no_such_folder">Тека \"%1$s\" недоступна.</string>
+  <string name="fav_added">\"%1$s\" додано в улюблені</string>
+  <string name="no_root">Нема root?</string>
+  <string name="run_command">Виконати команду</string>
+  <string name="manage">Керувати</string>
+  <string name="shortcuts">Ярлики</string>
+  <string name="pkg_name">Назва пакунку</string>
+  <string name="cert_subj">Суб\'єкт сертифіката</string>
+  <string name="cert_auth">Видавець сертифіката</string>
+  <string name="version">Версія</string>
+  <string name="version_code">Код версії</string>
+  <string name="target_sdk">Для SDK</string>
+  <string name="min_sdk">Мін. SDK</string>
+  <string name="data_dir">Дані</string>
+  <string name="inst_date">Дата</string>
+  <string name="pkg_size">Вага</string>
+  <string name="process">Назва процесу</string>
+  <string name="app_class">Клас застосунку</string>
+  <string name="affinity">Рід завдання</string>
+  <string name="permissions">Дозволи</string>
+  <string name="flags">Прапори</string>
+  <string name="not_exported">Activity не експортовано</string>
+  <string name="smb_missed">Не вдалося завантажити адаптер Samba: переконайтеся, що плагін Ghost Commander SMB встановлений.</string>
+  <string name="sftp_missed">Не вдалося завантажити адаптер SFTP: переконайтеся, що плагін Ghost Commander SFTP встановлений.</string>
+  <string name="manage_all_files">Відкриються системні налаштування, де вам слід дозволити Ghost Commander керувати всіма файлами.
+Без цього можливості застосунку будуть обмежені.</string>
+  <string name="need_perm">Доступу до сховища не дозволено! Щоб працювати з файловою системою напряму, дозвольте доступ.</string>
+  <string name="donate">Підтримати</string>
+  <string name="online_help">Онлайн-довідка</string>
+  <string name="donation">Невелика пожертва підтримає майбутню розробку.\n
+Торкніться \"Гаразд\", щоб перейти на сайт PayPal.\n
+\"Скасувати\", щоб «Ghost Commander» керував файлами безкоштовно далі.\n</string>
+  <string name="about_text"><![CDATA[<h1>Ghost Commander v%1$s</h1>
+<h4>Менеджер файлів від Ghost Squared.</h4>
+<p>В інтернеті:<br/>
+<a href="https://sites.google.com/site/ghostcommander1/">Сайт</a><br/>
+<a href="http://sourceforge.net/projects/ghostcommander/">Вихідний код</a><br/>
+Допоможіть <a href="https://crowdin.com/project/ghost-commander">перекласти</a> своєю мовою.
+</p>
+<p>Опишіть вади/пропозиції листом:<br/><a href="mailto:ghost.sq2@gmail.com">ghost.sq2@gmail.com</a></p>
+%2$s
+<p>Застосунок корисний? Підтримайте <a href="market://search?q=pname:com.ghostsq.commander.donate">придбанням версії</a>.
+%3$s
+</p>
+<h3>ВІДМОВА ВІД ВІДПОВІДАЛЬНОСТІ:</h3>
+<p>
+Використовуючи це програмне забезпечення, ви приймаєте такі умови:
+Автор цього програмного забезпечення не несе відповідальності за жодну шкоду, втрату інформації/даних,
+непрямі збитки чи будь-які проблеми, що є чи могли бути спричинені використанням цього програмного забезпечення.
+Ви погоджуєтеся використовувати це програмне забезпечення на винятково свій ризик. Якщо ви не згодні з умовами вище,
+негайно припиніть використання цього програмного забезпечення й видаліть його.</p>]]></string>
+  <string name="keys_text"><![CDATA[<h3>ОБРАТИ ФАЙЛИ</h3>
+<p>
+Щоб обрати файли чи теки, натисніть їхні рядки <b>праворуч</b>, а щоб відкрити, - <b>ліворуч</b>.
+Тобто один бік активує пункти, а інший обирає.
+</p>
+<h3>КОПІЮВАТИ ЧИ ПОСУНУТИ</h3>
+<p>
+Копіюйте чи посуньте файли й теки, спершу відкривши теку-ціль в одній панелі, а тоді прогорнувши до іншої панелі (чи натиснувши її) та обравши пункти,
+які слід передати. Нарешті торкніть кнопку \"Коп.\" чи \"Посун.\".
+</p>
+<h3>ЗОВНІШНІ КАРТИ Й USB OTG</h3>
+<p>
+Системні налаштування пристрою з Android 11 (R) або новіше запитають вас, чи дозволити застосунку Ghost Commander керувати всіма файлами.
+Коли погодитесь, файли зовнішніх томів (як-от USB OTG) стануть повністю доступні в рідному режимі.
+Старіші системи забороняють писати напряму файли на зовнішній носій.
+Якщо версія ОС вашого пристрою 5 чи вище, редагуйте файли за такими адресами
+в режимі \"Storage Access Framework\" (SAF).<br/>
+Режим SAF при першому доступі запитує бажану адресу й запам\'ятовує її.
+Щоб змінити адресу (коли під\'єднуєте інший пристрій),
+затисніть пункт SAF екрану \"home:\" і оберіть \"Відкрити\".
+</p>
+<h3>ZIP-ФАЙЛИ</h3>
+<p>
+Ghost Commander відкриває ZIP-архіви, ніби теки.
+Архіви інших типів не підтримуються.
+</p>
+<h3>ЗМІНИТИ АДРЕСУ</h3>
+<p>
+Щоб увести адресу вручну (й побачити спадний список ваших
+улюблених), затисніть верхівку панелі й цим відкрийте редактор
+адреси.\n
+Впишіть URI ресурсу в редактор адреси так:
+</p><p>
+<b>ftp://</b><i>хост.укр</i><b>/</b><i>тека</i><br/>
+- анонімний FTP
+</p><p>
+<b>ftp://</b><i>користувач</i><b>:</b><i>пароль</i><b>@</b><i>хост</i><b>/</b><i>тека</i><br/>
+- ідентифікований FTP
+</p><p>
+<b>sftp://</b><i>користувач</i><b>:</b><i>пароль</i><b>@</b><i>хост</i><b>/</b><i>тека</i><br/>
+- SSH FTP (з плагіном)<br/>
+Якщо маєте файл закритого ключа автентифікації, завантажте його в SFTP Keys Manager.
+Для цього затисніть пункт SFTP домівки й оберіть Параметри -> Менеджер ключів PEM.
+Назвіть ключ точною назвою хоста, з яким плануєте з\'єднатись.
+При автентифікації ключа, пароль до вашого файлу ключа буде паролем користувача.
+</p><p>
+<b>smb://</b><i>домен</i><b>;</b><i>користувач</i><b>:</b><i>пароль</i><b>@</b><i>сервер</i><b>/</b><i>спільне</i><br/>
+- спільне Windows (із плагіном)
+</p><p>
+<b>root:/</b><i>шлях/до/теки</i><br/>
+- Root-режим<br/>
+Використовувати можливості режиму root (суперкористувача)
+в Ghost Commander слід обачно. Для них потрібен рутований пристрій.
+Також слід встановити BusyBox і вказати шлях до нього в параметрах.<br/>
+Для показу пункту Root у домівці, ввімкніть відповідну опцію в параметрах застосунку.
+</p>
+<h3>ПЛАГІНИ</h3>
+<p>
+Плагіни, встановлювані окремо, надають доступ до
+спільних тек Windows, протоколу SSH-передачі файлів, WebDAV, а також
+служб хмарного сховища: Box, Dropbox і Google Drive.
+</p>
+<h3>ГАРЯЧІ КЛАВІШІ</h3>
+<p>(Для пристроїв із клавіатурою)<br/>
+<b><i>Гучніше</i></b> - обрати файл чи теку<br/>
+<b><i>Тихіше</i></b> - перемкнути панель<br/>
+<b>+</b>, <b>-</b> - обрати чи зняти вибір у поточній теці<br/>
+<b>(</b>, <b>)</b> - ввести адресу вручну чи переглянути улюблені<br/>
+<b>*</b> - додати поточну теку в улюблені<br/>
+<b>\"</b> - показати докладну інформацію про обрані<br/>
+<b>=</b> - показати цю ж адресу в іншій панелі (зрівняти)<br/>
+<b>1</b> - довідка<br/>
+<b>2</b> - перейменувати обране<br/>
+<b>4</b> - редагувати обране<br/>
+<b>5</b> - копіювати обрані<br/>
+<b>6</b> - посунути обрані<br/>
+<b>7</b> - створити теку<br/>
+<b>8</b> - стерти обрані<br/>
+<b>9</b> - відкрити параметри<br/>
+<b>0</b> - закрити застосунок<br/>
+<b>[А-я]</b> - швидкий пошук<br/>
+</p>
+<p>
+<a href="https://sites.google.com/site/ghostcommander1/info">Більше довідки онлайн…</a>
+</p>]]></string>
+  <string name="license_text"><![CDATA[<h3>Ghost Commander</h3>
+<p>Менеджер файлів</p>
+<p>Copyright © 2009-2025 Ghost Squared</p>
+<p>Ця програма - вільне програмне забезпечення; Ви можете розповсюджувати її та/або вносити зміни відповідно до умов Загальної Публічної Ліцензії GNU у тому вигляді, у якому вона була опублікована Фундацією Вільного Програмного Забезпечення; або 3ї версії Ліцензії, або (на Ваш розсуд) будь-якої більш пізньої версії.</p>
+<p>Ця програма розповсюджується із сподіванням, що вона виявиться корисною, але БЕЗ БУДЬ-ЯКОЇ ҐАРАНТІЇ, без навіть УЯВНОЇ ҐАРАНТІЇ КОМЕРЦІЙНОЇ ПРИДАТНОСТІ чи ВІДПОВІДНОСТІ БУДЬ-ЯКОМУ ПЕВНОМУ ЗАСТОСУВАННЮ. Зверніться до Загальної Публічної Ліцензії GNU за подробицями.</p>
+<p>Ви мали отримати копію Загальної Публічної Ліцензії GNU разом з цією програмою. Якщо ні, перегляньте http://www.gnu.org/licenses/</p>]]></string>
+</resources>
