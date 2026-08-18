@@ -133,7 +133,6 @@ public interface CommanderAdapter {
                             LIST_STATE = 0x010000,  STATE_IDLE = 0x000000,    STATE_BUSY = 0x010000,
                             MODE_CLONE = 0x020000, NORMAL_MODE = 0x000000,    CLONE_MODE = 0x020000,
                             MODE_DIRSZ = 0x040000,    NO_DIRSZ = 0x000000,    SHOW_DIRSZ = 0x040000,
-                             MODE_OPSM = 0x080000,   OPSM_FLAT = 0x000000,      OP_AS_SM = 0x080000,
                           MODE_SORTING = 0x700000,   SORT_NAME = 0x000000,
                                                      SORT_EXT  = 0x100000,
                                                      SORT_SIZE = 0x200000,
@@ -156,7 +155,6 @@ public interface CommanderAdapter {
      *  <p>     {@code MODE_ATTR}     to show additional attributes  
      *  <p>     {@code MODE_ROOT}     to show the root and mount in the home adapter  
      *  <p>     {@code MODE_ICONS}    to show the file icons  
-     *  <p>     {@code MODE_OPSM}     file operations as a submenu of the context menu
      *  <p>     {@code LIST_STATE}    set the current state taken from {@link AbsListView.OnScrollListener#onScrollStateChanged}
      *  <p>     {@code SET_TBN_SIZE}  to pass the integer - the size of the thubnails  
      *  <p>     {@code SET_FONT_SIZE} to pass the font size     
