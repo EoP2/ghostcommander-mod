@@ -23,9 +23,6 @@
                   />
           </menu>
     </item>
-    <item android:id="@+id/action_sort"
-          android:title="@string/sorting"
-          android:showAsAction="always"/>
     <item android:id="@+id/action_nav"
           android:title="@string/go_button"
           android:showAsAction="always">

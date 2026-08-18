@@ -23,6 +23,8 @@
 
     <item android:id="@+id/new_item"
           android:title="@string/new_item"/>
+    <item android:id="@+id/action_sort"
+          android:title="@string/sorting"/>
     <item android:id="@+id/oth_sh_this"
          android:title="@string/oth_sh_this"/>
     <item android:id="@+id/toggle_panels_mode"
