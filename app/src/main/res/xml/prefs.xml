@@ -288,7 +288,7 @@
                 android:key="show_confirm"
                 android:title="@string/show_confirm"
                 android:summary="@string/summary_show_confirm"
-                android:defaultValue="true"/>
+                android:defaultValue="false"/>
         <CheckBoxPreference
                 android:key="prevent_root"
                 android:title="@string/prevent_root"
