@@ -857,12 +857,10 @@ public abstract class CommanderAdapterBase extends BaseAdapter implements Comman
                         menu.add( CM_OPERATION, R.id.F4t, CM_OPERATION, R.string.edit_title );
                 }
             }
-            Menu opsm = android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1 && ( mode & MODE_OPSM ) != 0 ?
-                    menu.addSubMenu( CM_OPERATION, Menu.NONE, CM_OPERATION, R.string.operation ) : menu;
             if( hasFeature( Feature.F5 ) || hasFeature( Feature.F6 ) )
-                opsm.add( CM_OPERATION, R.id.F5F6t, CM_OPERATION, R.string.F5F6 );
+                menu.add( CM_OPERATION, R.id.F5F6t, CM_OPERATION, R.string.F5F6 );
             if( hasFeature( Feature.F8 ) )
-                opsm.add( CM_OPERATION, R.id.F8t, CM_OPERATION, R.string.delete_title );
+                menu.add( CM_OPERATION, R.id.F8t, CM_OPERATION, R.string.delete_title );
             if( hasFeature( Feature.LOCAL ) && file && num <= 1 )
                 menu.add( CM_INTEGRATION, Commander.OPEN_WITH, CM_INTEGRATION, R.string.open_with );
             if( hasFeature( Feature.SEND ) && file )
