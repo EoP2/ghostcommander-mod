@@ -82,11 +82,11 @@
   <string name="search_file">搜索</string>
   <string name="replace">替换</string>
   <string name="menu">菜单</string>
-  <string name="sort_by_name">名称</string>
-  <string name="sort_by_ext">类别</string>
-  <string name="sort_by_size">大小</string>
-  <string name="sort_by_date">时间</string>
-  <string name="sort_by_adate">访问时间</string>
+  <string name="sort_by_name">按名称</string>
+  <string name="sort_by_ext">按类别</string>
+  <string name="sort_by_size">按大小</string>
+  <string name="sort_by_date">按时间</string>
+  <string name="sort_by_adate">按访问时间</string>
   <string name="sel_dlg">选择</string>
   <string name="select_between">选择范围</string>
   <string name="select2">至少选择两个文件才能确定范围</string>
@@ -161,7 +161,6 @@
   <string name="show_matched">显示匹配项</string>
   <string name="hide_matched">隐藏匹配项</string>
   <string name="launch">启动</string>
-  <string name="operation">操作</string>
   <string name="view_title">查看</string>
   <string name="edit_title">编辑</string>
   <string name="new_item_prompt">名称：</string>
@@ -370,9 +369,9 @@ Use \%# for a file counter, \%## with 2 digits and so on.</string>
   <string name="left_panel_settings">左面板设置</string>
   <string name="right_panel_settings">右面板设置</string>
   <string name="detailed_view_SbS">在并排模式中显示详情</string>
-  <string name="summary_detailed_view_SbS">在并排模式中显示文件的大小和日期</string>
+  <string name="summary_detailed_view_SbS">在并排模式中显示文件的大小和时间</string>
   <string name="detailed_view_Ovr">在重叠模式中显示详情</string>
-  <string name="summary_detailed_view_Ovr">在重叠模式中显示文件的大小和日期</string>
+  <string name="summary_detailed_view_Ovr">在重叠模式中显示文件的大小和时间</string>
   <string name="sorting">排序</string>
   <string name="summary_sorting">在列表中如何排序项目</string>
   <string name="sort_case">忽略大小写排序</string>
@@ -472,7 +471,7 @@ Use \%# for a file counter, \%## with 2 digits and so on.</string>
   <string name="target_sdk">目标 SDK</string>
   <string name="min_sdk">Min SDK</string>
   <string name="data_dir">Data</string>
-  <string name="inst_date">安装日期</string>
+  <string name="inst_date">安装时间</string>
   <string name="pkg_size">大小</string>
   <string name="process">进程名</string>
   <string name="app_class">应用系列</string>
