@@ -294,8 +294,6 @@ public class ListHelper {
                 thubnails_size = Integer.parseInt( sp.getString( "thumbnails_size", "200" ) );
             ca.setMode( CommanderAdapter.SET_TBN_SIZE, thubnails_size );
 
-            ca.setMode( CommanderAdapter.MODE_OPSM, sp.getBoolean( "show_toolbar", true ) ? CommanderAdapter.OP_AS_SM : CommanderAdapter.OPSM_FLAT );
-
             if( ca instanceof HomeAdapter )
                 ca.setMode( CommanderAdapter.MODE_ROOT, sp.getBoolean( "show_root", false ) ? CommanderAdapter.ROOT_MODE
                         : CommanderAdapter.BASIC_MODE );
