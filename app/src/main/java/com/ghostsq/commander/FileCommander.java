@@ -50,6 +50,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.RadioGroup;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
@@ -1001,65 +1002,64 @@ public class FileCommander extends Activity implements Commander, ServiceConnect
         final CommanderAdapter ca = panels.getListAdapter( true );
         if( ca == null ) return;
 
-        ArrayList<Integer> criteria = new ArrayList<Integer>();
-        ArrayList<String>  labels   = new ArrayList<String>();
-        if( ca.hasFeature( CommanderAdapter.Feature.BY_NAME ) ) {
-            criteria.add( CommanderAdapter.SORT_NAME );
-            labels.add( getString( R.string.sort_by_name ) );
-        }
-        if( ca.hasFeature( CommanderAdapter.Feature.BY_EXT ) ) {
-            criteria.add( CommanderAdapter.SORT_EXT );
-            labels.add( getString( R.string.sort_by_ext ) );
-        }
-        if( ca.hasFeature( CommanderAdapter.Feature.BY_SIZE ) ) {
-            criteria.add( CommanderAdapter.SORT_SIZE );
-            labels.add( getString( R.string.sort_by_size ) );
-        }
-        if( ca.hasFeature( CommanderAdapter.Feature.BY_DATE ) ) {
-            criteria.add( CommanderAdapter.SORT_DATE );
-            labels.add( getString( R.string.sort_by_date ) );
-        }
+        View sortView = getLayoutInflater().inflate( R.layout.sort_dlg, null );
+        final RadioGroup rg = sortView.findViewById( R.id.sort_criteria );
+
+        boolean any = false;
+        any |= setSortRadioVisible( sortView, R.id.sort_rb_name, ca.hasFeature( CommanderAdapter.Feature.BY_NAME ) );
+        any |= setSortRadioVisible( sortView, R.id.sort_rb_ext,  ca.hasFeature( CommanderAdapter.Feature.BY_EXT ) );
+        any |= setSortRadioVisible( sortView, R.id.sort_rb_size, ca.hasFeature( CommanderAdapter.Feature.BY_SIZE ) );
+        any |= setSortRadioVisible( sortView, R.id.sort_rb_date, ca.hasFeature( CommanderAdapter.Feature.BY_DATE ) );
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences( this );
-        if( sharedPref.getBoolean( "sort_by_access_date", false ) && ca.hasFeature( CommanderAdapter.Feature.BY_ACCESS_DATE ) ) {
-            criteria.add( CommanderAdapter.SORT_ACCD );
-            labels.add( getString( R.string.sort_by_adate ) );
-        }
-        if( criteria.isEmpty() )
+        boolean showAccessDate = sharedPref.getBoolean( "sort_by_access_date", false )
+                               && ca.hasFeature( CommanderAdapter.Feature.BY_ACCESS_DATE );
+        any |= setSortRadioVisible( sortView, R.id.sort_rb_adate, showAccessDate );
+        if( !any )
             return;
 
-        final int[] criteria_a = new int[criteria.size()];
-        for( int i = 0; i < criteria_a.length; i++ )
-            criteria_a[i] = criteria.get( i );
+        int targetId = sortCriterionToId( panels.getSortingMode() );
+        if( sortView.findViewById( targetId ).getVisibility() != View.VISIBLE )
+            targetId = R.id.sort_rb_name;
+        rg.check( targetId );
 
-        int cur_criterion = panels.getSortingMode();
-        int checked = 0;
-        for( int i = 0; i < criteria_a.length; i++ )
-            if( criteria_a[i] == cur_criterion ) {
-                checked = i;
-                break;
-            }
-
-        final int[] chosen = { criteria_a[checked] };
-
-        new AlertDialog.Builder( this )
+        final AlertDialog dialog = new AlertDialog.Builder( this )
             .setTitle( R.string.sorting )
-            .setSingleChoiceItems( labels.toArray( new String[0] ), checked,
-                new DialogInterface.OnClickListener() {
-                    public void onClick( DialogInterface dialog, int which ) {
-                        chosen[0] = criteria_a[which];
-                    }
-                } )
-            .setPositiveButton( R.string.sort_asc, new DialogInterface.OnClickListener() {
-                public void onClick( DialogInterface dialog, int which ) {
-                    panels.changeSorting( chosen[0], true );
-                }
-            } )
-            .setNegativeButton( R.string.sort_desc, new DialogInterface.OnClickListener() {
-                public void onClick( DialogInterface dialog, int which ) {
-                    panels.changeSorting( chosen[0], false );
-                }
-            } )
-            .show();
+            .setView( sortView )
+            .create();
+
+        View.OnClickListener cl = new View.OnClickListener() {
+            @Override
+            public void onClick( View v ) {
+                int criterion = sortIdToCriterion( rg.getCheckedRadioButtonId() );
+                panels.changeSorting( criterion, v.getId() == R.id.sort_asc_btn );
+                dialog.dismiss();
+            }
+        };
+        sortView.findViewById( R.id.sort_asc_btn  ).setOnClickListener( cl );
+        sortView.findViewById( R.id.sort_desc_btn ).setOnClickListener( cl );
+
+        dialog.show();
+    }
+
+    private boolean setSortRadioVisible( View parent, int id, boolean visible ) {
+        parent.findViewById( id ).setVisibility( visible ? View.VISIBLE : View.GONE );
+        return visible;
+    }
+
+    private int sortCriterionToId( int criterion ) {
+        if( criterion == CommanderAdapter.SORT_EXT )  return R.id.sort_rb_ext;
+        if( criterion == CommanderAdapter.SORT_SIZE ) return R.id.sort_rb_size;
+        if( criterion == CommanderAdapter.SORT_DATE ) return R.id.sort_rb_date;
+        if( criterion == CommanderAdapter.SORT_ACCD ) return R.id.sort_rb_adate;
+        return R.id.sort_rb_name;
+    }
+
+    private int sortIdToCriterion( int id ) {
+        if( id == R.id.sort_rb_ext )   return CommanderAdapter.SORT_EXT;
+        if( id == R.id.sort_rb_size )  return CommanderAdapter.SORT_SIZE;
+        if( id == R.id.sort_rb_date )  return CommanderAdapter.SORT_DATE;
+        if( id == R.id.sort_rb_adate ) return CommanderAdapter.SORT_ACCD;
+        return CommanderAdapter.SORT_NAME;
     }
 
     public class SimpleHandler extends Handler {
