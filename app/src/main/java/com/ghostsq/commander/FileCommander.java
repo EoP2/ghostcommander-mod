@@ -87,7 +87,7 @@ public class FileCommander extends Activity implements Commander, ServiceConnect
     private ArrayList<Dialogs> dialogs;
     private ProgressDialog waitPopup;
     public  Panels panels;
-    private boolean on = false, exit = false, dont_restore = false, sxs_auto = true, show_confirm = true, back_exits = false,
+    private boolean on = false, exit = false, dont_restore = false, sxs_auto = true, show_confirm = false, back_exits = false,
             ab = false, start_failed = false;
     private int file_exist_resolution = Commander.UNKNOWN;
     private IBackgroundWork background_work;
@@ -1886,7 +1886,7 @@ public class FileCommander extends Activity implements Commander, ServiceConnect
     }
 
     private void setConfirmMode( SharedPreferences sharedPref ) {
-        show_confirm = sharedPref.getBoolean( "show_confirm", true );
+        show_confirm = sharedPref.getBoolean( "show_confirm", false );
     }
 
     public final boolean isPickMode() {
