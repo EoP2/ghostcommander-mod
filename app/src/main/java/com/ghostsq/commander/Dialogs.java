@@ -342,6 +342,7 @@ public class Dialogs implements DialogInterface.OnClickListener {
         Utils.changeLanguage( owner );
         try {
             TextView prompt = (TextView)dialog.findViewById( R.id.prompt );
+            EditText edit = (EditText)dialog.findViewById( R.id.edit_field );
             TextView dlgTitle = (TextView)dialog.findViewById( R.id.dlg_title );
             if( id == PROGRESS_DIALOG ) {
                 TextView t = (TextView)dialogObj.findViewById( R.id.text );
