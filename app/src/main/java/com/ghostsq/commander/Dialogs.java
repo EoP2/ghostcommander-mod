@@ -213,7 +213,6 @@ public class Dialogs implements DialogInterface.OnClickListener {
                 final View twoActionView = factory.inflate( R.layout.two_action, null );
                 dialogObj = new AlertDialog.Builder( owner )
                         .setView( twoActionView )
-                        .setTitle( " " )
                         .create();
                 return dialogObj;
             }
@@ -343,7 +342,7 @@ public class Dialogs implements DialogInterface.OnClickListener {
         Utils.changeLanguage( owner );
         try {
             TextView prompt = (TextView)dialog.findViewById( R.id.prompt );
-            EditText edit = (EditText)dialog.findViewById( R.id.edit_field );
+            TextView dlgTitle = (TextView)dialog.findViewById( R.id.dlg_title );
             if( id == PROGRESS_DIALOG ) {
                 TextView t = (TextView)dialogObj.findViewById( R.id.text );
                 if( t != null )
@@ -381,7 +380,8 @@ public class Dialogs implements DialogInterface.OnClickListener {
                 return;
             }
             if( id == R.id.new_item ) {
-                dialog.setTitle( R.string.new_item );
+                if( dlgTitle != null )
+                    dlgTitle.setText( R.string.new_item );
                 if( prompt != null )
                     prompt.setText( R.string.new_item_prompt );
                 if( edit != null ) {
@@ -414,7 +414,8 @@ public class Dialogs implements DialogInterface.OnClickListener {
                 return;
             }
             if( id == R.id.F5F6 || id == R.id.F5F6t ) {
-                dialog.setTitle( R.string.F5F6 );
+                if( dlgTitle != null )
+                    dlgTitle.setText( R.string.F5F6 );
                 final boolean touch = dialogId == R.id.F5F6t;
                 if( prompt != null ) {
                     String summ = owner.panels.getActiveItemsSummary( touch );
