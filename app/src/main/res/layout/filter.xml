@@ -8,7 +8,10 @@
   <RelativeLayout
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:padding="20dip">
+      android:paddingTop="16dip"
+      android:paddingLeft="20dip"
+      android:paddingRight="20dip"
+      android:paddingBottom="8dp">
 
     <TextView
         android:id="@+id/dlg_title"

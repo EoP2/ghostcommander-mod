@@ -1,15 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dip"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/dlg_title"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:layout_marginStart="10dip"
-        android:layout_marginBottom="6dip"
+        android:layout_marginTop="16dip"
+        android:layout_marginStart="20dip"
+        android:layout_marginBottom="10dip"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="bold"
         />
@@ -18,7 +18,7 @@
         android:id="@+id/msg_text"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_marginStart="10dip"
+        android:layout_marginStart="20dip"
         android:text=" !!!!!!!!"
         />
 
@@ -26,7 +26,7 @@
         android:id="@+id/conflict_details"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_marginStart="20dip"
+        android:layout_marginStart="30dip"
         android:text=" sssssss"
         />
 
