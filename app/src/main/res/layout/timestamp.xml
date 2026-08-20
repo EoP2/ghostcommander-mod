@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     android:padding="20sp">
 
+    <TextView
+        android:id="@+id/dlg_title"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="10dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:gravity="left"
+        />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

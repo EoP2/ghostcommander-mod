@@ -10,11 +10,23 @@
       android:layout_height="wrap_content"
       android:padding="8dp">
 
+    <TextView
+        android:id="@+id/dlg_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="6dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:gravity="left"
+        />
+
     <CheckBox
         android:id="@+id/for_dirs"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/dlg_title"
         android:layout_alignParentRight="true"
         android:textSize="11sp"
         android:checked="true"
@@ -34,6 +46,7 @@
         android:id="@+id/prompt"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/dlg_title"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@id/for_dirs"
         android:text="@string/filemask" />

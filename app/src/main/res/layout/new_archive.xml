@@ -15,7 +15,17 @@
     android:layout_marginLeft="20dip"
     android:layout_marginRight="20dip"
     >
-    
+
+    <TextView
+        android:id="@+id/dlg_title"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="8dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:gravity="left"
+        />
+
     <!-- first row: file path -->
     
       <TextView 
