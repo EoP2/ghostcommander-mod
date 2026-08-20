@@ -133,10 +133,9 @@ public class Dialogs implements DialogInterface.OnClickListener {
         taskId = 0L;
     }
 
-    private AlertDialog build( View inner_view, String title ) {
+    private AlertDialog build( View inner_view ) {
         AlertDialog ad = new AlertDialog.Builder( owner )
                 .setView( inner_view )
-                .setTitle( title )
                 .setPositiveButton( R.string.dialog_ok, this )
                 .setNegativeButton( R.string.dialog_cancel, this )
                 .create();
@@ -186,25 +185,25 @@ public class Dialogs implements DialogInterface.OnClickListener {
             LayoutInflater factory = LayoutInflater.from( owner );
             if( id == INPUT_DIALOG || id == R.id.open_zip ) {
                 final View openArchiveView = factory.inflate( R.layout.open_archive, null );
-                dialogObj = build( openArchiveView, " " );
+                dialogObj = build( openArchiveView );
                 return dialogObj;
             }
             if( id == R.id.new_zip
                     || id == R.id.new_zipt ) {
                 final View newArchiveView = factory.inflate( R.layout.new_archive, null );
-                dialogObj = build( newArchiveView, " " );
+                dialogObj = build( newArchiveView );
                 return dialogObj;
             }
             if( id == R.id.set_date ) {
                 final View timestampView = factory.inflate( R.layout.timestamp, null );
-                dialogObj = build( timestampView, owner.getString( R.string.set_date ) );
+                dialogObj = build( timestampView );
                 return dialogObj;
             }
             if( id == R.id.F2
              || id == R.id.F2t
              || id == R.id.open_via_SAF ) {
                 final View textEntryView = factory.inflate( R.layout.input, null );
-                dialogObj = build( textEntryView, " " );
+                dialogObj = build( textEntryView );
                 return dialogObj;
             }
             if( id == R.id.F5F6
@@ -220,7 +219,6 @@ public class Dialogs implements DialogInterface.OnClickListener {
                 final View selectView = factory.inflate( R.layout.select_unselect, null );
                 dialogObj = new AlertDialog.Builder( owner )
                         .setView( selectView )
-                        .setTitle( " " )
                         .create();
                 return dialogObj;
             }
@@ -230,25 +228,26 @@ public class Dialogs implements DialogInterface.OnClickListener {
                 if( search_params != null )
                     search_params.setVisibility( View.VISIBLE );
                 setScaleSpinner( searchView );
-                dialogObj = build( searchView, " " );
+                dialogObj = build( searchView );
                 return dialogObj;
             }
             if( id == R.id.filter ) {
                 final View filterView = factory.inflate( R.layout.filter, null );
-                dialogObj = build( filterView, " " );
+                dialogObj = build( filterView );
                 setScaleSpinner( filterView );
                 return dialogObj;
             }
             if( id == LOGIN_DIALOG ) {
                 final View textEntryView = factory.inflate( R.layout.login, null );
-                dialogObj = build( textEntryView, "Login" );
+                dialogObj = build( textEntryView );
                 return dialogObj;
             }
             if( id == FILE_EXIST_DIALOG ) {
                 final View oc = factory.inflate( R.layout.file_exists, null );
+                TextView fileExistsTitle = oc.findViewById( R.id.dlg_title );
+                if( fileExistsTitle != null )
+                    fileExistsTitle.setText( R.string.error );
                 dialogObj = new AlertDialog.Builder( owner )
-                        .setIcon( android.R.drawable.ic_dialog_alert )
-                        .setTitle( R.string.error )
                         .setView( oc )
                         .setNegativeButton( R.string.dialog_cancel, this )
                         .create();
@@ -257,7 +256,7 @@ public class Dialogs implements DialogInterface.OnClickListener {
             if( id == R.id.F8
                     || id == R.id.F8t ) {
                 final View deleteView = factory.inflate( R.layout.delete, null );
-                return dialogObj = build( deleteView, owner.getString( R.string.delete_title ) );
+                return dialogObj = build( deleteView );
             }
             if( id == PROGRESS_DIALOG ) {
                 final View progressView = factory.inflate( R.layout.progress, null );
@@ -355,7 +354,8 @@ public class Dialogs implements DialogInterface.OnClickListener {
                 String op = owner.getString( R.string.to_rename );
                 if( op == null || op.length() <= 1 )
                     op = op_title;
-                dialog.setTitle( op_title );
+                if( dlgTitle != null )
+                    dlgTitle.setText( op_title );
 
                 String item_name = owner.panels.getSelectedItemName( R.id.F2t == id );
                 if( item_name == null ) {
@@ -371,7 +371,8 @@ public class Dialogs implements DialogInterface.OnClickListener {
                 return;
             }
             if( id == R.id.open_via_SAF ) {
-                dialog.setTitle( owner.getString( R.string.saf ) );
+                if( dlgTitle != null )
+                    dlgTitle.setText( owner.getString( R.string.saf ) );
                 prompt.setText( owner.getString( R.string.saf_pick ) );
                 if( edit != null ) {
                     edit.setWidth( owner.getWidth() - 80 );
@@ -472,7 +473,8 @@ public class Dialogs implements DialogInterface.OnClickListener {
             }
             if( id == R.id.open_zip ) {
                 final String op = owner.getString( R.string.open );
-                dialog.setTitle( op );
+                if( dlgTitle != null )
+                    dlgTitle.setText( op );
                 prompt.setText( owner.getString( R.string.file_name ) );
                 TextView file_path = (TextView)dialog.findViewById( R.id.file_path );
                 file_path.setText( this.activeFileName );
@@ -497,7 +499,8 @@ public class Dialogs implements DialogInterface.OnClickListener {
 
             if( id == R.id.new_zip || id == R.id.new_zipt ) {
                 final String op = owner.getString( R.string.create_zip_title );
-                dialog.setTitle( op );
+                if( dlgTitle != null )
+                    dlgTitle.setText( op );
                 if( prompt != null ) {
                     String summ = owner.panels.getActiveItemsSummary( R.id.new_zipt == id );
                     if( summ == null ) {
@@ -548,6 +551,8 @@ public class Dialogs implements DialogInterface.OnClickListener {
                 return;
             }
             if( id == R.id.set_date ) {
+                if( dlgTitle != null )
+                    dlgTitle.setText( R.string.set_date );
                 if( timestamp <= 0 )
                     timestamp = new Date().getTime();
                 java.text.DateFormat df = DateFormat.getDateFormat( owner );
@@ -612,10 +617,12 @@ public class Dialogs implements DialogInterface.OnClickListener {
             }
             if( id == R.id.find || id == R.id.filter ) {
                 if( id == R.id.filter ) {
-                    dialog.setTitle( R.string.filter );
+                    if( dlgTitle != null )
+                        dlgTitle.setText( R.string.filter );
                 } else
                 if( id == R.id.find ) {
-                    dialog.setTitle( R.string.search_title );
+                    if( dlgTitle != null )
+                        dlgTitle.setText( R.string.search_title );
                     if( prompt != null )
                         prompt.setText( R.string.search_prompt );
                 }
@@ -670,7 +677,8 @@ public class Dialogs implements DialogInterface.OnClickListener {
                 return;
             }
             if( id == R.id.sel_dlg ) {
-                dialog.setTitle( R.string.sel_dlg );
+                if( dlgTitle != null )
+                    dlgTitle.setText( R.string.sel_dlg );
                 if( edit != null ) {
                     Editable edit_text = edit.getText();
                     if( edit_text.length() == 0 )
@@ -705,7 +713,6 @@ public class Dialogs implements DialogInterface.OnClickListener {
                     dialog.findViewById( R.id.username_prompt ).setVisibility( View.GONE );
                     n_v.setVisibility( View.GONE );
                 }
-                AlertDialog ad = (AlertDialog)dialog;
                 String title = Utils.str( toShowInAlertDialog ) ? toShowInAlertDialog : owner.getString( R.string.login_title );
                 int nl_pos = title.indexOf( '\n' );
                 if( nl_pos > 0 && prompt != null ) {
@@ -713,13 +720,15 @@ public class Dialogs implements DialogInterface.OnClickListener {
                     title = title.substring( 0, nl_pos );
                 } else
                     prompt.setText( "" );
-                ad.setTitle( title );
+                if( dlgTitle != null )
+                    dlgTitle.setText( title );
                 toShowInAlertDialog = null;
                 return;
             }
             if( id == R.id.F8 || id == R.id.F8t ) {
                 AlertDialog ad = (AlertDialog)dialog;
-                ad.setTitle( R.string.delete_title );
+                if( dlgTitle != null )
+                    dlgTitle.setText( R.string.delete_title );
                 ArrayList<String> names = new ArrayList<String>();
                 String str, summ = owner.panels.getActiveItemsSummary( R.id.F8t == id, names );
                 if( summ == null ) {
