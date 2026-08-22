@@ -37,9 +37,9 @@ public class ThumbSizeDialog extends AlertDialog implements DialogInterface.OnCl
         super.onCreate( savedInstanceState );
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences( context );
         try {
-            size = Integer.parseInt( sp.getString( "thumbnails_size", "200" ) );
+            size = Integer.parseInt( sp.getString( "thumbnails_size", "125" ) );
         } catch( NumberFormatException e ) {
-            size = 200;
+            size = 125;
         }
         SeekBar seekBar = findViewById( R.id.sz_seek );
         if( seekBar != null ) {
