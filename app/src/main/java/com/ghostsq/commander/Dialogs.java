@@ -249,7 +249,6 @@ public class Dialogs implements DialogInterface.OnClickListener {
                     fileExistsTitle.setText( R.string.error );
                 dialogObj = new AlertDialog.Builder( owner )
                         .setView( oc )
-                        .setNegativeButton( R.string.dialog_cancel, this )
                         .create();
                 return dialogObj;
             }
@@ -861,6 +860,7 @@ public class Dialogs implements DialogInterface.OnClickListener {
                         Dialogs.this.dialogObj.cancel();
                     }
                     private int getResolution( int id ) {
+                        if( id == R.id.cancel )      return Commander.ABORT;
                         if( id == R.id.no_skip )     return Commander.SKIP;
                         if( id == R.id.yes_replace ) return Commander.REPLACE;
                         if( id == R.id.skip_all )    return Commander.SKIP_ALL;
@@ -869,6 +869,7 @@ public class Dialogs implements DialogInterface.OnClickListener {
                         return Commander.UNKNOWN;
                     }
                 };
+                dialog.findViewById( R.id.cancel ).setOnClickListener( click_listener );
                 dialog.findViewById( R.id.yes_replace ).setOnClickListener( click_listener );
                 dialog.findViewById( R.id.no_skip ).setOnClickListener( click_listener );
                 dialog.findViewById( R.id.skip_all ).setOnClickListener( click_listener );
