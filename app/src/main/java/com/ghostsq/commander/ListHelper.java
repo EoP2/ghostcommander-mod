@@ -291,7 +291,7 @@ public class ListHelper {
 
             int thubnails_size = 0;
             if( show_icons && sp.getBoolean( "show_thumbnails", true ) )
-                thubnails_size = Integer.parseInt( sp.getString( "thumbnails_size", "200" ) );
+                thubnails_size = Integer.parseInt( sp.getString( "thumbnails_size", "125" ) );
             ca.setMode( CommanderAdapter.SET_TBN_SIZE, thubnails_size );
 
             if( ca instanceof HomeAdapter )
