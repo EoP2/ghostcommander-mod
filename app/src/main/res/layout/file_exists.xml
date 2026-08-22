@@ -39,7 +39,7 @@
 
         <Button style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/cancel"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dip"
             android:layout_weight="1"
@@ -48,7 +48,7 @@
 
         <Button style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/yes_replace"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dip"
             android:layout_weight="1"
@@ -57,7 +57,7 @@
 
         <Button style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/no_skip"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/dialog_skip" />
@@ -73,15 +73,16 @@
 
         <Button style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/replace_old"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dip"
             android:layout_weight="1"
             android:text="@string/dialog_replace_old"
             />
 
         <Button style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/replace_all"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dip"
             android:layout_weight="1"
@@ -90,9 +91,8 @@
 
         <Button style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/skip_all"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dip"
             android:layout_weight="1"
             android:text="@string/dialog_skip_all"
             />
