@@ -67,15 +67,10 @@
 
     </LinearLayout>
 
-    <!-- Both buttons read edit_field + the two checkboxes above and execute
-         immediately, there is no separate OK button. -->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginBottom="6dip"
+        android:layout_margin="6dip"
         android:gravity="center_horizontal"
         android:orientation="horizontal" >
 
@@ -83,7 +78,7 @@
             android:id="@+id/action_select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dip"
+            android:layout_marginEnd="6dip"
             android:layout_weight="1"
             android:text="@string/dialog_select"
             />
