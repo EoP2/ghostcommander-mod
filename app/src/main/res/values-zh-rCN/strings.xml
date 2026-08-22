@@ -99,7 +99,7 @@
   <string name="prefs_restr">设置已导入</string>
   <string name="about">关于</string>
   <string name="keys">指南</string>
-  <string name="new_zip">新建ZIP</string>
+  <string name="new_zip">压缩为ZIP</string>
   <string name="go_button">转到</string>
   <string name="show_size">属性</string>
   <string name="checksum">校验和</string>
@@ -272,7 +272,7 @@ Use \%# for a file counter, \%## with 2 digits and so on.</string>
   <string name="sz_lastmod"><![CDATA[\n\n修改时间：]]></string>
   <string name="sz_created"><![CDATA[\n创建时间：]]></string>
   <string name="sz_access"><![CDATA[\n访问时间：]]></string>
-  <string name="sz_total"><![CDATA[可用：%2$s/%1$s]]></string>
+  <string name="sz_total"><![CDATA[可用空间：%2$s/%1$s]]></string>
   <string name="busy">繁忙！</string>
   <string name="cd_title">转到</string>
   <string name="not_supported">此操作不被允许</string>
@@ -310,7 +310,7 @@ Use \%# for a file counter, \%## with 2 digits and so on.</string>
   <string name="sel_onright">右侧选择</string>
   <string name="highlight_zones">高亮</string>
   <string name="show_confirm">操作提示</string>
-  <string name="summary_show_confirm">在某些操作后显示提示信息</string>
+  <string name="summary_show_confirm">复制、移动、删除等操作成功后显示汇总提示（不影响出错提示）</string>
   <string name="prefs_label">设置</string>
   <string name="filetypes_label">按类别上色</string>
   <string name="editor_label">文本编辑器</string>
@@ -320,8 +320,8 @@ Use \%# for a file counter, \%## with 2 digits and so on.</string>
   <string name="advanced">高级</string>
   <string name="advanced_settings">高级</string>
   <string name="summary_advanced_settings">为高级用户准备的更多设置项</string>
-  <string name="remote_open_size">File size threshold</string>
-  <string name="summary_remote_open_size">Maximum remote file size allowed to be opened locally</string>
+  <string name="remote_open_size">远程文件大小上限</string>
+  <string name="summary_remote_open_size">超过该大小的远程文件将不会下载到本地打开（单位：字节）</string>
   <string name="compare_content">比较内容</string>
   <string name="summary_compare_content">比较名称和大小相似的文件内容</string>
   <string name="send_content">通过内容提供程序发送</string>
