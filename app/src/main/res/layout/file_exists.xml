@@ -37,13 +37,13 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal" >
 
-        <TextView
-            android:layout_height="wrap_content"
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/cancel"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="10dip"
             android:layout_weight="1"
-            android:gravity="right"
-            android:text="@string/replace_this"
+            android:text="@string/dialog_cancel"
             />
 
         <Button style="?android:attr/buttonBarButtonStyle"
