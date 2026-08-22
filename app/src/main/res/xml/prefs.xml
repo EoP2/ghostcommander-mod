@@ -110,7 +110,7 @@
                     android:title="@string/thumbnails_size"
                     android:summary="@string/summary_thumbnails_size"
                     android:dependency="show_thumbnails"
-                    android:defaultValue="200"/>
+                    android:defaultValue="125"/>
         </PreferenceScreen>
         <ListPreference
                 android:key="font_size"
