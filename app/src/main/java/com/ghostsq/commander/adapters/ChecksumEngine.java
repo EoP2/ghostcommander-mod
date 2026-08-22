@@ -82,7 +82,7 @@ public class ChecksumEngine extends Engine {
             }
             byte[] digest = digester.digest();
             String report = ctx.getString( R.string.sz_file, item.name ) +
-                    "<br/>" + algorithm + ": " + Utils.toHexString( digest, null );
+                    "<br/><br/>" + algorithm + ": " + Utils.toHexString( digest, null );
             sendReport( report );
         } catch( Exception e ) {
             Log.e( TAG, "", e );
