@@ -449,7 +449,7 @@ public class Panels implements AdapterView.OnItemSelectedListener,
         if( sxs ) {
             View div = mainView.findViewById( R.id.divider );
             if( div != null )
-                div.setBackgroundColor( ck.ttlColor );
+                div.setBackgroundColor( ck.divColor );
         }
         list[LEFT].applyColors( ck );
         list[RIGHT].applyColors( ck );

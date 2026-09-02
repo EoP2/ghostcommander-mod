@@ -79,6 +79,7 @@ public class Prefs extends PreferenceActivity implements Preference.OnPreference
             findPreference( ColorsKeeper.SFG_COLORS ).setOnPreferenceClickListener( this );
             findPreference( ColorsKeeper.CUR_COLORS ).setOnPreferenceClickListener( this );
             findPreference( ColorsKeeper.TTL_COLORS ).setOnPreferenceClickListener( this );
+            findPreference( ColorsKeeper.DIV_COLORS ).setOnPreferenceClickListener( this );
             findPreference( ColorsKeeper.BTN_COLORS ).setOnPreferenceClickListener( this );
             findPreference( "color_themes" ).setOnPreferenceChangeListener( this );
             findPreference( "language" ).setOnPreferenceChangeListener( this );
@@ -188,6 +189,7 @@ public class Prefs extends PreferenceActivity implements Preference.OnPreference
             findPreference( ColorsKeeper.SFG_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.SFG_COLORS ) );
             findPreference( ColorsKeeper.CUR_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.CUR_COLORS ) );
             findPreference( ColorsKeeper.TTL_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.TTL_COLORS ) );
+            findPreference( ColorsKeeper.DIV_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.DIV_COLORS ) );
             findPreference( ColorsKeeper.BTN_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.BTN_COLORS ) );
         } catch( Exception e ) {
             Log.e( TAG, "", e );
