@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Nothing to read</string>
+    <string name="nothing_returned">Can\'t open the shared folder %1$s</string>
+    <string name="malformed_url">Malformed URL: \n%s</string>
+    <string name="msbrowse_err">Can\'t get the list of domains/workgroups.\nTry to specify the domain name explicitly, like\n \"smb://your_domain_name/\".</string>
+    <string name="connect_err">Unable to connect to:\n%s</string>
+    <string name="broken_pipe">Connection to the server broken. Return to \"/home:\" and then try again.</string>
+    <string name="exception">An exception occurred</string>
+    <!-- statuses -->
+    <string name="STATUS_UNSUCCESSFUL">Unsuccessful.</string>
+    <string name="STATUS_VOLUME_DISMOUNTED">Volume Dismounted.</string>
+
+    <!-- prefs -->
+    <string name="min_ver">Minimum version</string>
+    <string name="min_ver_sum">Minimum supported SMB version</string>
+    <string name="max_ver">Maximum version</string>
+    <string name="max_ver_sum">Maximum supported SMB version</string>
+
+    <string name="resolve_using_DNS">Use DNS</string>
+    <string name="resolve_using_DNS_summary">Besides the broadcast, also use the DNS server to resolve host names.</string>
+    <string name="WINS_server">WINS server</string>
+    <string name="WINS_server_summary">When a WINS server address is specified it will be used for name resolving.</string>
+    <string name="disable_DFS">Disable DFS</string>
+    <string name="disable_DFS_summary">Disabled Distributed File System feature may help access Win10 shares with MS account.</string>
+    <string name="use_guest">Use GUEST as anonymous</string>
+    <string name="use_guest_summary">If no credentials provided, the name GUEST with empty password will be used.</string>
+    <string name="use_raw_NTLM">Use raw NTLM</string>
+    <string name="use_raw_NTLM_summary">Use raw NTLMSSP tokens instead of SPNEGO wrapped ones.</string>
+    <string name="disable_Spnego_Integrity">Disable SPNEGO integrity</string>
+    <string name="disable_Spnego_Integrity_summary">Disable sending/verifying SPNEGO mechanismListMIC.</string>
+</resources>

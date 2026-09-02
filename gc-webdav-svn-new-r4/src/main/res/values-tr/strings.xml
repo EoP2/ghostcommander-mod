@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghost Commander - WebDAV eklentisi</string>
+    <string name="app_descr">WebDAV: Bir WebDAV özellikli sunucuya erişin.</string>
+    <string name="trust_level">Güven Seviyesi</string>
+    <string name="trust_level_summary">Kabul etmek için geçerli bir sunucu sertifikası seçin.</string>
+    <string name="TLS_only">Yalnızca TLS</string>
+    <string name="TLS_only_summary">SSL yerine TLS kullanmaya zorlayın.</string>
+</resources>

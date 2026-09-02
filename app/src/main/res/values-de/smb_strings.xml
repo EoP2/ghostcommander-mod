@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Nichts gefunden</string>
+    <string name="nothing_returned">Samba-Freigabe: %s\n kann nicht geöffnet werden</string>
+    <string name="malformed_url">Ungültige URL: \n%s</string>
+    <string name="msbrowse_err">Abruf der Liste mit Domänen/Arbeitsgruppen gescheitert.\nVersuchen Sie, den Domänennamen explizit anzugeben, etwa so:\n \"smb://your_domain_name/\".</string>
+    <string name="connect_err">Verbindung zu %s\n nicht möglich</string>
+    <string name="broken_pipe">Verbindung zum Server unterbrochen. Kehren Sie zu \"/home:\" zurück und versuchen Sie es erneut.</string>
+    <string name="exception">Eine Ausnahme ist aufgetreten</string>
+    <!-- statuses -->
+    <string name="STATUS_UNSUCCESSFUL">Erfolglos.</string>
+    <string name="STATUS_VOLUME_DISMOUNTED">Laufwerk ausgehängt.</string>
+    <!-- prefs -->
+    <string name="min_ver">Minimalversion</string>
+    <string name="min_ver_sum">Niedrigste unterstützte Samba-Version</string>
+    <string name="max_ver">Maximalversion</string>
+    <string name="max_ver_sum">Höchste unterstützte Samba-Version</string>
+    <string name="resolve_using_DNS">DNS verwenden</string>
+    <string name="resolve_using_DNS_summary">Neben dem Broadcast auch den DNS-Server verwenden, um Hostnamen aufzulösen.</string>
+    <string name="disable_DFS">DFS deaktivieren</string>
+    <string name="disable_DFS_summary">Die Deaktivierung des Distributed File System kann den Zugriff auf Win10-Freigaben mit MS Account erleichtern.</string>
+</resources>

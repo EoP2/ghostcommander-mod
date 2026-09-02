@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name" translatable="false">Ghost Commander</string>
+<string name="file">New</string>
+<string name="location">Location</string>
+<string name="list">List</string>
+<string name="app">App</string>
+<string name="help">Help</string>
+<string name="F1">Help</string>
+<string name="F2">Rename</string>
+<string name="F3">View</string>
+<string name="F4">Edit</string>
+<string name="new_item">New</string>
+<string name="F5F6">Copy/Move</string>
+<string name="F8">Del</string>
+<string name="F9">Prefs</string>
+<string name="F10">Exit</string>
+<string name="oth_sh_this">Show same folder</string>
+<string name="oth_sh_dir">Open \"%s\" in other panel</string>
+<string name="eq">Same</string>
+<string name="change">Toggle</string>
+<string name="tgl">Toggle</string>
+<string name="sz">Info</string>
+<string name="dirsz">Folder sizes</string>
+<string name="refresh">Refresh</string>
+<string name="swap">Swap</string>
+<string name="compare">Compare</string>
+<string name="filter">Filter</string>
+<string name="filter_canceled">Filter canceled</string>
+<string name="enter">Change location</string>
+<string name="home">Home</string>
+<string name="sdcard" translatable="false">/sdcard</string>
+<string name="softkbd">Keyboard</string>
+<string name="enter_b">Location</string>
+<string name="add_fav">Add to favorites</string>
+<string name="add_fav_b">Add fave</string>
+<string name="remount_b">Remount /system</string>
+<string name="remount">Remount</string>
+<string name="hidden">Hidden</string>
+<string name="rescan">Rescan media</string>
+<string name="install">Install</string>
+<string name="favs">Favorites</string>
+<string name="df_dnl">Downloads</string>
+<string name="df_cam">Camera</string>
+<string name="df_pic">Pictures</string>
+<string name="df_mus">Music</string>
+<string name="df_mov">Movies</string>
+<string name="local">Local storage</string>
+<string name="temp">Temporary storage</string>
+<string name="external">External card</string>
+<string name="media">Media Store</string>
+<string name="saf">Storage Access Framework</string>
+<string name="ftp">FTP site</string>
+<string name="sftp">SFTP site</string>
+<string name="smb">Windows share</string>
+<string name="plugins">Browse plugins</string>
+<string name="root">Root mode</string>
+<string name="mount">Mount points</string>
+<string name="mount_b">Mounts</string>
+<string name="apps">Apps</string>
+<string name="exit">Exit</string>
+<string name="forget">Forget</string>
+<string name="favs_descr">View and manage your list of favorite folders and sites</string>
+<string name="local_descr">Browse, organize and modify the contents of the primary file system</string>
+<string name="temp_descr">Direct access to a temporary folder</string>
+<string name="external_descr">Access files on the physically inserted SD card. It may be read-only on some devices. Use the SAF mode in such a case.</string>
+<string name="media_descr">Browse your media files as the system sees them.</string>
+<string name="saf_descr">Gives a modification-enabled access to the files where the native access is forbidden</string>
+<string name="saf_pick">Please pick the corresponding SAF root folder.</string>
+<string name="saf_picked">The SAF root folder has been picked and ready to use.</string>
+<string name="pick_mode">Please pick a file</string>
+<string name="ftp_descr">Connect to an FTP server</string>
+<string name="sftp_descr">Connect to an SSH FTP (sftp) server</string>
+<string name="smb_descr">Connect to shared Windows folders</string>
+<string name="plugins_descr">Look for more Ghost Commander plugins</string>
+<string name="root_descr">For rooted devices only: manage critical system files. Only proceed if you know what you\'re doing.</string>
+<string name="mount_descr">Display a list of all mount points. Remount them to \"rw\" mode, then back to \"ro\" mode after changes. Proceed with caution.</string>
+<string name="apps_descr">View and manage installed packages</string>
+<string name="exit_descr">Close the app</string>
+<string name="shortcut">Add shortcut to Home screen</string>
+<string name="enter_ftp">Connect to FTP</string>
+<string name="enter_smb">Connect to Windows PC</string>
+<string name="search_file">Search</string>
+<string name="replace">Replace</string>
+<string name="menu">Menu</string>
+<string name="sort_by_name">By file Name</string>
+<string name="sort_by_ext">By Extension</string>
+<string name="sort_by_size">By file Size</string>
+<string name="sort_by_date">By Date</string>
+<string name="sort_by_adate">By access Date</string>
+<string name="sel_dlg">Select</string>
+<string name="select_between">Select between</string>
+<string name="select2">Please select at least 2 items</string>
+<string name="toggle_panels_mode">Change panels mode</string>
+<string name="prefs">Settings</string>
+<string name="save_prefs">Back up settings</string>
+<string name="rest_prefs">Restore settings</string>
+<string name="save_log">Save log to file</string>
+<string name="prefs_saved">Your preferences have been saved</string>
+<string name="prefs_restr">Your preferences have been restored. Please restart the app.</string>
+<string name="about">About</string>
+<string name="keys">Brief help</string>
+<string name="new_zip">Create a new ZIP file</string>
+<string name="go_button">Go</string>
+<string name="show_size">Info</string>
+<string name="checksum">Checksum</string>
+<string name="send_to">Send to…</string>
+<string name="open_with">Open with…</string>
+<string name="open">Open</string>
+<string name="open_as">Open as…</string>
+<string name="open_native">Open as native</string>
+<string name="copy_name">Copy name to clipboard</string>
+<string name="fav_fld">Add \"%s\" to favorites</string>
+<string name="create_zip">Create a new ZIP file</string>
+<string name="create_zip_title">Create ZIP file</string>
+<string name="extract_zip">Extract ZIP</string>
+<string name="open_zip">Open as ZIP</string>
+<string name="set_date">Change Date</string>
+<string name="use_now">Use current time</string>
+<string name="file_name">File</string>
+<string name="wait">wait…</string>
+<string name="fail">FAILED</string>
+<string name="failed">Error:\n</string>
+<string name="unkhost">Unknown host \"%s\"</string>
+<string name="default_uri_cmnt">Default location</string>
+<string name="default_color">Default</string>
+<string name="base_color">Base color</string>
+<string name="typemasks">File masks</string>
+<string name="color_sample">Sample</string>
+<string name="add_new_type">Add new</string>
+<string name="fav_comment">Comment:</string>
+<string name="fav_dialog">Edit favorite</string>
+<string name="dialog_yes">Yes</string>
+<string name="dialog_no">No</string>
+<string name="dialog_ok">OK</string>
+<string name="dialog_cancel">Cancel</string>
+<string name="dialog_close">Close</string>
+<string name="dialog_exit">Exit</string>
+<string name="dialog_browse">Browse</string> 
+<string name="dialog_abort">Abort</string>
+<string name="dialog_retry">Retry</string>
+<string name="dialog_ignore">Ignore</string>
+<string name="dialog_replace_all">Replace all</string>
+<string name="dialog_replace_old">Replace old</string>
+<string name="dialog_skip_all">Skip all</string>
+<string name="dialog_replace">Replace</string>
+<string name="dialog_skip">Skip</string>
+<string name="replace_this">Replace this?</string>
+<string name="source">Source</string>
+<string name="destination">Destination</string>
+<string name="dialog_select">Select</string>
+<string name="dialog_unselect">Unselect</string>
+<string name="filemask">File mask:</string>
+<string name="for_files">Files</string>
+<string name="for_dirs">Folders</string>
+<string name="in_subf">Subfolders</string>
+<string name="content">Content:</string>
+<string name="bigger_than">Bigger\nthan:</string>
+<string name="smaller_than">Smaller\nthan:</string>
+<string name="mod_after">After</string>
+<string name="mod_before">Before</string>
+<string name="show_matched">Show matched</string>
+<string name="hide_matched">Hide Matched</string>
+<string name="launch">Launch</string>
+<string name="view_title">View</string>
+<string name="edit_title">Edit</string>
+<string name="new_item_prompt">Name:</string>
+<string name="new_item_file">File</string>
+<string name="new_item_folder">Folder</string>
+<string name="search_title">Search</string>
+<string name="search_prompt">Search criteria:</string>
+<string name="rename_title">Rename</string>
+<string name="mult_rename_title">Rename multiple</string>
+<string name="copy_title">Copy</string>
+<string name="move_title">Move</string>
+<string name="send_title">Send to…</string>
+<string name="open_title">Open with…</string>
+<string name="to_copy">&#xA0;</string>
+<string name="to_move">&#xA0;</string>
+<string name="to_rename">&#xA0;</string>
+
+<string name="search">Search (regex):</string>
+<string name="replace_to">Replace with:</string>
+<string name="preview">Preview</string>
+<string name="to_trash">Move to trash can</string>
+<string name="trashcan">Trash can</string>
+<string name="mult_rename_help">Use standard regular expressions to search string patterns in file names and replace what found.\n
+In the replace string use back-reference like $1 to refer to a search group marked with parenthesis.\n
+Use \\$ for the \'$\' sign.\n
+Use \%# for a file counter, \%## with 2 zero-leading digits and so on.
+</string>
+<string name="find_str">Search string:</string>
+<string name="regex">Regular expression</string>
+<string name="whole_words">Whole words</string>
+<string name="backwards">Backwards</string>
+<string name="case_sensitive">Case Sensitive</string>
+<string name="not_found">The search has completed</string>
+
+<string name="copy_err">Nothing to copy</string>
+<string name="rename_err">Cannot rename</string>
+<string name="edit_err">Not editable</string>
+<string name="no_items">No valid files to complete the operation</string>
+<string name="inv_dest">Invalid destination</string>
+<string name="inv_path">Invalid path</string>
+<string name="find_on_fs_only">The search feature is not supported here.</string>
+<string name="on_fs_only">This feature only works on the local file system.</string>
+<string name="op_not_alwd">Operation \"%1$s\" is not allowed - select something first</string>
+<string name="oper_item_to">%1$s \"%2$s\" to:</string>
+<string name="login_title">Login</string>
+<string name="delete_title">Delete</string>
+<string name="delete_err">Nothing to delete</string>
+<string name="delete_q">Delete \"%1$s\"?</string>
+<string name="rescan_q">Are you sure you want to do the search again?</string>
+<string name="search_done">Search complete</string>
+<string name="done">Done</string>
+<string name="interrupted">Interrupted</string>
+<string name="cant_copy_to_itself">Cannot copy the folder \"%s\" to itself or below</string>
+<string name="too_deep_hierarchy">The file hierarchy is too deep</string>
+<string name="nothing_found">No files found</string>
+<string name="preparing">Preparing…</string>
+<string name="copying">Copying\n\"%s\"…</string>
+<string name="copied_f">Copied\n\"%s\"</string>
+<string name="deleting">Deleting\n\"%s\"…</string>
+<string name="deleting_a">Deleting…</string>
+<string name="fail_del">File "%1$s\" was not completed, deleting…</string>
+<string name="unpacking">Unpacking \n\"%s\"…</string>
+<string name="unpacked_p">Unpacked \n\"%s\"</string>
+<string name="packing">Packing \n\"%s\"…</string>
+<string name="retrieving">Retrieving…\n\"%s\"</string>
+<string name="uploading">Uploading…\n\"%s\"</string>
+<string name="uploaded_p">Uploaded \n\"%s\"</string>
+<string name="loading">Loading…</string>
+<string name="second">s</string>
+<string name="canceled">Canceled</string>
+<string name="oom_err">Out of memory</string>
+<string name="unkn_err">Unknown error</string>
+<string name="cant_md">Unable to create folder \"%s\"</string>
+<string name="cant_cd">Cannot browse the folder \"%s\"</string>
+<string name="file_exist">File \"%s\" already exists</string>
+<string name="sec_err">Security issue\n%s</string>
+<string name="not_accs">File not accessible\n%s</string>
+<string name="acc_err">Access error on file \"%1$s\"\n %2$s</string>
+<string name="rtexcept">Error on file \"%1$s\"\n %2$s</string>
+<string name="cant_move">Unable to move file \"%s\"</string>
+<string name="cant_create">Unable to create file \"%1$s\"\n%2$s</string>
+<string name="cant_del">Unable to delete \"%1$s\"</string>
+<string name="dest_wrtble">Make sure the folder \"%s\" is writable</string>
+<string name="copied">copied</string>
+<string name="moved">moved</string>
+<string name="deleted">deleted</string>
+<string name="downloaded">downloaded</string>
+<string name="uploaded">uploaded</string>
+<string name="packed">packed</string>
+<string name="unpacked">unpacked</string>
+<string name="remounted">Remounted \"%1$s\" to \"%2$s\"</string>
+<string name="tried_to_exec">Tried to execute \"%s\"</string>
+<string name="verb_plural_sfx">&#xA0;</string>
+<string name="item">item</string>
+<string name="items">items</string>
+<string name="items24">&#xA0;</string>
+<string name="were">were</string>
+<string name="was">was</string>
+<string name="nothing">Nothing</string>
+
+<string name="report_0" ><![CDATA[ Nothing was ]]></string>
+<string name="report_1" ><![CDATA[ One item was ]]></string>
+<string name="report_24">&#xA0;</string>
+<string name="report_m" ><![CDATA[ %1$d items were ]]></string>
+
+<string name="sz_folder"><![CDATA[<b>Folder:</b> \"<small>%1$s</small>\"\n%2$d files ]]></string>
+<string name="sz_dirnum"><![CDATA[ in %1$d sub-folder%2$s]]></string>
+<string name="sz_dirsfx_s"></string>
+<string name="sz_dirsfx_p">s</string>
+<string name="sz_file"><![CDATA[<b>File:</b> \"<small>%s</small>\"]]></string>
+<string name="sz_files"><![CDATA[<b>Files:</b> %d ]]></string>
+<string name="sz_Nbytes"><![CDATA[\n<b>Size:</b> %1$s]]></string>
+<string name="sz_bytes"> (<small>%d B</small>)</string>
+<string name="sz_lastmod"><![CDATA[\n<b>Last modified:</b> ]]></string>
+<string name="sz_created"><![CDATA[\n<b>Created:</b> ]]></string>
+<string name="sz_access"><![CDATA[\n<b>Accessed:</b> ]]></string>
+<string name="sz_total"><![CDATA[<b>Total:</b> %1$s\n<b>Free:</b> %2$s]]></string>
+<string name="busy">Busy!</string>
+<string name="cd_title">Go</string>
+<string name="not_supported">This operation is not supported</string>
+<string name="select_some">No selection made</string>
+<string name="select">Select</string>
+<string name="error">Error</string>
+<string name="info">Information</string>
+<string name="confirm">Confirm</string>
+<string name="alert">Alert</string>
+<string name="progress">Progress</string>
+<string name="inprogress">A file operation is in progress</string>
+<string name="server">Server:</string>
+<string name="path">Path:</string>
+<string name="active">Active</string>
+<string name="domain">Domain:</string>
+<string name="username">Username:</string>
+<string name="password">Password:</string>
+<string name="encrypted">Encrypted</string>
+<string name="command">Command:</string>
+<string name="use_busybox">busybox</string>
+<string name="user">User</string>
+<string name="group">Group</string>
+<string name="other">Other</string>
+<string name="connect">Connect to</string>
+<string name="cancel">Cancel</string>
+<string name="ftp_connected">Connected to \"%1$s\",\n Logged in as \"%2$s\"</string>
+<string name="ftp_upload_failed">Uploading \"%1$s\" failed.\n FTP log:\n\n%2$s</string>
+<string name="ftp_mkdir_failed">Failed to create folder \"%1$s\".\n FTP log:\n\n\"%2$s\</string>
+<string name="ftp_nologin">Not logged in!</string>
+<string name="data_settings">File lists</string>
+<string name="layout_settings">Appearance</string>
+<string name="input_settings">Input</string>
+<string name="selection_zone_setup">Selection area</string> 
+<string name="summary_selection_zone_setup">Customize the way files and folders are selected</string> 
+<string name="sel_onright">Select on the right</string> 
+<string name="highlight_zones">Highlight</string>
+<string name="show_confirm">Confirmations</string>
+<string name="summary_show_confirm">Show a message after certain operations</string>
+<string name="prefs_label">Settings</string>
+<string name="filetypes_label">Colors by type</string>
+<string name="editor_label">Text Editor</string>
+<string name="pictvw_label">Picture Viewer</string>
+<string name="textvw_label">Text Viewer</string>
+<string name="perms_label">chmod / chown</string>
+<string name="advanced">Advanced</string>
+<string name="advanced_settings">Miscellaneous</string>
+<string name="summary_advanced_settings">Extra settings for advanced users</string>
+<string name="remote_open_size">File size threshold</string>
+<string name="summary_remote_open_size">Maximum remote file size allowed to be opened locally</string>
+<string name="compare_content">Compare content</string>
+<string name="summary_compare_content">Compare file contents for files with similar names and sizes</string>
+<string name="send_content">Send using content provider</string>
+<string name="summary_send_content">Try to untick if your file sending app doesn\'t implement a ContentResolver</string>
+<string name="open_content">Open using content provider</string>
+<string name="summary_open_content">Try to open a file via the content provider rather than as a regular file.</string>
+<string name="panels_mode">Side-by-side panels</string>
+<string name="summary_panels_mode">Show both panels side-by-side in a split screen view</string>
+<string name="two_lines">Two lines in a row</string>
+<string name="summary_two_lines">Show file attributes below file names</string>
+<string name="icons">File Icons</string>
+<string name="show_icons">Enable icons</string>
+<string name="summary_show_icons">Show file and folder icons instead of just text</string>
+<string name="toolbar_settings">Toolbar</string>
+<string name="summary_toolbar_settings">Customize the toolbar at the bottom of the screen</string> 
+<string name="show_actionbar">Enable Action Bar</string>
+<string name="summary_show_actionbar">Show the Action Bar at the top of the screen. Restart required.</string>
+<string name="show_toolbar">Enable toolbar</string>
+<string name="summary_show_toolbar">Show the toolbar at the bottom of the screen</string>
+<string name="show_hotkeys">Show hot keys</string>
+<string name="summary_show_hotkeys">Show hot key shortcuts on certain buttons</string>
+<string name="show_emoji">Show icons</string>
+<string name="summary_show_emoji">Show emoji icons </string>
+<string name="show_caption">Show caption</string>
+<string name="summary_show_caption">Show button text caption</string>
+<string name="tb_height">Toolbar area height</string>
+<string name="summary_tb_height">On some devices it would be convenient to have a larger toolbar area. Set a value in inches, 0 for default.</string>
+<string name="toolbar_preference">Customize the toolbar</string>
+<string name="summary_toolbar_preference">Select which buttons to display, edit and arrange them</string>
+<string name="tblist_label">Customize the toolbar</string>
+<string name="finger_friendly">Finger-friendly</string>
+<string name="summary_finger_friendly">Enlarge the user interface elements</string>
+<string name="prevent_root">Warn on leaving /sdcard</string>
+<string name="summary_prevent_root">Issue a warning when going to a device\'s root folder</string>
+<string name="show_root">Show advanced home items</string>
+<string name="summary_show_root">Home view will include \"Root mode\", \"Mount points\" and \"Media Store\"</string>
+<string name="root_root">Automatic root mode</string>
+<string name="summary_root_root">Switch to root mode when going to a device\'s root folder</string>
+<string name="thumbnails">Enable thumbnails</string>
+<string name="summary_thumbnails">Show thumbnails for images instead of icons</string>
+<string name="pdf_preview">PDF preview</string>
+<string name="summary_pdf_preview">Show PDF previews for PDF files</string>
+<string name="thumbnails_size">Thumbnail size</string>
+<string name="summary_thumbnails_size">Set the percentage value in relation to icon size</string>
+<string name="font_size">Font size</string>
+<string name="summary_font_size">Set the font size</string>
+<string name="left_panel_settings">Left panel</string>
+<string name="right_panel_settings">Right panel</string>
+<string name="detailed_view_SbS">Detailed side-by-side mode</string>
+<string name="summary_detailed_view_SbS">Show size and date for files in side-by-side mode</string>
+<string name="detailed_view_Ovr">Detailed overlapped mode</string>
+<string name="summary_detailed_view_Ovr">Show size and date for files in overlapped mode</string>
+<string name="sorting">Sorting method</string>
+<string name="summary_sorting">Choose how to sort files and folders</string>
+<string name="sort_case">Ignore case in sorting</string>
+<string name="summary_sort_case">Tick this to ignore case sensitivity in file and folder sorting</string>
+<string name="sort_asc">Ascending</string>
+<string name="sort_desc">Descending</string>
+<string name="show_hidden">Show hidden files</string>
+<string name="summary_show_hidden">Show files and folders with a preceding dot in their names</string>
+<string name="compatibility_settings">Hardware buttons</string>
+<string name="summary_compatibility_settings">Customize the overriding of hardware button functions</string> 
+<string name="panels_sliding">Enable sliding gesture</string>
+<string name="summary_panels_sliding">Switch panels by a horizontal scroll gesture</string>
+<string name="arrow_mode">Override arrow buttons</string>
+<string name="summary_arrow_mode">Left/right arrows perform toggle/select</string>
+<string name="volume_mode">Override volume buttons</string>
+<string name="summary_volume_mode">Volume buttons perform toggle/select</string>
+<string name="exit_on_back">Back button exits</string>
+<string name="summary_exit_on_back">Back button closes the app</string>
+<string name="colors">Colors</string>
+<string name="summary_colors">Modify background and foreground colors</string>
+<string name="bgr_color_picker">Background</string>
+<string name="summary_bgr_color_picker">Choose a color for the main background</string>
+<string name="fgr_color_picker">Foreground</string>
+<string name="summary_fgr_color_picker">Choose a color for file names and attributes</string>
+<string name="cur_color_picker">Focused</string>
+<string name="summary_cur_color_picker">Choose a color for items in focus</string>
+<string name="sel_color_picker">Selected background</string>
+<string name="summary_sel_color_picker">Choose a background color for selected files and the current panel\'s title</string>
+<string name="sfg_color_picker">Selected foreground</string>
+<string name="summary_sfg_color_picker">Choose a text color for selected files and the current panel\'s title</string>
+<string name="ttl_color_picker">Panel title</string>
+<string name="summary_ttl_color_picker">Choose a background color for the panel title</string>
+<string name="btn_color_picker">Buttons</string>
+<string name="summary_btn_color_picker">Choose a background color for the buttons</string>
+<string name="pick_color">Set color</string>
+<string name="color">Color</string>
+<string name="color_themes">Themes</string>
+<string name="summary_color_themes">Reset all custom colors to one chosen theme</string>
+<string name="language">Language</string>
+<string name="summary_language">Override the system language</string>
+<string name="restart_to_apply_lang">Restart the app to apply the new language</string>
+<string name="editor_activity">Custom text editor</string>
+<string name="summary_editor_activity">Enter the activity name of an external text editor</string>
+<string name="busybox_location">Path to BusyBox</string>
+<string name="summary_busybox_location">Specify the location of the BusyBox executable</string>
+<string name="su_location">Path to su</string>
+<string name="summary_su_location">Specify the location of the su executable</string>
+
+<string name="cpmv_err_ign">Ignore permission errors on copy/move</string>
+<string name="summary_cpmv_err_ign">Suppress root mode errors when a file is copied to a file system which does not support permissions.</string>
+<string name="foreground_service">Runs file operations in a foreground service</string>
+<string name="summary_foreground_service">If when the device\'s sleep breaks a file operation, try to check this option on. A notification icon will be shown all the time the app is active.</string>
+<string name="system_notifications">Application notifications</string>
+<string name="summary_system_notifications">Manage which notifications can be shown by the application.</string>
+<string name="show_scrollbars">File panels have scrollbar</string>
+<string name="summary_show_scrollbars">Uncheck to disable the file panels scroll bars.</string>
+<string name="sort_by_access_date">Sort by access date</string>
+<string name="summary_sort_by_access_date">Allow sorting by file access date</string>
+<string name="scan_all">Scan all files</string>
+<string name="summary_scan_all">Untick to scan only media files</string>
+<string name="execute_command">Execute a command</string>
+<string name="nothing_to_open">Nothing to open</string>
+<string name="remind_to_save">Don\'t forget to save your changes</string>
+<string name="saved">\"%1$s\" saved.</string>
+<string name="not_saved">Save changes?</string>
+<string name="save">Save</string>
+<string name="save_as">Save as…</string>
+<string name="revert">Revert</string>
+<string name="wrap">Wrap long lines</string>
+<string name="crlf">CRLF lines separator</string>
+<string name="go_up">Parent</string>
+<string name="go_top">Top</string>
+<string name="go_end">Bottom</string>
+<string name="go_next">Next</string>
+<string name="go_prev">Previous</string>
+<string name="rot_right">Rotate clockwise</string>
+<string name="rot_left">Rotate counterclockwise</string>
+<string name="encoding">Encoding:</string>
+<string name="encoding_set">The new encoding is \"%1$s\", please reload the file. If you save it now, the file\'s encoding will be converted.</string>
+<string name="no_such_file">No such file \"%1$s\"</string>
+<string name="too_big_file">The file \"%1$s\" is too big</string>
+<string name="binary_file">The file \"%1$s\" is binary, you could damage it. Edit at your own risk.</string>
+<string name="cant_open_dir">\"%1$s\" is a folder</string>
+<string name="cant_view_empt">File \"%1$s\" is empty</string>
+<string name="cant_open">Cannot open the file</string>
+<string name="cant_save">Cannot save the file</string>
+<string name="nav_warn">You\'re opening a system folder which may not be accessible. Continue?</string>
+<string name="no_such_folder">Folder \"%1$s\" is not available.</string>
+<string name="fav_added">\"%1$s\" was added to your favorites</string>
+<string name="no_root">Not root?</string>
+<string name="run_command">Run Command</string>
+<string name="manage">Manage</string>
+<string name="shortcuts">Shortcuts</string>
+<string name="pkg_name">Package name</string>
+<string name="cert_subj">Certificate Subject</string>
+<string name="cert_auth">Certificate Issuer</string>
+<string name="version">Version</string>
+<string name="version_code">Version code</string>
+<string name="target_sdk">Target SDK</string>
+<string name="min_sdk">Min SDK</string>
+<string name="data_dir">Data</string>
+<string name="inst_date">Date</string>
+<string name="pkg_size">Size</string>
+<string name="process">Process name</string>
+<string name="app_class">App class</string>
+<string name="affinity">Task Affinity</string>
+<string name="permissions">Permissions</string>
+<string name="flags">Flags</string>
+<string name="not_exported">Activity is not exported</string>
+<string name="manage_all_files">
+Ghost Commander is a file manager app and it needs a special system
+permission (MANAGE_EXTERNAL_STORAGE) which provides the necessary authority to perform the file access and modification operations
+which are core essential functions of a file manager.\n
+You, as the owner of the system are in command of giving such permission to the Ghost Commander application.\n
+If you agree, please tap the OK button, then you will be redirected to the system level settings screen where you should allow Ghost Commander to manage all files.
+If you do not agree, please tap the CANCEL, the abilities of the applications would be limited. However, you would still be able to use the SAF mode to perform some file operations.</string>
+<string name="need_perm">Storage access permission was not granted! You should grant the permission on order to operate the file system in the native mode. </string>
+<string name="donate">Donate</string>
+<string name="online_help">Online help</string>
+<string name="donation">A little donation will support further development.\n
+Tap \"OK\" to be redirected to the PayPal site.\n
+\"Cancel\" to continue enjoy the «Ghost Commander» file manager for free.\n
+</string>
+<string name="about_text"><![CDATA[
+<h1>Ghost Commander v%1$s</h1>
+<h4>A file manager by Ghost Squared.</h4>
+<p>On the Web:<br/>
+<a href="https://sites.google.com/site/ghostcommander1/">Web site</a><br/>
+<a href="http://sourceforge.net/projects/ghostcommander/">Source code</a><br/>
+Help <a href="https://crowdin.com/project/ghost-commander">translate</a> to your language.
+</p>
+<p>Please email bugs/suggestions to:<br/><a href="mailto:ghost.sq2@gmail.com">ghost.sq2@gmail.com</a></p>
+%2$s
+<p>Like this app? Consider a <a href="market://search?q=pname:com.ghostsq.commander.donate">\"donate\" version</a>.
+%3$s
+</p>
+<h3>DISCLAIMER:</h3>
+<p>
+By using this software, you agree to the following conditions:
+The author of this software is not responsible for any kind of damage, loss of information/data,
+consequential damages, or any issues that are, or could be caused by the use of this software.
+You agree to use this software at your sole risk. If you don\'t agree to the above conditions,
+immediately cease using this software and uninstall it.</p>
+]]></string>
+<string name="keys_text"><![CDATA[
+<h3>SELECTING FILES</h3>
+<p>
+To select files and folders, tap to the <b>right</b> of their rows and open them by tapping to the <b>left</b>.
+That\'s right, one side will activate items and the other one will select them.
+</p>
+<h3>COPYING AND MOVING</h3>
+<p>
+Copy or move files and folders by first choosing the target destination in one panel, then swipe (or toggle) back to the other panel and select the items you wish to transfer. Then commit the desired operation.
+</p>
+<h3>EXTERNAL CARDS AND USB OTG</h3>
+<p>
+On devices with Android 11 (R) on newer, you will be asked to enable the Ghost Commander app to manage all files in the system settings.
+After that\'s done, files on the external volumes (such as USB OTG) should be fully accessible in the native mode.
+</p>
+<h3>ZIP FILES</h3>
+<p>
+Ghost Commander can handle ZIP archives as if they were
+folders. Other archive types are not supported.
+</p>
+<h3>LOCATION EDITOR</h3>
+<p>
+To enter a location manually (and to see a drop-down list of your
+favorites), long-press the panel\'s header to open the location
+editor.\n
+You can enter resource URIs into the location editor manually as
+follows:
+</p><p>
+<b>ftp://</b><i>host.com</i><b>/</b><i>folder</i><br/>
+- Anonymous FTP
+</p><p>
+<b>ftp://</b><i>user</i><b>:</b><i>pass</i><b>@</b><i>ftp_host</i><b>/</b><i>folder</i><br/>
+- Authenticated FTP
+</p><p>
+<b>sftp://</b><i>user</i><b>:</b><i>pass</i><b>@</b><i>sftp_host</i><b>/</b><i>folder</i><br/>
+- SSH FTP <br/>
+If you have a private authentication key file, you will need to load it to the SFTP Keys Manger.
+For that, tap and hold on the SFTP item in the \"home:\" screen, then choose \"Settings\" -> \"PEM Keys manager\".
+Set your key name as the exact host name you are planning to connect to.
+In the case of the key authentication, the user password will be the passphrase to your key file.<br/>
+If you need to login to the same server as two or more different users, set the key name
+in the format user@host<br/>
+Having more than one key per an account is not supported.
+</p><p>
+A standard <a href="https://www.man7.org/linux/man-pages/man5/ssh_config.5.html">ssh_config</a>
+ file could be used for fine tuning the sftp. If the file /sdcard/.GhostCommander/ssh_config exists
+its lines will be parsed and applied to the client configuration.
+(However, not all options are supported)
+</p><p>
+<b>smb://</b><i>domain</i><b>;</b><i>user</i><b>:</b><i>pass</i><b>@</b><i>server</i><b>/</b><i>share</i><br/>
+- Windows share
+</p><p>
+<b>root:/</b><i>path/to/folder</i><br/>
+- Root mode<br/>
+Using the root mode (superuser) features of Ghost
+Commander require caution, and will only work on a rooted device.
+Also, BusyBox should be installed with its path defined in the settings.<br/>
+To show the root item in the \"home:\" screen, enable such option in the app settings.
+</p>
+<h3>PLUGINS</h3>
+<p>
+Plugins, which have to be installed separately, provide access to
+Box, Dropbox as well as any cloud service which supports WebDAV.
+</p>
+<h3>HOT KEYS</h3>
+<p>(For devices with a keyboard)<br/>
+<b><i>VolumeUp</i></b> - Select files and folders<br/>
+<b><i>VolumeDn</i></b> - Toggle between the panels<br/>
+<b>1</b> - Help<br/>
+<b>2</b> - Rename selected item<br/>
+<b>4</b> - Edit selected item<br/>
+<b>5</b> - Copy selected item(s)<br/>
+<b>6</b> - Move selected item(s)<br/>
+<b>7</b> - Create a new folder<br/>
+<b>8</b> - Delete selected item(s)<br/>
+<b>9</b> - Open preferences/settings<br/>
+<b>0</b> - Close the app<br/>
+<b>[A-z]</b> - Quick search<br/>
+<b>/</b> - File search<br/>
+<b>&amp;</b> - File filter<br/>
+<b>+</b>, <b>-</b> - Select or unselect items in the current folder<br/>
+<b>(</b>, <b>)</b> - Enter a location manually and view your favorites<br/>
+<b>*</b> - Add the current folder to your favorites<br/>
+<b>\"</b> - Show detailed information for the selected item(s)<br/>
+<b>=</b> - Display the same location in the other panel (synchronize)<br/>
+</p>
+<p>
+<a href="https://sites.google.com/site/ghostcommander1/info">More help online…</a>
+</p>
+]]></string>
+<string name="license_text"><![CDATA[
+<h3>Ghost Commander</h3>
+<p>A file manager</p>
+<p>Copyright © 2009-2022 Ghost Squared</p>
+<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/</p>
+]]></string>
+</resources>

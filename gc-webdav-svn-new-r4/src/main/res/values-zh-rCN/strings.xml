@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Ghost Commander - WebDAV插件</string>
+  <string name="app_descr">WebDAV：访问WebDAV服务器</string>
+  <string name="trust_level">信任级别</string>
+  <string name="trust_level_summary">选择接受哪种服务器证书</string>
+  <string name="TLS_only">仅TLS</string>
+  <string name="TLS_only_summary">强制使用TLS而不是SSL</string>
+</resources>

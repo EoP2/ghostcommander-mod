@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="sorting">
+    <item>Par nom</item>
+    <item>Par extension</item>
+    <item>Par taille</item>
+    <item>Par date</item>
+  </string-array>
+  <string-array name="panels_mode">
+    <item>Oui</item>
+    <item>Non</item>
+    <item>Automatique</item>
+  </string-array>
+    <string-array name="encoding">
+        <item>Défaut</item>
+        <item>Windows-1250\n\t  Europe centrale</item>
+        <item>Windows-1251\n\t  cyrillique</item>
+        <item>Windows-1252\n\t  latin occidental</item>
+        <item>Windows-1253\n\t  grec</item>
+        <item>UTF-8\n\t   8 bit Unicode</item>
+        <item>UTF-16BE\n\t  16bit big-endian</item>
+        <item>UTF-16LE\n\t  16bit little-endian</item>
+        <item>UTF-8\n\t   8 bit Unicode</item>
+        <item>KOI8-R\n\t  UNIX russe</item>
+        <item>Cp866\n\t  DOS russe</item>
+        <item>Shift_JIS\n\t  Shift_JIS Japonais</item>
+        <item>EUC-JP\n\t  EUC-JP Japonais</item>
+        <item>EUC-KR\n\t  EUC-KR Coréen</item>
+        <item>ISO-2022-JP\n\t  iso-2022 Japonais</item>
+        <item>ISO-2022-KR\n\t  iso-2022 Coréen</item>
+        <item>ISO-2022-CN\n\t  iso-2022 Chinois</item>
+        <item>GB18030\n\t  国家标准 Chinois</item>
+        <item>HZ-GB-2312\n\t  汉字 Chinois</item>
+    </string-array>
+    <string-array name="color_themes">
+        <item>Sombre</item>
+        <item>Clair</item>
+        <item>Norton</item>
+        <item>Auto</item>
+    </string-array>
+</resources>

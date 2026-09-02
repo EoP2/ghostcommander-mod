@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trust_level">
+        <item>Seulement avec une chaîne de confiance valide</item>
+        <item>Faire confiance aux auto-signés ou expirés</item>
+        <item>Faire confiance à tous (dangereux)</item>
+    </string-array>
+</resources>

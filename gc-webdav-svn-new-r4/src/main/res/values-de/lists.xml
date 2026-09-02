@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trust_level">
+        <item>Nur mit gültiger Vetrauenskette</item>
+        <item>Mit abgelaufenem oder selbstsigniertem Zertifikat</item>
+        <item>Allem vertrauen (gefährlich)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="16dip"
+      android:paddingLeft="20dip"
+      android:paddingRight="20dip"
+      android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/dlg_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="6dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:gravity="left"
+        />
+
+    <CheckBox
+        android:id="@+id/for_dirs"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dlg_title"
+        android:layout_alignParentRight="true"
+        android:textSize="11sp"
+        android:checked="true"
+        android:text="@string/for_dirs" />
+    <CheckBox
+        android:id="@+id/for_files"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/for_dirs"
+        android:layout_alignLeft="@id/for_dirs"
+        android:layout_marginTop="-10dip"
+        android:textSize="11sp"
+        android:checked="true"
+        android:text="@string/for_files" />
+    
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dlg_title"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/for_dirs"
+        android:text="@string/filemask" />
+    <EditText
+        android:id="@+id/edit_field"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prompt"
+        android:layout_toLeftOf="@id/for_dirs"
+        android:layout_marginRight="8dp"
+        android:autoText="false"
+        android:capitalize="none"
+        android:gravity="fill_horizontal"
+        android:inputType="textUri"
+        android:scrollHorizontally="true">
+        <requestFocus/>
+    </EditText>
+
+    <RelativeLayout
+        android:id="@+id/search_params"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/for_files"
+        android:visibility="gone">
+        
+      <CheckBox
+          android:id="@+id/in_subf"
+          android:layout_width="100sp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentRight="true"
+          android:textSize="12dp"
+          android:checked="true"
+          android:text="@string/in_subf" />          
+        
+        <TextView
+            android:id="@+id/content_prompt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/content"
+            android:labelFor="@id/edit_content"/>
+        <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_prompt"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/in_subf"
+            android:autoText="false"
+            android:capitalize="none"
+            android:gravity="fill_horizontal"
+            android:scrollHorizontally="true"
+            android:inputType="text" />
+        
+        <include layout="@layout/file_props"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_content" />
+
+        </RelativeLayout>
+  </RelativeLayout>
+</ScrollView>

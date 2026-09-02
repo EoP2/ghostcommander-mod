@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Ničesar ni za brati</string>
+    <string name="nothing_returned">Te souporabe Samba ni mogoče odpreti\n%s</string>
+    <string name="malformed_url">Nepravilno oblikovan URL:\n%s</string>
+    <string name="msbrowse_err">Seznama domen/delovnih skupin ni mogoče dobiti.\nPoizkusite izrecno navesti ime domene, kot je npr.\n\"smb://your_domain_name/\".</string>
+    <string name="connect_err">Ni se mogoče povezati v:\n%s</string>
+    <string name="broken_pipe">Povezava s strežnikom je prekinjena. Vrnite se v \"/sdcard\" in poizkusite znova.</string>
+    <!-- statuses -->
+    <!-- prefs -->
+</resources>

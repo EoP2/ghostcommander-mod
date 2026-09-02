@@ -1,0 +1,97 @@
+name: Android CI Build
+
+"on":
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # This SVN export did not include a Gradle wrapper (gradlew /
+      # gradle-wrapper.jar), so instead of "./gradlew" we install a
+      # matching Gradle version directly. AGP 8.6.0 (see build.gradle)
+      # requires Gradle 8.7 or newer.
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '8.7'
+
+      # The runner image sets ANDROID_HOME / ANDROID_SDK_ROOT, but it does
+      # NOT put cmdline-tools' bin directory (where sdkmanager lives) on
+      # PATH by default. Add it explicitly before calling sdkmanager.
+      - name: Configure Android SDK environment
+        run: |
+          echo "ANDROID_HOME=$ANDROID_SDK_ROOT" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_HOME=$RUNNER_TEMP/android-home" >> "$GITHUB_ENV"
+          echo "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin" >> "$GITHUB_PATH"
+
+      # Make sure the exact SDK Platform / Build-Tools this project needs
+      # are present, regardless of what happens to already be installed
+      # on the runner image. platforms;android-31 is for the
+      # gc-webdav-svn-new-r4 plugin module (its own compileSdkVersion),
+      # :app itself only needs android-34.
+      - name: Install required Android SDK packages
+        run: |
+          yes | sdkmanager --licenses > /dev/null || true
+          sdkmanager "platforms;android-34" "platforms;android-31" "build-tools;34.0.0"
+
+      # Builds every product flavor (fdroid / free / root) in both debug
+      # and release form. Release is unsigned since no signing config is
+      # defined; see the README note about adding one if you need signed
+      # release builds.
+      # createJar is included here too: it depends on
+      # :app:compileFreeDebugJavaWithJavac and drops com.jar in the repo
+      # root, which the plugin module below needs as a compileOnly
+      # dependency (compileOnly fileTree(include: 'com.jar', dir: '..')).
+      - name: Build all flavors and build types
+        run: gradle :app:assemble :app:createJar --stacktrace
+
+      - name: Verify com.jar was produced
+        run: ls -la com.jar
+
+      - name: Build relocated httpclient (avoids Android platform class clash)
+        run: gradle :httpclient-shaded:shadowJar --stacktrace
+
+      - name: Verify httpclient-shaded.jar was produced
+        run: ls -la httpclient-shaded.jar
+
+      # gc-webdav-svn-new-r4 is kept as a separate step, run strictly
+      # after the two above: com.jar and httpclient-shaded.jar both have
+      # to exist on disk before this module can compile, and nothing in
+      # the Gradle task graph enforces that ordering for us, so we rely
+      # on step order instead.
+      - name: Build WebDAV/SVN plugin (all build types)
+        run: gradle :gc-webdav-svn-new-r4:assemble --stacktrace
+
+      - name: Upload APKs
+        uses: actions/upload-artifact@v4
+        with:
+          name: GhostCommander-APKs
+          path: app/build/outputs/apk/**/*.apk
+          if-no-files-found: error
+
+      - name: Upload WebDAV/SVN plugin APKs
+        uses: actions/upload-artifact@v4
+        with:
+          name: gc-webdav-svn-plugin-APKs
+          path: gc-webdav-svn-new-r4/build/outputs/apk/**/*.apk
+          if-no-files-found: error
+
+      - name: Upload com.jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: com-jar
+          path: com.jar
+          if-no-files-found: error
