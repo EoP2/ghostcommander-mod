@@ -178,6 +178,12 @@
                   android:icon="@drawable/square">
               </PreferenceScreen>
               <PreferenceScreen
+                  android:key="div_color_picker"
+                  android:title="@string/div_color_picker"
+                  android:summary="@string/summary_div_color_picker"
+                  android:icon="@drawable/square">
+              </PreferenceScreen>
+              <PreferenceScreen
                   android:key="btn_color_picker"
                   android:title="@string/btn_color_picker"
                   android:summary="@string/summary_btn_color_picker"

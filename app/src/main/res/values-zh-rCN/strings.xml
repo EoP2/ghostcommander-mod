@@ -404,6 +404,8 @@
   <string name="summary_sfg_color_picker">已选定项目和当前面板标题的字体颜色</string>
   <string name="ttl_color_picker">面板标题</string>
   <string name="summary_ttl_color_picker">面板标题的底色</string>
+  <string name="div_color_picker">分割线</string>
+  <string name="summary_div_color_picker">左右面板之间分割线的颜色</string>
   <string name="btn_color_picker">工具栏按钮</string>
   <string name="summary_btn_color_picker">底部工具栏按钮的颜色</string>
   <string name="pick_color">选择颜色</string>

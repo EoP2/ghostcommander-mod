@@ -412,6 +412,8 @@ Use \%# for a file counter, \%## with 2 zero-leading digits and so on.
 <string name="summary_sfg_color_picker">Choose a text color for selected files and the current panel\'s title</string>
 <string name="ttl_color_picker">Panel title</string>
 <string name="summary_ttl_color_picker">Choose a background color for the panel title</string>
+<string name="div_color_picker">Divider</string>
+<string name="summary_div_color_picker">Choose a color for the divider between panels</string>
 <string name="btn_color_picker">Buttons</string>
 <string name="summary_btn_color_picker">Choose a background color for the buttons</string>
 <string name="pick_color">Set color</string>
