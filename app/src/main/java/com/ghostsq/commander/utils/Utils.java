@@ -1031,7 +1031,7 @@ public final class Utils {
                 ActionBar ab = a.getActionBar();
                 if( ab == null ) return false;
                 ab.setDisplayHomeAsUpEnabled( back );
-                ab.setElevation( 0 );
+                ab.setElevation( 1 );
                 if( no_title_on_small ) {
                     final int size_class = ( a.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK );
                     if( size_class <= Configuration.SCREENLAYOUT_SIZE_LARGE )
