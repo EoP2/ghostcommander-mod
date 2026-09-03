@@ -149,6 +149,7 @@
   <string name="destination">目标</string>
   <string name="dialog_select">加选</string>
   <string name="dialog_unselect">减选</string>
+  <string name="dialog_invert">反选</string>
   <string name="filemask">文件类型：</string>
   <string name="for_files">文件</string>
   <string name="for_dirs">文件夹</string>
