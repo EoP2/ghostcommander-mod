@@ -402,9 +402,9 @@
   <string name="summary_sel_color_picker">已选定项目和当前面板标题的背景色</string>
   <string name="sfg_color_picker">已选择前景</string>
   <string name="summary_sfg_color_picker">已选定项目和当前面板标题的文本颜色</string>
-  <string name="ufg_color_picker">未选择前景</string>
-  <string name="summary_ufg_color_picker">未激活面板标题的文本颜色</string>
-  <string name="ttl_color_picker">面板标题</string>
+  <string name="ufg_color_picker">面板标题前景</string>
+  <string name="summary_ufg_color_picker">面板标题的文本颜色</string>
+  <string name="ttl_color_picker">面板标题背景</string>
   <string name="summary_ttl_color_picker">面板标题的背景色</string>
   <string name="div_color_picker">分割线</string>
   <string name="summary_div_color_picker">左右面板之间分割线的颜色</string>
