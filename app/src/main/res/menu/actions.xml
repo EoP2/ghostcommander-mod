@@ -3,11 +3,11 @@
           android:title="@string/select"
           android:showAsAction="always">
           <menu>
-              <item android:id="@id/sel_dlg"
-                    android:title="@string/sel_dlg"/>
               <item android:id="@+id/sel_between"
                     android:title="@string/select_between"
                   />
+              <item android:id="@id/sel_dlg"
+                    android:title="@string/sel_dlg"/>
               <item android:id="@id/compare"
                     android:title="@string/compare"
                   />
