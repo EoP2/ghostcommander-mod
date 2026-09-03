@@ -71,7 +71,7 @@
   <string name="ftp_descr">配置FTP</string>
   <string name="sftp_descr">配置SFTP</string>
   <string name="smb_descr">配置SMB</string>
-  <string name="plugins_descr">发现更多Ghost Commander的插件</string>
+  <string name="plugins_descr">更多Ghost Commander插件</string>
   <string name="root_descr">仅对于已Root的设备：管理危险的系统文件，确保你知道自己正在做什么</string>
   <string name="mount_descr">显示挂载点列表，并切换至读写\"rw\"，然后在操作后返回只读\"ro\"模式，开始请小心</string>
   <string name="apps_descr">查看和管理已安装的应用程序</string>
@@ -89,7 +89,7 @@
   <string name="sort_by_adate">按访问时间</string>
   <string name="sel_dlg">选择</string>
   <string name="select_between">选择范围</string>
-  <string name="select2">至少选择两个文件才能确定范围</string>
+  <string name="select2">至少选择两个文件方可确定范围</string>
   <string name="toggle_panels_mode">切换单双面板</string>
   <string name="prefs">设置</string>
   <string name="save_prefs">导出设置</string>
@@ -402,6 +402,8 @@
   <string name="summary_sel_color_picker">已选定项目和当前面板标题的背景色</string>
   <string name="sfg_color_picker">已选择前景</string>
   <string name="summary_sfg_color_picker">已选定项目和当前面板标题的文本颜色</string>
+  <string name="ufg_color_picker">未选择前景</string>
+  <string name="summary_ufg_color_picker">未激活面板标题的文本颜色</string>
   <string name="ttl_color_picker">面板标题</string>
   <string name="summary_ttl_color_picker">面板标题的背景色</string>
   <string name="div_color_picker">分割线</string>

@@ -171,6 +171,12 @@
                   android:summary="@string/summary_sfg_color_picker"
                   android:icon="@drawable/square">
               </PreferenceScreen>
+              <PreferenceScreen
+                  android:key="ufg_color_picker"
+                  android:title="@string/ufg_color_picker"
+                  android:summary="@string/summary_ufg_color_picker"
+                  android:icon="@drawable/square">
+              </PreferenceScreen>
                   <PreferenceScreen
                   android:key="ttl_color_picker"
                   android:title="@string/ttl_color_picker"

@@ -410,6 +410,8 @@ Use \%# for a file counter, \%## with 2 zero-leading digits and so on.
 <string name="summary_sel_color_picker">Choose a background color for selected files and the current panel\'s title</string>
 <string name="sfg_color_picker">Selected foreground</string>
 <string name="summary_sfg_color_picker">Choose a text color for selected files and the current panel\'s title</string>
+<string name="ufg_color_picker">Unfocused foreground</string>
+<string name="summary_ufg_color_picker">Choose a text color for the panel title when not focused</string>
 <string name="ttl_color_picker">Panel title</string>
 <string name="summary_ttl_color_picker">Choose a background color for the panel title</string>
 <string name="div_color_picker">Divider</string>
