@@ -889,15 +889,7 @@ public final class Utils {
     // and ListHelper.setFocused() so both sides of the merged path+status bar
     // always agree on the same color.
     public static int getFocusTextColor( ColorsKeeper ck, boolean focused ) {
-        if( focused )
-            return ck.sfgColor;
-        float[] fgr_hsv = new float[3];
-        Color.colorToHSV( ck.fgrColor, fgr_hsv );
-        float[] ttl_hsv = new float[3];
-        Color.colorToHSV( ck.ttlColor, ttl_hsv );
-        fgr_hsv[1] *= 0.5f;
-        fgr_hsv[2] = ( fgr_hsv[2] + ttl_hsv[2] ) / 2;
-        return Color.HSVToColor( fgr_hsv );
+        return focused ? ck.sfgColor : ck.ufgColor;
     }
 
     public static GradientDrawable getShadingEx( int color, float drop ) {
