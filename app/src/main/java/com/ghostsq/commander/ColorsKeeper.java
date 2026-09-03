@@ -19,6 +19,7 @@ public final class ColorsKeeper {
     public  static final String FGR_COLORS = "fgr_color_picker"; 
     public  static final String SEL_COLORS = "sel_color_picker"; 
     public  static final String SFG_COLORS = "sfg_color_picker"; 
+    public  static final String UFG_COLORS = "ufg_color_picker";
     public  static final String CUR_COLORS = "cur_color_picker";
     public  static final String TTL_COLORS = "ttl_color_picker";
     public  static final String BTN_COLORS = "btn_color_picker";
@@ -26,7 +27,7 @@ public final class ColorsKeeper {
 
     private  Context ctx;
     private  SharedPreferences   colorPref = null;
-    public   int ttlColor, bgrColor, fgrColor, selColor, sfgColor, curColor, btnColor, divColor;
+    public   int ttlColor, bgrColor, fgrColor, selColor, sfgColor, curColor, btnColor, divColor, ufgColor;
     private  static String theme;
     
     public class FileTypeColor {
@@ -219,6 +220,7 @@ public final class ColorsKeeper {
             curColor = 0;//r.getColor( R.color.cur_drk );
             selColor = r.getColor( R.color.sel_drk );
             sfgColor = r.getColor( R.color.sfg_drk );
+            ufgColor = r.getColor( R.color.ufg_drk );
             btnColor = r.getColor( R.color.btn_drk );
         }
         if( "n".equals( t ) ) {
@@ -229,6 +231,7 @@ public final class ColorsKeeper {
             curColor = r.getColor( R.color.cur_nrt );
             selColor = r.getColor( R.color.sel_nrt );
             sfgColor = r.getColor( R.color.sfg_nrt );
+            ufgColor = r.getColor( R.color.ufg_nrt );
             btnColor = r.getColor( R.color.btn_nrt );
         }
         if( "l".equals( t ) ) {
@@ -239,6 +242,7 @@ public final class ColorsKeeper {
             curColor = 0;//r.getColor( R.color.cur_lgt );
             selColor = r.getColor( R.color.sel_lgt );
             sfgColor = r.getColor( R.color.sfg_lgt );
+            ufgColor = r.getColor( R.color.ufg_lgt );
             btnColor = r.getColor( R.color.btn_lgt );
         }
         if( ftColors == null ) restoreTypeColors();
@@ -254,6 +258,7 @@ public final class ColorsKeeper {
         if( FGR_COLORS.equals( key ) ) return fgrColor;
         if( SEL_COLORS.equals( key ) ) return selColor;
         if( SFG_COLORS.equals( key ) ) return sfgColor;
+        if( UFG_COLORS.equals( key ) ) return ufgColor;
         if( CUR_COLORS.equals( key ) ) return curColor;
         if( TTL_COLORS.equals( key ) ) return ttlColor;
         if( BTN_COLORS.equals( key ) ) return btnColor;
@@ -266,6 +271,7 @@ public final class ColorsKeeper {
         if( FGR_COLORS.equals( key ) ) fgrColor = c;
         if( SEL_COLORS.equals( key ) ) selColor = c;
         if( SFG_COLORS.equals( key ) ) sfgColor = c;
+        if( UFG_COLORS.equals( key ) ) ufgColor = c;
         if( CUR_COLORS.equals( key ) ) curColor = c;
         if( TTL_COLORS.equals( key ) ) ttlColor = c;
         if( BTN_COLORS.equals( key ) ) btnColor = c;
@@ -287,6 +293,7 @@ public final class ColorsKeeper {
         editor.putInt( CUR_COLORS, curColor );
         editor.putInt( SEL_COLORS, selColor );
         editor.putInt( SFG_COLORS, sfgColor );
+        editor.putInt( UFG_COLORS, ufgColor );
         editor.putInt( TTL_COLORS, ttlColor );
         editor.putInt( BTN_COLORS, btnColor );
         editor.putInt( DIV_COLORS, divColor );
@@ -302,6 +309,7 @@ public final class ColorsKeeper {
         curColor = colorPref.getInt( CUR_COLORS, curColor );
         selColor = colorPref.getInt( SEL_COLORS, selColor );
         sfgColor = colorPref.getInt( SFG_COLORS, sfgColor );
+        ufgColor = colorPref.getInt( UFG_COLORS, ufgColor );
         ttlColor = colorPref.getInt( TTL_COLORS, ttlColor );
         btnColor = colorPref.getInt( BTN_COLORS, btnColor );
         divColor = colorPref.getInt( DIV_COLORS, divColor );

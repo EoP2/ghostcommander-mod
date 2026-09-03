@@ -77,6 +77,7 @@ public class Prefs extends PreferenceActivity implements Preference.OnPreference
             findPreference( ColorsKeeper.BGR_COLORS ).setOnPreferenceClickListener( this );
             findPreference( ColorsKeeper.SEL_COLORS ).setOnPreferenceClickListener( this );
             findPreference( ColorsKeeper.SFG_COLORS ).setOnPreferenceClickListener( this );
+            findPreference( ColorsKeeper.UFG_COLORS ).setOnPreferenceClickListener( this );
             findPreference( ColorsKeeper.CUR_COLORS ).setOnPreferenceClickListener( this );
             findPreference( ColorsKeeper.TTL_COLORS ).setOnPreferenceClickListener( this );
             findPreference( ColorsKeeper.DIV_COLORS ).setOnPreferenceClickListener( this );
@@ -187,6 +188,7 @@ public class Prefs extends PreferenceActivity implements Preference.OnPreference
             findPreference( ColorsKeeper.BGR_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.BGR_COLORS ) );
             findPreference( ColorsKeeper.SEL_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.SEL_COLORS ) );
             findPreference( ColorsKeeper.SFG_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.SFG_COLORS ) );
+            findPreference( ColorsKeeper.UFG_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.UFG_COLORS ) );
             findPreference( ColorsKeeper.CUR_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.CUR_COLORS ) );
             findPreference( ColorsKeeper.TTL_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.TTL_COLORS ) );
             findPreference( ColorsKeeper.DIV_COLORS ).getIcon().setTint( ck.getColor( ColorsKeeper.DIV_COLORS ) );
