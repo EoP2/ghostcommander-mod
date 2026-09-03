@@ -14,6 +14,7 @@
     <color name="ttl_drk">#FF000000</color>
     <color name="div_drk">#FF555555</color>
     <color name="btn_drk">#FF2A2A2A</color>
+    <color name="tbg_drk">#FF000000</color>
     <color name="btn_odf">#FFFFFFFF</color>    
     <color name="toolbar">#333</color>    
 
@@ -26,6 +27,7 @@
     <color name="ttl_lgt">#FFFFFFFF</color>    
     <color name="div_lgt">#FFEEEEEE</color>
     <color name="btn_lgt">#FFF4F2F4</color>    
+    <color name="tbg_lgt">#FFFAFAFA</color>
 
     <color name="bgr_nrt">#FF1818B2</color>    
     <color name="fgr_nrt">#FFB2B2B2</color>    
@@ -35,7 +37,8 @@
     <color name="cur_nrt">#FF18B2B2</color>    
     <color name="ttl_nrt">#FF1818B2</color>    
     <color name="div_nrt">#FF204E51</color>
-    <color name="btn_nrt">#FF18B2B2</color>    
+    <color name="btn_nrt">#FF18B2B2</color>  
+    <color name="tbg_nrt">#FF000000</color>  
 
     <color name="fg1_drk">#FFFFFFEF</color>
     <color name="fg2_drk">#FFD1FFDF</color>

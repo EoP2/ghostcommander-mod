@@ -195,6 +195,12 @@
                   android:summary="@string/summary_btn_color_picker"
                   android:icon="@drawable/square">
               </PreferenceScreen>
+              <PreferenceScreen
+                  android:key="tbg_color_picker"
+                  android:title="@string/tbg_color_picker"
+                  android:summary="@string/summary_tbg_color_picker"
+                  android:icon="@drawable/square">
+              </PreferenceScreen>
            </PreferenceCategory>
         </PreferenceScreen>
         <ListPreference

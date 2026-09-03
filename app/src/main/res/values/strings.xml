@@ -418,6 +418,8 @@ Use \%# for a file counter, \%## with 2 zero-leading digits and so on.
 <string name="summary_div_color_picker">Choose a color for the divider between panels</string>
 <string name="btn_color_picker">Buttons</string>
 <string name="summary_btn_color_picker">Choose a background color for the buttons</string>
+<string name="tbg_color_picker">Toolbar background</string>
+<string name="summary_tbg_color_picker">Choose a background color for the toolbar bar</string>
 <string name="pick_color">Set color</string>
 <string name="color">Color</string>
 <string name="color_themes">Themes</string>

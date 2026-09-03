@@ -347,6 +347,8 @@
   <string name="summary_show_emoji">显示emoji图标</string>
   <string name="show_caption">显示文本</string>
   <string name="summary_show_caption">显示按钮文本</string>
+  <string name="tb_height">工具栏区域高度</string>
+  <string name="summary_tb_height">在某些设备上，更大的工具栏区域会更方便。以英寸为单位设置一个值，默认值为0</string>
   <string name="toolbar_preference">定制工具栏</string>
   <string name="summary_toolbar_preference">选择需要显示的按钮，并编辑排序</string>
   <string name="tblist_label">定制工具栏</string>
@@ -410,6 +412,8 @@
   <string name="summary_div_color_picker">左右面板之间分割线的颜色</string>
   <string name="btn_color_picker">工具栏按钮</string>
   <string name="summary_btn_color_picker">底部工具栏按钮的颜色</string>
+  <string name="tbg_color_picker">工具栏背景</string>
+  <string name="summary_tbg_color_picker">底部工具栏区域的背景色</string>
   <string name="pick_color">选择颜色</string>
   <string name="color">颜色</string>
   <string name="color_themes">预设主题</string>
