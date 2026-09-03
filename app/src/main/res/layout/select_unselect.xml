@@ -75,20 +75,29 @@
         android:orientation="horizontal" >
 
         <Button style="?android:attr/buttonBarButtonStyle"
-            android:id="@+id/action_select"
+            android:id="@+id/action_invert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="6dip"
             android:layout_weight="1"
-            android:text="@string/dialog_select"
+            android:text="@string/dialog_invert"
             />
 
         <Button style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/action_unselect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="6dip"
             android:layout_weight="1"
             android:text="@string/dialog_unselect"
+            />
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/action_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_select"
             />
 
     </LinearLayout>
