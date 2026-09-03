@@ -92,7 +92,7 @@ public class Panels implements AdapterView.OnItemSelectedListener,
     private final int[] headerIds = {R.id.left_stat, R.id.right_stat};
     private final ListHelper[] list = {null, null};
     public FileCommander c;
-    public View mainView, toolbar = null;
+    public View mainView, toolbar = null, tbScroll = null;
     private final LockableScrollView hsv;
     public PanelsView panelsView = null;
     public boolean sxs, fingerFriendly = false;
@@ -236,6 +236,8 @@ public class Panels implements AdapterView.OnItemSelectedListener,
                     }
                     ((ViewGroup)mainView).addView( tb_scroll );
                     toolbar = tb_scroll.findViewById( R.id.toolbar );
+                    tbScroll = tb_scroll;
+                    tbScroll.setBackgroundColor( ck.tbgColor );
                 }
                 if( toolbar == null ) {
                     Log.e( TAG, "Toolbar inflation has failed!" );
@@ -451,6 +453,8 @@ public class Panels implements AdapterView.OnItemSelectedListener,
             if( div != null )
                 div.setBackgroundColor( ck.divColor );
         }
+        if( tbScroll != null )
+            tbScroll.setBackgroundColor( ck.tbgColor );
         list[LEFT].applyColors( ck );
         list[RIGHT].applyColors( ck );
 
