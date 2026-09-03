@@ -697,13 +697,19 @@ public class Dialogs implements DialogInterface.OnClickListener {
                     public void onClick( View v ) {
                         String file_name = edit != null ? edit.getText().toString() : "";
                         if( !Utils.str( file_name ) ) return;
-                        owner.panels.checkItems( v.getId() == R.id.action_select, file_name,
-                                for_dirs.isChecked(), for_files.isChecked() );
+                        int id = v.getId();
+                        if( id == R.id.action_invert )
+                            owner.panels.invertItems( file_name,
+                                    for_dirs.isChecked(), for_files.isChecked() );
+                        else
+                            owner.panels.checkItems( id == R.id.action_select, file_name,
+                                    for_dirs.isChecked(), for_files.isChecked() );
                         Dialogs.this.dialogObj.cancel();
                     }
                 };
-                dialog.findViewById( R.id.action_select ).setOnClickListener( cl );
+                dialog.findViewById( R.id.action_select   ).setOnClickListener( cl );
                 dialog.findViewById( R.id.action_unselect ).setOnClickListener( cl );
+                dialog.findViewById( R.id.action_invert   ).setOnClickListener( cl );
                 return;
             }
             if( id == LOGIN_DIALOG ) {

@@ -431,27 +431,44 @@ public class ListHelper {
         return true;
     }
 
-    public final void checkItems( boolean set, String mask, boolean dir, boolean file ) {
-        try {
-            if( !dir && !file ) return;   // should it issue a warning?
-            String[] cards = Query.prepareWildcard( mask );
-            ListAdapter la = flv.getAdapter();
-            CommanderAdapter ca = (CommanderAdapter)la;
-            if( la != null && cards != null ) {
-                for( int i = 1; i < flv.getCount(); i++ ) {
-                    if( dir != file ) {
-                        CommanderAdapter.Item cai = (CommanderAdapter.Item)la.getItem( i );
-                        if( cai == null ) continue;
-                        if( cai.dir ) {
-                            if( !dir )  continue;
-                        } else {
-                            if( !file ) continue;
-                        }
-                    }
-                    if( Query.match( ca.getItemName( i, false ), cards ) )
-                        flv.setItemChecked( i, set );
+    private interface ItemAction {
+        void apply( int pos );
+    }
+
+    private final void forEachMatching( String mask, boolean dir, boolean file, ItemAction action ) {
+        if( !dir && !file ) return;
+        String[] cards = Query.prepareWildcard( mask );
+        ListAdapter la = flv.getAdapter();
+        CommanderAdapter ca = (CommanderAdapter)la;
+        if( la == null || cards == null ) return;
+        for( int i = 1; i < flv.getCount(); i++ ) {
+            if( dir != file ) {
+                CommanderAdapter.Item cai = (CommanderAdapter.Item)la.getItem( i );
+                if( cai == null ) continue;
+                if( cai.dir ) {
+                    if( !dir )  continue;
+                } else {
+                    if( !file ) continue;
                 }
             }
+            if( Query.match( ca.getItemName( i, false ), cards ) )
+                action.apply( i );
+        }
+        updateStatus();
+    }
+
+    public final void checkItems( boolean set, String mask, boolean dir, boolean file ) {
+        try {
+            forEachMatching( mask, dir, file, i -> flv.setItemChecked( i, set ) );
+        } catch( Exception e ) {
+            Log.e( TAG, mask, e );
+        }
+    }
+
+    public final void invertItems( String mask, boolean dir, boolean file ) {
+        try {
+            final SparseBooleanArray cis = flv.getCheckedItemPositions();
+            forEachMatching( mask, dir, file, i -> flv.setItemChecked( i, !cis.get( i ) ) );
         } catch( Exception e ) {
             Log.e( TAG, mask, e );
         }

@@ -692,6 +692,10 @@ public class Panels implements AdapterView.OnItemSelectedListener,
         list[current].checkItems( set, mask, dir, file );
     }
 
+    public final void invertItems( String mask, boolean dir, boolean file ) {
+        list[current].invertItems( mask, dir, file );
+    }
+
     public final void checkBetween() {
         if( !list[current].checkItemsBetween() )
             c.showError( c.getString( R.string.select2 ) );
