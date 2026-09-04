@@ -44,6 +44,7 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
     private LayoutInflater inflater;
     private int font_size;
     private ArrayList<ListHelper.HistEntry> historyList = new ArrayList<ListHelper.HistEntry>();
+    private int currentHistoryIndex = -1;
 	
 	public LocationBar( FileCommander c_, Panels p_, Favorites shortcuts_list ) {
 		super();
@@ -160,6 +161,7 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 
             nv.setText( he.label );
             nv.setTypeface( null, Typeface.NORMAL );
+            nv.setTypeface( null, position == currentHistoryIndex ? Typeface.BOLD : Typeface.NORMAL );
             dv.setTextSize( font_size * 0.75f );
             dv.setText( "" );
             return v;
@@ -261,6 +263,9 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 
     private void refreshHistoryList( int which ) {
     	historyList = p.getHistoryList( which );
+    	ListHelper.HistoryView hv = p.getHistoryView( which );
+    	historyList = hv.entries;
+    	currentHistoryIndex = hv.currentIndex;
     	notifyDataSetChanged();
     }
 

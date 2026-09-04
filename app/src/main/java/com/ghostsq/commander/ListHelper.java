@@ -250,7 +250,33 @@ public class ListHelper {
         return new ArrayList<HistEntry>( fwdStack );
     }
 
+    public static final class HistoryView {
+        public final ArrayList<HistEntry> entries;
+        public final int currentIndex;
+        HistoryView( ArrayList<HistEntry> entries, int currentIndex ) {
+            this.entries = entries;
+            this.currentIndex = currentIndex;
+        }
+    }
+
+    public final HistoryView getHistoryView() {
+        ArrayList<HistEntry> entries = new ArrayList<HistEntry>();
+        ArrayList<HistEntry> fwdAsList = new ArrayList<HistEntry>( fwdStack );
+        for( int i = fwdAsList.size() - 1; i >= 0; i-- )
+            entries.add( fwdAsList.get( i ) );
+        int currentIndex = entries.size();
+        HistEntry cur = captureCurrentEntry();
+        if( cur != null )
+            entries.add( cur );
+        else
+            currentIndex = -1;
+        entries.addAll( backStack );
+        return new HistoryView( entries, currentIndex );
+    }
+
     public final void restoreHistory( ArrayList<HistEntry> back, ArrayList<HistEntry> fwd ) {
+        if( back == null && fwd == null )
+            return;
         backStack.clear();
         if( back != null ) backStack.addAll( back );
         fwdStack.clear();

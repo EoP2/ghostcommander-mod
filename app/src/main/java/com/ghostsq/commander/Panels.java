@@ -817,8 +817,8 @@ public class Panels implements AdapterView.OnItemSelectedListener,
         return list[which].hasHistForward();
     }
 
-    public final ArrayList<ListHelper.HistEntry> getHistoryList( int which ) {
-        return list[which].getHistoryList();
+    public final ListHelper.HistoryView getHistoryView( int which ) {
+        return list[which].getHistoryView();
     }
 
     public final void recoverAfterRefresh( String item_name, int which ) {
