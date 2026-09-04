@@ -102,6 +102,8 @@
 <string name="keys">Brief help</string>
 <string name="new_zip">Create a new ZIP file</string>
 <string name="go_button">Go</string>
+<string name="hist_back">←</string>
+<string name="hist_fwd">→</string>
 <string name="show_size">Info</string>
 <string name="checksum">Checksum</string>
 <string name="send_to">Send to…</string>
