@@ -30,7 +30,7 @@
   <string name="home">主页</string>
   <string name="sdcard">SD卡</string>
   <string name="softkbd">键盘</string>
-  <string name="enter_b">位置</string>
+  <string name="enter_b">跳转</string>
   <string name="add_fav">添加到书签</string>
   <string name="add_fav_b">添加书签</string>
   <string name="remount_b">挂载读写</string>
