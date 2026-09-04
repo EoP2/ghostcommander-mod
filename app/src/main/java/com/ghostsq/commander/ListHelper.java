@@ -13,6 +13,8 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -31,9 +33,11 @@ import com.ghostsq.commander.adapters.CommanderAdapter.Item;
 import com.ghostsq.commander.adapters.FSAdapter;
 import com.ghostsq.commander.adapters.FavsAdapter;
 import com.ghostsq.commander.adapters.HomeAdapter;
+import com.ghostsq.commander.favorites.Favorite;
 import com.ghostsq.commander.utils.Credentials;
 import com.ghostsq.commander.utils.Utils;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 
@@ -47,7 +51,42 @@ public class ListHelper {
     private String[]   listOfItemsChecked = null;
     private final Panels p;
     private boolean    needRefresh, was_current;
-    
+
+    private final static int HIST_CAP = 50;
+    private final ArrayDeque<HistEntry> backStack = new ArrayDeque<HistEntry>();
+    private final ArrayDeque<HistEntry> fwdStack  = new ArrayDeque<HistEntry>();
+
+    public static final class HistEntry implements Parcelable {
+        public final Uri         uri;
+        public final Credentials crd;
+        public final String      label;
+
+        public HistEntry( Uri uri, Credentials crd, String label ) {
+            this.uri   = uri;
+            this.crd   = crd;
+            this.label = label;
+        }
+
+        private HistEntry( Parcel in ) {
+            uri   = in.readParcelable( Uri.class.getClassLoader() );
+            crd   = in.readParcelable( Credentials.class.getClassLoader() );
+            label = in.readString();
+        }
+
+        public static final Parcelable.Creator<HistEntry> CREATOR = new Parcelable.Creator<HistEntry>() {
+            @Override public HistEntry createFromParcel( Parcel in ) { return new HistEntry( in ); }
+            @Override public HistEntry[] newArray( int size ) { return new HistEntry[size]; }
+        };
+
+        @Override public int describeContents() { return 0; }
+
+        @Override public void writeToParcel( Parcel dest, int flags ) {
+            dest.writeParcelable( uri, flags );
+            dest.writeParcelable( crd, flags );
+            dest.writeString( label );
+        }
+    }
+
     ListHelper( int which_, Panels p_ ) {
         needRefresh = false;
         was_current = false;
@@ -104,7 +143,13 @@ public class ListHelper {
     }
     
     public final void Navigate( Uri uri, Credentials crd, String posTo, boolean was_current_ ) {
+        Navigate( uri, crd, posTo, was_current_, false );
+    }
+
+    public final void Navigate( Uri uri, Credentials crd, String posTo, boolean was_current_, boolean fromHistory ) {
         try {
+            if( !fromHistory )
+                pushHistory( uri );
             // Log.v( TAG, "Navigate to " + Favorite.screenPwd( uri ) );
             was_current = was_current_;
             currentPosition = -1;
@@ -143,6 +188,73 @@ public class ListHelper {
         } catch( Exception e ) {
             Log.e( TAG, "NavigateInternal()", e );
         }
+    }
+
+    private HistEntry captureCurrentEntry() {
+        CommanderAdapter ca = (CommanderAdapter)flv.getAdapter();
+        if( ca == null ) return null;
+        Uri cur = ca.getUri();
+        if( cur == null ) return null;
+        return new HistEntry( cur, ca.getCredentials(), Favorite.screenPwd( cur ) );
+    }
+
+    private void pushHistory( Uri target ) {
+        try {
+            HistEntry cur = captureCurrentEntry();
+            if( cur == null ) return;
+            if( target != null && Utils.addTrailingSlash( cur.uri ).equals( Utils.addTrailingSlash( target ) ) )
+                return;
+            backStack.push( cur );
+            while( backStack.size() > HIST_CAP )
+                backStack.removeLast();
+            fwdStack.clear();
+        } catch( Exception e ) {
+            Log.e( TAG, "pushHistory()", e );
+        }
+    }
+
+    private void pushOpposite( ArrayDeque<HistEntry> stack ) {
+        try {
+            HistEntry cur = captureCurrentEntry();
+            if( cur != null )
+                stack.push( cur );
+        } catch( Exception e ) {
+            Log.e( TAG, "pushOpposite()", e );
+        }
+    }
+
+    public final HistEntry histBack() {
+        if( backStack.isEmpty() ) return null;
+        HistEntry e = backStack.pop();
+        pushOpposite( fwdStack );
+        Navigate( e.uri, e.crd, null, was_current, true );
+        return e;
+    }
+
+    public final HistEntry histForward() {
+        if( fwdStack.isEmpty() ) return null;
+        HistEntry e = fwdStack.pop();
+        pushOpposite( backStack );
+        Navigate( e.uri, e.crd, null, was_current, true );
+        return e;
+    }
+
+    public final boolean hasHistBack()    { return !backStack.isEmpty(); }
+    public final boolean hasHistForward() { return !fwdStack.isEmpty();  }
+
+    public final ArrayList<HistEntry> getHistoryList() {
+        return new ArrayList<HistEntry>( backStack );
+    }
+
+    public final ArrayList<HistEntry> getForwardHistoryList() {
+        return new ArrayList<HistEntry>( fwdStack );
+    }
+
+    public final void restoreHistory( ArrayList<HistEntry> back, ArrayList<HistEntry> fwd ) {
+        backStack.clear();
+        if( back != null ) backStack.addAll( back );
+        fwdStack.clear();
+        if( fwd != null ) fwdStack.addAll( fwd );
     }
 
     public final void focus() {

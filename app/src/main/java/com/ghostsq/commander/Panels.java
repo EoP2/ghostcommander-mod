@@ -801,6 +801,26 @@ public class Panels implements AdapterView.OnItemSelectedListener,
         list_h.Navigate( uri, crd, posTo, which == current );
     }
 
+    public final ListHelper.HistEntry histBack( int which ) {
+        return list[which].histBack();
+    }
+
+    public final ListHelper.HistEntry histForward( int which ) {
+        return list[which].histForward();
+    }
+
+    public final boolean hasHistBack( int which ) {
+        return list[which].hasHistBack();
+    }
+
+    public final boolean hasHistForward( int which ) {
+        return list[which].hasHistForward();
+    }
+
+    public final ArrayList<ListHelper.HistEntry> getHistoryList( int which ) {
+        return list[which].getHistoryList();
+    }
+
     public final void recoverAfterRefresh( String item_name, int which ) {
         try {
             if( which >= 0 )
@@ -1934,12 +1954,15 @@ public class Panels implements AdapterView.OnItemSelectedListener,
         private final static String LI = "LEFT_ITEM", RI = "RIGHT_ITEM";
         private final static String LM = "LEFT_MODE", RM = "RIGHT_MODE";
         private final static String CP = "LAST_PANEL";
+        private final static String LHB = "LEFT_HIST_BACK",  LHF = "LEFT_HIST_FWD";
+        private final static String RHB = "RIGHT_HIST_BACK", RHF = "RIGHT_HIST_FWD";
         private int current = -1;
         private Context ctx;
         private Credentials leftCrd, rightCrd;
         private Uri         leftUri, rightUri;
         private String      leftItem,rightItem;
         private int         leftMode,rightMode;
+        private ArrayList<ListHelper.HistEntry> leftHistBack, leftHistFwd, rightHistBack, rightHistFwd;
         
         State( Context c ) {
             this.ctx = c;
@@ -1959,6 +1982,10 @@ public class Panels implements AdapterView.OnItemSelectedListener,
             b.putString( RI, rightItem );
             b.putInt( LM, leftMode );
             b.putInt( RM, rightMode );
+            b.putParcelableArrayList( LHB, leftHistBack );
+            b.putParcelableArrayList( LHF, leftHistFwd );
+            b.putParcelableArrayList( RHB, rightHistBack );
+            b.putParcelableArrayList( RHF, rightHistFwd );
         }
 
         public final void restore( Bundle b ) {
@@ -1971,6 +1998,10 @@ public class Panels implements AdapterView.OnItemSelectedListener,
             rightItem = b.getString( RI );
             leftMode  = b.getInt( LM );
             rightMode = b.getInt( RM );
+            leftHistBack  = b.getParcelableArrayList( LHB );
+            leftHistFwd   = b.getParcelableArrayList( LHF );
+            rightHistBack = b.getParcelableArrayList( RHB );
+            rightHistFwd  = b.getParcelableArrayList( RHF );
         }
 
         public final void store( SharedPreferences.Editor e ) {
@@ -2032,6 +2063,11 @@ public class Panels implements AdapterView.OnItemSelectedListener,
             s.rightMode = right_adapter.getMode() & ( CommanderAdapter.MODE_SORTING | CommanderAdapter.MODE_SORT_DIR );
             pos = list[RIGHT].getCurPos();
             s.rightItem = pos >= 0 ? right_adapter.getItemName( pos, false ) : "";
+
+            s.leftHistBack  = list[LEFT].getHistoryList();
+            s.leftHistFwd   = list[LEFT].getForwardHistoryList();
+            s.rightHistBack = list[RIGHT].getHistoryList();
+            s.rightHistFwd  = list[RIGHT].getForwardHistoryList();
         } catch( Exception e ) {
             Log.e( TAG, "getState()", e );
         }
@@ -2046,6 +2082,7 @@ public class Panels implements AdapterView.OnItemSelectedListener,
         current = s.current;
         if( dont_restore != LEFT ) {
             ListHelper list_h = list[LEFT];
+            list_h.restoreHistory( s.leftHistBack, s.leftHistFwd );
             CommanderAdapter ca = list_h.getListAdapter(); 
             if( ca == null ) {
                 Uri lu = s.leftUri != null ? s.leftUri : Uri.parse( "home:" );
@@ -2058,6 +2095,7 @@ public class Panels implements AdapterView.OnItemSelectedListener,
         }
         if( dont_restore != RIGHT ) {
             ListHelper list_h = list[RIGHT];
+            list_h.restoreHistory( s.rightHistBack, s.rightHistFwd );
             CommanderAdapter ca = list_h.getListAdapter(); 
             if( ca == null ) {
                 Uri ru = s.rightUri != null ? s.rightUri : Uri.parse( "home:" );
