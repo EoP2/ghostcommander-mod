@@ -11,10 +11,16 @@
          android:orientation="horizontal"
          android:visibility="gone"
         >
-        <CheckBox android:id="@+id/star"
-            style="?android:attr/starStyle"
+        <Button android:id="@+id/hist_back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/hist_back"
+            style="?android:attr/buttonStyleSmall"/>
+        <Button android:id="@+id/hist_fwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hist_fwd"
+            style="?android:attr/buttonStyleSmall"/>
         <!-- android:background="@android:drawable/editbox_background" -->
         <AutoCompleteTextView android:id="@+id/uri_edit"
             android:layout_weight="1"
