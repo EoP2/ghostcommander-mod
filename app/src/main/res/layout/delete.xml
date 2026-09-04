@@ -65,7 +65,7 @@
         android:text="@string/to_trash"
         android:button="@null"
         android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-        android:drawablePadding="8dip"
+        android:drawablePadding="4dip"
         android:gravity="center_vertical"
         android:layout_marginTop="6dip"
         />
