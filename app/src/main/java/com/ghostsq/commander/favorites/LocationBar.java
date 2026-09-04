@@ -262,7 +262,6 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
     }
 
     private void refreshHistoryList( int which ) {
-    	historyList = p.getHistoryList( which );
     	ListHelper.HistoryView hv = p.getHistoryView( which );
     	historyList = hv.entries;
     	currentHistoryIndex = hv.currentIndex;
