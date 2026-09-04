@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.KeyEvent;
@@ -18,18 +19,19 @@ import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ghostsq.commander.FileCommander;
+import com.ghostsq.commander.ListHelper;
 import com.ghostsq.commander.Panels;
 import com.ghostsq.commander.R;
-import com.ghostsq.commander.adapters.SAFAdapter;
 import com.ghostsq.commander.utils.Credentials;
 import com.ghostsq.commander.utils.Utils;
+
+import java.util.ArrayList;
 
 public class LocationBar extends BaseAdapter implements Filterable, OnKeyListener, OnClickListener, TextWatcher {
     private final String TAG = getClass().getName();
@@ -41,6 +43,7 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
     private float density = 1;
     private LayoutInflater inflater;
     private int font_size;
+    private ArrayList<ListHelper.HistEntry> historyList = new ArrayList<ListHelper.HistEntry>();
 	
 	public LocationBar( FileCommander c_, Panels p_, Favorites shortcuts_list ) {
 		super();
@@ -54,12 +57,13 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
             AutoCompleteTextView textView = goPanel.findViewById( R.id.uri_edit );
             if( textView != null ) {
 	            textView.setAdapter( this );
+	            textView.setDropDownAnchor( R.id.uri_edit_panel );
 	            textView.setOnKeyListener( this );
 	            textView.addTextChangedListener( this );
 	            textView.setOnItemClickListener( new AdapterView.OnItemClickListener() {
 	                @Override
 	                public void onItemClick( AdapterView<?> parent, View view, int position, long id ) {
-	                    applyGoPanel();
+	                    applyHistoryItem( position );
 	                }
 	            } );
             }
@@ -67,9 +71,12 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
             if( go != null ) {
             	go.setOnClickListener( this );
             }
-            View star = goPanel.findViewById( R.id.star );
-            if( star != null )
-            	star.setOnClickListener( this );
+            View back = goPanel.findViewById( R.id.hist_back );
+            if( back != null )
+            	back.setOnClickListener( this );
+            View fwd = goPanel.findViewById( R.id.hist_fwd );
+            if( fwd != null )
+            	fwd.setOnClickListener( this );
             density = c.getContext().getResources().getDisplayMetrics().density;
         } catch( Exception e ) {
 			c.showMessage( "Exception on setup history dropdown: " + e );
@@ -78,12 +85,17 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 
 	public void setFingerFriendly( boolean finger_friendly, int font_size, float density ) {
 		this.font_size = font_size;
+        int pv = 0;//go.getPaddingTop();
+        int ph = (int)( finger_friendly ? 20 * density : 8 * density );
         Button go = (Button)goPanel.findViewById( R.id.go_button );
-        if( go != null ) {
-            int pv = 0;//go.getPaddingTop();
-            int ph = (int)( finger_friendly ? 20 * density : 8 * density );
+        if( go != null )
             go.setPadding( ph, pv, ph, pv );
-        }
+        View back = goPanel.findViewById( R.id.hist_back );
+        if( back != null )
+            back.setPadding( ph, pv, ph, pv );
+        View fwd = goPanel.findViewById( R.id.hist_fwd );
+        if( fwd != null )
+            fwd.setPadding( ph, pv, ph, pv );
 	}
 	
 	@Override
@@ -114,12 +126,12 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 
 	@Override
 	public int getCount() {
-		return favorites.size();
+		return historyList.size();
 	}
 
 	@Override
 	public Object getItem( int position ) {
-		return favorites.get( position ).getUriString( true );
+		return position >= 0 && position < historyList.size() ? historyList.get( position ).label : "";
 	}
 
 	@Override
@@ -131,8 +143,8 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 	@Override
 	public View getView( int position, View convertView, ViewGroup parent ) {
 		try {
-			Favorite f = favorites.get( position );
-			if( f == null ) return null;
+			if( position < 0 || position >= historyList.size() ) return null;
+			ListHelper.HistEntry he = historyList.get( position );
             View v = convertView != null ? convertView : inflater.inflate( R.layout.favitem, parent, false );
             TextView nv = v.findViewById( R.id.name );
             nv.setTextSize( font_size );
@@ -146,17 +158,10 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
             nv.setPadding( hp_name, vp, hp_name, 0 );
             dv.setPadding( hp_desc, 0, hp_name, vp );
 
-			String name = f.getComment();
-			Uri uri = f.getUri();
-			String uri_s = f.getUriString( true );
-			if( SAFAdapter.isTreeUri( uri ) )
-				uri_s = SAFAdapter.getUserFriendlyURI( c.getContext(), uri );
-			boolean name_exists = Utils.str( name );
-            nv.setText( name_exists ? name : uri_s );
-            nv.setTypeface( null, name_exists ? Typeface.BOLD : Typeface.NORMAL );
-
+            nv.setText( he.label );
+            nv.setTypeface( null, Typeface.NORMAL );
             dv.setTextSize( font_size * 0.75f );
-            dv.setText( name_exists ? uri_s : "" );
+            dv.setText( "" );
             return v;
         } catch( Exception e ) {
             Log.e( TAG, "", e );
@@ -176,16 +181,16 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 		try {
 			goPanel.setVisibility( View.VISIBLE );
 			toChange = which;
+			refreshHistoryList( which );
+			updateHistButtons( which );
 			AutoCompleteTextView edit = (AutoCompleteTextView)c.findViewById( R.id.uri_edit );
 			if( edit != null ) {
+				positionDropDown( edit, which );
 				edit.setText( Favorite.screenPwd( uri ) );
 				edit.showDropDown();
 				edit.setSelection( edit.length() );
 				edit.requestFocus();
 			}
-			CheckBox star = (CheckBox)c.findViewById( R.id.star );
-            if( star != null )
-            	star.setChecked( favorites.findIgnoreAuth( uri ) >= 0 );
 		}
 		catch( Exception e ) {
 			c.showMessage( "Error: " + e );
@@ -217,8 +222,63 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 		}
 		toChange = -1;
 		p.focus();
-    }    
-    
+    }
+
+    private void applyHistoryItem( int position ) {
+    	closeGoPanel();
+    	try {
+	    	if( toChange >= 0 && position >= 0 && position < historyList.size() ) {
+	    		ListHelper.HistEntry he = historyList.get( position );
+				if( toChange != p.getCurrent() )
+					p.togglePanels( false );
+				p.Navigate( toChange, he.uri, he.crd, null );
+	    	}
+    	} catch( Exception e ) {
+    		Log.w( TAG, "applyHistoryItem()", e );
+    	}
+		toChange = -1;
+		p.focus();
+    }
+
+    private void onHistStep( boolean back ) {
+    	try {
+    		if( toChange < 0 ) return;
+    		if( toChange != p.getCurrent() )
+    			p.setPanelCurrent( toChange, true );
+    		ListHelper.HistEntry he = back ? p.histBack( toChange ) : p.histForward( toChange );
+    		if( he == null ) return;
+    		AutoCompleteTextView edit = (AutoCompleteTextView)goPanel.findViewById( R.id.uri_edit );
+    		if( edit != null ) {
+    			edit.setText( he.label );
+    			edit.setSelection( edit.length() );
+    		}
+    		refreshHistoryList( toChange );
+    		updateHistButtons( toChange );
+    	} catch( Exception e ) {
+    		Log.w( TAG, "onHistStep()", e );
+    	}
+    }
+
+    private void refreshHistoryList( int which ) {
+    	historyList = p.getHistoryList( which );
+    	notifyDataSetChanged();
+    }
+
+    private void updateHistButtons( int which ) {
+    	View back = goPanel.findViewById( R.id.hist_back );
+    	View fwd  = goPanel.findViewById( R.id.hist_fwd );
+    	if( back != null ) back.setEnabled( p.hasHistBack( which ) );
+    	if( fwd  != null ) fwd.setEnabled( p.hasHistForward( which ) );
+    }
+
+    private void positionDropDown( AutoCompleteTextView edit, int which ) {
+    	DisplayMetrics dm = c.getContext().getResources().getDisplayMetrics();
+    	int half = dm.widthPixels / 2;
+    	int offset = ( p.sxs && which == Panels.RIGHT ) ? 0 : half;
+    	edit.setDropDownWidth( half );
+    	edit.setDropDownHorizontalOffset( offset );
+    }
+
 	@Override
 	public boolean onKey( View v, int keyCode, KeyEvent event ) {
 	    int v_id = v.getId();
@@ -257,31 +317,12 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 	@Override
 	public void onClick( View v ) {
 		final int id = v.getId();
-		if( id == R.id.star ) {
-			try {
-				if( toChange < 0 ) return;
-				TextView edit = goPanel.findViewById( R.id.uri_edit );
-				String uri_s = edit.getText().toString().trim();
-				CheckBox star_cb = (CheckBox)v;
-				Uri u = Uri.parse( uri_s );
-				favorites.removeFromFavorites( u );
-				if( star_cb.isChecked() ) {
-					Credentials crd = null;
-					if( Favorite.isPwdScreened( u ) ) {
-						crd = p.getCredentials( true );
-						if( crd == null )
-							crd = favorites.searchForPassword( u );
-					}
-					favorites.addToFavorites( u, crd );
-				}
-				notifyDataSetChanged();
-				star_cb.setChecked( favorites.findIgnoreAuth( u ) >= 0 );
-				AutoCompleteTextView actv = (AutoCompleteTextView)edit;
-				actv.showDropDown();
-				actv.requestFocus();
-			} catch( Exception e ) {
-				Log.w( TAG, "", e );
-			}
+		if( id == R.id.hist_back ) {
+			onHistStep( true );
+			return;
+		}
+		if( id == R.id.hist_fwd ) {
+			onHistStep( false );
 			return;
 		}
 		if( id == R.id.go_button )
@@ -292,15 +333,6 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 	
 	@Override
 	public void afterTextChanged( Editable s ) {
-		try {
-			TextView edit = (TextView)goPanel.findViewById( R.id.uri_edit );
-			CheckBox star = (CheckBox)goPanel.findViewById( R.id.star );
-			String   addr = edit.getText().toString().trim();
-			Uri       uri = Uri.parse( addr );
-			star.setChecked( favorites.findIgnoreAuth( uri ) >= 0 );
-		}
-		catch( Exception e ) {
-		}
 	}
 	@Override
 	public void beforeTextChanged( CharSequence s, int start, int count, int after ) {
