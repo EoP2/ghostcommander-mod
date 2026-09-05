@@ -188,7 +188,7 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 			AutoCompleteTextView edit = (AutoCompleteTextView)c.findViewById( R.id.uri_edit );
 			if( edit != null ) {
 				positionDropDown( edit, which );
-				edit.setText( Favorite.screenPwd( uri ) );
+				edit.setText( Favorite.screenPwd( uri ), false );
 				edit.showDropDown();
 				edit.setSelection( edit.length() );
 				edit.requestFocus();
@@ -251,7 +251,7 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
     		if( he == null ) return;
     		AutoCompleteTextView edit = (AutoCompleteTextView)goPanel.findViewById( R.id.uri_edit );
     		if( edit != null ) {
-    			edit.setText( he.label );
+    			edit.setText( he.label, false );
     			edit.setSelection( edit.length() );
     		}
     		refreshHistoryList( toChange );
