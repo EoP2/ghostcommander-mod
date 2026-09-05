@@ -2,16 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="80sp"
-    android:padding="10dp">
+    android:padding="20dp">
 
     <TextView 
         android:id="@+id/text"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:layout_marginStart="12dip"
-        android:layout_marginEnd="10dip"
         android:gravity="start"
-        android:textSize="11sp"
+        android:textSize="12sp"
         android:textColor="#888"
         android:singleLine="true"
         android:ellipsize="start"
@@ -34,7 +32,6 @@
         android:layout_width="wrap_content"
         android:gravity="start"
         android:text="@string/zero_percent"
-        android:textSize="8sp"
         android:textColor="#888"
         />
     <TextView 
