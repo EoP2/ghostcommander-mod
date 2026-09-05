@@ -229,11 +229,11 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
     private void applyHistoryItem( int position ) {
     	closeGoPanel();
     	try {
-	    	if( toChange >= 0 && position >= 0 && position < historyList.size() ) {
-	    		ListHelper.HistEntry he = historyList.get( position );
+	    	if( toChange >= 0 && position >= 0 && position < historyList.size() && position != currentHistoryIndex ) {
 				if( toChange != p.getCurrent() )
 					p.togglePanels( false );
-				p.Navigate( toChange, he.uri, he.crd, null );
+				int steps = currentHistoryIndex - position;
+				p.jumpHistory( toChange, steps );
 	    	}
     	} catch( Exception e ) {
     		Log.w( TAG, "applyHistoryItem()", e );

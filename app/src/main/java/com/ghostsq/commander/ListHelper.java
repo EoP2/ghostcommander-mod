@@ -239,6 +239,40 @@ public class ListHelper {
         return e;
     }
 
+    public final HistEntry jumpHistory( int steps ) {
+        try {
+            if( steps == 0 ) return null;
+            HistEntry oldCurrent = captureCurrentEntry();
+            if( oldCurrent == null ) return null;
+            HistEntry target;
+            if( steps > 0 ) {
+                if( steps > fwdStack.size() ) return null;
+                ArrayList<HistEntry> fwdAsList = new ArrayList<HistEntry>( fwdStack );
+                target = fwdAsList.get( steps - 1 );
+                backStack.push( oldCurrent );
+                for( int i = 0; i < steps - 1; i++ )
+                    backStack.push( fwdAsList.get( i ) );
+                for( int i = 0; i < steps; i++ )
+                    fwdStack.pop();
+            } else {
+                int n = -steps;
+                if( n > backStack.size() ) return null;
+                ArrayList<HistEntry> backAsList = new ArrayList<HistEntry>( backStack );
+                target = backAsList.get( n - 1 );
+                fwdStack.push( oldCurrent );
+                for( int i = 0; i < n - 1; i++ )
+                    fwdStack.push( backAsList.get( i ) );
+                for( int i = 0; i < n; i++ )
+                    backStack.pop();
+            }
+            Navigate( target.uri, target.crd, null, was_current, true );
+            return target;
+        } catch( Exception e ) {
+            Log.e( TAG, "jumpHistory()", e );
+            return null;
+        }
+    }
+
     public final boolean hasHistBack()    { return !backStack.isEmpty(); }
     public final boolean hasHistForward() { return !fwdStack.isEmpty();  }
 

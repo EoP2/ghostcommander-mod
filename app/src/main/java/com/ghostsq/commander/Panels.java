@@ -809,6 +809,10 @@ public class Panels implements AdapterView.OnItemSelectedListener,
         return list[which].histForward();
     }
 
+    public final ListHelper.HistEntry jumpHistory( int which, int steps ) {
+        return list[which].jumpHistory( steps );
+    }
+
     public final boolean hasHistBack( int which ) {
         return list[which].hasHistBack();
     }
