@@ -249,13 +249,14 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
     			p.setPanelCurrent( toChange, true );
     		ListHelper.HistEntry he = back ? p.histBack( toChange ) : p.histForward( toChange );
     		if( he == null ) return;
+    		refreshHistoryList( toChange );
+    		updateHistButtons( toChange );
     		AutoCompleteTextView edit = (AutoCompleteTextView)goPanel.findViewById( R.id.uri_edit );
     		if( edit != null ) {
     			edit.setText( he.label, false );
     			edit.setSelection( edit.length() );
+    			edit.showDropDown();
     		}
-    		refreshHistoryList( toChange );
-    		updateHistButtons( toChange );
     	} catch( Exception e ) {
     		Log.w( TAG, "onHistStep()", e );
     	}
