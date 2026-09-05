@@ -703,8 +703,9 @@ public class ListHelper {
                 int pos = cis.keyAt( i );
                 Object o = la.getItem( pos );
                 String item_name;
+                CommanderAdapter.Item item = null;
                 if( o instanceof CommanderAdapter.Item ) {
-                    CommanderAdapter.Item item = (CommanderAdapter.Item)o;
+                    item = (CommanderAdapter.Item)o;
                     item_name = item.name + (item.dir ? "/" : "");
                 } else
                     item_name = ca.getItemName( pos, false );
@@ -717,7 +718,8 @@ public class ListHelper {
                     return item_name;
                 }
                 if( ca instanceof FSAdapter ) {
-                    Item item = ca.getItem( ca.getItemUri( pos ) );
+                    if( item == null )
+                        item = ca.getItem( ca.getItemUri( pos ) );
                     if( item != null && !item.dir )
                         total_size += item.size;
                 }
