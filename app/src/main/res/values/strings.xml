@@ -363,7 +363,6 @@ Use \%# for a file counter, \%## with 2 zero-leading digits and so on.
 <string name="summary_toolbar_preference">Select which buttons to display, edit and arrange them</string>
 <string name="actionbar_buttons_settings">Action Bar buttons</string>
 <string name="summary_actionbar_buttons_settings">Customize the button row on the left of the Action Bar</string>
-<string name="show_action_bar_buttons">Enable Action Bar buttons</string>
 <string name="summary_show_action_bar_buttons">Show the configured buttons on the left of the Action Bar</string>
 <string name="tblist_label">Customize the toolbar</string>
 <string name="finger_friendly">Finger-friendly</string>

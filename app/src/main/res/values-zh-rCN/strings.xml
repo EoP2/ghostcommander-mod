@@ -340,12 +340,12 @@
   <string name="icons">文件图标</string>
   <string name="show_icons">显示图标</string>
   <string name="summary_show_icons">在文件名前显示图标</string>
-  <string name="toolbar_settings">工具栏</string>
-  <string name="summary_toolbar_settings">定制屏幕下方的工具栏</string>
+  <string name="toolbar_settings">底部工具栏</string>
+  <string name="summary_toolbar_settings">定制屏幕底部的工具栏</string>
   <string name="show_actionbar">启用顶栏</string>
   <string name="summary_show_actionbar">显示屏幕顶部的操作栏，重启生效</string>
   <string name="show_toolbar">启用工具栏</string>
-  <string name="summary_show_toolbar">显示屏幕下方的工具栏</string>
+  <string name="summary_show_toolbar">显示屏幕底部的工具栏</string>
   <string name="show_hotkeys">显示热键</string>
   <string name="summary_show_hotkeys">在部分功能键前显示热键</string>
   <string name="show_emoji">显示图标</string>
@@ -358,7 +358,6 @@
   <string name="summary_toolbar_preference">编辑、排序和显示、隐藏按钮</string>
   <string name="actionbar_buttons_settings">顶部工具栏</string>
   <string name="summary_actionbar_buttons_settings">定制顶栏左侧的工具栏</string>
-  <string name="show_action_bar_buttons">启用操作栏按钮</string>
   <string name="summary_show_action_bar_buttons">显示顶栏左侧的工具栏</string>
   <string name="tblist_label">定制工具栏</string>
   <string name="finger_friendly">触屏优化</string>
@@ -496,13 +495,13 @@
   <string name="permissions">权限</string>
   <string name="flags">标志</string>
   <string name="not_exported">Activity 未导出</string>
-  <string name="manage_all_files">授予软件管理所有文件的权限\n\n确定，打开授权页面\n\n取消，仍可使用安卓存储访问框架管理文件，部分功能会受系统限制</string>
+  <string name="manage_all_files">授予软件管理所有文件的权限：\n\n确定，打开授权页面。\n取消，仍可使用安卓存储访问框架管理文件，部分功能会受系统限制。</string>
   <string name="need_perm">未取得存储访问权限，暂无法以原生模式操作文件系统</string>
   <string name="donate">捐赠</string>
   <string name="online_help">在线文档</string>
   <string name="donation">任何金额的捐赠都有助于软件的后续开发。\n
-点击【确定】将打开PayPal页面。\n
-点击【取消】依旧可以自由使用Ghost Commander文件管理器。\n</string>
+确定，将打开PayPal页面。\n
+取消，依旧可以自由使用Ghost Commander文件管理器。\n</string>
   <string name="about_text"><![CDATA[
 <h2>Ghost Commander v%1$s</h2>
 <h4>Ghost Squared 开发的文件管理器</h4>

@@ -229,7 +229,7 @@
                 android:summary="@string/summary_actionbar_buttons_settings">
             <CheckBoxPreference
                         android:key="show_action_bar_buttons"
-                        android:title="@string/show_action_bar_buttons"
+                        android:title="@string/show_toolbar"
                         android:summary="@string/summary_show_action_bar_buttons"
                         android:defaultValue="true"/>
                 <CheckBoxPreference
