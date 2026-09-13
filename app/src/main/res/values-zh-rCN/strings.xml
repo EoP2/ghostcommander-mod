@@ -10,7 +10,7 @@
   <string name="F2">重命名</string>
   <string name="F3">查看</string>
   <string name="F4">编辑</string>
-  <string name="new_item">新建…</string>
+  <string name="new_item">新建</string>
   <string name="F5F6">复制/移动</string>
   <string name="F8">删除</string>
   <string name="F9">设置</string>
@@ -456,6 +456,7 @@
   <string name="save_as">另存为&#8230;</string>
   <string name="revert">撤销</string>
   <string name="wrap">自动换行</string>
+  <string name="crlf">CRLF换行符</string>
   <string name="go_up">上一级文件夹</string>
   <string name="go_top">页首</string>
   <string name="go_end">页尾</string>
@@ -495,7 +496,7 @@
   <string name="permissions">权限</string>
   <string name="flags">标志</string>
   <string name="not_exported">Activity 未导出</string>
-  <string name="manage_all_files">授予软件管理所有文件的权限：\n\n确定，打开授权页面。\n取消，仍可使用安卓存储访问框架管理文件，部分功能会受系统限制。</string>
+  <string name="manage_all_files">授予软件管理所有文件的权限：\n- 确定，打开授权页面。\n- 取消，仍可使用安卓存储访问框架管理文件，部分功能会受系统限制。</string>
   <string name="need_perm">未取得存储访问权限，暂无法以原生模式操作文件系统</string>
   <string name="donate">捐赠</string>
   <string name="online_help">在线文档</string>
