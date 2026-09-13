@@ -1,0 +1,4 @@
+rootProject.name = 'GhostCommander'
+include ':app'
+include ':gc-webdav'
+include ':httpclient-shaded'

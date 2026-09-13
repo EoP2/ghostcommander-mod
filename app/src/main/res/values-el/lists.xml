@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sorting">
+        <item>Κατά Όνομα</item>
+        <item>Κατά Επέκταση</item>
+        <item>Κατά Μέγεθος</item>
+        <item>Κατά Ημερομηνία</item>
+    </string-array>
+    <string-array name="panels_mode">
+        <item>Ναι</item>
+        <item>Όχι</item>
+        <item>Αυτόματο</item>
+    </string-array>
+    <string-array name="language">
+        <item>Προεπιλογή</item>
+        <item>Κεστάκινα</item>
+        <item>Δανικά</item>
+        <item>Γερμανικά</item>
+        <item>Αγγλικά</item>
+        <item>Ισπανικά</item>
+        <item>Φιλιππινέζικα</item>
+        <item>Γαλλικά</item>
+        <item>Ιταλικά</item>
+        <item>Ουγγρικά</item>
+        <item>Πολωνικά</item>
+        <item>Πορτογαλικά</item>
+        <item>Σλοβενικά</item>
+        <item>Σουηδικά</item>
+        <item>Τουρκικά</item>
+        <item>Λευκορωσικά</item>
+        <item>Βουλγαρικά</item>
+        <item>Ρώσικα</item>
+        <item>Σερβικά</item>
+        <item>Ουκρανικά</item>
+        <item>Ελληνικά</item>
+        <item>Κορεάτικα</item>
+        <item>Απλοποιημένα Κινέζικα</item>
+        <item>Παραδοσιακά κινεζικά</item>
+        <item>Ιαπωνικά</item>
+    </string-array>
+    <string-array name="encoding">
+        <item>Προεπιλογή</item>
+        <item>Windows-1250\n\t  Κεντρικής Ευρώπης</item>
+        <item>Windows-1251\n\t  Κυριλλικά</item>
+        <item>Windows-1252\n\t  Δυτικά Λατινικά</item>
+        <item>Windows-1253\n\t  Ελληνικά</item>
+        <item>UTF-8\n\t Αποκωδικοποίησή 8-bit</item>
+        <item>UTF-16BE\n\t  16-bit big-endian</item>
+        <item>UTF-16LE\n\t  16-bit λίγο-endian</item>
+        <item>UTF-16\n\t Αποκωδικοποίηση 16-bit</item>
+        <item>KOI8-R\n\t  Ρωσικό UNIX</item>
+        <item>Cp866\n\t  Ρωσικά DOS</item>
+        <item>Shift_JIS\n\t  Ιαπωνικό Shift_JIS</item>
+        <item>EUC-JP\n\t  Ιαπωνική EUC-JP</item>
+        <item>EUC-KR\n\t  Κορεάτικο EUC-KR</item>
+        <item>ISO-2022-JP\n\t  Ιαπωνικό iso-2022</item>
+        <item>ISO-2022-KR\n\t  Κορεάτικο iso-2022</item>
+        <item>ISO-2022-CN\n\t  Κινέζικο iso-2022</item>
+        <item>GB18030\n\t Κινεζικό εθνικό πρότυπο</item>
+        <item>HZ-GB-2312\n\t  Κινέζικα </item>
+    </string-array>
+    <string-array name="color_themes">
+        <item>Σκοτεινό</item>
+        <item>Φωτεινό</item>
+        <item>Νόρτον</item>
+        <item>Αυτόματο</item>
+    </string-array>
+</resources>

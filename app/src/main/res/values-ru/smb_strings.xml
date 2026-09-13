@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Нет ничего</string>
+    <string name="nothing_returned">Не могу открыть сетевую папку %1$s</string>
+    <string name="malformed_url">Неправильный URL: \n%s</string>
+    <string name="msbrowse_err">Не могу запросить список доменов.\nПопробуйте указать имя домена явно, как в этом примере: \n \"smb://имя_вашего_домена/\".</string>
+    <string name="connect_err">Не могу подсоединиться к:\n%s</string>
+    <string name="broken_pipe">Соединение с сервером прервано. Убедитесь что сеть подключена, вернитесь к \"home:\" и затем попробуйте снова.</string>
+
+    <string name="STATUS_UNSUCCESSFUL">Неуспешно.</string>
+    <string name="STATUS_VOLUME_DISMOUNTED">Устройство не подключено.</string>
+
+    <!-- prefs -->
+    <string name="min_ver">Минимальная версия</string>
+    <string name="min_ver_sum">Минимально поддервиваемая версия SMB протокола</string>
+    <string name="max_ver">Максимальная версия</string>
+    <string name="max_ver_sum">Поддерживать экспериментальные версии вплоть до&#8230;</string>
+
+    <string name="resolve_using_DNS">Использовать DNS</string>
+    <string name="resolve_using_DNS_summary">Помимо метода опроса, пытаться использовать DNS сервер для получения адреса SMB серверов из имени.</string>
+    <string name="WINS_server">Адрес WINS-сервера</string>
+    <string name="WINS_server_summary">Если задан адрес WINS сервера, он будет использован для получения адреса SMB серверов из имени.</string>
+    <string name="disable_DFS">Запретить DFS</string>
+    <string name="disable_DFS_summary">Запрещение поддержки Распределённой Файловой Системы для лучшего доступa к серверам Win10 с аккаунтами Microsoft.</string>
+    <string name="use_guest">Использовать GUEST</string>
+    <string name="use_guest_summary">Для анонимного подключения использовать имя пользователя \"GUEST\" с пустым паролем.</string>
+</resources>

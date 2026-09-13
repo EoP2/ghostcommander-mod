@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghost Commander - plugin WebDAV</string>
+    <string name="app_descr">WebDAV : Accès à un serveur WebDAV actif.</string>
+    <string name="trust_level">Niveau de confiance</string>
+    <string name="trust_level_summary">Sélectionnez la validité du certificat de serveur à accepter.</string>
+    <string name="TLS_only">TLS uniquement</string>
+    <string name="TLS_only_summary">Forcer l\'utilisation de TLS plutôt que SSL.</string>
+</resources>

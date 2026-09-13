@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Τίποτα για ανάγνωση</string>
+    <string name="nothing_returned">Αδυναμία ανοίγματος του κοινόχρηστου φακέλου %1$s</string>
+    <string name="malformed_url">Λανθασμένη μορφή διεύθυνσης URL: \n%s</string>
+    <string name="msbrowse_err">Δεν είναι δυνατή η λήψη λίστας domains/workgroups.\nΠροσπαθήστε να ορίσετε ρητώς το όνομα τομέα, όπως\n \"smb://your_domain_name/\".</string>
+    <string name="connect_err">Αδυναμία σύνδεσης στο:\n%s</string>
+    <string name="broken_pipe">Σύνδεση με το διακομιστή έσπασε. Επιστρέψτε στο \"/home:\" και προσπαθήστε ξανά.</string>
+    <string name="exception">Προέκυψε μια εξαίρεση</string>
+    <!-- statuses -->
+    <string name="STATUS_UNSUCCESSFUL">Ανεπιτυχής.</string>
+    <string name="STATUS_VOLUME_DISMOUNTED">Ο Όγκος Αποσυναρμολογήθηκε.</string>
+    <!-- prefs -->
+    <string name="min_ver">Ελάχιστη έκδοση</string>
+    <string name="min_ver_sum">Ελάχιστη υποστηριζόμενη έκδοση SMB</string>
+    <string name="max_ver">Μέγιστη έκδοση</string>
+    <string name="max_ver_sum">Μέγιστη υποστηριζόμενη έκδοση SMB</string>
+    <string name="resolve_using_DNS">Χρήση DNS</string>
+    <string name="resolve_using_DNS_summary">Εκτός από την εκπομπή, χρησιμοποιήστε επίσης το διακομιστή DNS για την επίλυση ονομάτων υποδοχής.</string>
+    <string name="disable_DFS">Απενεργοποίηση DFS</string>
+    <string name="disable_DFS_summary">Η λειτουργία Κατανεμημένου Συστήματος Αρχείων μπορεί να βοηθήσει στην πρόσβαση σε μετοχές Win10 με λογαριασμό MS.</string>
+</resources>

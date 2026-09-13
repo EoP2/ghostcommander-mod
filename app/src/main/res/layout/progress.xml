@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80sp"
+    android:padding="10dp">
+
+    <TextView 
+        android:id="@+id/text"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="start"
+        android:textSize="12sp"
+        android:textColor="#888"
+        android:singleLine="true"
+        android:ellipsize="start"
+        />
+            
+    <ProgressBar android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_below="@id/text"        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip"
+        android:max="100"
+        android:progress="0"
+        android:secondaryProgress="0" 
+        />
+    <TextView 
+        android:id="@+id/percent"
+        android:layout_below="@id/progress_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="start"
+        android:text="@string/zero_percent"
+        android:textColor="#888"
+        />
+    <TextView 
+        android:id="@+id/speed"
+        android:layout_below="@id/progress_bar"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="end"
+        android:textColor="#888"
+        />
+</RelativeLayout>                

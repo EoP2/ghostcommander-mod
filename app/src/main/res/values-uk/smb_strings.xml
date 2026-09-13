@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Нічого читати</string>
+    <string name="nothing_returned">Не вдалося відкрити спільну теку %1$s</string>
+    <string name="malformed_url">Хибний URL: \n%s</string>
+    <string name="msbrowse_err">Не вдалося отримати список доменів/робочих груп.\nСпробуйте явно вказати домен:\n \"smb://your_domain_name/\".</string>
+    <string name="connect_err">Не вдалося з\'єднатися з:\n%s</string>
+    <string name="broken_pipe">З\'єднання з сервером втрачено. Поверніться в \"/home:\" і повторіть спробу.</string>
+    <string name="exception">Виник виняток</string>
+    <!-- statuses -->
+    <string name="STATUS_UNSUCCESSFUL">Невдача.</string>
+    <string name="STATUS_VOLUME_DISMOUNTED">Том демонтовано.</string>
+    <!-- prefs -->
+    <string name="min_ver">Мінімальна версія</string>
+    <string name="min_ver_sum">Мінімальна підтримувана версія SMB</string>
+    <string name="max_ver">Максимальна версія</string>
+    <string name="max_ver_sum">Максимальна підтримувана версія SMB</string>
+    <string name="resolve_using_DNS">Використати DNS</string>
+    <string name="resolve_using_DNS_summary">Крім широкомовлення, розпізнати назви хостів через DNS-сервер.</string>
+    <string name="disable_DFS">Вимкнути DFS</string>
+    <string name="disable_DFS_summary">Вимкнення Distributed File System може допомогти дістатися спільного Win10 з обліковим записом MS.</string>
+</resources>

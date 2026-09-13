@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Nada para leer</string>
+    <string name="nothing_returned">No se puede abrir el volumen Samba</string>
+    <string name="malformed_url">Sintaxis de URL incorrecta: \n%s</string>
+    <string name="msbrowse_err">No se puede obtener la lista de dominios/grupos de trabajo.\nPrueba a especificarlo manualmente, ej. \n \"smb://tu_dominio/\".</string>
+    <string name="connect_err">Imposible conectar a:\n%s</string>
+    <string name="broken_pipe">Conexión al servidor perdida. Vuelve a \"/sdcard\" y prueba de nuevo.</string>
+    <!-- statuses -->
+    <!-- prefs -->
+</resources>

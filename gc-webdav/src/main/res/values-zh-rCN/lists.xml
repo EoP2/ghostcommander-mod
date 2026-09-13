@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="trust_level">
+    <item>只允许有效的信任链</item>
+    <item>信任已过期或自签名的证书</item>
+    <item>信任任何（危险）</item>
+  </string-array>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Няма чаго чытаць</string>
+    <string name="nothing_returned">Не атрымалася адкрыць сеткавы рэсурс Samba\n%s</string>
+    <string name="malformed_url">Хібны URL: \n%s</string>
+    <string name="msbrowse_err">Не ўдалося атрымаць спіс даменаў / працоўных груп.\n\nПаспрабуйце ўвесці дакладную назву, як у прыкладзе:\n \"smb://your_domain_name/\".</string>
+    <string name="connect_err">Не атрымалася злучыцца з:\n%s</string>
+    <string name="broken_pipe">Злучэнне страцілася. Вярніцеся на пачатковую пазіцыю і паспрабуйце зноў.</string>
+    <string name="exception">Ужыта выключэнне</string>
+    <!-- statuses -->
+    <string name="STATUS_UNSUCCESSFUL">Няўдала.</string>
+    <string name="STATUS_VOLUME_DISMOUNTED">Том адмантаваны.</string>
+    <!-- prefs -->
+    <string name="min_ver">Мінімальная версія</string>
+    <string name="min_ver_sum">Мінімальная версія SMB, якая падтрымліваецца</string>
+    <string name="max_ver">Максімальная версія</string>
+    <string name="max_ver_sum">Максімальная версія SMB, якая падтрымліваецца</string>
+    <string name="resolve_using_DNS">Выкарыстоўваць DNS</string>
+    <string name="resolve_using_DNS_summary">У дадатак да  шырокапалоснай рассылкі выкарыстоўваць сервер DNS для вызначэння назваў хоста.</string>
+    <string name="disable_DFS">Адключыць DFS</string>
+    <string name="disable_DFS_summary">Адключэнне DFS можа дапамагчы атрымаць доступ да агульных рэсурсаў Win10 з акаўнтам MS.</string>
+</resources>
