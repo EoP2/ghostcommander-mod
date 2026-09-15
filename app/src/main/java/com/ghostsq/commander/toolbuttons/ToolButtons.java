@@ -21,7 +21,7 @@ public class ToolButtons extends ArrayList<ToolButton>
         String bcns = shared_pref.getString( pref_key, null );
         if( bcns != null && !bcns.isEmpty() ) {
             // add new introduced buttons here like below:
-            if( !bcns.contains( "send" ) ) bcns += ",send";
+            //if( !bcns.contains( "send" ) ) bcns += ",send";
 
             String[] bcna = bcns.split( "," );
             for( String bcn : bcna ) {
