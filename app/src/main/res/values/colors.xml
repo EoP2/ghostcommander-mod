@@ -27,8 +27,8 @@
     <color name="cur_lgt">#FFEEEEEE</color>    
     <color name="ttl_lgt">#FFFCFCFC</color>    
     <color name="div_lgt">#FFEEEEEE</color>
-    <color name="tbg_lgt">#FFF8F8F8</color>
-    <color name="bfg_lgt">#FF333333</color>
+    <color name="tbg_lgt">#FFFCFCFC</color>
+    <color name="bfg_lgt">#FF000000</color>
 
     <color name="fg1_drk">#FFFFFFEF</color>
     <color name="fg2_drk">#FFD1FFDF</color>
