@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Okunacak bir şey yok</string>
+    <string name="nothing_returned">Bu Samba bağlantısı açılmıyor\n%s</string>
+    <string name="malformed_url">Hatalı URL:\n%s</string>
+    <string name="msbrowse_err">Domain/Çalışma grubu listeleri alınamıyor.\nAlan adını açıkça belirterek yeniden deneyin, örneğin\n\"smb://your_domain_name/\".</string>
+    <string name="connect_err">Bağlantı kurulamıyor:\n</string>
+    <string name="broken_pipe">Sunucu bağlantısı kesildi. \"/sdcard\" konumuna dönerek tekrar deneyin.</string>
+    <!-- statuses -->
+    <!-- prefs -->
+</resources>

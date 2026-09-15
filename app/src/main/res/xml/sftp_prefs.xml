@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="SFTP">
+        <PreferenceScreen
+                android:key="keys_manager"
+                android:title="@string/keys_manager"
+                android:summary="@string/keys_manager_summary">
+        </PreferenceScreen>
+        <ListPreference
+            android:key="show_digest_as"
+            android:title="@string/digest"
+            android:summary="@string/digest_summary"
+            android:entries="@array/digests"
+            android:entryValues="@array/digests"
+            android:dialogTitle="@string/digest"
+            android:defaultValue="MD5"/>
+    </PreferenceCategory>
+</PreferenceScreen>

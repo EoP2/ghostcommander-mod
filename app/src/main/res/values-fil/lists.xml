@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sorting">
+        <item>Ayon sa Pangalan</item>
+        <item>Sa pamamagitan ng Extension</item>
+        <item>Sa pamamagitan ng sukat</item>
+        <item>Sa pamamagitan ng petsa</item>
+    </string-array>
+    <string-array name="panels_mode">
+        <item>Oo</item>
+        <item>Hindi</item>
+        <item>Auto</item>
+    </string-array>
+</resources>
