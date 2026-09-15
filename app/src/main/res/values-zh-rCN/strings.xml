@@ -418,10 +418,10 @@
   <string name="summary_ttl_color_picker">面板标题的背景色</string>
   <string name="div_color_picker">分割线</string>
   <string name="summary_div_color_picker">左右面板之间分割线的颜色</string>
-  <string name="bfg_color_picker">底部工具栏按钮文本</string>
+  <string name="bfg_color_picker">下工具栏前景</string>
   <string name="summary_bfg_color_picker">底部工具栏按钮的文本颜色</string>
-  <string name="tbg_color_picker">工具栏背景</string>
-  <string name="summary_tbg_color_picker">底部工具栏区域的背景色</string>
+  <string name="tbg_color_picker">下工具栏背景</string>
+  <string name="summary_tbg_color_picker">底部工具栏的背景色</string>
   <string name="pick_color">选择颜色</string>
   <string name="color">颜色</string>
   <string name="color_themes">预设主题</string>
