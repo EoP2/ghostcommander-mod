@@ -190,15 +190,15 @@
                   android:icon="@drawable/square">
               </PreferenceScreen>
               <PreferenceScreen
-                  android:key="bfg_color_picker"
-                  android:title="@string/bfg_color_picker"
-                  android:summary="@string/summary_bfg_color_picker"
-                  android:icon="@drawable/square">
-              </PreferenceScreen>
-              <PreferenceScreen
                   android:key="tbg_color_picker"
                   android:title="@string/tbg_color_picker"
                   android:summary="@string/summary_tbg_color_picker"
+                  android:icon="@drawable/square">
+              </PreferenceScreen>
+              <PreferenceScreen
+                  android:key="bfg_color_picker"
+                  android:title="@string/bfg_color_picker"
+                  android:summary="@string/summary_bfg_color_picker"
                   android:icon="@drawable/square">
               </PreferenceScreen>
            </PreferenceCategory>
