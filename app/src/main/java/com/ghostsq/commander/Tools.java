@@ -24,6 +24,7 @@ public abstract class Tools {
             R.id.refresh,
             R.id.hidden,
             R.id.sel_dlg,
+            R.id.sel_between,
             R.id.add_fav,
             R.id.home,
             R.id.favs,
@@ -64,6 +65,7 @@ public abstract class Tools {
         if( cn.equals( "sz"      ) ) return        R.id.sz;
         if( cn.equals( "sort"    ) ) return        R.id.action_sort;
         if( cn.equals( "sel_dlg" ) ) return        R.id.sel_dlg;
+        if( cn.equals( "sel_between" ) ) return    R.id.sel_between;
         if( cn.equals( "enter"   ) ) return        R.id.enter;
         if( cn.equals( "addfav"  ) ) return        R.id.add_fav;
         if( cn.equals( "remount" ) ) return        R.id.remount;
@@ -105,7 +107,8 @@ public abstract class Tools {
         if( id == R.id.swap )         return  CommanderAdapter.Feature.TGL;
         if( id == R.id.sz )           return  CommanderAdapter.Feature.SZ;
         if( id == R.id.action_select
-         || id == R.id.sel_dlg )      return  CommanderAdapter.Feature.SEL_UNS;
+         || id == R.id.sel_dlg
+         || id == R.id.sel_between )  return  CommanderAdapter.Feature.SEL_UNS;
         if( id == R.id.enter )        return  CommanderAdapter.Feature.ENTER;
         if( id == R.id.add_fav )      return  CommanderAdapter.Feature.ADD_FAV;
         if( id == R.id.remount )      return  CommanderAdapter.Feature.REMOUNT;
@@ -148,6 +151,7 @@ public abstract class Tools {
         if( id == R.id.sz )           return  "sz";
         if( id == R.id.action_sort )  return  "sort";
         if( id == R.id.sel_dlg )      return  "sel_dlg";
+        if( id == R.id.sel_between )  return  "sel_between";
         if( id == R.id.enter )        return  "enter";
         if( id == R.id.add_fav )      return  "addfav";
         if( id == R.id.remount )      return  "remount";
@@ -214,6 +218,7 @@ public abstract class Tools {
         if( id == R.id.sz )           return  R.string.sz;
         if( id == R.id.action_sort )  return  R.string.sorting;
         if( id == R.id.sel_dlg )      return  R.string.sel_dlg;
+        if( id == R.id.sel_between )  return  R.string.select_between;
         if( id == R.id.enter )        return  R.string.enter_b;
         if( id == R.id.add_fav )      return  R.string.add_fav_b;
         if( id == R.id.remount )      return  R.string.remount_b;
@@ -264,6 +269,7 @@ public abstract class Tools {
         if( id == R.id.sz )           return  "ⓘ";
         if( id == R.id.action_sort )  return  "☷";
         if( id == R.id.sel_dlg )      return  "☑";
+        if( id == R.id.sel_between )  return  "▣";
         if( id == R.id.enter )        return  "⤴";
         if( id == R.id.add_fav )      return  "✦";
         if( id == R.id.remount )      return  "⏏";
