@@ -856,13 +856,6 @@ public final class Utils {
         }
     }
 
-    public static int setBrightness( int color, float new_brightness ) {
-        float[] hsv = new float[3];
-        Color.colorToHSV( color, hsv );
-        hsv[2] = new_brightness;
-        return Color.HSVToColor( hsv );
-    }
-
     public static int shiftBrightness( int color, float drop_to ) {
         float[] hsv = new float[3];
         Color.colorToHSV( color, hsv );
