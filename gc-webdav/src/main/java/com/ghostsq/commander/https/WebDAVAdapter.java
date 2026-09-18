@@ -262,7 +262,7 @@ public class WebDAVAdapter extends CommanderAdapterBase implements Engines.IReci
             HttpClientBuilder hcb = HttpClients.custom();
             if( creds != null  ) {
                 CredentialsProvider cp = new BasicCredentialsProvider();
-                cp.setCredentials( new AuthScope( host, 443 ), creds );
+                cp.setCredentials( new AuthScope( host, AuthScope.ANY_PORT ), creds );
                 hcb.setDefaultCredentialsProvider( cp );
             }
             if( ts != null ) {
@@ -718,7 +718,7 @@ public class WebDAVAdapter extends CommanderAdapterBase implements Engines.IReci
         HttpPut pm = new HttpPut( u.toString() );
         try {
             AuthCache authCache = new BasicAuthCache();
-            authCache.put( new HttpHost( u.getHost()), new BasicScheme() );
+            authCache.put( new HttpHost( u.getHost(), u.getPort(), u.getScheme() ), new BasicScheme() );
             final HttpClientContext http_context = HttpClientContext.create();
             http_context.setAuthCache(authCache);
 

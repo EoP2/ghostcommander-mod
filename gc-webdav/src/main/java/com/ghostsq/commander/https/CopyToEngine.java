@@ -104,7 +104,7 @@ class CopyToEngine extends WebDAVEngineBase
             }
             Uri dest_uri = owner.getUri();
             AuthCache authCache = new BasicAuthCache();
-            authCache.put( new HttpHost(dest_uri.getHost()), new BasicScheme() );
+            authCache.put( new HttpHost( dest_uri.getHost(), dest_uri.getPort(), dest_uri.getScheme() ), new BasicScheme() );
             http_context = HttpClientContext.create();
             http_context.setAuthCache(authCache);
             wifiLock.acquire();
