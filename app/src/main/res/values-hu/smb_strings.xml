@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Nincs mit olvasni</string>
+    <string name="nothing_returned">Nem nyitható meg ez a Samba megosztás\n%s</string>
+    <string name="malformed_url">Rosszul formázott URL: \n%s</string>
+    <string name="msbrowse_err">Nem sikerült a gépnevek/munkacsoportok listájának megszerzése.\nPróbálja meg megadni a gépnevet, például\n \"smb://a_gep_neve/\".</string>
+    <string name="connect_err">Nem sikerült csatlakozni ide:\n%s</string>
+    <string name="broken_pipe">A kapcsolat a kiszolgálóval megszakadt. Térjen vissza a „/home:” címre, majd próbálja újra!</string>
+    <string name="exception">Kivétel történt</string>
+    <!-- statuses -->
+    <string name="STATUS_UNSUCCESSFUL">Sikertelen</string>
+    <string name="STATUS_VOLUME_DISMOUNTED">Kötet leválasztva.</string>
+    <!-- prefs -->
+    <string name="min_ver">Legalacsonyabb verzió</string>
+    <string name="min_ver_sum">Legalacsonyabb támogatott SMB verzió</string>
+    <string name="max_ver">Legmagasabb verzió</string>
+    <string name="max_ver_sum">Legmagasabb támogatott SMB verzió</string>
+    <string name="resolve_using_DNS">DNS használata</string>
+    <string name="resolve_using_DNS_summary">A közvetítés mellett használja a DNS kiszolgálót is az állomásnevek feloldásához.</string>
+    <string name="disable_DFS">DFS letiltása</string>
+    <string name="disable_DFS_summary">Letiltott elosztott fájlrendszer szolgáltatás segíthet hozzáférni Win10 megosztásokhoz MS fiókkal.</string>
+</resources>

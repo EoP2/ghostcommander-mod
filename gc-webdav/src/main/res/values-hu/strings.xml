@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghost Commander - WebDAV beépülő modul</string>
+    <string name="app_descr">WebDAV: Hozzáférés egy WebDAV-kiszolgálóhoz.</string>
+    <string name="trust_level">Megbízhatósági szint</string>
+    <string name="trust_level_summary">Válasszon elfogadandó kiszolgálótanúsítvány érvényességet.</string>
+    <string name="TLS_only">Csak TLS</string>
+    <string name="TLS_only_summary">TLS kötelező használata SSL helyett.</string>
+</resources>

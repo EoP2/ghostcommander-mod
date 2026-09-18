@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="WebDAV">
+        <ListPreference
+                android:key="trust_level"
+                android:title="@string/trust_level"
+                android:summary="@string/trust_level_summary"
+                android:entries="@array/trust_level"
+                android:entryValues="@array/trust_level_vals"
+                android:dialogTitle="@string/trust_level" 
+                android:defaultValue="loose"/>
+    </PreferenceCategory>
+</PreferenceScreen>

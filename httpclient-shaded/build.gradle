@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+    id 'com.gradleup.shadow' version '8.3.9'
+}
+
+dependencies {
+    implementation('org.apache.httpcomponents:httpclient:4.5.14') {
+        exclude group: 'commons-logging', module: 'commons-logging'
+        exclude group: 'commons-codec', module: 'commons-codec'
+    }
+    // jackrabbit-webdav 内部编译时引用了原版 org.apache.http.* 的类（比如它自定义的
+    // HttpMkcol/HttpPropfind 继承自 httpclient 的请求基类），必须跟 httpclient 一起
+    // 打进来、一起改名，否则它内部的类型跟我们改名后的 CloseableHttpClient 对不上。
+    implementation('org.apache.jackrabbit:jackrabbit-webdav:2.21.14') {
+        exclude group: 'commons-logging', module: 'commons-logging'
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+        exclude group: 'commons-codec', module: 'commons-codec'
+    }
+}
+
+tasks.shadowJar {
+    archiveBaseName.set('httpclient-shaded')
+    archiveVersion.set('')
+    archiveClassifier.set('')
+    destinationDirectory.set(file('..'))
+
+    relocate 'org.apache.http', 'shaded.org.apache.http'
+
+    exclude 'META-INF/*.SF'
+    exclude 'META-INF/*.DSA'
+    exclude 'META-INF/*.RSA'
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="16dip"
+    android:paddingLeft="20dip"
+    android:paddingRight="20dip"
+    >
+
+    <TextView
+        android:id="@+id/dlg_title"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="6dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:gravity="left"
+        />
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="start"
+        android:paddingTop="6sp"
+        />
+
+    
+    <CheckBox
+        android:id="@+id/to_trash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_trash"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+        android:drawablePadding="4dip"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dip"
+        />
+
+</LinearLayout>

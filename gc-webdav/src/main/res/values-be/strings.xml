@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghost Commander - убудова WebDAV</string>
+    <string name="app_descr">WebDAV: доступ да сеткавых файлаў сервераў WebDAV.</string>
+    <string name="trust_level">Узровень даверу</string>
+    <string name="trust_level_summary">Абраць, якім сертыфікатам давяраць.</string>
+    <string name="TLS_only">Толькі TLS</string>
+    <string name="TLS_only_summary">Прымусова выкарыстоўваць TLS замест SSL.</string>
+</resources>
