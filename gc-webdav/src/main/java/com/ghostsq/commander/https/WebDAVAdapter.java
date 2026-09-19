@@ -117,7 +117,17 @@ public class WebDAVAdapter extends CommanderAdapterBase implements Engines.IReci
 
     @Override
     public String getScheme() {
-        return scheme;
+        // Must reflect the ACTUAL scheme of the current connection (http vs
+        // https), not a hardcoded value: ListHelper.Navigate()/StreamServer
+        // compare this against the target URI's scheme to decide whether to
+        // reuse the existing (already authenticated) adapter instance or spin
+        // up a brand new one. Returning a constant "https" here made every
+        // single navigation inside an "http://" connection look like a scheme
+        // change, so a fresh, credential-less adapter was silently recreated
+        // for every click/address-bar navigation/stream request - the very
+        // first request (which explicitly supplies credentials) worked, and
+        // everything after it 401'd regardless of which path was requested.
+        return uri != null ? uri.getScheme() : scheme;
     }
 
     @Override
