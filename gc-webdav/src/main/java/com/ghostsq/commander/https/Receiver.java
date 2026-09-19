@@ -31,12 +31,15 @@ import java.net.URI;
 public class Receiver implements IReceiver {
     private final static String TAG = "DAVReceiver";
     private WebDAVAdapter owner;
-    private String sDestUri, destHost;
+    private String sDestUri, destHost, destScheme;
+    private int destPort;
     private CloseableHttpClient client;
 
     Receiver( WebDAVAdapter a, Uri dest, CloseableHttpClient client ) {
         this.owner = a;
         destHost = dest.getHost();
+        destPort = dest.getPort();
+        destScheme = dest.getScheme();
         sDestUri = Utils.mbAddSl( dest.toString() );
         this.client = client;
     }
@@ -50,7 +53,7 @@ public class Receiver implements IReceiver {
         HttpPut pm = new HttpPut( getURI( fn ) );
         try {
             AuthCache authCache = new BasicAuthCache();
-            authCache.put( new HttpHost( destHost ), new BasicScheme() );
+            authCache.put( new HttpHost( destHost, destPort, destScheme ), new BasicScheme() );
             final HttpClientContext http_context = HttpClientContext.create();
             http_context.setAuthCache(authCache);
 
