@@ -58,10 +58,15 @@ public class DavItem extends Item {
                 uri = Uri.parse( s_base_uri + getPath() );
             } else {
                 String href = (String)origin;
-                if( href.startsWith( "http" ) )
-                    uri = Uri.parse( href );
-                else
-                    uri = Uri.parse( s_base_uri ).buildUpon().query( null ).encodedPath( href ).build();
+                // RFC 3986 §5 reference resolution correctly handles all three shapes
+                // a server may send back: a full "http(s)://..." URL, a root-relative
+                // absolute path ("/dav/x/y/"), or a path relative to the CURRENT
+                // collection ("y/"). The previous encodedPath(href) call REPLACED the
+                // whole path with href verbatim, so a relative href silently dropped
+                // the shared prefix (e.g. "/dav/movies/") and pointed at the wrong
+                // location on the same host/port - which is what produced 401s only
+                // for items reached by clicking, never for a manually typed full path.
+                uri = Uri.parse( URI.create( s_base_uri ).resolve( href ).toString() );
             }
         }
         return uri;
@@ -74,17 +79,10 @@ public class DavItem extends Item {
                 uri_c = URI.create( s_base_uri + getPath() );
             } else {
                 String href = (String)origin;
-                if( href.startsWith( "http" ) )
-                    uri_c = URI.create( href );
-                else {
-                    try {
-                        // don't use URIBuilder, it's ruins escaping and performance
-                        int ps = s_base_uri.indexOf( '/', 8 );
-                        String s_item_uri = s_base_uri.substring( 0, ps ) + href;
-                        uri_c = URI.create( s_item_uri );
-                    } catch( Exception e ) {
-                        Log.e( TAG, this.toString(), e );
-                    }
+                try {
+                    uri_c = URI.create( s_base_uri ).resolve( href );
+                } catch( Exception e ) {
+                    Log.e( TAG, this.toString(), e );
                 }
             }
         }
