@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.ghostsq.commander.https'
+
+    compileSdkVersion 31
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    defaultConfig {
+        applicationId "com.ghostsq.commander.https"
+        minSdkVersion 19
+        targetSdkVersion 31
+        
+        versionCode 15
+        versionName "1.1b1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES']
+        }
+    }
+
+    lint {
+        // httpclient 会跟 Android 曾经内置的同名类冲突，但当前 targetSdk 下系统已经
+        // 不再提供这批类了（除非开 useLibrary 'org.apache.http.legacy'，这里没开），
+        // 不存在真的"两份撞在一起"的风险，所以关掉这条。
+        disable 'DuplicatePlatformClasses'
+        // 这是 Google Play 商店的上架政策检查（要求 targetSdk 33+），如果不打算
+        // 上架 Play 商店，这条跟编译/运行都没关系。真要上架的话应该把
+        // targetSdkVersion 提上去并做兼容性测试，而不是一直关着这条检查。
+        disable 'ExpiredTargetSdkVersion'
+    }
+}
+configurations {
+    runtime.exclude group: "commons-logging", module: "commons-logging"
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.5.0'
+    compileOnly fileTree(include: 'com.jar', dir: '..')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar','**/*.class'])
+
+    //implementation files('libs/slf4j-android-1.7.25.jar')
+    //implementation files('libs/slf4j-api-1.7.25.jar')
+
+     // httpclient/httpcore + jackrabbit-webdav 现在统一由重新打包过命名空间的
+     // httpclient-shaded.jar 提供（原因见 httpclient-shaded/build.gradle）。
+    implementation fileTree(include: 'httpclient-shaded.jar', dir: '..')
+    // https://mvnrepository.com/artifact/commons-codec/commons-codec
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.15'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/org.apache.commons.logging
+//    implementation group: 'org.apache.commons', name: 'org.apache.commons.logging', version: '1.0.4.v200706111724'
+    
+
+
+/*
+    // operates with ClassicHttpRequest instead of HttpRequest, thus not compatible with jackrabbit-webdav !
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5
+    implementation group: 'org.apache.httpcomponents.client5', name: 'httpclient5', version: '5.1.3'
+*/
+
+
+    // needed to bind a log implementation, such as slf4j-android
+//    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.35'
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-android
+//    implementation group: 'org.slf4j', name: 'slf4j-android', version: '1.7.32'     // creates tag names with a '*'. Thus failed to enable it by the setprop command
+//    implementation group: 'uk.uuid.slf4j', name: 'slf4j-android', version: '1.7.32-0' // no idea how to config
+//    implementation( group: 'de.psdev.slf4j-android-logger', name: 'slf4j-android-logger', version: '1.0.5' )     // does not put the class name to the tag...
+//    implementation 'com.noveogroup.android:android-logger:1.3.1'    // did not test http://noveogroup.github.io/android-logger/
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keys_manager">Менеджер PEM ключей</string>
+    <string name="keys_manager_summary">Управление ключами аутентификации</string>
+    <string name="digest">Тип контрольной суммы</string>
+    <string name="digest_summary">Показывать слепок ключа в виде…</string>
+    <string name="host_name">Сетевое имя SFTP сервера:</string>
+    <string name="pick_file">Выберите PEM файл с закрытым ключом</string>
+    <string name="add">Добавить</string>
+    <string name="delete">Удалить</string>
+    <string name="bad_file">Не PEM файл</string>
+    <string name="wrong">Неправильно</string>
+    <string name="key_encrypted">Шифр</string>
+    <string name="not_encrypted">Не шифрован!</string>
+    <string name="test_passphrase">Проверить ключ</string>
+    <string name="passphrase_for">Ключевая фраза для:</string>
+    <string name="new_passphrase">Новая ключевая фраза</string>
+    <string name="not_unique">Может быть только один ключ на сервер.</string>
+    <string name="are_you_sure">Вы уверены?</string>
+    <string name="key_save">Сохранить</string>
+</resources>

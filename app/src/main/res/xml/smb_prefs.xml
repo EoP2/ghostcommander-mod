@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="SMB">
+        <ListPreference
+            android:key="min_smb_ver"
+            android:title="@string/min_ver"
+            android:summary="@string/min_ver_sum"
+            android:entries="@array/smb_ver"
+            android:entryValues="@array/smb_ver_vals"
+            android:dialogTitle="@string/min_ver"
+            android:defaultValue="SMB1"/>
+        <ListPreference
+            android:key="max_smb_ver"
+            android:title="@string/max_ver"
+            android:summary="@string/max_ver_sum"
+            android:entries="@array/smb_ver"
+            android:entryValues="@array/smb_ver_vals"
+            android:dialogTitle="@string/max_ver"
+            android:defaultValue="SMB210"/>
+
+        <CheckBoxPreference
+            android:key="resolve_using_DNS"
+            android:title="@string/resolve_using_DNS"
+            android:summary="@string/resolve_using_DNS_summary"
+            android:defaultValue="false"/>
+
+        <EditTextPreference
+            android:key="WINS_server"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/WINS_server"
+            android:summary="@string/WINS_server_summary"/>
+
+       <PreferenceScreen
+            android:title="@string/advanced"
+            android:summary="@string/summary_advanced_settings">
+            <CheckBoxPreference
+                android:key="disable_DFS"
+                android:title="@string/disable_DFS"
+                android:summary="@string/disable_DFS_summary"
+                android:defaultValue="true"/>
+            <CheckBoxPreference
+                android:key="use_raw_NTLM"
+                android:title="@string/use_raw_NTLM"
+                android:summary="@string/use_raw_NTLM_summary"
+                android:defaultValue="false"/>
+            <CheckBoxPreference
+                android:key="disable_Spnego_Integrity"
+                android:title="@string/disable_Spnego_Integrity"
+                android:summary="@string/disable_Spnego_Integrity_summary"
+                android:defaultValue="false"/>
+            <!-- see https://github.com/AgNO3/jcifs-ng/issues/186#issuecomment-674384275
+            <CheckBoxPreference
+                android:key="as_guest"
+                android:title="@string/use_guest"
+                android:summary="@string/use_guest_summary"
+                android:defaultValue="true"/>
+            -->
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Walang babasahin</string>
+    <string name="nothing_returned">Hindi mabuksan ang Samba share\n%s</string>
+    <string name="malformed_url">Pangit ng porma ng URL:\n%s</string>
+    <string name="msbrowse_err">Hindi makuha ang listahan ng mga domain / workgroup. \n Ntubukang tukuyin ang pangalan ng domain nang tahasang, tulad ng \n \"smb: // your_domain_name /\".</string>
+    <string name="connect_err">Hindi makakonek sa:\n%s</string>
+    <string name="broken_pipe">Koneksiyon sa serber ay nasira. Bumalik sa \"/sdcard\' at pagkatapos ay ulitin.</string>
+    <!-- statuses -->
+    <!-- prefs -->
+</resources>

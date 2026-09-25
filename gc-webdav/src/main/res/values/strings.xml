@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghost Commander - WebDAV plugin</string>
+    <string name="app_descr">WebDAV: Access to a WebDAV enabled server.</string>
+    <string name="trust_level">Trust level</string>
+    <string name="trust_level_summary">Select server certificate validity to accept.</string>
+    <string name="TLS_only">TLS only</string>
+    <string name="TLS_only_summary">Force to use TLS instead of SSL.</string>
+    <string name="cant_cd">Cannot list content of the folder \"%s\"</string>
+</resources>
