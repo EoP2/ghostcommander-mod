@@ -73,6 +73,9 @@ jobs:
       - name: Build WebDAV plugin (all build types)
         run: gradle :gc-webdav:assemble --stacktrace
 
+      - name: Build 139 Yun plugin (all build types)
+        run: gradle :yun139:assemble --stacktrace
+
       - name: Upload APKs
         uses: actions/upload-artifact@v4
         with:
@@ -85,6 +88,13 @@ jobs:
         with:
           name: gc-webdav-plugin-APKs
           path: gc-webdav/build/outputs/apk/**/*.apk
+          if-no-files-found: error
+
+      - name: Upload 139 Yun plugin APKs
+        uses: actions/upload-artifact@v4
+        with:
+          name: yun139-plugin-APKs
+          path: yun139/build/outputs/apk/**/*.apk
           if-no-files-found: error
 
       - name: Upload com.jar
