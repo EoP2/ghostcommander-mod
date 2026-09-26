@@ -1,39 +1,27 @@
-apply plugin: 'com.android.application'
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-android {
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+buildscript {
+    
+    repositories {
+        google()
+        mavenCentral()
     }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.6.0'
+        
 
-    compileSdkVersion 34
-    defaultConfig {
-        applicationId "com.ghostsq.commander.yun139"
-        minSdkVersion 21
-        targetSdkVersion 34
-        versionCode 1
-        versionName "1.0"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            debuggable true
-        }
-    }
-    lint {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-    namespace 'com.ghostsq.commander.yun139'
 }
 
-dependencies {
-    // Only needed at compile time to resolve com.ghostsq.commander.* types (CommanderAdapter,
-    // Engine, Utils, ...). At runtime those classes come from the host app process because this
-    // plugin shares its android:sharedUserId / android:process, exactly like the webdav/box/gdrive
-    // plugins. Build ../com.jar first by running the ':app:createJar' Gradle task.
-    compileOnly fileTree(include: 'com.jar', dir: '..')
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean( type: Delete ) {
+    delete rootProject.buildDir
 }
