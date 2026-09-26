@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">139云盘</string>
+    <string name="app_descr">139云盘: 中国移动个人云盘（yun.139.com），仅支持令牌登录。</string>
+
+    <string name="help_text">请粘贴登录 yun.139.com 网页版后，浏览器请求头中 “Authorization” 字段的值（不含开头的 “Basic ”）。当前仅支持令牌登录，暂不支持账号密码登录。</string>
+    <string name="token_label">授权令牌（Authorization）</string>
+    <string name="token_hint">例如：MTAwMDA6MTM4MDAxMzgwMDA6...</string>
+    <string name="btn_test">测试连接</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_clear">清除</string>
+
+    <string name="status_empty">请先粘贴令牌。</string>
+    <string name="status_saved">已保存。</string>
+    <string name="status_cleared">已清除。</string>
+    <string name="status_testing">正在测试连接…</string>
+    <string name="status_ok">连接成功，账号：%1$s</string>
+    <string name="status_fail">连接失败：%1$s</string>
+</resources>
