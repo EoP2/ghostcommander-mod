@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">139 Yun</string>
+    <string name="app_descr">139 Yun: China Mobile\'s 139 personal cloud drive (yun.139.com).</string>
+
+    <string name="help_text">Paste the "Authorization" request header value that yun.139.com sends when you are logged in on the web (without the leading "Basic "). Only token-based login is supported; username/password login is not implemented.</string>
+    <string name="token_label">Authorization token</string>
+    <string name="token_hint">e.g. MTAwMDA6MTM4MDAxMzgwMDA6...</string>
+    <string name="btn_test">Test</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_clear">Clear</string>
+
+    <string name="status_empty">Please paste a token first.</string>
+    <string name="status_saved">Saved.</string>
+    <string name="status_cleared">Cleared.</string>
+    <string name="status_testing">Testing\u2026</string>
+    <string name="status_ok">Connected. Account: %1$s</string>
+    <string name="status_fail">Failed: %1$s</string>
+</resources>
