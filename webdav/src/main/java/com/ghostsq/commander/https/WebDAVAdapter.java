@@ -117,7 +117,8 @@ public class WebDAVAdapter extends CommanderAdapterBase implements Engines.IReci
 
     @Override
     public String getScheme() {
-        return scheme;
+        String sch = uri != null ? uri.getScheme() : null;
+        return Utils.str( sch ) ? sch : scheme;
     }
 
     @Override
@@ -262,7 +263,7 @@ public class WebDAVAdapter extends CommanderAdapterBase implements Engines.IReci
             HttpClientBuilder hcb = HttpClients.custom();
             if( creds != null  ) {
                 CredentialsProvider cp = new BasicCredentialsProvider();
-                cp.setCredentials( new AuthScope( host, 443 ), creds );
+                cp.setCredentials( new AuthScope( host, AuthScope.ANY_PORT ), creds );
                 hcb.setDefaultCredentialsProvider( cp );
             }
             if( ts != null ) {
