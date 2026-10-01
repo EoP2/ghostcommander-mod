@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghost Commander - Samba-plugin</string>
+    <string name="app_descr">WebDAV: Tilgå server med WebDAV-understøttelse.</string>
+    <string name="trust_level">Tillidsniveau</string>
+    <string name="trust_level_summary">Vælg, hvilken servercertifikatgyldighed, der skal accepteres.</string>
+    <string name="TLS_only">Kun TLS</string>
+    <string name="TLS_only_summary">Gennemtving brug af TLF i stedet for SSL.</string>
+</resources>

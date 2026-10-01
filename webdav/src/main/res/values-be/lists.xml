@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trust_level">
+        <item>Давяраць толькі поўнасцю надзейным сертыфікатам</item>
+        <item>Давяраць пратэрмінаваным і самападпісаным сертыфікатам</item>
+        <item>Давяраць усім сертыфікатам (небяспечна)</item>
+    </string-array>
+</resources>

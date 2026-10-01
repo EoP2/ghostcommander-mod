@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">移动云盘</string>
+    <string name="app_descr">移动139云盘</string>
+
+    <string name="help_text">139云盘支持多个账号。请为每个账号起一个自己的名字后添加。\n\n添加账号时，请粘贴yun.139.com请求头中 “Authorization” 值（不含开头的 “Basic ”）。</string>
+    <string name="empty_accounts">尚未添加任何账号，点击下方“添加账号”。</string>
+    <string name="btn_add_account">添加账号</string>
+
+    <string name="add_account_title">添加账号</string>
+    <string name="alias_label">账号别名</string>
+    <string name="alias_hint">例如：个人、工作（会出现在路径里）</string>
+    <string name="token_label">授权令牌（Authorization）</string>
+    <string name="token_hint">例如：MTAwMDA6MTM4MDAxMzgwMDA6...</string>
+
+    <string name="btn_add">添加</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_test">测试连接</string>
+    <string name="btn_remove">移除账号</string>
+
+    <string name="account_phone">手机号：%1$s</string>
+    <string name="confirm_remove">确定要移除账号“%1$s”吗？</string>
+
+    <string name="status_added">账号已添加。</string>
+    <string name="status_testing">正在测试连接…</string>
+    <string name="status_ok">连接成功，账号：%1$s</string>
+    <string name="status_fail">连接失败：%1$s</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false">
+   
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="3dip" >
+
+        <LinearLayout
+            android:id="@+id/keys_container"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/add_new_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@android:drawable/ic_menu_add"
+            android:tooltipText="@string/add"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/add" />
+   </LinearLayout>
+</ScrollView>

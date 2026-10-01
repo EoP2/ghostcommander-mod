@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="smb_ver">
+    <item>SMB 1 / CIFS</item>
+    <item>SMB 2.02 - Windows Vista+</item>
+    <item>SMB 2.1 - Windows 7/Server 2008R2</item>
+    <item>SMB 3.0 - Windows 8/Server 2012</item>
+    <item>SMB 3.0.2 - Windows 8.1/Server 2012R2</item>
+    <item>SMB 3.1.1 - Windows 10/Server 2016</item>
+    </string-array>
+    <string-array name="smb_ver_vals">
+    <item translatable="false">SMB1</item>
+    <item translatable="false">SMB202</item>
+    <item translatable="false">SMB210</item>
+    <item translatable="false">SMB300</item>
+    <item translatable="false">SMB302</item>
+    <item translatable="false">SMB311</item>
+    </string-array>
+</resources>

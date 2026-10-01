@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Intet at læse</string>
+    <string name="nothing_returned">Kan ikke åbne Samba-share\n%s</string>
+    <string name="malformed_url">Ugyldig URL: \n%s</string>
+    <string name="msbrowse_err">Kan ikke hente listen over domæner/arbejdsgrupper.\nPrøv at angive det eksplicitte domænenavn, f.eks.\n\"smb: //dit_domænenavn/\".</string>
+    <string name="connect_err">Kan ikke forbinde til \n%s</string>
+    <string name="broken_pipe">Serverforbindelsen afbrudt. Returnér til \"/sdcard\" og forsøg igen.</string>
+    <!-- statuses -->
+    <!-- prefs -->
+</resources>

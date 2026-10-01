@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ab_buttons_scroll"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="false">
+
+    <LinearLayout
+         android:id="@+id/ab_buttons_row"
+         android:orientation="horizontal"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:gravity="center_vertical"/>
+
+</HorizontalScrollView>

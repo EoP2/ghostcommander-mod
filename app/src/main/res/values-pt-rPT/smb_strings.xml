@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Nada para ler</string>
+    <string name="nothing_returned">Incapaz de abrir esta partilha Samba\n%s</string>
+    <string name="malformed_url">URL inválido:\n%s</string>
+    <string name="msbrowse_err">Não é possível obter a lista de domínios/grupos de trabalho.\nTente especificar o nome de domínio como, por exemplo\n \"smb://nome_do_seu_domínio/\".</string>
+    <string name="connect_err">Incapaz de ligar a:\n%s</string>
+    <string name="broken_pipe">Ligação perdida. Retorne à pasta \'sdcard\' e tente novamente.</string>
+    <!-- statuses -->
+    <!-- prefs -->
+</resources>

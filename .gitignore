@@ -1,0 +1,20 @@
+# Build outputs
+/build/
+/app/build/
+*.apk
+*.aab
+
+# Gradle
+.gradle/
+gradle-app.setting
+
+# Local configuration (machine-specific, never commit)
+local.properties
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+.DS_Store
+/captures/
+.externalNativeBuild/
+.cxx/

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trust_level">
+        <item>Доверять только полностью действительным сертификатам</item>
+        <item>Доверять просроченным и самоподписанным сертификатам</item>
+        <item>Доверять любым сертификатам (опасно)</item>
+    </string-array>
+</resources>
