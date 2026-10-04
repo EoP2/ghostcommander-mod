@@ -31,7 +31,9 @@ import java.util.List;
  * Each account is a user-chosen alias (which becomes the Uri authority, so it shows up in
  * paths - see Yun139Adapter) plus the pasted "Authorization" token. The alias is the
  * account's identity and is fixed once added; to change it, remove the account and add it
- * again.
+ * again. The token alone can be replaced in place (tap the account -> "更换令牌"), which is
+ * what to do once it has expired for good: the alias, and with it every bookmark pointing
+ * into yun139://&lt;alias&gt;/..., stays as it was.
  * <p>
  * Reachable two ways, exactly like the webdav/box plugins' own Prefs activities:
  * - long-press the "139云盘" entry on GhostCommander's Home screen -> "prefs"
@@ -132,11 +134,13 @@ public class Prefs extends Activity {
     }
 
     // ------------------------------------------------------------------
-    // An existing account: test it / remove it
+    // An existing account: test it / replace its token / remove it
     // ------------------------------------------------------------------
 
     private void showAccountDialog(final String alias) {
         String phone = Yun139Api.getMaskedPhone(appCtx, alias);
+        // An AlertDialog has exactly three button slots, so there is no explicit "Cancel" here:
+        // tapping outside the dialog or pressing Back dismisses it just the same.
         new AlertDialog.Builder(this)
                 .setTitle(alias)
                 .setMessage(phone != null ? getString(R.string.account_phone, phone) : "")
@@ -145,13 +149,58 @@ public class Prefs extends Activity {
                         testAccount(alias);
                     }
                 })
+                .setNeutralButton(R.string.btn_replace_token, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface d, int which) {
+                        showReplaceDialog(alias);
+                    }
+                })
                 .setNegativeButton(R.string.btn_remove, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface d, int which) {
                         confirmRemove(alias);
                     }
                 })
-                .setNeutralButton(R.string.btn_cancel, null)
                 .show();
+    }
+
+    /**
+     * Swaps the token of an existing account, typically because the old one has expired for good.
+     * Re-uses the "add account" form with the alias shown but locked: the alias is the account's
+     * identity (see the class comment), only the token is up for replacement.
+     */
+    private void showReplaceDialog(final String alias) {
+        View form = LayoutInflater.from(this).inflate(R.layout.dialog_add_account, null);
+        final EditText aliasEdit = form.findViewById(R.id.alias_edit);
+        final EditText tokenEdit = form.findViewById(R.id.token_edit);
+        aliasEdit.setText(alias);
+        aliasEdit.setEnabled(false);
+
+        final AlertDialog dlg = new AlertDialog.Builder(this)
+                .setTitle(R.string.btn_replace_token)
+                .setView(form)
+                .setPositiveButton(R.string.btn_replace, null) // real handler is set in onShow, see showAddDialog()
+                .setNegativeButton(R.string.btn_cancel, null)
+                .create();
+
+        // Same reasoning as in showAddDialog(): a rejected token must leave the dialog - and the
+        // long pasted text in it - open.
+        dlg.setOnShowListener(new DialogInterface.OnShowListener() {
+            public void onShow(DialogInterface d) {
+                dlg.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        String err = Yun139Api.replaceToken(appCtx, alias, tokenEdit.getText().toString());
+                        if (err != null) {
+                            Toast.makeText(Prefs.this, err, Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        Toast.makeText(Prefs.this, R.string.status_replaced, Toast.LENGTH_SHORT).show();
+                        reload();
+                        dlg.dismiss();
+                        testAccount(alias); // find out right away whether the new token really works
+                    }
+                });
+            }
+        });
+        dlg.show();
     }
 
     private void confirmRemove(final String alias) {

@@ -231,6 +231,38 @@ public class Yun139Api {
         return null;
     }
 
+    /**
+     * Replaces the token of an EXISTING account in place - what to do once the old one has expired
+     * for good (or was revoked). The alias, and therefore every bookmark, history entry and panel
+     * location of the form yun139://&lt;alias&gt;/..., stays valid; only the stored token changes.
+     * Validated locally, exactly like addAccount() - no network round trip.
+     * <p>
+     * The phone number is deliberately NOT compared with the old one: whichever account the new
+     * token belongs to is what the alias points at from now on, and the stored phone number
+     * (the one shown in the settings list) simply follows the token.
+     *
+     * @return null on success, or a user-facing message describing why it was rejected.
+     */
+    public static synchronized String replaceToken(Context appCtx, String alias, String rawToken) {
+        if (alias == null || !accountExists(appCtx, alias))
+            return "账号不存在或已被移除";
+        if (rawToken == null || rawToken.trim().length() == 0)
+            return "请粘贴授权令牌";
+        rawToken = rawToken.trim();
+        String phone;
+        try {
+            phone = decodePhoneFromToken(rawToken);
+        } catch (Yun139Exception e) {
+            return e.getMessage();
+        }
+        SharedPreferences.Editor ed = appCtx.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).edit();
+        ed.putString(tokenKey(alias), rawToken);
+        ed.putString(phoneKey(alias), phone);
+        ed.apply();
+        invalidateCache(alias); // a cached instance still holds the old token; getInstance() rebuilds it
+        return null;
+    }
+
     /** Forgets a saved account: deletes its token/phone and drops it from the account list. */
     public static synchronized void removeAccount(Context appCtx, String alias) {
         SharedPreferences.Editor ed = appCtx.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).edit();
