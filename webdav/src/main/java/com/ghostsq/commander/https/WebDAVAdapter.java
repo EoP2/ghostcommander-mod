@@ -155,13 +155,24 @@ public class WebDAVAdapter extends CommanderAdapterBase implements Engines.IReci
         return Utils.str( path ) ? path : "/";
     }
      
-    @Override 
-    public String toString() { 
-        if( uri != null ) {
-            return uri.toString();
+    @Override
+    public String toString() {
+        if( uri == null )
+            return "";
+        try {
+            String path = uri.getPath();
+            if( path != null ) {
+                Uri.Builder ub = uri.buildUpon().encodedPath( Utils.escapePath( path ) );
+                String query = uri.getQuery();
+                if( query != null )
+                    ub.encodedQuery( Utils.escapeRest( query ) );
+                return ub.build().toString();
+            }
+        } catch( Exception e ) {
+            Log.e( TAG, "toString()", e );
         }
-        return "";
-    }    
+        return uri.toString();
+    } 
 
     @Override
     public void setCredentials( com.ghostsq.commander.utils.Credentials gc_crd ) {
