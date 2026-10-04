@@ -4,14 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/help_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="@string/help_text"
-        android:textSize="14sp" />
-
     <!-- The list and its "no accounts yet" message share one cell; ListView.setEmptyView()
          (see Prefs.onCreate) shows exactly one of them. -->
     <FrameLayout
