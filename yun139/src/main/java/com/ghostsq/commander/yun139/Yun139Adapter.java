@@ -527,8 +527,50 @@ public class Yun139Adapter extends CommanderAdapterBase {
         if (alias == null) return false;
         Item[] toCopy = itemsFromSelection(cis);
         if (toCopy.length == 0) return false;
-        commander.startEngine(new CopyFromEngine(commander, this, Yun139Api.getInstance(ctx, alias), toCopy, move, to));
+        Yun139Api api = Yun139Api.getInstance(ctx, alias);
+
+        // The destination is a folder of the SAME account: both ends are on one and the same
+        // server-side drive, so let the server move/copy there (MoveCopyEngine) instead of
+        // downloading every file to the phone just to upload it again (CopyFromEngine + Receiver).
+        String destFolderId = sameAccountFolderId(alias, to);
+        if (destFolderId != null) {
+            if (destFolderId.equals(fileIdFromUri(uri))) {
+                notify("源目录与目标目录相同", Commander.OPERATION_FAILED);
+                return false;
+            }
+            for (Item it : toCopy) {
+                if (it.dir && destFolderId.equals(fileIdOf(it))) {
+                    notify("不能把文件夹“" + it.name + "”" + (move ? "移动" : "复制") + "到它自己里面",
+                            Commander.OPERATION_FAILED);
+                    return false;
+                }
+            }
+            commander.startEngine(new MoveCopyEngine(commander, this, api, toCopy, destFolderId, move));
+            return true;
+        }
+
+        // Another account, or some other kind of location: the bytes really do have to travel.
+        commander.startEngine(new CopyFromEngine(commander, this, api, toCopy, move, to));
         return true;
+    }
+
+    /**
+     * @return the file id of the destination folder if {@code to} is a panel of this plugin that
+     *         is showing a folder of account {@code alias}; null for anything else.
+     * <p>
+     * Deliberately goes by getScheme()/getUri() and not by instanceof Yun139Adapter: CA.java
+     * loads the plugin through a brand-new DexClassLoader for every adapter it creates, so the
+     * other panel's adapter is an instance of a <i>different</i> Yun139Adapter class (same name,
+     * other class loader) - instanceof is false for it and a cast would throw. android.net.Uri
+     * and CommanderAdapter come from the host, so those are shared and safe to use.
+     */
+    private static String sameAccountFolderId(String alias, CommanderAdapter to) {
+        if (to == null || !SCHEME.equals(to.getScheme()))
+            return null;
+        Uri dest = to.getUri();
+        if (!alias.equals(accountIdFromUri(dest)))
+            return null;
+        return fileIdFromUri(dest);
     }
 
     @Override
