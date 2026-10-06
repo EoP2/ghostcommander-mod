@@ -2,6 +2,7 @@ package com.ghostsq.commander.yun139;
 
 import android.content.Context;
 import android.net.Uri;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseBooleanArray;
 
@@ -11,6 +12,7 @@ import com.ghostsq.commander.adapters.CommanderAdapterBase;
 import com.ghostsq.commander.adapters.Engines;
 import com.ghostsq.commander.adapters.IReceiver;
 import com.ghostsq.commander.utils.Credentials;
+import com.ghostsq.commander.utils.Utils;
 import com.ghostsq.commander.yun139.Yun139Api.FileEntry;
 
 import java.io.File;
@@ -24,6 +26,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Stack;
 
@@ -584,17 +587,119 @@ public class Yun139Adapter extends CommanderAdapterBase {
 
     @Override
     public void reqItemsSize(SparseBooleanArray cis) {
-        // Cheap best-effort: sum what the current listing already knows (file sizes are
-        // returned by file/list; folder sizes are not, and recursively walking the whole
-        // subtree just to report a number is not implemented).
-        long total = 0;
-        for (int i = 0; i < cis.size(); i++) {
-            if (!cis.valueAt(i)) continue;
-            Item it = itemAt(cis.keyAt(i));
-            if (it != null && !it.dir && it.size > 0)
-                total += it.size;
+        // The "Properties" command. Everything it shows is already in the listing - file/list
+        // returns the size, the times and the content hash of every file - so it is answered on
+        // the spot: no request, no Engine. (A folder's size is not in the listing and walking its
+        // subtree just to report a number is not implemented.)
+        //
+        // The report goes out with OPERATION_REPORT_IMPORTANT, which makes the host open its
+        // "Info" dialog. A plain OPERATION_COMPLETED message - what this used to send - is only
+        // shown when the "Confirmations" preference is on, and that is off by default (see
+        // FileCommander.notifyMe()), which is why the command appeared to do nothing.
+        Item[] sel = itemsFromSelection(cis);
+        if (sel.length == 0) {
+            notify("请先选择文件或文件夹", Commander.OPERATION_FAILED);
+            return;
         }
-        notify(com.ghostsq.commander.utils.Utils.getHumanSize(total), Commander.OPERATION_COMPLETED);
+        String report;
+        if (sel[0].origin instanceof String)
+            report = propsOfAccounts(sel); // rows of the account list
+        else if (sel.length == 1)
+            report = propsOfOne(sel[0]);
+        else
+            report = propsOfMany(sel);
+        notify(report, Commander.OPERATION_COMPLETED, Commander.OPERATION_REPORT_IMPORTANT);
+    }
+
+    /** Properties of one row of the listing, a file or a folder. */
+    private String propsOfOne(Item it) {
+        StringBuilder sb = new StringBuilder();
+        addProp(sb, it.dir ? "文件夹" : "文件", it.name, false);
+        if (!it.dir && it.size >= 0)
+            addProp(sb, "大小", sizeText(it.size), false);
+        String modified = Utils.formatDate(it.date, ctx);
+        if (modified != null)
+            addProp(sb, "修改时间", modified, false);
+        if (!it.dir) {
+            // The digest travels in the FileEntry the row carries (see Yun139Api.list()).
+            FileEntry fe = it.origin instanceof FileEntry ? (FileEntry) it.origin : null;
+            if (fe != null && fe.contentHash != null)
+                addProp(sb, hashLabel(fe.contentHashAlgorithm), fe.contentHash, true);
+            else
+                addProp(sb, "SHA-256", "服务器未提供", false);
+        }
+        return sb.toString().trim();
+    }
+
+    /** Properties of several rows: how many, and the combined size of the files among them. */
+    private String propsOfMany(Item[] sel) {
+        int files = 0, folders = 0;
+        long total = 0;
+        for (Item it : sel) {
+            if (it.dir) {
+                folders++;
+            } else {
+                files++;
+                if (it.size > 0)
+                    total += it.size;
+            }
+        }
+        String count;
+        if (files > 0 && folders > 0)
+            count = files + " 个文件，" + folders + " 个文件夹";
+        else if (files > 0)
+            count = files + " 个文件";
+        else
+            count = folders + " 个文件夹";
+        StringBuilder sb = new StringBuilder();
+        addProp(sb, "数量", count, false);
+        if (files > 0) {
+            // Folder sizes are unknown, so don't present the sum as the size of everything selected.
+            addProp(sb, "大小", sizeText(total) + (folders > 0 ? "（不含文件夹内的内容）" : ""), false);
+        }
+        return sb.toString().trim();
+    }
+
+    /** Properties of rows of the account list: the alias and the masked phone number. */
+    private String propsOfAccounts(Item[] sel) {
+        StringBuilder sb = new StringBuilder();
+        for (Item it : sel) {
+            if (!(it.origin instanceof String))
+                continue;
+            addProp(sb, "账号", it.name, false);
+            if (it.attr != null && it.attr.length() > 0)
+                addProp(sb, "手机号", it.attr, false);
+        }
+        return sb.toString().trim();
+    }
+
+    /**
+     * Appends one "label / value" block of the properties report, laid out like the host's own
+     * file-properties report: a small label, the value under it, a blank line between blocks.
+     * The Info dialog renders HTML, so the value is escaped - a file name may contain '<' or '&'.
+     */
+    private static void addProp(StringBuilder sb, String label, String value, boolean mono) {
+        if (sb.length() > 0)
+            sb.append('\n');
+        String v = TextUtils.htmlEncode(value != null ? value : "");
+        sb.append("<small>").append(label).append("</small>\n")
+                .append(mono ? "<tt>" + v + "</tt>" : v).append('\n');
+    }
+
+    /** "182.5M (191378548 字节)", the same way the host's properties report words a size. */
+    private static String sizeText(long bytes) {
+        if (bytes > 1024)
+            return Utils.getHumanSize(bytes, false).trim() + " (" + bytes + " 字节)";
+        return bytes + " 字节";
+    }
+
+    /** "sha256" -> "SHA-256"; any other algorithm is labelled with its own name as the server gives it. */
+    private static String hashLabel(String algorithm) {
+        if (algorithm == null || algorithm.length() == 0)
+            return "哈希";
+        if (algorithm.replace("-", "").equalsIgnoreCase("sha256"))
+            return "SHA-256";
+        return algorithm.toUpperCase(Locale.ROOT);
     }
 
     // ------------------------------------------------------------------

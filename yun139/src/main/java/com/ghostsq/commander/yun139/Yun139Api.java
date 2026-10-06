@@ -479,6 +479,8 @@ public class Yun139Api {
                         fe.isDir = "folder".equals(it.optString("type"));
                         fe.createdAt = parsePersonalTime(it.optString("createdAt", null));
                         fe.updatedAt = parsePersonalTime(it.optString("updatedAt", null));
+                        fe.contentHash = optStringOrNull(it, "contentHash");
+                        fe.contentHashAlgorithm = optStringOrNull(it, "contentHashAlgorithm");
                         if (fe.fileId == null || fe.fileId.length() == 0 || seenIds.add(fe.fileId)) {
                             result.add(fe);
                             newCount++;
@@ -505,6 +507,19 @@ public class Yun139Api {
             }
         }
         return result;
+    }
+
+    /**
+     * org.json on Android makes optString() return the literal text "null" for a JSON null, and
+     * this API does send explicit nulls (description, trashedAt, ... in file/list rows). isNull()
+     * is true for an explicit null as well as for a missing key, so this gives a real null for
+     * both, and for an empty string.
+     */
+    private static String optStringOrNull(JSONObject o, String key) {
+        if (o.isNull(key))
+            return null;
+        String s = o.optString(key, null);
+        return s != null && s.length() > 0 ? s : null;
     }
 
     public String getDownloadUrl(String fileId) throws IOException {
@@ -603,6 +618,15 @@ public class Yun139Api {
         public boolean isDir;
         public long createdAt; // epoch millis, 0 if unknown
         public long updatedAt; // epoch millis, 0 if unknown
+        /**
+         * Hex digest of the content as file/list reports it; null when the server sent none
+         * (folders, or a file it has no digest for). Only the properties report reads it, from
+         * the FileEntry a listing row carries (see Yun139Adapter.reqItemsSize()) - it is
+         * deliberately not part of any file Uri.
+         */
+        public String contentHash;
+        /** Algorithm of {@link #contentHash} as the server names it, e.g. "sha256"; null if not sent. */
+        public String contentHashAlgorithm;
     }
 
     private static class PartSpec {
