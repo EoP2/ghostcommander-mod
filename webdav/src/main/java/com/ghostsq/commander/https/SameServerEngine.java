@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.util.Log;
 
 import com.ghostsq.commander.Commander;
+import com.ghostsq.commander.adapters.CommanderAdapter;
 import com.ghostsq.commander.adapters.CommanderAdapter.Item;
 import com.ghostsq.commander.utils.Credentials;
 import com.ghostsq.commander.utils.Utils;
@@ -37,7 +38,7 @@ import java.net.URI;
  */
 class SameServerEngine extends CopyFromEngine {
     private final Commander     cmdr;
-    private final WebDAVAdapter dest;
+    private final CommanderAdapter dest;
     private final Item[]        todo;
     private final boolean       is_move;
     private int     done = 0;               // how many items have been moved or copied
@@ -45,7 +46,7 @@ class SameServerEngine extends CopyFromEngine {
     private boolean quit = false;           // the operation can't go on
     private boolean unsupported = false;    // the server answered that it can't COPY
 
-    SameServerEngine( Commander c, WebDAVAdapter src, WebDAVAdapter dest, Item[] list, boolean move ) {
+    SameServerEngine( Commander c, WebDAVAdapter src, CommanderAdapter dest, Item[] list, boolean move ) {
         super( c, src, list, move, dest );
         this.cmdr = c;
         this.dest = dest;
@@ -53,26 +54,47 @@ class SameServerEngine extends CopyFromEngine {
         this.is_move = move;
     }
 
+    private static final String LOG = "SameServerEngine";
+    private static final String PLUGIN_PACKAGE = "com.ghostsq.commander.https.";
+
     /**
      * @return true if both adapters are connected to the same WebDAV server as the same user,
      *         so the server itself is able to copy or move an item from one folder to another
+     *
+     * Mind: every adapter instance of this plugin is loaded by its own class loader (see CA.java in
+     * the main app), so the other adapter is NOT an instance of this WebDAVAdapter class, and it
+     * can't be cast to it. Only what the CommanderAdapter interface of the main app offers is usable.
      */
-    static boolean isSameServer( WebDAVAdapter a, WebDAVAdapter b ) {
+    static boolean isSameServer( WebDAVAdapter a, CommanderAdapter b ) {
         try {
+            if( b == null || !b.getClass().getName().startsWith( PLUGIN_PACKAGE ) )
+                return no( "the other adapter is " + ( b == null ? null : b.getClass().getName() ) );
             Uri ua = a.getUri(), ub = b.getUri();
-            if( ua == null || ub == null || !Utils.str( ua.getHost() ) )
-                return false;
-            if( !ua.getHost().equalsIgnoreCase( ub.getHost() ) ||
-                !eqIgnoreCase( ua.getScheme(), ub.getScheme() ) ||
-                portOf( ua ) != portOf( ub ) )
-                return false;
+            if( ua == null || ub == null || !Utils.str( ua.getHost() ) || !Utils.str( ub.getHost() ) )
+                return no( "no host" );
+            if( !ua.getHost().equalsIgnoreCase( ub.getHost() ) )
+                return no( "the hosts are " + ua.getHost() + " and " + ub.getHost() );
+            if( !eqIgnoreCase( ua.getScheme(), ub.getScheme() ) )
+                return no( "the schemes are " + ua.getScheme() + " and " + ub.getScheme() );
+            if( portOf( ua ) != portOf( ub ) )
+                return no( "the ports are " + portOf( ua ) + " and " + portOf( ub ) );
             Credentials ca = a.getCredentials(), cb = b.getCredentials();
-            if( ca == null || cb == null )
-                return ca == cb;
-            return Utils.equals( ca.getUserName(), cb.getUserName() );
+            if( ca == null || cb == null ) {
+                if( ca == cb )
+                    return true;
+                return no( "credentials are set for the " + ( ca == null ? "destination" : "source" ) + " only" );
+            }
+            if( !Utils.equals( ca.getUserName(), cb.getUserName() ) )
+                return no( "the user names differ" );
+            return true;
         } catch( Exception e ) {
-            Log.e( "SameServerEngine", "isSameServer()", e );
+            Log.e( LOG, "isSameServer()", e );
         }
+        return false;
+    }
+
+    private static boolean no( String why ) {
+        Log.i( LOG, "Not the same server, so the generic way is used: " + why );
         return false;
     }
 
@@ -82,11 +104,15 @@ class SameServerEngine extends CopyFromEngine {
             getClient();
             if( client == null )
                 throw new IOException( "No HTTP client" );
-            Uri du = Utils.updateUserInfo( dest.getUriNoQuery(), null );
+            Uri du = dest.getUri();
+            if( du != null )
+                du = Utils.updateUserInfo( du.buildUpon().clearQuery().build(), null );
             if( du == null || !Utils.str( du.getHost() ) )
                 throw new IOException( "Invalid destination" );
             // the path is encoded again from its decoded form, so it's a valid URL however the Uri was written
-            process( todo, Utils.mbAddSl( Uri.encode( du.getPath(), "/" ) ) );
+            String dst_path = Utils.mbAddSl( Uri.encode( du.getPath(), "/" ) );
+            Log.i( TAG, "Server side " + ( is_move ? "MOVE" : "COPY" ) + " of " + todo.length + " item(s) to " + dst_path );
+            process( todo, dst_path );
         } catch( InterruptedException e ) {
             error( owner.ctx.getString( Utils.RR.interrupted.r() ) );
         } catch( Exception e ) {
@@ -157,6 +183,7 @@ class SameServerEngine extends CopyFromEngine {
             return true;
         }
         if( !is_move && requests == 1 && isUnsupported( code ) ) {
+            Log.w( TAG, "COPY is not supported here (" + code + " " + sl.getReasonPhrase() + "), so the generic way is used" );
             unsupported = true;     // see run()
             quit = true;
             return false;
