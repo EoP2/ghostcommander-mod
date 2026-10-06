@@ -29,6 +29,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.Message;
 import android.os.Parcelable;
 import android.os.StrictMode;
@@ -50,6 +51,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.ListAdapter;
 import android.widget.Toast;
 
 import com.ghostsq.commander.adapters.CA;
@@ -1307,36 +1309,31 @@ public class FileCommander extends Activity implements Commander, ServiceConnect
                 ca_uri = Utils.updateUserInfo( uri, Uri.encode(username) );
             }
             final Uri ca_uri0 = ca_uri;
+            final boolean is_video = Utils.getCategoryByExt( Utils.getFileExt( path0 ) ) == Utils.C_VIDEO;
+            if( is_video ) {
+                // The listing the user has just clicked in is already in memory - no need to ask the server
+                ArrayList<Uri> panel_subs = findSubtitlesInPanel( uri0, crd0 );
+                if( panel_subs != null ) {
+                    openRemoteWithSubs( uri0, crd0, scheme0, path0, mime0, ca_uri0, panel_subs );
+                    return;
+                }
+            }
             final Handler ui_handler = new Handler();
             new Thread( "SubtitleProbe" ) {
                 @Override
                 public void run() {
                     final ArrayList<Uri> subUris = new ArrayList<>();
-                    if( Utils.getCategoryByExt( Utils.getFileExt( path0 ) ) == Utils.C_VIDEO ) {
+                    if( is_video ) {
                         try {
                             findSiblingSubtitles( uri0, ca_uri0, crd0, subUris );
                         } catch( Exception e ) {
                             Log.w( TAG, "Subtitle probing failed, opening without subs", e );
                         }
                     }
-                    final Uri cu = StreamProvider.put( ca_uri0, path0, mime0, -1 );
                     ui_handler.post( new Runnable() {
                         @Override
                         public void run() {
-                            Intent in = new Intent( Intent.ACTION_VIEW );
-                            in.addFlags( Intent.FLAG_GRANT_READ_URI_PERMISSION );
-                            if( !subUris.isEmpty() ) {
-                                Uri[] subs = subUris.toArray( new Uri[0] );
-                                in.putExtra( "subs", subs );
-                                in.putExtra( "subs.enable", subs );
-                            }
-                            if( tryOpen( in, cu, mime0 ) )
-                                return;
-                            try {
-                                openRemoteFileFallback( uri0, crd0, scheme0, path0 );
-                            } catch( Exception e ) {
-                                Log.e( TAG, uri0.toString(), e );
-                            }
+                            openRemoteWithSubs( uri0, crd0, scheme0, path0, mime0, ca_uri0, subUris );
                         }
                     } );
                 }
@@ -1344,9 +1341,148 @@ public class FileCommander extends Activity implements Commander, ServiceConnect
         }
     }
 
+    private final void openRemoteWithSubs( Uri uri, Credentials crd, String scheme, String path, String mime,
+                                           Uri ca_uri, ArrayList<Uri> subUris ) {
+        Uri cu = StreamProvider.put( ca_uri, path, mime, -1 );
+        Intent in = new Intent( Intent.ACTION_VIEW );
+        in.addFlags( Intent.FLAG_GRANT_READ_URI_PERMISSION );
+        if( !subUris.isEmpty() ) {
+            Uri[] subs = subUris.toArray( new Uri[0] );
+            in.putExtra( "subs", subs );
+            in.putExtra( "subs.enable", subs );
+        }
+        if( tryOpen( in, cu, mime ) )
+            return;
+        try {
+            openRemoteFileFallback( uri, crd, scheme, path );
+        } catch( Exception e ) {
+            Log.e( TAG, uri.toString(), e );
+        }
+    }
+
     private static final String[] SUBTITLE_EXTS  = { ".srt",                 ".ass",        ".ssa",        ".vtt",      ".sub" };
     private static final String[] SUBTITLE_MIMES = { "application/x-subrip", "text/x-ssa",  "text/x-ssa",  "text/vtt",  "text/plain" };
     private static final int      SUBTITLE_PROBE_TIMEOUT_MS = 3000;
+
+    /**
+     * Looks for the subtitles of a remote video in the folder listing the user has just clicked in.
+     * The listing is already in memory, so unlike {@link #findSiblingSubtitles} there is no need
+     * to create an adapter, to connect to the server and to ask about every candidate.
+     * Has to be called on the UI thread, where the adapters replace their items.
+     * @return the content Uris of the subtitles found (the list may be empty), or null if the listing
+     *         on the screen is not the one the video was opened from, so the server has to be asked
+     */
+    private final ArrayList<Uri> findSubtitlesInPanel( Uri uri, Credentials crd ) {
+        try {
+            if( panels == null || Looper.myLooper() != Looper.getMainLooper() )
+                return null;
+            CommanderAdapter ca = panels.getListAdapter( true );
+            if( !( ca instanceof ListAdapter ) )
+                return null;
+            ListAdapter la = (ListAdapter)ca;
+            String video_name = uri.getLastPathSegment();
+            if( !Utils.str( video_name ) )
+                return null;
+            int count = la.getCount();
+            // The guard: the video itself has to be in the listing (it is not if opened from the favorites, for example)
+            int video_pos = -1;
+            Uri video_uri = null;
+            for( int i = 1; i < count; i++ ) {  // the item #0 is ".."
+                Object o = la.getItem( i );
+                if( !( o instanceof Item ) )
+                    continue;
+                Item it = (Item)o;
+                if( it.dir || !video_name.equals( it.name ) )
+                    continue;
+                Uri iu = itemUri( ca, it, i );
+                if( sameLocation( iu, uri ) ) {
+                    video_pos = i;
+                    video_uri = iu;
+                    break;
+                }
+            }
+            if( video_pos < 0 ) {
+                Log.d( TAG, "The video is not in the panel listing, will ask the server about the subtitles" );
+                return null;
+            }
+            ArrayList<Uri> subs = new ArrayList<>();
+            String base = video_name.substring( 0, video_name.length() - Utils.getFileExt( video_name ).length() );
+            if( base.length() == 0 )
+                return subs;
+            for( int i = 1; i < count; i++ ) {
+                if( i == video_pos )
+                    continue;
+                Object o = la.getItem( i );
+                if( !( o instanceof Item ) )
+                    continue;
+                Item it = (Item)o;
+                if( it.dir )
+                    continue;
+                int k = subtitleKind( base, it.name );
+                if( k < 0 )
+                    continue;
+                Uri su = itemUri( ca, it, i );
+                // the listing may be a search result which spans several folders
+                if( su == null || !sameFolder( su, video_uri ) )
+                    continue;
+                if( crd != null )
+                    su = Utils.updateUserInfo( su, Uri.encode( crd.getUserName() ) );
+                subs.add( StreamProvider.put( su, it.name, SUBTITLE_MIMES[k], it.size ) );
+            }
+            Log.d( TAG, "Subtitles found in the panel listing: " + subs.size() );
+            return subs;
+        } catch( Exception e ) {
+            Log.w( TAG, "Can't use the panel listing to find the subtitles", e );
+        }
+        return null;
+    }
+
+    private static Uri itemUri( CommanderAdapter ca, Item it, int position ) {
+        Uri u = ca.getItemUri( position );
+        return u != null ? u : it.getUri();
+    }
+
+    /**
+     * @return the index in SUBTITLE_EXTS if the name is the base name of the video plus a subtitle extension
+     *         (the case is ignored), -1 otherwise
+     */
+    private static int subtitleKind( String base, String name ) {
+        if( name == null || name.length() <= base.length() || !name.regionMatches( true, 0, base, 0, base.length() ) )
+            return -1;
+        int ext_len = name.length() - base.length();
+        for( int k = 0; k < SUBTITLE_EXTS.length; k++ ) {
+            String e = SUBTITLE_EXTS[k];
+            if( e.length() == ext_len && name.regionMatches( true, base.length(), e, 0, ext_len ) )
+                return k;
+        }
+        return -1;
+    }
+
+    // The Uris of the same item may differ in the user info and in the way the path is escaped
+    // (SFTPAdapter.openItem() and getItemUri() do it differently), so the decoded parts are compared
+    private static boolean sameLocation( Uri a, Uri b ) {
+        if( a == null || b == null )
+            return false;
+        return locationKey( a, false ).equals( locationKey( b, false ) );
+    }
+
+    private static boolean sameFolder( Uri a, Uri b ) {
+        return locationKey( a, true ).equals( locationKey( b, true ) );
+    }
+
+    private static String locationKey( Uri u, boolean folder_only ) {
+        Uri nu = Utils.updateUserInfo( u, null );
+        String path = nu.getPath();
+        String query = nu.getQuery();
+        String fragment = nu.getFragment();
+        if( folder_only ) {
+            int sl = path == null ? -1 : path.lastIndexOf( '/' );
+            path = sl < 0 ? "" : path.substring( 0, sl );
+            query = null;
+            fragment = null;
+        }
+        return nu.getScheme() + "://" + nu.getAuthority() + path + "?" + query + "#" + fragment;
+    }
 
     private void findSiblingSubtitles( final Uri uri, final Uri ca_uri, final Credentials crd,
                                         ArrayList<Uri> subUris ) {
@@ -1377,9 +1513,16 @@ public class FileCommander extends Activity implements Commander, ServiceConnect
                         String subFileName = baseUriStr.substring( baseUriStr.lastIndexOf( '/' ) + 1 ) + subExt;
                         Uri subCaUri = Uri.parse( baseCaUriStr + subExt );
                         Uri subUri = StreamProvider.put( subCaUri, subFileName, SUBTITLE_MIMES[i], item.size );
-                        foundUris.add( subUri );
+                        synchronized( foundUris ) {
+                            foundUris.add( subUri );
+                        }
                     } catch( Exception e ) {
                     }
+                }
+                try {
+                    ca.prepareToDestroy();  // closes the connection the probe has opened
+                } catch( Exception e ) {
+                    Log.w( TAG, "", e );
                 }
             }
         };
@@ -1389,7 +1532,8 @@ public class FileCommander extends Activity implements Commander, ServiceConnect
         } catch( InterruptedException e ) {
             Thread.currentThread().interrupt();
         }
-        if( !probe.isAlive() ) {
+        // take what has been found so far even if the server is slow
+        synchronized( foundUris ) {
             subUris.addAll( foundUris );
         }
     }
