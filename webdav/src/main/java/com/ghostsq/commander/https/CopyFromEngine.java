@@ -95,6 +95,7 @@ class CopyFromEngine extends PropFinder
                     throw new Exception( ctx.getString( Utils.RR.interrupted.r() ) );
                 DavItem item = (DavItem)l[i];
                 String file_name = item.name;
+                cur_fn = file_name;
                 String rel_path_name = path + file_name;
                 if( item.dir ) {
                     Uri dest_subdir_uri = super.handleDirOnReceiver( commander, receiver, file_name );

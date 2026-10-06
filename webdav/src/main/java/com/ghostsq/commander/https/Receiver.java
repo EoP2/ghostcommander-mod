@@ -42,7 +42,7 @@ public class Receiver implements IReceiver {
     }
 
     private final URI getURI( String name ) {
-        return URI.create( sDestUri + name );
+        return URI.create( sDestUri + Uri.encode( name ) );
     }
 
     @Override
