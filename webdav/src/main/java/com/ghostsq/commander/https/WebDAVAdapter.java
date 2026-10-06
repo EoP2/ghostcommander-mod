@@ -523,7 +523,12 @@ public class WebDAVAdapter extends CommanderAdapterBase implements Engines.IReci
             if( to_copy == null ) {
                 notify( s( Utils.RR.copy_err.r() ), Commander.OPERATION_FAILED );
                 return false;
-            } 
+            }
+            if( to instanceof WebDAVAdapter && SameServerEngine.isSameServer( this, (WebDAVAdapter)to ) ) {
+                notify( Commander.OPERATION_STARTED );
+                commander.startEngine( new SameServerEngine( commander, this, (WebDAVAdapter)to, to_copy, move ) );
+                return true;
+            }
             java.io.File dest = null;
             Engines.IReciever recipient = null;
             if( to instanceof FSAdapter ) {
