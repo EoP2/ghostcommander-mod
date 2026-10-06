@@ -41,15 +41,14 @@ class CalcSizesEngine extends PropFinder {
                 result.append( ctx.getString( Utils.RR.sz_bytes.r(), sum ) );
             if( list.length == 1 ) {
                 Item item = list[0];
-                
-                result.append( ctx.getString( Utils.RR.sz_lastmod.r() ) );
-                result.append( " <small>" );
-                result.append( item.date );
-                result.append( "</small>" );
 
-                result.append( "\n<b>URL:</b>\n<small>" );
+                result.append( " <small>" );
+                result.append( ctx.getString( Utils.RR.sz_lastmod.r() ) );
+                result.append( "</small>\n" );
+                result.append( item.date );
+
+                result.append( "\n<small>URL</small>\n" );
                 result.append( ((DavItem)item).getURI( sBaseUri ) );
-                result.append( "</small>" );
             }
             sendReport( result.toString() );            
         } catch( Exception e ) {
