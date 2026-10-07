@@ -106,8 +106,8 @@ class DataProxy extends ProxyFileDescriptorCallback {
         int total_read = 0, remained = size;
         while( true ) {
             int has_read = is.read( data, total_read, remained );
-            if( BuildConfig.DEBUG )
-                Log.d( TAG, "Has read: " + has_read + " of requested " + remained + ", total: " + ( total_read + has_read ) );
+            //if( BuildConfig.DEBUG )
+            //    Log.d( TAG, "Has read: " + has_read + " of requested " + remained + ", total: " + ( total_read + has_read ) );
             if( has_read <= 0 )
                 break;
             this.isPos += has_read;
