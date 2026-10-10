@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghost Commander - плагін WebDAV</string>
+    <string name="app_descr">WebDAV: дістатися сервера з підтримкою WebDAV.</string>
+    <string name="trust_level">Рівень довіри</string>
+    <string name="trust_level_summary">Прийняти настільки довірений сертифікат сервера.</string>
+    <string name="TLS_only">Лише TLS</string>
+    <string name="TLS_only_summary">Примусово використати TLS, не SSL.</string>
+</resources>

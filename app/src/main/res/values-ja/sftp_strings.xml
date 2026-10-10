@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keys_manager">キーマネージャー</string>
+    <string name="keys_manager_summary">認証キーを管理します</string>
+    <string name="digest">ダイジェストを表示...</string>
+    <string name="digest_summary">サーバーフィンガープリント表示形式</string>
+    <string name="host_name">正確なホスト名</string>
+    <string name="pick_file">ファイルを選択</string>
+    <string name="add">新規追加</string>
+    <string name="delete">削除</string>
+    <string name="bad_file">無効なファイル</string>
+    <string name="wrong">パスフレーズが間違っています!</string>
+    <string name="key_encrypted">暗号化</string>
+    <string name="not_encrypted">暗号化されていません!</string>
+    <string name="test_passphrase">パスフレーズをテスト</string>
+    <string name="passphrase_for">次のパスフレーズ: </string>
+    <string name="new_passphrase">新しいパスフレーズ</string>
+    <string name="not_unique">同じホスト名のキーを複数持つことはできません</string>
+    <string name="are_you_sure">よろしいですか?</string>
+</resources>

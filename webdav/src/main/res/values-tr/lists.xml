@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trust_level">
+        <item>Only with valid chain of trust</item>
+        <item>Güven süresi doldu ya da kendinden imzalı</item>
+        <item>Hepsine güven (Tehlikeli)</item>
+    </string-array>
+</resources>

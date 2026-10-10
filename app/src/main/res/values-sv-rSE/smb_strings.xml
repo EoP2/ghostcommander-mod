@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghost Commander - SMB-tillägg</string>
+    <string name="app_descr">Anslut till utdelade mappar på en Windows-dator.</string>
+    <string name="nothing_read">Inget att läsa</string>
+    <string name="nothing_returned">Kunde inte öppna denna Samba-utdelning\n%s</string>
+    <string name="malformed_url">Felaktig URL: \n%s</string>
+    <string name="msbrowse_err">Det gick inte att hitta några domäner/arbetsgrupper.\nProva med att specificera domänens namn mer exakt\n \"smb://your_domain_name/\".</string>
+    <string name="connect_err">Kunde inte ansluta till:\n%s</string>
+    <string name="broken_pipe">Anslutningen till servern bröts. Återgå till \"/sdcard\" och försök igen.</string>
+    <string name="exception">Ett undantag inträffade</string>
+    <!-- statuses -->
+    <string name="STATUS_UNSUCCESSFUL">Misslyckades.</string>
+    <string name="STATUS_VOLUME_DISMOUNTED">Volym demonterad.</string>
+    <!-- prefs -->
+    <string name="min_ver">Minsta version</string>
+    <string name="min_ver_sum">Minsta stödda SMB-version</string>
+    <string name="max_ver">Maximal version</string>
+    <string name="max_ver_sum">Maximal stödda SMB-version</string>
+    <string name="resolve_using_DNS">Använd DNS</string>
+    <string name="resolve_using_DNS_summary">Förutom broadcast, använd även DNS-servern för att hitta värdnamnet.</string>
+    <string name="disable_DFS">Inaktivera DFS</string>
+    <string name="disable_DFS_summary">Inaktiverad Distributed File System-funktion kan hjälpa till att komma åt Win10-resurser med MS-konto.</string>
+</resources>

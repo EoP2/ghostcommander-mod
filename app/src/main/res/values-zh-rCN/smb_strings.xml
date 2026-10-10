@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">未读取到任何内容</string>
+    <string name="nothing_returned">无法打开共享文件夹 %1$s</string>
+    <string name="malformed_url">地址格式错误：\n%s</string>
+    <string name="msbrowse_err">无法获取域或工作组列表。\n请尝试明确指定域名，例如：\n\"smb://your_domain_name/\"</string>
+    <string name="connect_err">无法连接到：\n%s</string>
+    <string name="broken_pipe">与服务器的连接中断，请返回主页重试</string>
+    <string name="exception">发生异常</string>
+    <!-- statuses -->
+    <string name="STATUS_UNSUCCESSFUL">失败</string>
+    <string name="STATUS_VOLUME_DISMOUNTED">卷已卸载</string>
+
+    <!-- prefs -->
+    <string name="min_ver">最低版本</string>
+    <string name="min_ver_sum">支持的最低SMB版本</string>
+    <string name="max_ver">最高版本</string>
+    <string name="max_ver_sum">支持的最高SMB版本</string>
+
+    <string name="resolve_using_DNS">使用DNS</string>
+    <string name="resolve_using_DNS_summary">除了广播，还使用DNS服务器解析主机名</string>
+    <string name="WINS_server">WINS服务器</string>
+    <string name="WINS_server_summary">指定WINS服务器地址后，将使用该服务器进行名称解析</string>
+    <string name="disable_DFS">禁用DFS</string>
+    <string name="disable_DFS_summary">禁用分布式文件系统（DFS）功能可能有助于使用微软帐户访问Win10共享</string>
+    <string name="use_guest">使用GUEST作为匿名用户</string>
+    <string name="use_guest_summary">如果未提供凭据，则使用用户名GUEST和空密码</string>
+    <string name="use_raw_NTLM">使用原始NTLM</string>
+    <string name="use_raw_NTLM_summary">使用原始NTLMSSP令牌，而不是SPNEGO封装的令牌</string>
+    <string name="disable_Spnego_Integrity">禁用SPNEGO完整性验证</string>
+    <string name="disable_Spnego_Integrity_summary">禁用SPNEGO mechanismListMIC的发送和验证</string>
+</resources>

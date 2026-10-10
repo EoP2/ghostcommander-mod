@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.ghostsq.commander.https"
+      android:sharedUserId="com.ghostsq.commander.userId">
+
+    <application 
+        android:icon="@drawable/icon" 
+        android:logo="@drawable/logo"
+        android:label="@string/app_name"
+        android:description="@string/app_descr"
+        android:process="com.ghostsq.commander">
+        <activity
+            android:name=".Prefs"
+            android:label="Prefs">
+        </activity>
+    </application>
+</manifest> 

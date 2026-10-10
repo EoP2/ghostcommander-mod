@@ -1,0 +1,5 @@
+rootProject.name = 'GhostCommander'
+include ':app'
+include ':webdav'
+include ':httpclient-shaded'
+include ':yun139'

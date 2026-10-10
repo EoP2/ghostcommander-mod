@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sorting">
+        <item>За назвою</item>
+        <item>За суфіксом</item>
+        <item>За вагою</item>
+        <item>За датою</item>
+    </string-array>
+    <string-array name="panels_mode">
+        <item>Так</item>
+        <item>Ні</item>
+        <item>Авто</item>
+    </string-array>
+    <string-array name="language">
+        <item>Типова</item>
+        <item>Čeština</item>
+        <item>Danske</item>
+        <item>Deutsch</item>
+        <item>English</item>
+        <item>Español</item>
+        <item>Filipino</item>
+        <item>Français</item>
+        <item>Italiano</item>
+        <item>Magyar</item>
+        <item>Polski</item>
+        <item>Português</item>
+        <item>Slovenščina</item>
+        <item>Svenska</item>
+        <item>Türkçe</item>
+        <item>Беларуская</item>
+        <item>Български</item>
+        <item>Русский</item>
+        <item>Српски</item>
+        <item>Українська</item>
+        <item>Грецька</item>
+        <item>한국어</item>
+        <item>简体中文</item>
+        <item>繁體中文</item>
+        <item>日本語</item>
+    </string-array>
+    <string-array name="encoding">
+        <item>Типове</item>
+        <item>Windows-1250\n\t  Центральна Європа</item>
+        <item>Windows-1251\n\t  Кирилиця</item>
+        <item>Windows-1252\n\t  Західна Європа</item>
+        <item>Windows-1253\n\t  Греція</item>
+        <item>UTF-8\n\t  8-бітний Юнікод</item>
+        <item>UTF-16BE\n\t  16-бітний мережевий</item>
+        <item>UTF-16BE\n\t  16-бітний інтелівський</item>
+        <item>UTF-16\n\t  16-бітний Юнікод</item>
+        <item>KOI8-R\n\t  UNIX Росія</item>
+        <item>Cp866\n\t  DOS Росія</item>
+        <item>Shift_JIS\n\t  Shift_JIS Японія</item>
+        <item>EUC-JP\n\t  EUC-JP Японія</item>
+        <item>EUC-KR\n\t  EUC-KR Корея</item>
+        <item>ISO-2022-JP\n\t  iso-2022 Японія</item>
+        <item>ISO-2022-KR\n\t  iso-2022 Корея</item>
+        <item>ISO-2022-CN\n\t  iso-2022 Китай</item>
+        <item>GB18030\n\t  国家标准 Китай</item>
+        <item>HZ-GB-2312\n\t  汉字 Китай</item>
+    </string-array>
+    <string-array name="color_themes">
+        <item>Темна</item>
+        <item>Світла</item>
+        <item>Нортон</item>
+        <item>Авто</item>
+    </string-array>
+</resources>

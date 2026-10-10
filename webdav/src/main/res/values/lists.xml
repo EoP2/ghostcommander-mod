@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trust_level">
+        <item>Only with valid chain of trust</item>
+        <item>Trust expired or self-signed</item>
+        <item>Trust anything (dangerous)</item>
+    </string-array>
+    <string-array name="trust_level_vals">
+        <item>normal</item>
+        <item>loose</item>
+        <item>open</item>
+    </string-array>
+</resources>

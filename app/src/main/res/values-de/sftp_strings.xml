@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keys_manager">Schlüsselverwaltung</string>
+    <string name="keys_manager_summary">Authentifizierungsschlüssel verwalten</string>
+    <string name="digest">Digest anzeigen als...</string>
+    <string name="digest_summary">Anzeigeformat des Server-Fingerabdrucks</string>
+    <string name="host_name">Genauer Hostname:</string>
+    <string name="pick_file">Eine Datei auswählen</string>
+    <string name="add">Neue hinzufügen</string>
+    <string name="delete">Löschen</string>
+    <string name="bad_file">Ungültige Datei</string>
+    <string name="wrong">Falsches Passwort!</string>
+    <string name="key_encrypted">Verschlüsselt</string>
+    <string name="not_encrypted">Nicht verschlüsselt!</string>
+    <string name="test_passphrase">Test-Passwort</string>
+    <string name="passphrase_for">Passwort für: </string>
+    <string name="new_passphrase">Neues Passwort</string>
+    <string name="not_unique">Es kann nicht mehr als einen Schlüssel mit dem gleichen Hostnamen geben</string>
+    <string name="are_you_sure">Sind Sie sicher?</string>
+</resources>

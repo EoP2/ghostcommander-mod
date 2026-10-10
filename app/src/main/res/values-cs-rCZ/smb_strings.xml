@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_read">Nic ke čtení</string>
+    <string name="nothing_returned">Nelze připojit toto Samba úložiště\n%s</string>
+    <string name="malformed_url">Poškozená URL: \n%s</string>
+    <string name="msbrowse_err">Nelze získat seznam domén/skupin.\nSpecifikujte doménu přesněji, např.\n \"smb://vaše_doména/\".</string>
+    <string name="connect_err">Nelze připojit k:\n%s</string>
+    <string name="broken_pipe">Připojení k serveru přerušeno. Vrattě se do složky \"/sdcard\" a zkuste znovu.</string>
+    <!-- statuses -->
+    <!-- prefs -->
+</resources>

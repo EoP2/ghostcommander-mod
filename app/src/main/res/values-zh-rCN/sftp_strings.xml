@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keys_manager">PEM密钥管理器</string>
+    <string name="keys_manager_summary">管理身份验证密钥</string>
+    <string name="digest">指纹显示方式…</string>
+    <string name="digest_summary">服务器指纹显示格式</string>
+    <string name="host_name">完整主机名（[用户名@]主机）：</string>
+    <string name="pick_file">选择PEM文件</string>
+    <string name="add">新增</string>
+    <string name="delete">删除</string>
+    <string name="bad_file">无效的PEM文件</string>
+    <string name="wrong">密码短语错误！</string>
+    <string name="key_encrypted">已加密</string>
+    <string name="not_encrypted">未加密！</string>
+    <string name="test_passphrase">测试密码短语</string>
+    <string name="passphrase_for">密码短语：</string>
+    <string name="new_passphrase">新密码短语</string>
+    <string name="not_unique">同一主机名不能设置多个密钥</string>
+    <string name="are_you_sure">确定吗</string>
+    <string name="key_save">设置密钥的主机名</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="ok">确定</string>
+    <string name="key_cancel">取消</string>
+</resources>
