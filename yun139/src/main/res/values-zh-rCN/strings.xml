@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">移动云盘</string>
-    <string name="app_descr">移动139云盘</string>
+    <string name="app_name">文件管理器 - 移动云盘</string>
+    <string name="app_descr">移动云盘:139云盘</string>
 
     <string name="empty_accounts">尚未添加任何账号，点击下方“添加账号”。</string>
     <string name="btn_add_account">添加账号</string>
