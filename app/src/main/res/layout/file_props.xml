@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/mod_after"
-            android:textSize="10dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/mod_after_date"
@@ -80,7 +80,7 @@
             android:layout_gravity="top"
             android:layout_weight="1"
             android:text="@string/mod_before"
-            android:textSize="10dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/mod_before_date"
