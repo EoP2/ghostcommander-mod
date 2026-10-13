@@ -249,6 +249,7 @@ public abstract class Tools {
         if( id == R.id.F2 )           return  true;
         if( id == R.id.F5F6 )         return  true;
         if( id == R.id.F8 )           return  true;
+        if( id == R.id.eq )           return  true;
         if( id == R.id.home )         return  true;
         if( id == R.id.sel_dlg )      return  true;
         return false;
