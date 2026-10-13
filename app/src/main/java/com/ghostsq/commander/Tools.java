@@ -14,6 +14,8 @@ public abstract class Tools {
             R.id.F8,
             R.id.F9,
             R.id.F10,
+            R.id.sel_dlg,
+            R.id.sel_between,
             R.id.remount,
             R.id.sz,
             R.id.dirsz,
@@ -23,8 +25,6 @@ public abstract class Tools {
             R.id.enter,
             R.id.refresh,
             R.id.hidden,
-            R.id.sel_dlg,
-            R.id.sel_between,
             R.id.add_fav,
             R.id.home,
             R.id.favs,
@@ -60,12 +60,12 @@ public abstract class Tools {
         if( cn.equals( "F8"      ) ) return        R.id.F8;
         if( cn.equals( "F9"      ) ) return        R.id.F9;
         if( cn.equals( "F10"     ) ) return        R.id.F10;
+        if( cn.equals( "sel_dlg" ) ) return        R.id.sel_dlg;
+        if( cn.equals( "sel_between" ) ) return    R.id.sel_between;
         if( cn.equals( "eq"      ) ) return        R.id.eq;
         if( cn.equals( "tgl"     ) ) return        R.id.tgl;
         if( cn.equals( "sz"      ) ) return        R.id.sz;
         if( cn.equals( "sort"    ) ) return        R.id.action_sort;
-        if( cn.equals( "sel_dlg" ) ) return        R.id.sel_dlg;
-        if( cn.equals( "sel_between" ) ) return    R.id.sel_between;
         if( cn.equals( "enter"   ) ) return        R.id.enter;
         if( cn.equals( "addfav"  ) ) return        R.id.add_fav;
         if( cn.equals( "remount" ) ) return        R.id.remount;
@@ -102,13 +102,13 @@ public abstract class Tools {
         if( id == R.id.F8 )           return  CommanderAdapter.Feature.F8;
         if( id == R.id.F9 )           return  CommanderAdapter.Feature.F9;
         if( id == R.id.F10 )          return  CommanderAdapter.Feature.F10;
+        if( id == R.id.action_select
+         || id == R.id.sel_dlg
+         || id == R.id.sel_between )  return  CommanderAdapter.Feature.SEL_UNS;
         if( id == R.id.eq )           return  CommanderAdapter.Feature.EQ;
         if( id == R.id.tgl )          return  CommanderAdapter.Feature.TGL;
         if( id == R.id.swap )         return  CommanderAdapter.Feature.TGL;
         if( id == R.id.sz )           return  CommanderAdapter.Feature.SZ;
-        if( id == R.id.action_select
-         || id == R.id.sel_dlg
-         || id == R.id.sel_between )  return  CommanderAdapter.Feature.SEL_UNS;
         if( id == R.id.enter )        return  CommanderAdapter.Feature.ENTER;
         if( id == R.id.add_fav )      return  CommanderAdapter.Feature.ADD_FAV;
         if( id == R.id.remount )      return  CommanderAdapter.Feature.REMOUNT;
@@ -146,12 +146,12 @@ public abstract class Tools {
         if( id == R.id.F8 )           return  "F8";
         if( id == R.id.F9 )           return  "F9";
         if( id == R.id.F10 )          return  "F10";
+        if( id == R.id.sel_dlg )      return  "sel_dlg";
+        if( id == R.id.sel_between )  return  "sel_between";
         if( id == R.id.eq )           return  "eq";
         if( id == R.id.tgl )          return  "tgl";
         if( id == R.id.sz )           return  "sz";
         if( id == R.id.action_sort )  return  "sort";
-        if( id == R.id.sel_dlg )      return  "sel_dlg";
-        if( id == R.id.sel_between )  return  "sel_between";
         if( id == R.id.enter )        return  "enter";
         if( id == R.id.add_fav )      return  "addfav";
         if( id == R.id.remount )      return  "remount";
@@ -188,10 +188,10 @@ public abstract class Tools {
         if( id == R.id.F8 )           return  '8';
         if( id == R.id.F9 )           return  '9';
         if( id == R.id.F10 )          return  '0';
+        if( id == R.id.sel_dlg )      return  '+';
         if( id == R.id.eq )           return  '=';
         if( id == R.id.tgl )          return  0;
         if( id == R.id.sz )           return  '"';
-        if( id == R.id.sel_dlg )      return  '+';
         if( id == R.id.enter )        return  0;
         if( id == R.id.add_fav )      return  '*';
         if( id == R.id.remount )      return  0;
@@ -213,12 +213,12 @@ public abstract class Tools {
         if( id == R.id.F8 )           return  R.string.F8;
         if( id == R.id.F9 )           return  R.string.F9;
         if( id == R.id.F10 )          return  R.string.F10;
+        if( id == R.id.sel_dlg )      return  R.string.sel_dlg;
+        if( id == R.id.sel_between )  return  R.string.select_between;
         if( id == R.id.eq )           return  R.string.eq;
         if( id == R.id.tgl )          return  R.string.tgl;
         if( id == R.id.sz )           return  R.string.sz;
         if( id == R.id.action_sort )  return  R.string.sorting;
-        if( id == R.id.sel_dlg )      return  R.string.sel_dlg;
-        if( id == R.id.sel_between )  return  R.string.select_between;
         if( id == R.id.enter )        return  R.string.enter_b;
         if( id == R.id.add_fav )      return  R.string.add_fav_b;
         if( id == R.id.remount )      return  R.string.remount_b;
@@ -249,9 +249,9 @@ public abstract class Tools {
         if( id == R.id.F2 )           return  true;
         if( id == R.id.F5F6 )         return  true;
         if( id == R.id.F8 )           return  true;
+        if( id == R.id.sel_dlg )      return  true;
         if( id == R.id.eq )           return  true;
         if( id == R.id.home )         return  true;
-        if( id == R.id.sel_dlg )      return  true;
         return false;
     }
 
@@ -265,12 +265,12 @@ public abstract class Tools {
         if( id == R.id.F8 )           return  "⌫";
         if( id == R.id.F9 )           return  "⚒";
         if( id == R.id.F10 )          return  "⊗";
+        if( id == R.id.sel_dlg )      return  "☑";
+        if( id == R.id.sel_between )  return  "▣";
         if( id == R.id.eq )           return  "⚌";
         if( id == R.id.tgl )          return  "⇌";
         if( id == R.id.sz )           return  "ⓘ";
         if( id == R.id.action_sort )  return  "☷";
-        if( id == R.id.sel_dlg )      return  "☑";
-        if( id == R.id.sel_between )  return  "▣";
         if( id == R.id.enter )        return  "⤴";
         if( id == R.id.add_fav )      return  "✦";
         if( id == R.id.remount )      return  "⏏";
