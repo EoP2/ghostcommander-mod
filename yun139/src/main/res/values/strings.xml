@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Ghost Commander - 139yun plugin</string>
-    <string name="app_descr">China Mobile\'s 139 personal cloud drive.</string>
+    <string name="app_descr">139yun: China Mobile\'s 139 personal cloud drive.</string>
 
     <string name="empty_accounts">No accounts yet. Tap \"Add account\" below.</string>
     <string name="btn_add_account">Add account</string>
