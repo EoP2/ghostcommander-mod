@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
+import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.Html;
@@ -20,7 +21,9 @@ import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -133,12 +136,58 @@ public class Dialogs implements DialogInterface.OnClickListener {
         taskId = 0L;
     }
 
+    /**
+     * An AlertDialog that takes the soft keyboard down together with itself.
+     *
+     * Without this, a keyboard which was brought up by tapping an input field of the dialog
+     * is shown again on the main window right after the dialog is closed, unless the user has
+     * hidden it manually first (the "show requested" state of the input method service is
+     * not reset, and the main window - windowSoftInputMode="stateHidden" - does not reset it either).
+     * The keyboard has to be hidden while the dialog window is still alive, so dismiss() is the place:
+     * it is called on every way of closing - OK/Cancel buttons, Back, touching outside, cancel().
+     */
+    private static class SoftKbdAwareDialog extends AlertDialog {
+        SoftKbdAwareDialog( Context context ) {
+            super( context );
+        }
+
+        @Override
+        public void dismiss() {
+            if( Looper.myLooper() == Looper.getMainLooper() )
+                hideSoftKeyboard( this );
+            super.dismiss();
+        }
+    }
+
+    private static void hideSoftKeyboard( Dialog dialog ) {
+        try {
+            if( dialog == null || !dialog.isShowing() )
+                return;
+            Window window = dialog.getWindow();
+            if( window == null )
+                return;
+            View focused = dialog.getCurrentFocus();
+            View v = focused != null ? focused : window.getDecorView();
+            InputMethodManager imm = (InputMethodManager)dialog.getContext().getSystemService( Context.INPUT_METHOD_SERVICE );
+            if( imm != null )
+                imm.hideSoftInputFromWindow( v.getWindowToken(), 0 );
+        } catch( Exception e ) {
+            Log.w( TAG, "hideSoftKeyboard()", e );
+        }
+    }
+
+    private AlertDialog newDialog( View inner_view, boolean ok_cancel ) {
+        AlertDialog ad = new SoftKbdAwareDialog( owner );
+        ad.setView( inner_view );
+        if( ok_cancel ) {
+            ad.setButton( DialogInterface.BUTTON_POSITIVE, owner.getText( R.string.dialog_ok ),     this );
+            ad.setButton( DialogInterface.BUTTON_NEGATIVE, owner.getText( R.string.dialog_cancel ), this );
+        }
+        return ad;
+    }
+
     private AlertDialog build( View inner_view ) {
-        AlertDialog ad = new AlertDialog.Builder( owner )
-                .setView( inner_view )
-                .setPositiveButton( R.string.dialog_ok, this )
-                .setNegativeButton( R.string.dialog_cancel, this )
-                .create();
+        AlertDialog ad = newDialog( inner_view, true );
         ad.getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN );
         return ad;
     }
@@ -210,16 +259,12 @@ public class Dialogs implements DialogInterface.OnClickListener {
              || id == R.id.F5F6t
              || id == R.id.new_item ) {
                 final View twoActionView = factory.inflate( R.layout.two_action, null );
-                dialogObj = new AlertDialog.Builder( owner )
-                        .setView( twoActionView )
-                        .create();
+                dialogObj = newDialog( twoActionView, false );
                 return dialogObj;
             }
             if( id == R.id.sel_dlg ) {
                 final View selectView = factory.inflate( R.layout.select_unselect, null );
-                dialogObj = new AlertDialog.Builder( owner )
-                        .setView( selectView )
-                        .create();
+                dialogObj = newDialog( selectView, false );
                 return dialogObj;
             }
             if( id == R.id.find ) {
