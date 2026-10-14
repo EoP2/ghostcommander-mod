@@ -11,7 +11,6 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
-import android.net.UrlQuerySanitizer;
 import android.os.Build;
 import android.os.Environment;
 import android.preference.PreferenceManager;
@@ -37,6 +36,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.ByteBuffer;
+import java.nio.charset.CharacterCodingException;
+import java.nio.charset.CodingErrorAction;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Date;
@@ -787,9 +790,57 @@ public final class Utils {
         return escapePath( s ).replaceAll( "/", "%2F" );
     }
 
+    // Decodes %XX escapes.
+    // android.net.UrlQuerySanitizer.unescape() turns every single %XX into one char, so a multi-byte
+    // UTF-8 sequence (a Chinese character is %E4%B8%AD for example) became mojibake.
+    // Here consecutive escapes are collected into bytes and decoded as UTF-8. If the bytes are not
+    // valid UTF-8, each byte becomes a char like before. '+' and malformed escapes are left as is.
     public static String unEscape( String s ) {
-        UrlQuerySanitizer urlqs = new UrlQuerySanitizer();
-        return urlqs.unescape( s.replaceAll( "\\+", "`2B`" ) ).replaceAll( "`2B`", "+" );
+        if( s == null || s.indexOf( '%' ) < 0 )
+            return s;
+        final int len = s.length();
+        StringBuilder sb = new StringBuilder( len );
+        byte[] bytes = new byte[len / 3 + 1];
+        int n = 0;
+        for( int i = 0; i < len; ) {
+            char c = s.charAt( i );
+            if( c == '%' && i + 2 < len ) {
+                int hi = hexDigit( s.charAt( i + 1 ) ), lo = hexDigit( s.charAt( i + 2 ) );
+                if( hi >= 0 && lo >= 0 ) {
+                    bytes[n++] = (byte)( hi * 16 + lo );
+                    i += 3;
+                    continue;
+                }
+            }
+            n = appendDecoded( sb, bytes, n );
+            sb.append( c );
+            i++;
+        }
+        appendDecoded( sb, bytes, n );
+        return sb.toString();
+    }
+
+    private static int hexDigit( char c ) {
+        if( c >= '0' && c <= '9' ) return c - '0';
+        if( c >= 'A' && c <= 'F' ) return c - 'A' + 10;
+        if( c >= 'a' && c <= 'f' ) return c - 'a' + 10;
+        return -1;
+    }
+
+    // Appends the n collected bytes to sb and returns 0 (the new count of the collected bytes)
+    private static int appendDecoded( StringBuilder sb, byte[] bytes, int n ) {
+        if( n > 0 ) {
+            try {
+                sb.append( StandardCharsets.UTF_8.newDecoder()
+                        .onMalformedInput( CodingErrorAction.REPORT )
+                        .onUnmappableCharacter( CodingErrorAction.REPORT )
+                        .decode( ByteBuffer.wrap( bytes, 0, n ) ).toString() );
+            } catch( CharacterCodingException e ) {
+                for( int i = 0; i < n; i++ )
+                    sb.append( (char)( bytes[i] & 0xFF ) );
+            }
+        }
+        return 0;
     }
 
     public static boolean isHTML( String s ) {
