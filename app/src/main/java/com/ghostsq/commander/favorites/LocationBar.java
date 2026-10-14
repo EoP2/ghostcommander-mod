@@ -1,7 +1,7 @@
 package com.ghostsq.commander.favorites;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -128,7 +128,6 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
 		return position;
 	}
 
-	@SuppressLint("ResourceType")
 	@Override
 	public View getView( int position, View convertView, ViewGroup parent ) {
 		try {
@@ -137,7 +136,7 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
             View v = convertView != null ? convertView : inflater.inflate( R.layout.favitem, parent, false );
             TextView nv = v.findViewById( R.id.name );
             nv.setTextSize( font_size );
-            nv.setTextAppearance( c, android.R.attr.textAppearanceInverse );
+            nv.setTextColor( p.ck.ufgColor );
             View d = v.findViewById( R.id.divider );
             d.setVisibility( position == 0 ? View.GONE : View.VISIBLE );
             d.setBackgroundColor( p.ck.divColor );
@@ -160,12 +159,29 @@ public class LocationBar extends BaseAdapter implements Filterable, OnKeyListene
     }
 
 	// --- inner functions ---
-	
+
+    private void applyColors() {
+        try {
+            final int bg = p.ck.ttlColor;
+            final int fg = p.ck.ufgColor;
+            goPanel.setBackgroundColor( bg );
+            AutoCompleteTextView edit = (AutoCompleteTextView)goPanel.findViewById( R.id.uri_edit );
+            if( edit != null ) {
+                edit.setTextColor( fg );
+                edit.setHintTextColor( ( fg & 0x00FFFFFF ) | 0x80000000 );
+                edit.setDropDownBackgroundDrawable( new ColorDrawable( bg ) );
+            }
+        } catch( Exception e ) {
+            Log.e( TAG, "applyColors()", e );
+        }
+    }
+
     public final void openGoPanel( int which, Uri uri ) {
 		try {
 			goPanel.setVisibility( View.VISIBLE );
 			toChange = which;
 			refreshHistoryList( which );
+			applyColors();
 			AutoCompleteTextView edit = (AutoCompleteTextView)c.findViewById( R.id.uri_edit );
 			if( edit != null ) {
 				edit.setText( Favorite.screenPwd( uri ) );
