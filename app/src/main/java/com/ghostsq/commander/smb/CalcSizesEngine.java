@@ -1,8 +1,6 @@
 package com.ghostsq.commander.smb;
 
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.text.format.DateFormat;
 import android.text.format.Formatter;
 
@@ -211,15 +209,7 @@ class CalcSizesEngine extends Engine {
             }
             sendReport( result.toString() );
         } catch( Exception e ) {
-            String err_msg = "Error";
-            try {
-                PackageManager pm = ctx.getPackageManager();
-                Resources smb_res = pm.getResourcesForApplication( "com.ghostsq.commander.smb" );
-                err_msg = smb_res.getString( R.string.connect_err, e.getMessage() );
-            } catch( Exception e1 ) {
-                e1.printStackTrace();
-            }
-            sendProgress( err_msg, Commander.OPERATION_FAILED );
+            sendProgress( ctx.getString( R.string.connect_err, e.getMessage() ), Commander.OPERATION_FAILED );
         }
     }
 
