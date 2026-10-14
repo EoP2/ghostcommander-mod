@@ -25,6 +25,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Engine extends Thread {
     protected final String TAG = getClass().getName();
@@ -634,33 +638,88 @@ public class Engine extends Thread {
         return sp.match( item );
     }
 
+    // Byte patterns to look for. UTF-8 is always there. If the text has non-ASCII characters,
+    // GB18030 (covers GBK/GB2312), Big5 and UTF-16 LE/BE are added, but only for charsets
+    // that can represent the whole text (otherwise the pattern would contain '?' substitutes).
+    private static ArrayList<byte[]> searchPatterns( String s ) {
+        ArrayList<byte[]> res = new ArrayList<>();
+        res.add( s.getBytes( StandardCharsets.UTF_8 ) );
+        boolean ascii = true;
+        for( int i = 0; i < s.length(); i++ ) {
+            if( s.charAt( i ) > 0x7F ) {
+                ascii = false;
+                break;
+            }
+        }
+        if( !ascii ) {
+            String[] names = { "GB18030", "Big5", "UTF-16LE", "UTF-16BE" };
+            for( String n : names ) {
+                try {
+                    Charset cs = Charset.forName( n );
+                    if( !cs.newEncoder().canEncode( s ) )
+                        continue;
+                    byte[] b = s.getBytes( cs );
+                    boolean dup = false;
+                    for( byte[] e : res ) {
+                        if( Arrays.equals( e, b ) ) {
+                            dup = true;
+                            break;
+                        }
+                    }
+                    if( !dup )
+                        res.add( b );
+                } catch( Exception e ) {
+                    // the charset is not available on this device - skip it
+                }
+            }
+        }
+        return res;
+    }
+
+    // KMP failure table
+    private static int[] kmpFailure( byte[] p ) {
+        int[] f = new int[p.length];
+        for( int i = 1, k = 0; i < p.length; i++ ) {
+            while( k > 0 && p[i] != p[k] )
+                k = f[k-1];
+            if( p[i] == p[k] )
+                k++;
+            f[i] = k;
+        }
+        return f;
+    }
+
     // Attention: This method does not close the input stream!
     protected final boolean searchInContent( InputStream is, long sz, String name, String search_for ) {
         long start_time = System.currentTimeMillis();
         try {
-            byte[] bb = search_for.getBytes();
-            final  int  l = search_for.length();
+            if( search_for.length() == 0 ) return false;
+            // The needle is converted to bytes in several common encodings; a match of any of them counts.
+            final ArrayList<byte[]> pats = searchPatterns( search_for );
+            final int       pc    = pats.size();
+            final int[][]   fail  = new int[pc][];
+            final int[]     state = new int[pc];
+            for( int k = 0; k < pc; k++ )
+                fail[k] = kmpFailure( pats.get( k ) );
             final  double conv = 100. / sz;
-            BufferedInputStream bis = new BufferedInputStream( is, Math.min( (int)sz, 1048576 ) );
+            BufferedInputStream bis = new BufferedInputStream( is, sz > 0 ? (int)Math.min( sz, 1048576L ) : 8192 );
             int    cnt = 0, p = 0;
             sendProgress( name, progress, 0 );
             while( true ) {
                 int ch = bis.read();
                 if( ch == -1 )
                     return false;
-                if( ch == bb[0] ) {
-                    bis.mark( l );
-                    for( int i = 1; i < l; i++ ) {
-                        ch = bis.read();
-                        if( ch == -1 )
-                            return false;
-                        if( ch != bb[i] ) {
-                            bis.reset();
-                            break;
-                        }
-                        if( i >= l-1 )
-                            return true;
-                    }
+                for( int k = 0; k < pc; k++ ) {
+                    final byte[] pat = pats.get( k );
+                    int m = state[k];
+                    // compare as unsigned: read() gives 0..255, while byte is -128..127
+                    while( m > 0 && ( pat[m] & 0xFF ) != ch )
+                        m = fail[k][m-1];
+                    if( ( pat[m] & 0xFF ) == ch )
+                        m++;
+                    if( m == pat.length )
+                        return true;
+                    state[k] = m;
                 }
                 int np = (int)(cnt++ * conv);
                 if( np - 10 >= p ) {
