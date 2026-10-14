@@ -32,7 +32,6 @@ import com.ghostsq.commander.utils.Utils;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class HomeAdapter extends CommanderAdapterBase {
@@ -50,7 +49,6 @@ public class HomeAdapter extends CommanderAdapterBase {
     private static final int[] FTP      = { R.string.ftp,     R.string.ftp_descr,     R.drawable.ftp     };
     private static final int[] SFTP     = { R.string.sftp,     R.string.sftp_descr,     R.drawable.sftp     };
     private static final int[] SMB      = { R.string.smb,     R.string.smb_descr,     R.drawable.smb     };
-    private static final int[] PLUGINS  = { R.string.plugins, R.string.plugins_descr, R.drawable.plugins };
     private static final int[] ROOT     = { R.string.root,    R.string.root_descr,    R.drawable.root    };
     private static final int[] MOUNT    = { R.string.mount,   R.string.mount_descr,   R.drawable.mount   };
     private static final int[] APPS     = { R.string.apps,    R.string.apps_descr,    R.drawable.android };
@@ -189,11 +187,6 @@ public class HomeAdapter extends CommanderAdapterBase {
 
             String[] ghosts = CA.getInstalled( ctx );
             if( ghosts != null &&  ghosts.length > 1 ) {
-                Arrays.sort( ghosts, ( i1, i2 ) -> {
-                    if( i1.indexOf( "sftp"  ) > 0 ) return -1;
-                    if( i1.indexOf( "samba" ) > 0 ) return i2.indexOf( "sftp" ) > 0 ? 1 : -1;
-                    return 0;
-                } );
                 final String this_package = ctx.getPackageName();
                 PackageManager  pm = ctx.getPackageManager();
                 for( String pkgn : ghosts ) {
@@ -217,36 +210,27 @@ public class HomeAdapter extends CommanderAdapterBase {
                         continue;
                     Item item = new Item();
                     ia.add( item );
-                    if( "sftp".equals( pkg_sfx ) ) {
-                        item.name = s( R.string.sftp );
-                        item.attr = s( R.string.sftp_descr );
-                        item.icon_id = R.drawable.sftp;
-                        item.dir = true;
-                        item.uri = Uri.parse( "sftp:" );
-                    } else {                        
-                        Utils.changeLanguage( ctx, pre );
-                        if( pai.descriptionRes != 0 ) {
-                            String descr = pre.getString( pai.descriptionRes );
-                            if( Utils.str( descr ) ) {
-                                int cp = descr.indexOf( ':' );
-                                if( cp > 0 ) {
-                                    item.name = descr.substring( 0, cp ); 
-                                    item.attr = descr.substring( cp+1 ); 
-                                }
+                    Utils.changeLanguage( ctx, pre );
+                    if( pai.descriptionRes != 0 ) {
+                        String descr = pre.getString( pai.descriptionRes );
+                        if( Utils.str( descr ) ) {
+                            int cp = descr.indexOf( ':' );
+                            if( cp > 0 ) {
+                                item.name = descr.substring( 0, cp );
+                                item.attr = descr.substring( cp+1 );
                             }
                         }
-                        if( !Utils.str( item.name ) )
-                            item.name = pre.getString( pai.labelRes );
-                        Drawable logo = getLogo( pm, pai );
-                        item.setIcon( logo != null ? logo : pm.getApplicationIcon( pai ) );
-                        item.dir = true;    // to be used in the "forget" feature
-                        item.uri = Uri.parse( pkg_sfx + ":" );
+                    if( !Utils.str( item.name ) )
+                        item.name = pre.getString( pai.labelRes );
+                    Drawable logo = getLogo( pm, pai );
+                    item.setIcon( logo != null ? logo : pm.getApplicationIcon( pai ) );
+                    item.dir = true;    // to be used in the "forget" feature
+                    item.uri = Uri.parse( pkg_sfx + ":" );
                     }
                     item.origin = pkgn;
 
                 }
             }
-//            ia.add( makeItem( PLUGINS, "pl" ) );  // ?how to show only plugins, not other apps???
             if( root ) {
                 ia.add( makeItem( ROOT,  Uri.parse(  RootAdapter.DEFAULT_LOC ) ) );
                 ia.add( makeItem( MOUNT, Uri.parse( MountAdapter.DEFAULT_LOC ) ) );
@@ -355,12 +339,6 @@ public class HomeAdapter extends CommanderAdapterBase {
         if( SAFAdapter.ORG_SCHEME.equals( item.origin.toString() ) ) {
             commander.issue( SAFAdapter.getDocTreeIntent(), Commander.REQUEST_OPEN_DOCUMENT_TREE );
             return;
-        }
-        if( "pl".equals( item.origin ) ) {
-            Intent i = new Intent( Intent.ACTION_VIEW );
-            i.setData( Uri.parse( s( R.string.plugins_uri ) ) );
-            commander.issue( i, 0 );
-            return; 
         }
         if( "exit".equals( item.origin ) ) { 
             commander.dispatchCommand( R.id.exit ); 
