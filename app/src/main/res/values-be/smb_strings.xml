@@ -2,10 +2,8 @@
 <resources>
     <string name="nothing_read">Няма чаго чытаць</string>
     <string name="nothing_returned">Не атрымалася адкрыць сеткавы рэсурс Samba\n%s</string>
-    <string name="malformed_url">Хібны URL: \n%s</string>
     <string name="msbrowse_err">Не ўдалося атрымаць спіс даменаў / працоўных груп.\n\nПаспрабуйце ўвесці дакладную назву, як у прыкладзе:\n \"smb://your_domain_name/\".</string>
     <string name="connect_err">Не атрымалася злучыцца з:\n%s</string>
-    <string name="broken_pipe">Злучэнне страцілася. Вярніцеся на пачатковую пазіцыю і паспрабуйце зноў.</string>
     <string name="exception">Ужыта выключэнне</string>
     <!-- statuses -->
     <string name="STATUS_UNSUCCESSFUL">Няўдала.</string>

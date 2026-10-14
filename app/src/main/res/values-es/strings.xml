@@ -305,11 +305,6 @@
   <string name="inst_date">Fecha</string>
   <string name="pkg_size">Tamaño</string>
   <string name="permissions">Permisos</string>
-  <string name="smb_missed">
-    No se puede cargar el adaptador Samba.\n
-    Asegúrate de que el paquete\n
-    \"Ghost Commander - Samba plugin\"\n
-    (com.ghostsq.commander.samba) está instalado.</string>
   <string name="donate">Hacer donación</string>
   <string name="online_help">Ayuda en línea</string>
   <string name="donation">¿Te gusta esta aplicación? ¿De verdad? ¿Qué te parece una donación, 

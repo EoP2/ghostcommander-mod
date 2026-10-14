@@ -2,10 +2,8 @@
 <resources>
     <string name="nothing_read">未读取到任何内容</string>
     <string name="nothing_returned">无法打开共享文件夹 %1$s</string>
-    <string name="malformed_url">地址格式错误：\n%s</string>
     <string name="msbrowse_err">无法获取域或工作组列表。\n请尝试明确指定域名，例如：\n\"smb://your_domain_name/\"</string>
     <string name="connect_err">无法连接到：\n%s</string>
-    <string name="broken_pipe">与服务器的连接中断，请返回主页重试</string>
     <string name="exception">发生异常</string>
     <!-- statuses -->
     <string name="STATUS_UNSUCCESSFUL">失败</string>

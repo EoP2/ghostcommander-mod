@@ -51,7 +51,6 @@
   <string name="ftp">Страница FTP-а</string>
   <string name="sftp">Страница SFTP-а</string>
   <string name="smb">Виндоузово дељење</string>
-  <string name="plugins">Прегледај прикључке</string>
   <string name="root">Рад са кореним овлашћењима</string>
   <string name="mount">Тачке качења</string>
   <string name="mount_b">Тачке качења</string>
@@ -69,7 +68,6 @@
   <string name="ftp_descr">Повежи се са опслужитељем FTP-а</string>
   <string name="sftp_descr">Повежи се са опслужитељем SSH FTP-а (сфтп)</string>
   <string name="smb_descr">Повежи се са дељеним мапама на Виндоузу</string>
-  <string name="plugins_descr">Потражи још прикључака Здушног наредника</string>
   <string name="root_descr">Само за уређаје са кореним приступом: управљајте кључним деловима система. Продужите само ако знате шта радите.</string>
   <string name="mount_descr">Приказуј списак тачака качења. Прикачите их за читање/писање - rw, затим назад само за читање -ro после измена. Пажљиво.</string>
   <string name="apps_descr">Прегледај и управљај уграђеним програмима</string>

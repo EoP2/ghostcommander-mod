@@ -17,9 +17,7 @@
     <string name="new_passphrase">New Passphrase</string>
     <string name="not_unique">Cannot have more than one key with the same host name</string>
     <string name="are_you_sure">Are you sure?</string>
-    <string name="key_save">Set key\'s host name</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="ok">OK</string>
-    <string name="key_cancel">Cancel</string>
 </resources>

@@ -50,7 +50,6 @@
   <string name="ftp">Sito FTP</string>
   <string name="sftp">Sito SFTP</string>
   <string name="smb">Condivisione samba (Windows)</string>
-  <string name="plugins">Sfoglia plugins</string>
   <string name="root">La modalità root</string>
   <string name="mount">Punti di montaggio</string>
   <string name="mount_b">Punti di montaggio</string>
@@ -67,7 +66,6 @@
   <string name="ftp_descr">Connette a un server FTP</string>
   <string name="sftp_descr">Connette a un server SSH FTP (sftp)</string>
   <string name="smb_descr">Permette di connettersi a una cartella condivisa su un PC Windows</string>
-  <string name="plugins_descr">Cerca ulteriori plugins per Ghost Commander</string>
   <string name="root_descr">Se il telefono è rootato, usare questa modalità per interagire con i contenuti di sistema. Se non se ne conosce il significato, non usare questa funzionalità.</string>
   <string name="mount_descr">Sfoglia l\'elenco dei dispositivi montati e rimonta nelle modalità \"rw\" e  \"ro\". Usare con cautela.</string>
   <string name="apps_descr">Gestisce i pacchetti installati</string>
@@ -399,8 +397,6 @@
   <string name="permissions">Permessi</string>
   <string name="flags">Flag</string>
   <string name="not_exported">L\'attività non è esportata</string>
-  <string name="smb_missed">Impossibile caricare l\'adattatore Samba.\n Assicurarsi che il pacchetto\n \"Ghost Commander - Samba plugin\"\n (com.ghostsq.commander.samba) sia installato.</string>
-  <string name="sftp_missed">Impossibile caricare lo adattatore SFTP: accertarsi che il pluging SFTP di Ghost Commander sia installato.</string>
   <string name="donate">Donazione</string>
   <string name="online_help">Aiuto online</string>
   <string name="donation">Una piccola donazione contribuirà agli sviluppi futuri.\nSeleziona \"Ok\" per farla tramite PayPal.\n \"Annulla\" per goderti il gestore di file «Ghost Commander» gratuitamente.\n</string>

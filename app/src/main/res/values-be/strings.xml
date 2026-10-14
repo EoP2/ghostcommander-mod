@@ -52,7 +52,6 @@
   <string name="ftp">Сервер FTP</string>
   <string name="sftp">Сервер SFTP</string>
   <string name="smb">Сетка Windows</string>
-  <string name="plugins">Агляд убудоў</string>
   <string name="root">Рэжым root</string>
   <string name="mount">Пункты мантавання</string>
   <string name="mount_b">Пункты мантавання</string>
@@ -70,7 +69,6 @@
   <string name="ftp_descr">Злучэнне з серверам FTP</string>
   <string name="sftp_descr">Злучэнне з серверам SSH FTP (sftp)</string>
   <string name="smb_descr">Злучэнне з сеткавымі рэсурсамі Windows</string>
-  <string name="plugins_descr">Пошук убудоў для Ghost Commander</string>
   <string name="root_descr">Толькі для прылад з раблакаваным root: праца з сістэмнымі файламі. Выкарыстоўваце, толькі калі ведаеце, што робіце.</string>
   <string name="mount_descr">Спіс пунктаў мантавання з магчымасцю перамантаваць у \"rw\" і назад у \"ro\". Будзьце ўважлівымі.</string>
   <string name="apps_descr">Прагляд і кіраванне ўсталяванымі праграмамі</string>

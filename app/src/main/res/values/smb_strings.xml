@@ -2,10 +2,8 @@
 <resources>
     <string name="nothing_read">Nothing to read</string>
     <string name="nothing_returned">Can\'t open the shared folder %1$s</string>
-    <string name="malformed_url">Malformed URL: \n%s</string>
     <string name="msbrowse_err">Can\'t get the list of domains/workgroups.\nTry to specify the domain name explicitly, like\n \"smb://your_domain_name/\".</string>
     <string name="connect_err">Unable to connect to:\n%s</string>
-    <string name="broken_pipe">Connection to the server broken. Return to \"/home:\" and then try again.</string>
     <string name="exception">An exception occurred</string>
     <!-- statuses -->
     <string name="STATUS_UNSUCCESSFUL">Unsuccessful.</string>

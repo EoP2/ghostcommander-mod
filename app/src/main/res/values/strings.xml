@@ -53,7 +53,6 @@
 <string name="ftp">FTP site</string>
 <string name="sftp">SFTP site</string>
 <string name="smb">Windows share</string>
-<string name="plugins">Browse plugins</string>
 <string name="root">Root mode</string>
 <string name="mount">Mount points</string>
 <string name="mount_b">Mounts</string>
@@ -72,7 +71,6 @@
 <string name="ftp_descr">Connect to an FTP server</string>
 <string name="sftp_descr">Connect to an SSH FTP (sftp) server</string>
 <string name="smb_descr">Connect to shared Windows folders</string>
-<string name="plugins_descr">Look for more Ghost Commander plugins</string>
 <string name="root_descr">For rooted devices only: manage critical system files. Only proceed if you know what you\'re doing.</string>
 <string name="mount_descr">Display a list of all mount points. Remount them to \"rw\" mode, then back to \"ro\" mode after changes. Proceed with caution.</string>
 <string name="apps_descr">View and manage installed packages</string>

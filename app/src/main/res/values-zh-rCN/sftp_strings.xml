@@ -17,9 +17,7 @@
     <string name="new_passphrase">新密码短语</string>
     <string name="not_unique">同一主机名不能设置多个密钥</string>
     <string name="are_you_sure">确定吗</string>
-    <string name="key_save">设置密钥的主机名</string>
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="ok">确定</string>
-    <string name="key_cancel">取消</string>
 </resources>

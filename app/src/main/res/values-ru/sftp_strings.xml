@@ -17,5 +17,4 @@
     <string name="new_passphrase">Новая ключевая фраза</string>
     <string name="not_unique">Может быть только один ключ на сервер.</string>
     <string name="are_you_sure">Вы уверены?</string>
-    <string name="key_save">Сохранить</string>
 </resources>

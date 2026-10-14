@@ -2,10 +2,8 @@
 <resources>
     <string name="nothing_read">Нет ничего</string>
     <string name="nothing_returned">Не могу открыть сетевую папку %1$s</string>
-    <string name="malformed_url">Неправильный URL: \n%s</string>
     <string name="msbrowse_err">Не могу запросить список доменов.\nПопробуйте указать имя домена явно, как в этом примере: \n \"smb://имя_вашего_домена/\".</string>
     <string name="connect_err">Не могу подсоединиться к:\n%s</string>
-    <string name="broken_pipe">Соединение с сервером прервано. Убедитесь что сеть подключена, вернитесь к \"home:\" и затем попробуйте снова.</string>
 
     <string name="STATUS_UNSUCCESSFUL">Неуспешно.</string>
     <string name="STATUS_VOLUME_DISMOUNTED">Устройство не подключено.</string>

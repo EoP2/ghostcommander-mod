@@ -258,11 +258,6 @@
   <string name="version">Версия</string>
   <string name="inst_date">Дата</string>
   <string name="pkg_size">Размер</string>
-  <string name="smb_missed">
-    Не мога да заредя Samba адаптер.\n
-    Моля, убедете се, че пакета\n
-    \"Ghost Commander - Samba plugin\"\n
-    (com.ghostsq.commander.samba.apk) е инсталиран.</string>
   <string name="donate">Поддръжка</string>
   <string name="online_help">Описание в интернет (EN)</string>
   <string name="donation">Изразете своята поддръжка за по-нататъчното развитие на 

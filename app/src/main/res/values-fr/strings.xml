@@ -49,7 +49,6 @@
     <string name="ftp">Site FTP</string>
     <string name="sftp">Site SFTP</string>
     <string name="smb">Partage Windows</string>
-    <string name="plugins">Parcourir plugins</string>
     <string name="root">Mode root</string>
     <string name="mount">Points de montage</string>
     <string name="mount_b">Points de montage</string>
@@ -64,7 +63,6 @@
     <string name="ftp_descr">Connecter à un serveur FTP</string>
     <string name="sftp_descr">Connecter à un serveur SSH FTP (sftp)</string>
     <string name="smb_descr">Connecter à des dossiers partagés sur un appareil Windows</string>
-    <string name="plugins_descr">Rechercher plus de plugins pour Ghost Commander</string>
     <string name="root_descr">Pour appareils en mode root seulement : gérer les fichiers systèmes critiques. Continuez uniquement si vous savez ce que vous faites.</string>
     <string name="mount_descr">Afficher tous les points de montage. Activer mode «rw» et mode «ro». Avancez avec prudence!</string>
     <string name="apps_descr">Voir et administrer les paquets installés</string>
@@ -420,8 +418,6 @@
     <string name="permissions">Autorisations</string>
     <string name="flags">Marqueurs</string>
     <string name="not_exported">L\'activité n\'est pas exportée</string>
-    <string name="smb_missed">Impossible de charger l\'adaptateur Samba. Veuillez vérifier que le packet «Ghost Commander - plugin Samba» est installé</string>
-    <string name="sftp_missed">Impossible de charger l\'adaptateur SFTP. Veuillez vérifier que le packet «Ghost Commander - plugin SFTP» est installé.</string>
     <string name="donate">Don</string>
     <string name="online_help">Aide en ligne</string>
     <string name="donation">Aimez-vous cette application ? Réellement ? Et si vous faisiez un petit don pour soutenir son développement ?\n

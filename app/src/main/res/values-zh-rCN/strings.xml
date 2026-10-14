@@ -53,7 +53,6 @@
   <string name="ftp">FTP</string>
   <string name="sftp">SFTP</string>
   <string name="smb">SMB</string>
-  <string name="plugins">插件</string>
   <string name="root">Root模式</string>
   <string name="mount">挂载点</string>
   <string name="mount_b">挂载</string>
@@ -72,7 +71,6 @@
   <string name="ftp_descr">配置FTP</string>
   <string name="sftp_descr">配置SFTP</string>
   <string name="smb_descr">配置SMB</string>
-  <string name="plugins_descr">更多插件</string>
   <string name="root_descr">仅限Root设备，务必在保证系统安全的情况下进行操作</string>
   <string name="mount_descr">显示全部挂载点，将其重新挂载为\"rw\"（读写）模式，修改完成后再挂载回\"ro\"（只读）模式。务必谨慎操作。</string>
   <string name="apps_descr">查看和管理已安装的应用程序</string>
@@ -157,7 +155,7 @@
   <string name="for_files">文件</string>
   <string name="for_dirs">文件夹</string>
   <string name="in_subf">子目录</string>
-  <string name="content">目录：</string>
+  <string name="content">内容：</string>
   <string name="bigger_than">大于：</string>
   <string name="smaller_than">小于：</string>
   <string name="mod_after">晚于</string>

@@ -50,7 +50,6 @@
   <string name="ftp">Server FTP</string>
   <string name="sftp">Server SFTP</string>
   <string name="smb">Windows sdílení</string>
-  <string name="plugins">Procházet pluginy</string>
   <string name="root">Režim bez omezení</string>
   <string name="mount">Přípojné body</string>
   <string name="apps">Aplikace</string>
@@ -338,11 +337,6 @@
   <string name="pkg_size">Velikost</string>
   <string name="process">Název procesu</string>
   <string name="permissions">Oprávnění</string>
-  <string name="smb_missed">
-    Nelze nahrát plugin Samby.\n
-    Prosím, ujistěte se, že balíček\n
-    \"Ghost Commander - Samba plugin\"\n
-    (com.ghostsq.commander.samba) je nainstalován.</string>
   <string name="donate">Podpořit</string>
   <string name="online_help">Online nápověda</string>
   <string name="donation">Líbí se Vám Ghost Commander? Opravdu? Můžete přispět jakoukoliv částkou a podpořit tím tak další vývoj aplikace.\n

@@ -51,7 +51,6 @@
   <string name="ftp">FTP サイト</string>
   <string name="sftp">SFTP サイト</string>
   <string name="smb">Windows 共有</string>
-  <string name="plugins">プラグインの表示</string>
   <string name="root">Root モード</string>
   <string name="mount">マウントポイント</string>
   <string name="mount_b">マウント</string>
@@ -69,7 +68,6 @@
   <string name="ftp_descr">FTP サーバーに接続します</string>
   <string name="sftp_descr">SSH FTP (sftp) サーバーに接続します</string>
   <string name="smb_descr">Windows 機器の共有フォルダーに接続します</string>
-  <string name="plugins_descr">Ghost Commander プラグインを検索します</string>
   <string name="root_descr">root化されたデバイスのみ: 重要なシステムファイルを管理します. 何を行うか理解している人のみ使用してください.</string>
   <string name="mount_descr">全てのマウントポイントをリスト表示します. \"rw\" モードで再マウントし、変更後に \"ro\" モードに戻します. 注意して使用してください.</string>
   <string name="apps_descr">インストールされたパッケージを表示、管理します</string>
@@ -430,8 +428,6 @@ $ 記号は \\$ を使用します。\n
   <string name="permissions">パーミッション</string>
   <string name="flags">フラグ</string>
   <string name="not_exported">アクティビティはエクスポートされていません</string>
-  <string name="smb_missed">Samba アダプターをロードできません: Ghost Commander SMB プラグインがインストールされているか確認してください.</string>
-  <string name="sftp_missed">SFTP アダプターをロードできません: Ghost Commander SFTP プラグインがインストールされているか確認してください.</string>
   <string name="manage_all_files">Ghost Commander がすべてのファイルを管理できるようにするため、システムレベルの設定にリダイレクトされます。
 そうしないとアプリケーションの機能は限定されます。</string>
   <string name="donate">寄付する</string>

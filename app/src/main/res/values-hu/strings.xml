@@ -51,7 +51,6 @@
   <string name="ftp">FTP-kiszolgáló</string>
   <string name="sftp">SFTP-kiszolgáló</string>
   <string name="smb">Windows megosztás</string>
-  <string name="plugins">Beépülő modulok böngészése</string>
   <string name="root">Root mód</string>
   <string name="mount">Csatolási pontok</string>
   <string name="mount_b">Csatolások</string>
@@ -69,7 +68,6 @@
   <string name="ftp_descr">Csatlakozás FTP-kiszolgálóhoz</string>
   <string name="sftp_descr">Csatlakozás SSH FTP (sftp) -kiszolgálóhoz</string>
   <string name="smb_descr">Csatlakozás Windows-on megosztott mappákhoz</string>
-  <string name="plugins_descr">További Ghost Commander beépülő modulok keresése</string>
   <string name="root_descr">Csak rootolt eszközökhöz: rendszerfájlok kezelése. Csak ha tudja, hogy mit csinál!</string>
   <string name="mount_descr">Minden csatolási pont listázása. Újracsatolás „rw” módban, majd a változtatások után „ro” módban. Csak óvatosan!</string>
   <string name="apps_descr">Telepített csomagok megtekintése és kezelése</string>
@@ -436,8 +434,6 @@ Használja a \"\%#\"-t dokumentumfájl-számlálóhoz, \"\%##\"-t két számjegy
   <string name="permissions">Jogosultságok</string>
   <string name="flags">Jelzők</string>
   <string name="not_exported">Az aktivitás nem lett exportálva</string>
-  <string name="smb_missed">Nem tölthető be a Samba adapter: a Ghost Commander SMB-beépülő modul legyen telepítve</string>
-  <string name="sftp_missed">Nem tölthető be az SFTP adapter: a Ghost Commander SFTP-beépülő modul legyen telepítve</string>
   <string name="donate">Adományozás</string>
   <string name="online_help">Online súgó</string>
   <string name="donation">Bármilyen összegű támogatással a Ghost Commander fejlesztéséhez járul hozzá.\n

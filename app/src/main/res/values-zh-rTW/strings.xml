@@ -1,112 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="app_name">檔案管理器</string>
   <string name="file">新建</string>
   <string name="location">位置</string>
   <string name="list">列表</string>
   <string name="app">應用程式</string>
   <string name="help">幫助</string>
   <string name="F1">幫助</string>
-  <string name="F2">重命名</string>
-  <string name="F3">查看</string>
+  <string name="F2">重新命名</string>
+  <string name="F3">檢視</string>
   <string name="F4">編輯</string>
-  <string name="SF4">新建文件</string>
-  <string name="F5">複制</string>
-  <string name="F6">移動</string>
-  <string name="F7">新建文件夾</string>
+  <string name="new_item">新建</string>
+  <string name="F5F6">複製/移動</string>
   <string name="F8">刪除</string>
-  <string name="F9">設置</string>
+  <string name="F9">設定</string>
   <string name="F10">退出</string>
   <string name="oth_sh_this">同步面板</string>
-  <string name="oth_sh_dir">在對面打開 \"%s\"</string>
+  <string name="oth_sh_dir">在對向視窗打開</string>
   <string name="eq">同步面板</string>
   <string name="change">切換面板</string>
   <string name="tgl">切換面板</string>
   <string name="sz">屬性</string>
-  <string name="refresh">刷新</string>
+  <string name="dirsz">資料夾大小</string>
+  <string name="refresh">重新整理</string>
   <string name="swap">交換面板</string>
-  <string name="enter">改變位置</string>
+  <string name="compare">比較</string>
+  <string name="filter">篩選</string>
+  <string name="filter_canceled">已關閉篩選</string>
+  <string name="enter">跳轉到…</string>
   <string name="home">主頁</string>
-    <string name="softkbd">鍵盤</string>
-  <string name="enter_b">位置</string>
-  <string name="add_fav">添加到書簽</string>
-  <string name="add_fav_b">添加書簽</string>
+  <string name="sdcard">儲存卡</string>
+  <string name="softkbd">鍵盤</string>
+  <string name="enter_b">跳轉</string>
+  <string name="add_fav">新增到書籤</string>
+  <string name="add_fav_b">新增書籤</string>
   <string name="remount_b">掛載讀寫</string>
   <string name="remount">重新掛載</string>
-  <string name="hidden">隱藏文件</string>
-  <string name="rescan">重新掃描媒體</string>
-  <string name="favs">書簽</string>
+  <string name="hidden">隱藏檔案</string>
+  <string name="rescan">重新整理媒體庫</string>
+  <string name="install">安裝</string>
+  <string name="favs">書籤</string>
+  <string name="df_dnl">下載</string>
+  <string name="df_cam">照片</string>
+  <string name="df_pic">圖片</string>
+  <string name="df_mus">音樂</string>
+  <string name="df_mov">影片</string>
   <string name="local">本地儲存</string>
-  <string name="external">外部儲存卡</string>
-  <string name="media">媒體商店</string>
-  <string name="saf">儲存管理框架</string>
-  <string name="ftp">FTP站點</string>
-  <string name="sftp">SFTP站點</string>
-  <string name="smb">Windows share</string>
-  <string name="plugins">插件</string>
+  <string name="temp">臨時檔案</string>
+  <string name="external">外部儲存</string>
+  <string name="media">媒體庫</string>
+  <string name="saf">儲存訪問選擇器</string>
+  <string name="ftp">FTP</string>
+  <string name="sftp">SFTP</string>
+  <string name="smb">SMB</string>
   <string name="root">Root模式</string>
   <string name="mount">掛載點</string>
   <string name="mount_b">掛載</string>
   <string name="apps">應用管理</string>
   <string name="exit">退出</string>
-  <string name="forget">註銷賬戶(退出應用)</string>
-  <string name="favs_descr">查看、管理書簽和站點</string>
-  <string name="local_descr">瀏覽、整理和修改本地儲存的内容</string>
-  <string name="external_descr">使用外部儲存代替sd卡，但它可能是隻讀的</string>
-  <string name="media_descr">分類查看sd卡媒體文件(長按可指定類型)</string>
-  <string name="ftp_descr">連接FTP</string>
-  <string name="sftp_descr">連接SSH FTP (sftp)</string>
-  <string name="smb_descr">連接到Windows PC共享文件</string>
-  <string name="plugins_descr">發現更多Ghost Commander的插件</string>
-  <string name="root_descr">僅對於已root的設備：管理危險的系統文件，確保你知道自己正在做什麼</string>
-  <string name="mount_descr">顯示掛載點列表，並切換至讀寫\"rw\"，然後在操作後返回隻讀\"ro\"模式，開始請小心</string>
-  <string name="apps_descr">查看和管理已安裝的應用程式</string>
+  <string name="forget">登出賬戶(退出應用)</string>
+  <string name="favs_descr">檢視和管理書籤收藏</string>
+  <string name="local_descr">檢視和管理修改本地檔案</string>
+  <string name="temp_descr">直接訪問臨時資料夾</string>
+  <string name="external_descr">訪問外部儲存，部分裝置可能僅支援讀取，可嘗試換成儲存訪問框架模式訪問。</string>
+  <string name="media_descr">分類檢視本地媒體檔案（長按可指定型別）</string>
+  <string name="saf_descr">通過安卓儲存訪問框架管理檔案</string>
+  <string name="saf_pick">選擇要授權的目錄</string>
+  <string name="saf_picked">已通過儲存訪問框架授權</string>
+  <string name="pick_mode">請選擇一個檔案</string>
+  <string name="ftp_descr">配置FTP</string>
+  <string name="sftp_descr">配置SFTP</string>
+  <string name="smb_descr">配置SMB</string>
+  <string name="root_descr">僅限Root裝置，務必在保證系統安全的情況下進行操作</string>
+  <string name="mount_descr">顯示全部掛載點，將其重新掛載為\"rw\"（讀寫）模式，修改完成後再掛載回\"ro\"（只讀）模式。務必謹慎操作。</string>
+  <string name="apps_descr">檢視和管理已安裝的應用程式</string>
   <string name="exit_descr">關閉此應用</string>
-  <string name="shortcut">創建桌面快捷方式</string>
-  <string name="enter_ftp">FTP 助手</string>
-  <string name="enter_smb">連接至Windows PC</string>
-  <string name="search_file">蒐索</string>
-  <string name="menu">菜單</string>
-  <string name="sort_by_name">按名稱排序</string>
-  <string name="sort_by_ext">按類别排序</string>
-  <string name="sort_by_size">按大小排序</string>
-  <string name="sort_by_date">按時間排序</string>
-  <string name="select_all">選擇</string>
-  <string name="unselect_all">取消選擇</string>
-  <string name="select_b">選擇</string>
-  <string name="unselect_b">取消選擇</string>
-  <string name="toggle_panels_mode">切換面板模式</string>
-  <string name="prefs">設置</string>
-  <string name="save_prefs">導出設置</string>
-  <string name="rest_prefs">導入設置</string>
-  <string name="save_log">導出日誌</string>
-  <string name="prefs_saved">設置已導出</string>
-  <string name="prefs_restr">設置已導入</string>
+  <string name="shortcut">建立桌面快捷方式</string>
+  <string name="enter_ftp">連線FTP</string>
+  <string name="enter_smb">連線SMB</string>
+  <string name="search_file">搜尋</string>
+  <string name="replace">替換</string>
+  <string name="menu">選單</string>
+  <string name="sort_by_name">按名稱</string>
+  <string name="sort_by_ext">按類別</string>
+  <string name="sort_by_size">按大小</string>
+  <string name="sort_by_date">按時間</string>
+  <string name="sort_by_adate">按訪問時間</string>
+  <string name="sel_dlg">選擇</string>
+  <string name="select_between">連選</string>
+  <string name="select2">至少選擇兩個檔案以確定首尾</string>
+  <string name="toggle_panels_mode">切換單雙面板</string>
+  <string name="prefs">設定</string>
+  <string name="save_prefs">匯出設定</string>
+  <string name="rest_prefs">匯入設定</string>
+  <string name="save_log">匯出日誌</string>
+  <string name="prefs_saved">設定已匯出</string>
+  <string name="prefs_restr">設定已匯入</string>
   <string name="about">關於</string>
-  <string name="keys">資訊</string>
-  <string name="new_file">新建文件</string>
-  <string name="new_folder">新建文件夾</string>
-  <string name="new_zip">新建ZIP文件</string>
+  <string name="keys">操作指南</string>
+  <string name="new_zip">壓縮為ZIP</string>
   <string name="go_button">轉到</string>
+  <string name="hist_back">後退</string>
+  <string name="hist_fwd">前進</string>
   <string name="show_size">屬性</string>
-  <string name="send_to">發送至…</string>
-  <string name="open_with">打開方式…</string>
+  <string name="checksum">校驗和</string>
+  <string name="send_to">傳送至&#8230;</string>
+  <string name="open_with">打開方式&#8230;</string>
   <string name="open">打開</string>
-  <string name="copy_name">複制完整路徑</string>
-  <string name="fav_fld">添加 \"%s\" 到書簽</string>
-  <string name="create_zip">新建ZIP文件</string>
-  <string name="create_zip_title">新建ZIP文件</string>
+  <string name="open_as">打開方式&#8230;</string>
+  <string name="open_native">以原生方式打開</string>
+  <string name="copy_name">複製完整路徑</string>
+  <string name="fav_fld">新增到書籤</string>
+  <string name="create_zip">壓縮為ZIP…</string>
+  <string name="create_zip_title">壓縮為ZIP</string>
   <string name="extract_zip">解壓ZIP</string>
-  <string name="wait"> wait… </string>
+  <string name="open_zip">作為ZIP打開</string>
+  <string name="set_date">修改時間</string>
+  <string name="use_now">使用當前時間</string>
+  <string name="file_name">File</string>
+  <string name="wait">請稍候&#8230; </string>
   <string name="fail">操作失敗</string>
   <string name="failed">出錯：\n</string>
-  <string name="default_uri_cmnt">默認位置</string>
-  <string name="default_color">默認</string>
+  <string name="unkhost">未知主機\"%s\"</string>
+  <string name="default_uri_cmnt">預設儲存</string>
+  <string name="default_color">預設</string>
   <string name="base_color">基礎顏色</string>
-  <string name="typemasks">文件類型</string>
-  <string name="color_sample">示例Abc</string>
-  <string name="add_new_type">添加</string>
-  <string name="fav_comment">備註：</string>
-  <string name="fav_dialog">編輯書簽</string>
+  <string name="typemasks">檔案型別</string>
+  <string name="color_sample">效果Abc</string>
+  <string name="add_new_type">新增</string>
+  <string name="fav_comment">書籤名：</string>
+  <string name="fav_dialog">編輯書籤</string>
   <string name="dialog_yes">是</string>
   <string name="dialog_no">否</string>
   <string name="dialog_ok">確定</string>
@@ -118,82 +141,109 @@
   <string name="dialog_retry">重試</string>
   <string name="dialog_ignore">忽略</string>
   <string name="dialog_replace_all">替換全部</string>
+  <string name="dialog_replace_old">替換舊的</string>
   <string name="dialog_skip_all">跳過全部</string>
-  <string name="dialog_select">選擇</string>
-  <string name="dialog_unselect">取消選擇</string>
-  <string name="filemask">文件類型：</string>
-  <string name="for_files">文件</string>
-  <string name="for_dirs">文件夾</string>
+  <string name="dialog_replace">替換</string>
+  <string name="dialog_skip">跳過</string>
+  <string name="replace_this">是否替換</string>
+  <string name="source">來源</string>
+  <string name="destination">目標</string>
+  <string name="dialog_select">+ 加選</string>
+  <string name="dialog_unselect">- 減選</string>
+  <string name="dialog_invert">! 反選</string>
+  <string name="filemask">檔案型別：</string>
+  <string name="for_files">檔案</string>
+  <string name="for_dirs">資料夾</string>
   <string name="in_subf">子目錄</string>
-  <string name="content">目錄：</string>
+  <string name="content">内容：</string>
   <string name="bigger_than">大於：</string>
   <string name="smaller_than">小於：</string>
   <string name="mod_after">晚於</string>
   <string name="mod_before">早於</string>
+  <string name="show_matched">顯示匹配項</string>
+  <string name="hide_matched">隱藏匹配項</string>
   <string name="launch">啟動</string>
-  <string name="view_title">查看</string>
+  <string name="view_title">檢視</string>
   <string name="edit_title">編輯</string>
-  <string name="newf_title">新建文件</string>
-  <string name="newf_prompt">文件名稱：</string>
-  <string name="mkdir_title">新建文件夾</string>
-  <string name="mkdir_prompt">文件夾名稱：</string>
-  <string name="search_title">蒐索</string>
+  <string name="new_item_prompt">名稱：</string>
+  <string name="new_item_file">新建檔案</string>
+  <string name="new_item_folder">新建資料夾</string>
+  <string name="search_title">搜尋</string>
   <string name="search_prompt">關鍵字：</string>
-  <string name="rename_title">重命名</string>
-  <string name="copy_title">複制</string>
+  <string name="rename_title">重新命名</string>
+  <string name="mult_rename_title">批次重新命名</string>
+  <string name="copy_title">複製</string>
   <string name="move_title">移動</string>
-  <string name="send_title">發送至…</string>
-  <string name="open_title">打開方式…</string>
-  <string name="copy_err">什麼都沒複制</string>
-  <string name="rename_err">無法重命名</string>
+  <string name="send_title">傳送至&#8230;</string>
+  <string name="open_title">打開方式&#8230;</string>
+  <string name="to_copy">&#160;</string>
+  <string name="to_move">&#160;</string>
+  <string name="to_rename">&#160;</string>
+  <string name="search">查詢（正則式）：</string>
+  <string name="replace_to">替換為：</string>
+  <string name="preview">預覽</string>
+  <string name="to_trash">移至回收站</string>
+  <string name="trashcan">回收站</string>
+  <string name="mult_rename_help">使用正規表示式查詢替換檔名的字元\n
+在替換字元中，使用$1引用括號標記的搜尋組\n
+使用\\$替代$符號\n
+使用\%#作為檔案計數器，\%##代表兩位數，以此類推</string>
+  <string name="find_str">查詢字元：</string>
+  <string name="regex">正規表示式</string>
+  <string name="whole_words">全詞匹配</string>
+  <string name="backwards">反向</string>
+  <string name="case_sensitive">區分大小寫</string>
+  <string name="not_found">查詢完畢</string>
+  <string name="copy_err">無可複製項</string>
+  <string name="rename_err">無法重新命名</string>
   <string name="edit_err">無法編輯</string>
-  <string name="no_items">沒有有效的文件來完成此操作</string>
-  <string name="inv_dest">無效的目的地</string>
-  <string name="inv_path">無效的路徑</string>
-  <string name="find_on_fs_only">祗能在本地儲存使用蒐索</string>
-  <string name="on_fs_only">此特性僅在本地儲存工作</string>
-  <string name="op_not_alwd">操作不被允許，先選擇一些吧</string>
+  <string name="no_items">沒有可進行此操作的有效檔案</string>
+  <string name="inv_dest">目標位置無效</string>
+  <string name="inv_path">路徑無效</string>
+  <string name="find_on_fs_only">無法搜尋當前位置</string>
+  <string name="on_fs_only">該功能僅適用於本地檔案系統</string>
+  <string name="op_not_alwd">未選擇內容，無法進行 \"%1$s\" 操作</string>
   <string name="oper_item_to">%1$s %2$s 到：</string>
-  <string name="login_title">登錄</string>
+  <string name="login_title">登入</string>
   <string name="delete_title">刪除</string>
-  <string name="delete_err">什麼都沒刪除</string>
-  <string name="delete_q">刪除 \"%1$s\"？</string>
-  <string name="rescan_q">再次蒐索？</string>
-  <string name="search_done">蒐索完成</string>
+  <string name="delete_err">無可刪除的項</string>
+  <string name="delete_q">刪除 %1$s</string>
+  <string name="rescan_q">是否重新搜尋</string>
+  <string name="search_done">搜尋完成</string>
   <string name="done">完成</string>
-  <string name="interrupted">被中斷</string>
-  <string name="cant_copy_to_itself">不能複制文件夾 \"%s\" 到他自身或其下目錄</string>
-  <string name="too_deep_hierarchy">此文件層級太深</string>
-  <string name="nothing_found">沒有找到任何文件</string>
-  <string name="preparing">准備中…</string>
-  <string name="copying">正在複制\n\"%s\"…</string>
-  <string name="copied_f">完成複制\n\"%s\"</string>
-  <string name="deleting">正在刪除\n\"%s\"…</string>
-  <string name="deleting_a">正在刪除…</string>
-  <string name="fail_del">文件 \"%1$s\" 操作未完成，正在刪除…</string>
-  <string name="unpacking">正在解壓 \n\"%s\"…</string>
-  <string name="unpacked_p">完成解壓 \n\"%s\"</string>
-  <string name="packing">正在壓縮 \n\"%s\"…</string>
-  <string name="retrieving">恢複中…\n\"%s\"</string>
-  <string name="uploading">正在上傳…\n\"%s\"</string>
-  <string name="uploaded_p">完成上傳 \n\"%s\"</string>
-  <string name="loading">Loading…</string>
+  <string name="interrupted">已中止</string>
+  <string name="cant_copy_to_itself">無法複製資料夾 \"%s\" 到自身或其下目錄</string>
+  <string name="too_deep_hierarchy">檔案層級過深</string>
+  <string name="nothing_found">未找到檔案</string>
+  <string name="preparing">正在準備&#8230;</string>
+  <string name="copying">正在複製\n\"%s\"&#8230;</string>
+  <string name="copied_f">複製完成\n\"%s\"</string>
+  <string name="deleting">正在刪除\n\"%s\"&#8230;</string>
+  <string name="deleting_a">正在刪除&#8230;</string>
+  <string name="fail_del">檔案 \"%1$s\" 操作未完成，正在刪除&#8230;</string>
+  <string name="unpacking">正在解壓 \n\"%s\"&#8230;</string>
+  <string name="unpacked_p">解壓完成 \n\"%s\"</string>
+  <string name="packing">正在壓縮 \n\"%s\"&#8230;</string>
+  <string name="retrieving">正在恢復&#8230;\n\"%s\"</string>
+  <string name="uploading">正在上傳&#8230;\n\"%s\"</string>
+  <string name="uploaded_p">上傳完成 \n\"%s\"</string>
+  <string name="loading">載入中&#8230;</string>
   <string name="second">s</string>
-  <string name="canceled">已撤銷</string>
+  <string name="canceled">已取消</string>
   <string name="oom_err">儲存空間不足</string>
   <string name="unkn_err">未知錯誤</string>
-  <string name="cant_md">無法新建文件夾 \"%s\"</string>
-  <string name="cant_cd">無法瀏覽文件夾 \"%s\"</string>
-  <string name="file_exist">文件 \"%s\" 已存在</string>
+  <string name="cant_md">無法新建資料夾 \"%s\"</string>
+  <string name="cant_cd">無法瀏覽資料夾 \"%s\"</string>
+  <string name="file_exist">檔案已存在\n\"%s\"</string>
   <string name="sec_err">安全問題\n%s</string>
-  <string name="not_accs">無法打開文件\n%s</string>
-  <string name="acc_err">存取出錯於文件 \"%1$s\"\n %2$s</string>
-  <string name="rtexcept">出錯於文件 \"%1$s\"\n %2$s</string>
-  <string name="cant_move">無法移動文件 \"%s\"</string>
-  <string name="cant_create">無法新建文件 \"%1$s\"\n%2$s</string>
+  <string name="not_accs">無法打開檔案\n%s</string>
+  <string name="acc_err">訪問檔案 \"%1$s\" 時出錯\n %2$s</string>
+  <string name="rtexcept">檔案 \"%1$s\" 發生錯誤\n %2$s</string>
+  <string name="cant_move">無法移動檔案 \"%s\"</string>
+  <string name="cant_create">無法新建檔案 \"%1$s\"\n%2$s</string>
   <string name="cant_del">無法刪除 \"%1$s\"</string>
-  <string name="dest_wrtble">確認文件夾 \"%s\" 可寫</string>
-  <string name="copied">已複制</string>
+  <string name="dest_wrtble">確認資料夾 \"%s\" 可寫</string>
+  <string name="copied">已複製</string>
   <string name="moved">已移動</string>
   <string name="deleted">已刪除</string>
   <string name="downloaded">已下載</string>
@@ -201,284 +251,348 @@
   <string name="packed">已壓縮</string>
   <string name="unpacked">已解壓</string>
   <string name="remounted">重新掛載 \"%1$s\" 到 \"%2$s\"</string>
-  <string name="tried_to_exec">嚐試執行 \"%s\"</string>
-  <string name="item">個項目</string>
-  <string name="items">個項目</string>
-  <string name="were"> </string>
-  <string name="was"> </string>
-  <string name="nothing">無内容</string>
-  <string name="report_0">什麼都沒</string>
-  <string name="report_1">一個項目</string>
-  <string name="report_m">%1$d個項目</string>
+  <string name="tried_to_exec">嘗試執行 \"%s\"</string>
+  <string name="verb_plural_sfx">&#160;</string>
+  <string name="item">個專案</string>
+  <string name="items">個專案</string>
+  <string name="items24">&#160;</string>
+  <string name="were"></string>
+  <string name="was"></string>
+  <string name="nothing">無內容</string>
+  <string name="report_0"><![CDATA[0個專案]]></string>
+  <string name="report_1"><![CDATA[1個專案]]></string>
+  <string name="report_24">&#160;</string>
+  <string name="report_m"><![CDATA[%1$d個專案]]></string>
+  <string name="sz_folder">資料夾</string>
+  <string name="sz_folder_count"><![CDATA[%1$d 個檔案，]]></string>
+  <string name="sz_dirnum"><![CDATA[%1$d 個資料夾 %2$s]]></string>
+  <string name="sz_dirsfx_s"></string>
+  <string name="sz_dirsfx_p"></string>
+  <string name="sz_file">檔案</string>
+  <string name="sz_files">數量</string>
+  <string name="sz_Nbytes">大小</string>
+  <string name="sz_bytes">&#160;(%d 位元組)</string>
+  <string name="sz_lastmod">修改時間</string>
+  <string name="sz_created">建立時間</string>
+  <string name="sz_access">訪問時間</string>
+  <string name="sz_total">可用空間</string>
+  <string name="zip_compressed">壓縮後</string>
+  <string name="busy">繁忙</string>
   <string name="cd_title">轉到</string>
-  <string name="cd_prompt">更改目錄至：</string>
-  <string name="not_supported">此操作不被允許</string>
-  <string name="select_some">請選擇一些文件</string>
+  <string name="not_supported">不允許的操作</string>
+  <string name="select_some">未選擇檔案</string>
   <string name="select">選擇</string>
   <string name="error">錯誤</string>
   <string name="info">資訊</string>
   <string name="confirm">確認</string>
-  <string name="alert">消息</string>
-  <string name="progress">進程</string>
-  <string name="inprogress">一個文件操作正在進行</string>
+  <string name="alert">訊息</string>
+  <string name="progress">進度</string>
+  <string name="inprogress">正在執行檔案操作</string>
   <string name="server">伺服器：</string>
   <string name="path">路徑：</string>
-  <string name="active">激活</string>
-  <string name="domain">端口：</string>
-  <string name="username">用戶名：</string>
+  <string name="active">啟用</string>
+  <string name="domain">域：</string>
+  <string name="username">使用者名稱：</string>
   <string name="password">密碼：</string>
+  <string name="encrypted">加密</string>
   <string name="command">命令：</string>
+  <string name="use_busybox">busybox</string>
   <string name="user">所有者</string>
-  <string name="group">用戶組</string>
+  <string name="group">使用者組</string>
   <string name="other">其他</string>
-  <string name="connect">連接</string>
+  <string name="connect">連線</string>
   <string name="cancel">取消</string>
-  <string name="ftp_connected">連接到 \"%1$s\",\n 登錄為 \"%2$s\"</string>
-  <string name="ftp_upload_failed">上傳 \"%1$s\" 失敗.\n FTP log:\n\n%2$s</string>
-  <string name="ftp_mkdir_failed">新建文件夾 \"%1$s\"失敗.\n FTP log:\n\n\"%2$s\</string>
-  <string name="ftp_nologin">沒有登錄！</string>
-  <string name="data_settings">文件列表</string>
-  <string name="layout_settings">配置布局</string>
+  <string name="ftp_connected">連線到 \"%1$s\",\n 登入為 \"%2$s\"</string>
+  <string name="ftp_upload_failed">上傳 \"%1$s\" 失敗.\n FTP日誌:\n\n%2$s</string>
+  <string name="ftp_mkdir_failed">建立 \"%1$s\" 資料夾失敗.\n FTP日誌:\n\n\"%2$s\</string>
+  <string name="ftp_nologin">未登入</string>
+  <string name="data_settings">檔案列表</string>
+  <string name="layout_settings">配置佈局</string>
   <string name="input_settings">操作</string>
   <string name="selection_zone_setup">選擇範圍</string>
-  <string name="summary_selection_zone_setup">自定義項目的點擊選擇區域</string>
+  <string name="summary_selection_zone_setup">自定義專案的點選選擇區域</string>
   <string name="sel_onright">右側選擇</string>
+  <string name="highlight_zones">高亮</string>
   <string name="show_confirm">操作提示</string>
-  <string name="summary_show_confirm">在某些操作後顯示提示資訊</string>
-  <string name="prefs_label">設置</string>
-  <string name="filetypes_label">按類别上色</string>
-  <string name="editor_label">文字編輯器</string>
-  <string name="perms_label">權限</string>
-  <string name="advanced">高級</string>
-  <string name="advanced_settings">高級</string>
-  <string name="summary_advanced_settings">為高級用戶准備的更多設置項</string>
-  <string name="send_content">使用内容提供者發送</string>
-  <string name="summary_send_content">如果發送文件至應用沒有進行内容解析，請嚐試取消該選擇</string>
-  <string name="panels_mode">並排面板模式</string>
-  <string name="summary_panels_mode">雙面板同時顯示</string>
+  <string name="summary_show_confirm">複製、移動、刪除等操作成功後顯示彙總提示（不影響出錯提示）</string>
+  <string name="prefs_label">設定</string>
+  <string name="filetypes_label">按類別上色</string>
+  <string name="editor_label">文本編輯器</string>
+  <string name="pictvw_label">圖片檢視器</string>
+  <string name="textvw_label">文本檢視器</string>
+  <string name="perms_label">許可權</string>
+  <string name="advanced">高階</string>
+  <string name="advanced_settings">高階</string>
+  <string name="summary_advanced_settings">更多設定</string>
+  <string name="remote_open_size">遠端檔案大小上限</string>
+  <string name="summary_remote_open_size">超過該大小的遠端檔案將不會下載到本地打開（單位：位元組）</string>
+  <string name="compare_content">比較內容</string>
+  <string name="summary_compare_content">當檔名稱和大小相似時比較內容</string>
+  <string name="send_content">通過內容提供程式傳送</string>
+  <string name="summary_send_content">如果檔案傳送應用不支援此功能，可嘗試取消勾選</string>
+  <string name="open_content">通過內容解析器打開</string>
+  <string name="summary_open_content">嘗試通過內容解析器打開檔案，而非以常規檔案方式打開</string>
+  <string name="panels_mode">雙面板模式</string>
+  <string name="summary_panels_mode">同時顯示兩個面板</string>
   <string name="two_lines">分行顯示</string>
-  <string name="summary_two_lines">另起一行顯示文件屬性</string>
-  <string name="show_icons">啟用圖標</string>
-  <string name="summary_show_icons">顯示項目的圖標而不是僅顯示文本</string>
-  <string name="toolbar_settings">工具欄</string>
-  <string name="summary_toolbar_settings">定制屏幕下方的工具欄</string>
+  <string name="summary_two_lines">分兩行顯示檔案屬性</string>
+  <string name="icons">檔案圖示</string>
+  <string name="show_icons">顯示圖示</string>
+  <string name="summary_show_icons">在檔名前顯示圖示</string>
+  <string name="toolbar_settings">底部工具欄</string>
+  <string name="summary_toolbar_settings">定製螢幕底部的工具欄</string>
+  <string name="show_actionbar">啟用頂欄</string>
+  <string name="summary_show_actionbar">顯示螢幕頂部的操作欄，重啟生效</string>
   <string name="show_toolbar">啟用工具欄</string>
-  <string name="summary_show_toolbar">顯示屏幕下方的工具欄</string>
+  <string name="summary_show_toolbar">顯示螢幕底部的工具欄</string>
   <string name="show_hotkeys">顯示熱鍵</string>
-  <string name="summary_show_hotkeys">在某些功能鍵前顯示熱鍵</string>
-  <string name="toolbar_preference">定制工具欄</string>
-  <string name="summary_toolbar_preference">選擇需要顯示的按鈕，並編輯排序</string>
-  <string name="tblist_label">定制工具欄</string>
-  <string name="finger_friendly">觸屏優化</string>
-  <string name="summary_finger_friendly">增大用戶界面元素</string>
-  <string name="prevent_root">離開sd卡時警告</string>
-  <string name="summary_prevent_root">將跳轉到設備的root目錄時發出警告</string>
-  <string name="show_root">顯示root和掛載點</string>
-  <string name="summary_show_root">主頁將會顯示 \"Root模式\" 和 \"掛載點\"</string>
-  <string name="root_root">自動root模式</string>
-  <string name="summary_root_root">進入root目錄時將會自動切換至root模式</string>
-  <string name="thumbnails">啟用縮略圖</string>
-  <string name="summary_thumbnails">圖片顯示縮略圖用以代替圖標</string>
-  <string name="thumbnails_size">縮略圖大小</string>
-  <string name="summary_thumbnails_size">設置縮略圖大小的百分比值</string>
-  <string name="font_size">字體大小</string>
-  <string name="summary_font_size">調整字體尺寸</string>
-  <string name="left_panel_settings">左面板設置</string>
-  <string name="right_panel_settings">右面板設置</string>
-  <string name="detailed_view_SbS">在並排模式中顯示詳情</string>
-  <string name="summary_detailed_view_SbS">在並排模式中顯示文件的大小和日期</string>
-  <string name="detailed_view_Ovr">在重叠模式中顯示詳情</string>
-  <string name="summary_detailed_view_Ovr">在重叠模式中顯示文件的大小和日期</string>
+  <string name="summary_show_hotkeys">在部分功能鍵前顯示熱鍵</string>
+  <string name="show_emoji">顯示圖示</string>
+  <string name="summary_show_emoji">顯示字元圖示</string>
+  <string name="show_caption">顯示文本</string>
+  <string name="summary_show_caption">顯示按鈕文本</string>
+  <string name="tb_height">工具欄區域高度</string>
+  <string name="summary_tb_height">以英寸為單位，預設值0</string>
+  <string name="toolbar_preference">定製工具欄</string>
+  <string name="summary_toolbar_preference">編輯、排序和顯示、隱藏按鈕</string>
+  <string name="actionbar_buttons_settings">頂部工具欄</string>
+  <string name="summary_actionbar_buttons_settings">定製頂欄左側的工具欄</string>
+  <string name="summary_show_action_bar_buttons">顯示頂欄左側的工具欄</string>
+  <string name="tblist_label">定製工具欄</string>
+  <string name="finger_friendly">觸屏最佳化</string>
+  <string name="summary_finger_friendly">增大使用者介面元素</string>
+  <string name="prevent_root">離開儲存目錄時警告</string>
+  <string name="summary_prevent_root">將跳轉到系統目錄時發出警告</string>
+  <string name="show_root">顯示Root和掛載點</string>
+  <string name="summary_show_root">在主頁顯示 \"Root模式\", \"掛載列表\" 和 \"媒體庫\"</string>
+  <string name="root_root">自動Root模式</string>
+  <string name="summary_root_root">進入Root目錄時將會自動切換至Root模式</string>
+  <string name="thumbnails">顯示縮圖</string>
+  <string name="summary_thumbnails">為圖片型別生成縮圖預覽</string>
+  <string name="pdf_preview">PDF縮圖</string>
+  <string name="summary_pdf_preview">為PDF檔案生成縮圖預覽</string>
+  <string name="thumbnails_size">縮圖大小</string>
+  <string name="summary_thumbnails_size">設定縮圖大小，相對於普通圖示</string>
+  <string name="font_size">字型大小</string>
+  <string name="summary_font_size">調整字型尺寸</string>
+  <string name="left_panel_settings">左面板設定</string>
+  <string name="right_panel_settings">右面板設定</string>
+  <string name="detailed_view_SbS">在雙面板模式中顯示詳情</string>
+  <string name="summary_detailed_view_SbS">在雙面板模式中顯示檔案的大小和時間</string>
+  <string name="detailed_view_Ovr">在單面板模式中顯示詳情</string>
+  <string name="summary_detailed_view_Ovr">在單面板模式中顯示檔案的大小和時間</string>
   <string name="sorting">排序</string>
-  <string name="summary_sorting">在列表中如何排序項目</string>
+  <string name="summary_sorting">在列表中如何排序專案</string>
   <string name="sort_case">忽略大小寫排序</string>
   <string name="summary_sort_case">啟用以忽略大小寫敏感性排序</string>
-  <string name="show_hidden">顯示隱藏文件</string>
-  <string name="summary_show_hidden">顯示名稱前加點的隱藏文件</string>
+  <string name="sort_asc">升序</string>
+  <string name="sort_desc">降序</string>
+  <string name="show_hidden">顯示隱藏檔案</string>
+  <string name="summary_show_hidden">顯示名稱前帶點的隱藏檔案</string>
   <string name="compatibility_settings">實體鍵</string>
-  <string name="summary_compatibility_settings">選擇優先的實體鍵功能</string>
+  <string name="summary_compatibility_settings">配置實體鍵功能</string>
   <string name="panels_sliding">啟用滑動手勢</string>
-  <string name="summary_panels_sliding">使用水準滑動手勢切換面板</string>
-  <string name="arrow_mode">箭頭按鍵</string>
-  <string name="summary_arrow_mode">左/右箭頭 執行 切換面板/選擇</string>
+  <string name="summary_panels_sliding">使用水平滑動手勢切換面板</string>
+  <string name="arrow_mode">方向鍵</string>
+  <string name="summary_arrow_mode">按左右方向鍵進行【切換面板/選擇】操作</string>
   <string name="volume_mode">音量鍵</string>
-  <string name="summary_volume_mode">更改音量鍵功能為 切換面板/選擇</string>
-  <string name="exit_on_back">返回鍵退出</string>
-  <string name="summary_exit_on_back">透過返回鍵關閉應用</string>
+  <string name="summary_volume_mode">按音量鍵進行【選擇/切換面板】操作</string>
+  <string name="exit_on_back">返回鍵</string>
+  <string name="summary_exit_on_back">按返回鍵退出軟體</string>
   <string name="colors">主題</string>
-  <string name="summary_colors">修改界面顏色</string>
+  <string name="summary_colors">修改介面顏色</string>
   <string name="bgr_color_picker">背景</string>
-  <string name="summary_bgr_color_picker">主要的底色</string>
+  <string name="summary_bgr_color_picker">主要的背景色</string>
   <string name="fgr_color_picker">前景</string>
-  <string name="summary_fgr_color_picker">按文件類型上字體顏色</string>
+  <string name="summary_fgr_color_picker">指定各檔案型別的文本顏色</string>
   <string name="cur_color_picker">按下效果</string>
-  <string name="summary_cur_color_picker">項目被按下時的背景色</string>
+  <string name="summary_cur_color_picker">專案被按下時的背景色</string>
   <string name="sel_color_picker">已選擇背景</string>
-  <string name="summary_sel_color_picker">已選定項目和當前面板標題的背景色</string>
+  <string name="summary_sel_color_picker">已選定專案和當前面板標題的背景色</string>
   <string name="sfg_color_picker">已選擇前景</string>
-  <string name="summary_sfg_color_picker">已選定項目和當前面板標題的字體顏色</string>
-  <string name="ttl_color_picker">面板標題</string>
-  <string name="summary_ttl_color_picker">面板標題的底色</string>
+  <string name="summary_sfg_color_picker">已選定專案和當前面板標題的文本顏色</string>
+  <string name="ufg_color_picker">面板標題前景</string>
+  <string name="summary_ufg_color_picker">面板標題的文本顏色</string>
+  <string name="ttl_color_picker">面板標題背景</string>
+  <string name="summary_ttl_color_picker">面板標題的背景色</string>
+  <string name="div_color_picker">分割線</string>
+  <string name="summary_div_color_picker">左右面板之間分割線的顏色</string>
+  <string name="bfg_color_picker">下工具欄前景</string>
+  <string name="summary_bfg_color_picker">底部工具欄按鈕的文本顏色</string>
+  <string name="abfg_color_picker">上工具欄前景</string>
+  <string name="summary_abfg_color_picker">頂部工具欄按鈕的文本顏色</string>
+  <string name="abbg_color_picker">上工具欄背景</string>
+  <string name="summary_abbg_color_picker">頂部工具欄的背景色</string>
+  <string name="tbg_color_picker">下工具欄背景</string>
+  <string name="summary_tbg_color_picker">底部工具欄的背景色</string>
   <string name="pick_color">選擇顏色</string>
   <string name="color">顏色</string>
+  <string name="color_themes">預設主題</string>
+  <string name="summary_color_themes">將配色還原為指定預設主題</string>
   <string name="language">語言</string>
-  <string name="summary_language">無視系統語言</string>
+  <string name="summary_language">選擇介面語言</string>
   <string name="restart_to_apply_lang">重啟應用程式以應用新的語言</string>
   <string name="editor_activity">自定義文本編輯器</string>
   <string name="summary_editor_activity">鍵入外部文本編輯器的Activity</string>
-  <string name="busybox_location">Path to BusyBox</string>
+  <string name="busybox_location">BusyBox路徑</string>
   <string name="summary_busybox_location">指定BusyBox可執行的位置</string>
-  <string name="su_location">Path to su</string>
+  <string name="su_location">su路徑</string>
   <string name="summary_su_location">指定su可執行的位置</string>
-  <string name="scan_all">掃描所有文件</string>
-  <string name="summary_scan_all">取消勾選：僅掃描媒體文件</string>
-  <string name="execute_command">命令行模式</string>
-  <string name="nothing_to_open">什麼都沒打開</string>
-  <string name="remind_to_save">不要忘記保存你的更改</string>
-  <string name="saved">\"%1$s\" 已保存。</string>
-  <string name="not_saved">保存更改？</string>
-  <string name="save">保存</string>
-  <string name="save_as">另存為…</string>
+  <string name="cpmv_err_ign">忽略複製/移動時的許可權錯誤</string>
+  <string name="summary_cpmv_err_ign">當檔案複製到不支援許可權管理的檔案系統時，忽略Root模式下的許可權錯誤提示</string>
+  <string name="foreground_service">在前臺服務中執行檔案操作</string>
+  <string name="summary_foreground_service">如果裝置休眠導致檔案操作中斷，可嘗試打開此項。應用處於活動狀態時，將始終顯示通知圖示</string>
+  <string name="system_notifications">應用通知</string>
+  <string name="summary_system_notifications">管理要顯示的通知型別</string>
+  <string name="show_scrollbars">在檔案列表顯示捲軸</string>
+  <string name="summary_show_scrollbars">取消勾選將停用檔案列表的捲軸</string>
+  <string name="sort_by_access_date">按訪問時間排序</string>
+  <string name="summary_sort_by_access_date">允許按檔案訪問時間排序</string>
+  <string name="scan_all">掃描所有檔案</string>
+  <string name="summary_scan_all">重新整理媒體庫時掃描所有檔案，如未勾選則僅掃描媒體檔案</string>
+  <string name="execute_command">命令列模式</string>
+  <string name="nothing_to_open">沒有可打開的內容</string>
+  <string name="remind_to_save">記得儲存更改</string>
+  <string name="saved">\"%1$s\" 已儲存</string>
+  <string name="not_saved">是否儲存更改</string>
+  <string name="save">儲存</string>
+  <string name="save_as">另存為&#8230;</string>
   <string name="revert">撤銷</string>
   <string name="wrap">自動換行</string>
-  <string name="go_up">父目錄</string>
+  <string name="crlf">CRLF換行符</string>
+  <string name="go_up">上一級資料夾</string>
   <string name="go_top">頁首</string>
   <string name="go_end">頁尾</string>
-  <string name="go_next">下一張</string>
-  <string name="go_prev">上一張</string>
-  <string name="rot_right">顺時針旋轉</string>
+  <string name="go_next">下一項</string>
+  <string name="go_prev">上一項</string>
+  <string name="rot_right">順時針旋轉</string>
   <string name="rot_left">逆時針旋轉</string>
   <string name="encoding">編碼</string>
-  <string name="encoding_set">編碼已更改為 \"%1$s\"，重新加載以編輯。如果此時保存它，新的編碼將被應用。</string>
-  <string name="no_such_file">不存在文件 \"%1$s\"</string>
-  <string name="too_big_file">文件 \"%1$s\" 太大。</string>
-  <string name="binary_file">文件 \"%1$s\" 是二進制的。編輯可能會損壞它。請自担風險。</string>
-  <string name="cant_open_dir">\"%1$s\" 是一個文件夾</string>
-  <string name="cant_view_empt">文件 \"%1$s\" 是空的</string>
-  <string name="cant_open">無法打開此文件</string>
-  <string name="cant_save">無法保存此文件</string>
-  <string name="nav_warn">將前往的是系統目錄，擅自更改它可能會導致損失。繼續？</string>
-  <string name="nav_warn_cmt">點擊「取消」進入安全的/sdcard ,或點擊「退出」關閉應用程式.</string>
-  <string name="no_such_folder">\"%1$s\" 不是一個有效的文件夾！</string>
-  <string name="fav_added">\"%1$s\" 已添加到書簽</string>
-  <string name="no_root">尚未root？</string>
+  <string name="encoding_set">新的編碼 \"%1$s\"，請重新載入檔案。如現在儲存，檔案編碼將被轉換。</string>
+  <string name="no_such_file">檔案 \"%1$s\" 不存在</string>
+  <string name="too_big_file">檔案 \"%1$s\" 過大</string>
+  <string name="binary_file">\"%1$s\" 為二進位制檔案，編輯恐會造成損壞，請謹慎操作</string>
+  <string name="cant_open_dir">\"%1$s\" 為資料夾</string>
+  <string name="cant_view_empt">\"%1$s\" 為空檔案</string>
+  <string name="cant_open">無法打開此檔案</string>
+  <string name="cant_save">無法儲存此檔案</string>
+  <string name="nav_warn">正在訪問系統目錄，操作可能受限，是否繼續</string>
+  <string name="no_such_folder">無效目錄 \"%1$s\"</string>
+  <string name="fav_added">\"%1$s\" 已新增為書籤</string>
+  <string name="no_root">尚未Root？</string>
+  <string name="run_command">執行命令</string>
   <string name="manage">管理</string>
   <string name="shortcuts">快捷方式</string>
   <string name="pkg_name">包名</string>
+  <string name="cert_subj">證書主體</string>
+  <string name="cert_auth">證書頒發者</string>
   <string name="version">版本</string>
-  <string name="version_code">版本編號</string>
+  <string name="version_code">版本號</string>
   <string name="target_sdk">目標 SDK</string>
-  <string name="inst_date">安裝日期</string>
+  <string name="min_sdk">最低 SDK</string>
+  <string name="data_dir">資料</string>
+  <string name="inst_date">安裝時間</string>
   <string name="pkg_size">大小</string>
-  <string name="process">進程名</string>
-  <string name="app_class">應用系列</string>
+  <string name="process">程序名</string>
+  <string name="app_class">應用類</string>
   <string name="affinity">任務關聯</string>
-  <string name="permissions">許可</string>
-  <string name="flags">標記</string>
-  <string name="not_exported">活動未輸出</string>
-  <string name="smb_missed">無法加載Samba適配器，確認Ghost Commander SMB插件已安裝</string>
-  <string name="sftp_missed">無法加載SFTP適配器，確認Ghost Commander SFTP插件已安裝</string>
+  <string name="permissions">許可權</string>
+  <string name="flags">標誌</string>
+  <string name="not_exported">Activity 未匯出</string>
+  <string name="manage_all_files">授予軟體管理所有檔案的許可權：\n- 確定，打開授權頁面。\n- 取消，仍可使用安卓儲存訪問框架管理檔案，部分功能會受系統限制。</string>
+  <string name="need_perm">未取得儲存訪問許可權，暫無法以原生模式操作檔案系統</string>
   <string name="donate">捐贈</string>
-  <string name="online_help">在線幫助</string>
-  <string name="donation">一個小捐贈將支持進一步發展。\n
-點擊 \"OK\" 跳轉到 PayPal 網站.\n
-\"Cancel\" 繼續享受免費的 «Ghost Commander» \n
-    </string>
+  <string name="online_help">線上文件</string>
+  <string name="donation">任何金額的捐贈都有助於軟體的後續開發。\n
+確定，將打開PayPal頁面。\n
+取消，依舊可以自由使用Ghost Commander檔案管理器。\n</string>
   <string name="about_text"><![CDATA[
-<h1>Ghost Commander v%1$s</h1>
-<h4>一款文件管理器 by Ghost Squared</h4>
-<p>On the Web:<br/>
-<a href="https://sites.google.com/site/ghostcommander1/">Web site</a><br/>
-<a href="http://sourceforge.net/projects/ghostcommander/">At SourceForge</a>
-<a href="https://crowdin.com/project/ghost-commander">Translations</a>
+<h3>檔案管理器 v%1$s</h3>
+<p>本軟體基於 Ghost Commander 開發，以下為原軟體資訊。</p>
+<h3>Ghost Commander</h3>
+<p>作者：Ghost Squared</p>
+<p>網站：<a href="https://sites.google.com/site/ghostcommander1/">專案主頁</a> | <a href="http://sourceforge.net/projects/ghostcommander/">軟體原始碼</a> | <a href="https://crowdin.com/project/ghost-commander">參與翻譯</a>
 </p>
-<p>請發送 BUG/建議到:<br/><a href="mailto:ghost.sq2@gmail.com">ghost.sq2@gmail.com</a></p>
+
+<p>反饋：<a href="mailto:ghost.sq2@gmail.com">ghost.sq2@gmail.com</a></p>
 
 %2$s
-<p>喜歡這個軟體? <a href="market://search?q=pname:com.ghostsq.commander.donate">
+<p>支援作者：<a href="market://search?q=pname:com.ghostsq.commander.donate">
 捐贈</a></p>
 %3$s
 
-<h3>免責聲明：</h3>
-<p>欲使用本軟體，您需要同意以下條例:
-本軟體作者不會為任何損壞、丟失資訊、間接損壞以及任何可能由於使用本軟體而引起的問題承担責任。
-您必須同意使用此軟體並自担風險。如果您不同意上述條件，請立即停止使用本軟體並卸載它。</p>
+
+<h3>免責宣告</h3>
+<p>使用本軟體，即表示同意以下條款：
+本軟體的作者不對因使用本軟體而導致的任何形式的損害、資訊/資料丟失、間接損害，以及由使用本軟體已經造成或可能造成的任何問題承擔責任。
+同意上述條款即表示自願承擔使用本軟體的全部風險。如不同意，請立即停止使用並解除安裝該軟體。</p>
 ]]></string>
   <string name="keys_text"><![CDATA[
-<h3>選擇文件</h3>
-<p>
-若想要選擇文件或文件夾，僅需點擊目標右側即可標記。點擊左側以打開項目，你可以在設置-選擇面積里自定此設置。
+<h3>選擇檔案</h3>
+點選列表項的左側選擇檔案，右側打開檔案。設定中可自定義兩項操作的點選範圍，預設為：左20%，右80%。
 </p>
-<h3>複制和移動</h3>
-<p>
-若想要複制或移動文件和文件夾。首先請在對面(另一面板)選擇目的地，然後在當前面板標記貨物，長按-複制，文件們就飛過去了。
+<h3>複製和移動</h3>
+選中檔案後點擊底部工具欄中的【複製/移動】按鈕，然後在彈出的確認視窗中選擇具體操作，預設目標為對向視窗中的路徑。該功能也可在長按選單中調出。
 </p>
-<h3>ZIP文件</h3>
-<p>
-Ghost Commander可以像打開文件夾一樣打開標准的ZIP文件。但不支持打開加密的ZIP文件，亦不支持其他壓縮算法。
+<h3>ZIP檔案</h3>
+暫時只支援打開標準的ZIP檔案，不支援加密ZIP和其它壓縮演算法。
 </p>
-<h3>插件</h3>
-<p>
-安裝插件可以實現一些擴展功能。例如訪問Windows的共享文件夾、SSH文件傳輸協議。
-以及雲儲存:Box, Dropbox and Google Drive.
+<h3>外掛</h3>
+通過外掛訪問網路儲存，目前支援WebDAV、Box、Dropbox、Google Drive。另已內建FTP、SFTP、SMB功能，無需額外安裝。
 </p>
-<h3>ROOT模式</h3>
-<p>
-請謹慎使用帶root模式(超級用戶)和掛載點特性的Ghost Commander。BusyBox的安裝路徑可在設置中定義。
+<h3>Root模式</h3>
+支援Root模式，可自定義su檔案和BusyBox路徑。
 </p>
-<h3>位置編輯</h3>
-<p>
-按下「位置」鍵，軟體會展示一個書簽列表和地址欄。長按面板標題也可以打開位置。你可以在地址欄手動輸入URL，就像這樣：
+<h3>跳轉到指定路徑</h3>
+長按面板頂部的路徑欄，可直接鍵入路徑進行訪問，例如：
 </p><p>
 <b>ftp://</b><i>host.com</i><b>/</b><i>folder</i><br/>
-    - Anonymous FTP
+    - 匿名連線到FTP
 </p><p>
 <b>ftp://</b><i>user</i><b>:</b><i>pass</i><b>@</b><i>ftp_host</i><b>/</b><i>folder</i><br/>
-    - Authenticated FTP
+    - 登入連線到FTP
 </p><p>
 <b>sftp://</b><i>user</i><b>:</b><i>pass</i><b>@</b><i>sftp_host</i><b>/</b><i>folder</i><br/>
-    - SSH FTP<br/>
-如果你有一個密鑰文件可以身份驗證，就把它放進這個文件里
+    - 通過SSH連線到FTP<br/>
+使用金鑰登入時，請將金鑰檔案放入以下目錄
     <b>/sdcard/.GhostCommander/keys/</b><i>exact_host_name</i><br/>
-在這種情況下,密碼就是你的密鑰文件的密碼。
 </p><p>
 <b>smb://</b><i>domain</i><b>;</b><i>user</i><b>:</b><i>pass</i><b>@</b><i>server</i><b>/</b><i>share</i><br/>
-    - Windows share
+    - SMB共享
 </p><p>
 <b>root:/</b><i>path/to/folder</i><br/>
-    - Root mode
+    - Root模式
 </p>
 <h3>熱鍵</h3>
-<p>
-音量上鍵 - 選擇文件和文件夾<br/>
+音量上鍵 - 選擇檔案和資料夾<br/>
 音量下鍵 - 在面板之間切換<br/>
-+,- - 在當前文件夾中選擇或取消選擇<br/>
-(,) - 進入位置手動操作和查看您的書簽<br/>
-* - 添加當前文件夾到書簽<br/>
++,- - 在當前資料夾中選擇或取消選擇<br/>
+(,) - 進入位置手動操作和檢視您的書籤<br/>
+* - 添加當前資料夾到書籤<br/>
 " - 顯示所選條目的詳細資訊(屬性)<br/>
-= - 讓另一個面板顯示相同的位置(同步)<br/>
+= - 在對向視窗中打開當前目錄<br/>
 1 - 幫助<br/>
-2 - 重命名選定的項目<br/>
-4 - 編輯選定的項目<br/>
-5 - 複制選定的項目<br/>
-6 - 移動選定的項目<br/>
-7 - 新建文件夾<br/>
-8 - 刪除選定的項目<br/>
-9 - 打開設置<br/>
+2 - 重新命名選定的專案<br/>
+4 - 編輯選定的專案<br/>
+5 - 複製選定的專案<br/>
+6 - 移動選定的專案<br/>
+7 - 新建資料夾<br/>
+8 - 刪除選定的專案<br/>
+9 - 打開設定<br/>
 0 - 關閉應用程式<br/>
-[A-z] - 快速蒐索
+[A-z] - 快速搜尋
 </p>
 <p>
-<a href="https://sites.google.com/site/ghostcommander1/info">在線幫助…</a>
+<a href="https://sites.google.com/site/ghostcommander1/info">線上文件</a>
 </p>
 ]]></string>
-<string name="license_text"><![CDATA[
+  <string name="license_text"><![CDATA[
 <h3>Ghost Commander</h3>
-<p>一個文件管理器</p>
-<p>Copyright © 2009-2019 Ghost Squared</p>
-<p>這是一個自由軟體：你可以分享它，或者根據自由軟體基金會的「GNU通用公共許可證」(高於3的版本)修改它。</p>
-<p>此程式是分布式的，希望它有用，但沒有任何担保；甚至沒有隱含商業性或任何特定的目的。詳情請參閱GNU通用公共許可證。</p>
-<p>你應該已經隨程式收到了GNU通用公共許可證的副本。如果沒有，參見 <http://www.gnu.org/licenses/></p>
-<p>(此處應以英文版為准)</p>
+<p>一款檔案管理器</p>
+<p>版權所有 © 2009-2022 Ghost Squared</p>
+<p>本程式為自由軟體：可根據自由軟體基金會發布的 GNU 通用公共許可證（GPL）第 3 版或任何更高版本的條款，對其進行重新分發和/或修改。</p>
+<p>釋出本程式的目的是希望它能夠有所幫助，但不提供任何形式的保證；包括但不限於對適銷性（MERCHANTABILITY）或特定用途適用性（FITNESS FOR A PARTICULAR PURPOSE）的默示保證。有關詳細資訊，請參閱 GNU 通用公共許可證。</p>
+<p>如未收到隨本程式 GNU 通用公共許可證的副本，請訪問<http://www.gnu.org/licenses/>檢視。</p>
+<p>（以上宣告以英文版為準）</p>
 ]]></string>
 </resources>

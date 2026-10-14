@@ -350,11 +350,6 @@
   <string name="permissions">Uprawnienia</string>
   <string name="flags">Flagi</string>
   <string name="not_exported">Aktywność nie jest wyeksportowana</string>
-  <string name="smb_missed">
-Nie mogę użyć wtyczki Samba.\n
-Upewnij się, że wtyczka\n
-\"Ghost Commander - Samba plugin\"\n
-(com.ghostsq.commander.samba) jest zainstalowana.</string>
   <string name="donate">Wspomóż rozwój</string>
   <string name="online_help">Pomoc on-line</string>
   <string name="donation">Lubisz tą aplikację? Rozważ więc możliwość wsparcia finansowego. Każda, nawet drobna suma będzie doceniona, a zebrane datki posłużą do dalszego doskonalenia i rozwoju programu.\n

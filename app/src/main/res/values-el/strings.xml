@@ -51,7 +51,6 @@
   <string name="ftp">Ιστοσελίδα FTP</string>
   <string name="sftp">Ιστοσελίδα SFTP</string>
   <string name="smb">Κοινή χρήση των Windows</string>
-  <string name="plugins">Αναζήτηση πρόσθετων</string>
   <string name="root">Λειτουργία διαχειριστή (root)</string>
   <string name="mount">Προσάρτηση σημείων</string>
   <string name="mount_b">Προσάρτηση</string>
@@ -69,7 +68,6 @@
   <string name="ftp_descr">Σύνδεση σε διακομιστή FTP</string>
   <string name="sftp_descr">Σύνδεση σε διακομιστή SSH FTP (sftp)</string>
   <string name="smb_descr">Σύνδεση σε κοινόχρηστους φακέλους των Windows</string>
-  <string name="plugins_descr">Αναζητήστε περισσότερες προσθήκες Ghost Commander</string>
   <string name="root_descr">Μόνο για συσκευές με root: διαχείριση κρίσιμων αρχείων συστήματος.  Προχωρήστε μόνο εάν ξέρετε τι κάνετε</string>
   <string name="mount_descr">Εμφανίστε μια λίστα με όλα τα σημεία προσάρτησης.  Τοποθετήστε τα ξανά στη λειτουργία \"rw\" και μετά επιστρέψτε στη λειτουργία \"ro\" μετά από αλλαγές.  Προχωρήστε με προσοχή</string>
   <string name="apps_descr">Προβολή και διαχείριση εγκατεστημένων πακέτων</string>

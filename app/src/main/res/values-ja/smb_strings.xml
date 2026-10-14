@@ -3,10 +3,8 @@
 <resources>
     <string name="nothing_read">読み取り対象がありません</string>
     <string name="nothing_returned">この Samba 共有を開くことができません\n%s</string>
-    <string name="malformed_url">不正な URL: \n%s</string>
     <string name="msbrowse_err">ドメイン/ワークグループのリストを取得できません。\n次のように、ドメイン名を明示的に指定してみてください\n \"smb://your_domain_name/\"。</string>
     <string name="connect_err">デバイスに接続できません。</string>
-    <string name="broken_pipe">サーバーへの接続が壊れています。 \"/sdcard\" に戻って、もう一度やり直してください。</string>
     <string name="exception">例外が発生しました</string>
     <!-- statuses -->
     <string name="STATUS_UNSUCCESSFUL">失敗しました。</string>

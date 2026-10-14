@@ -42,7 +42,6 @@
   <string name="ftp">Stran FTP</string>
   <string name="sftp">Stran SFTP</string>
   <string name="smb">Souporaba Windows</string>
-  <string name="plugins">Brskaj po vstavkih</string>
   <string name="root">Skrbniški način</string>
   <string name="mount">Priklopne točke</string>
   <string name="mount_b">Priklopi</string>
@@ -57,7 +56,6 @@
   <string name="ftp_descr">Poveži se strežnikom FTP</string>
   <string name="sftp_descr">Poveži se strežnikom SSH FTP (sftp)</string>
   <string name="smb_descr">Poveži se z mapami v souporabi na računalniku Windows</string>
-  <string name="plugins_descr">Poišči več vstavkov za Ghost Commander</string>
   <string name="root_descr">Samo za naprave s skrbniškim dostopom: upravljaj s kritičnimi sistemskimi datotekami.  Nadaljujte samo, če veste kaj delate.</string>
   <string name="mount_descr">Prikaži seznam vseh priklopnih točk.  Ponovno jih priklopi v načinu za branje in pisanje in po spremembah nazaj v način samo za branje.  Nadaljujte previdno.</string>
   <string name="apps_descr">Pokaži in upravljaj z nameščenimi paketi</string>
@@ -386,8 +384,6 @@
   <string name="permissions">Dovoljenja</string>
   <string name="flags">Zastavice</string>
   <string name="not_exported">Dejavnost ni podprta</string>
-  <string name="smb_missed">Prilagodilnika Samba ni mogoče naložiti: prepričajte se, da je vstavek SMB za Ghost Commander nameščen</string>
-  <string name="sftp_missed">Prilagodilnika SFTP ni mogoče naložiti: prepričajte se, da je vstavek SFTP za Ghost Commander nameščen.</string>
   <string name="donate">Daruj</string>
   <string name="online_help">Spletna pomoč</string>
   <string name="donation">Majhno darovanje bo podprlo nadaljnji razvoj.\n

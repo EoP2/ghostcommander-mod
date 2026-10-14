@@ -52,7 +52,6 @@
   <string name="ftp">FTP-Verbindung</string>
   <string name="sftp">SFTP-Verbindung</string>
   <string name="smb">Windows-Freigabe</string>
-  <string name="plugins">Plug-ins durchsuchen</string>
   <string name="root">Root-Modus</string>
   <string name="mount">Einhängepunkte</string>
   <string name="mount_b">Einhängepunkte</string>
@@ -70,7 +69,6 @@
   <string name="ftp_descr">Mit einem FTP-Server verbinden</string>
   <string name="sftp_descr">Mit einem SSH-FTP-Server verbinden</string>
   <string name="smb_descr">Mit freigegebenen Verzeichnissen eines Windows-PC verbinden</string>
-  <string name="plugins_descr">Nach weiteren Plug-ins für Ghost Commander suchen</string>
   <string name="root_descr">Zugriff auf kritische Systemdateien. Nur für gerootete Geräte und erfahrene Benutzer!</string>
   <string name="mount_descr">Anzeige aller Einhängepunkte und die Möglichkeit diese im Lese-Schreib-Modus und nach Bearbeitung zurück in den Nur-Lese-Modus einzuhängen. Mit Vorsicht benutzen!</string>
   <string name="apps_descr">Anzeigen und verwalten der installierten Anwendungen</string>

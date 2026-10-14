@@ -53,7 +53,6 @@
   <string name="ftp">FTP-сайт</string>
   <string name="sftp">SFTP-сайт</string>
   <string name="smb">Спільне Windows</string>
-  <string name="plugins">Оглянути плагіни</string>
   <string name="root">Root-режим</string>
   <string name="mount">Точки монтування</string>
   <string name="mount_b">Монт.</string>
@@ -72,7 +71,6 @@
   <string name="ftp_descr">З\'єднатися з сервером FTP</string>
   <string name="sftp_descr">З\'єднатися з сервером SSH FTP (sftp)</string>
   <string name="smb_descr">З\'єднатися зі спільними теками Windows</string>
-  <string name="plugins_descr">Знайти інші плагіни Ghost Commander</string>
   <string name="root_descr">Лише для пристроїв із root: ризиковано керувати файлами системи. Продовжуйте лише якщо знаєте, що робите.</string>
   <string name="mount_descr">Перелічити всі точки монтування. Перемонтуйте їх у режимі \"rw\" і поверніть режим \"ro\" після змін. Будьте обачні.</string>
   <string name="apps_descr">Переглянути й налаштувати встановлені пакунки</string>
@@ -467,8 +465,6 @@
   <string name="permissions">Дозволи</string>
   <string name="flags">Прапори</string>
   <string name="not_exported">Activity не експортовано</string>
-  <string name="smb_missed">Не вдалося завантажити адаптер Samba: переконайтеся, що плагін Ghost Commander SMB встановлений.</string>
-  <string name="sftp_missed">Не вдалося завантажити адаптер SFTP: переконайтеся, що плагін Ghost Commander SFTP встановлений.</string>
   <string name="manage_all_files">Відкриються системні налаштування, де вам слід дозволити Ghost Commander керувати всіма файлами.
 Без цього можливості застосунку будуть обмежені.</string>
   <string name="need_perm">Доступу до сховища не дозволено! Щоб працювати з файловою системою напряму, дозвольте доступ.</string>

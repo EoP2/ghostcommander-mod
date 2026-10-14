@@ -51,7 +51,6 @@
   <string name="ftp">FTP</string>
   <string name="sftp">SFTP</string>
   <string name="smb">Windowsutdelning</string>
-  <string name="plugins">Bläddra bland tilläggen</string>
   <string name="root">Root-läge</string>
   <string name="mount">Monteringspunkter</string>
   <string name="mount_b">Montera</string>
@@ -69,7 +68,6 @@
   <string name="ftp_descr">Ansluta till en FTP-server</string>
   <string name="sftp_descr">Ansluta till en server med SSH FTP-server (sftp)</string>
   <string name="smb_descr">Ansluta till utdelade mappar på en dator med Windows</string>
-  <string name="plugins_descr">Leta efter fler Ghost Commander-tillägg</string>
   <string name="root_descr">Endast för rootade enheter: hantera kritiska systemfiler. Fortsätt endast om du vet vad du gör.</string>
   <string name="mount_descr">Visa en lista över alla monteringspunkter. Återmontera dem till \"rw\"-läge, sen tillbaka till \"ro\"-läge efter ändringarna. Iaktta försiktighet.</string>
   <string name="apps_descr">Visa och hantera installerade paket</string>

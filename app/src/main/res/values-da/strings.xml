@@ -50,7 +50,6 @@
   <string name="ftp">FTP-websted</string>
   <string name="sftp">SFTP-websted</string>
   <string name="smb">Delt Windows-ressource</string>
-  <string name="plugins">Gennemse plugins</string>
   <string name="root">Root-tilstand</string>
   <string name="mount">Mount-points</string>
   <string name="mount_b">Mounts</string>
@@ -65,7 +64,6 @@
   <string name="ftp_descr">Forbind til FTP-server</string>
   <string name="sftp_descr">Forbind til SSH FTP-server</string>
   <string name="smb_descr">Forbind til delte Windows-mapper</string>
-  <string name="plugins_descr">Find flere Ghost Commander-plugins</string>
   <string name="root_descr">Kun på rootede enheder: Se og modificér kritiske systemfiler. Fortsæt kun såfremt du ved, præcist hvad du laver.</string>
   <string name="mount_descr">Vis en liste over alle mount-points. Genindlæs dem i \"rw\"-tilstand, dernæst tilbage til \"ro\"-tilstand efter alle ændringer er foretaget. Fortsæt med omtanke.</string>
   <string name="apps_descr">Se og håndtér installerede pakker</string>
@@ -421,8 +419,6 @@ Benyt \%# som filtæller, \%## til 2 cifre osv.</string>
   <string name="permissions">Rettigheder</string>
   <string name="flags">Flag</string>
   <string name="not_exported">Aktivitet blev ikke eksporteret</string>
-  <string name="smb_missed">Kan ikke indlæse Samba-adapter: Tjek, at Ghost Commander SMB-plugin er installeret</string>
-  <string name="sftp_missed">Kan ikke indlæse SFTP-adapter: Tjek, at Ghost Commander SFTP-plugin er installeret.</string>
   <string name="donate">Donér</string>
   <string name="online_help">Online hjælp</string>
   <string name="donation">En lille donation vil støtte fremtidig udvikling.\n

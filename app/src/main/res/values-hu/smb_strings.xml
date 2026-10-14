@@ -2,10 +2,8 @@
 <resources>
     <string name="nothing_read">Nincs mit olvasni</string>
     <string name="nothing_returned">Nem nyitható meg ez a Samba megosztás\n%s</string>
-    <string name="malformed_url">Rosszul formázott URL: \n%s</string>
     <string name="msbrowse_err">Nem sikerült a gépnevek/munkacsoportok listájának megszerzése.\nPróbálja meg megadni a gépnevet, például\n \"smb://a_gep_neve/\".</string>
     <string name="connect_err">Nem sikerült csatlakozni ide:\n%s</string>
-    <string name="broken_pipe">A kapcsolat a kiszolgálóval megszakadt. Térjen vissza a „/home:” címre, majd próbálja újra!</string>
     <string name="exception">Kivétel történt</string>
     <!-- statuses -->
     <string name="STATUS_UNSUCCESSFUL">Sikertelen</string>

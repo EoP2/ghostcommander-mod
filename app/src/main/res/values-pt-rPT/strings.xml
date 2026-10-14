@@ -50,7 +50,6 @@
   <string name="ftp">Sítio FTP</string>
   <string name="sftp">Sítio SFTP</string>
   <string name="smb">Partilha Windows</string>
-  <string name="plugins">Explorar extras</string>
   <string name="root">Modo \'root\'</string>
   <string name="mount">Pontos de montagem</string>
   <string name="mount_b">Montagens</string>
@@ -67,7 +66,6 @@
   <string name="ftp_descr">Estabelecer ligação a um servidor FTP</string>
   <string name="sftp_descr">Estabelecer ligação a um servidor SSH FTP (SFTP)</string>
   <string name="smb_descr">Estabelecer ligação às pastas de um sistema Windows</string>
-  <string name="plugins_descr">Procurar extras para o Ghost Commander</string>
   <string name="root_descr">Para dispositivos com \'root\': gerir ficheiros críticos do sistema. Apenas o deve fazer se souber o que está a fazer.</string>
   <string name="mount_descr">Mostra uma lista dos pontos de montagem. Monte-os no modo \'rw\' e retorne ao modo \'ro\' após fazer as alterações. Prossiga com cuidado.</string>
   <string name="apps_descr">Ver e gerir os pacotes instalados</string>
@@ -430,8 +428,6 @@ desempacotado</string>
   <string name="permissions">Permissões</string>
   <string name="flags">Sinalizadores</string>
   <string name="not_exported">Atividade não exportada</string>
-  <string name="smb_missed">Erro ao carregar o adaptador Samba. Certifique-se que o extra \"Ghost Commander SMB\" está instalado.</string>
-  <string name="sftp_missed">Erro ao carregar o adaptador SFTP. Certifique-se que o extra \"Ghost Commander SFTP\" está instalado.</string>
   <string name="donate">Doe</string>
   <string name="online_help">Ajuda online</string>
   <string name="donation">A sua doação ajuda no desenvolvimento da aplicação.\n

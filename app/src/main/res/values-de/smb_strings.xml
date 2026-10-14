@@ -2,10 +2,8 @@
 <resources>
     <string name="nothing_read">Nichts gefunden</string>
     <string name="nothing_returned">Samba-Freigabe: %s\n kann nicht geöffnet werden</string>
-    <string name="malformed_url">Ungültige URL: \n%s</string>
     <string name="msbrowse_err">Abruf der Liste mit Domänen/Arbeitsgruppen gescheitert.\nVersuchen Sie, den Domänennamen explizit anzugeben, etwa so:\n \"smb://your_domain_name/\".</string>
     <string name="connect_err">Verbindung zu %s\n nicht möglich</string>
-    <string name="broken_pipe">Verbindung zum Server unterbrochen. Kehren Sie zu \"/home:\" zurück und versuchen Sie es erneut.</string>
     <string name="exception">Eine Ausnahme ist aufgetreten</string>
     <!-- statuses -->
     <string name="STATUS_UNSUCCESSFUL">Erfolglos.</string>

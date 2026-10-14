@@ -43,7 +43,6 @@
   <string name="ftp">FTP sitesi</string>
   <string name="sftp">SFTP sitesi</string>
   <string name="smb">Windows paylaşımı</string>
-  <string name="plugins">Eklentilere göz at</string>
   <string name="root">Root modu</string>
   <string name="mount">Bağlama noktaları</string>
   <string name="mount_b">Bağlar</string>
@@ -59,7 +58,6 @@
   <string name="ftp_descr">Bir FTP sunucusuna bağlan</string>
   <string name="sftp_descr">Bir SSH FTP (sftp) sunucusuna bağlan</string>
   <string name="smb_descr">Bir Windows cihazdaki paylaşılan klasörlere bağlan</string>
-  <string name="plugins_descr">Daha fazla Ghost Commander eklentisi araştır</string>
   <string name="root_descr">Sadece root\'lanmış cihazlar için: kritik sistem dosyalarını yönet. Sadece ne yaptığınızı biliyorsanız devam edin.</string>
   <string name="mount_descr">Bütün bağlantı noktalarının listesini göster. Değişiklerden sonra, \"rw\" moduna tekrar bağla, sonra yeniden \"ro\" moduna bağla. İlerlerken dikkat ediniz.</string>
   <string name="apps_descr">Yüklü paketleri görüntüle ve yönet</string>

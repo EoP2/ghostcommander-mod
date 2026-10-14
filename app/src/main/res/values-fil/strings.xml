@@ -49,7 +49,6 @@
   <string name="ftp">FTP na banda</string>
   <string name="sftp">SFTP na banda</string>
   <string name="smb">Magbahagi ng bintana</string>
-  <string name="plugins">I-browse ang plugins</string>
   <string name="root">Ugat mode</string>
   <string name="mount">Mga punto ng Mount</string>
   <string name="mount_b">Mga mounts</string>
@@ -64,7 +63,6 @@
   <string name="ftp_descr">Kumonek sa isang FTP server</string>
   <string name="sftp_descr">Kumonek sa isang SSH FTP (sftp) server</string>
   <string name="smb_descr">Kumonek sa nakahalong folder sa isang Window na makina</string>
-  <string name="plugins_descr">Hanapin ang higit na Multong kumander plugins</string>
   <string name="root_descr">Para sa rooted na aparato lang: i-manage ang sistemang kritikal na file. Magpatuloy lamang kung ikaw ay may alam sa iyong ginagawa.</string>
   <string name="mount_descr">I-displey ang listahan ng lahat na malaking puntos. Remount sila sa \"rw\" mode pagkatapos ng pagbabago. Patuloy ng may pag-iingat.</string>
   <string name="apps_descr">Ipakita at i-manage ang mga naka-install na package</string>
@@ -406,8 +404,6 @@
   <string name="permissions">Mga Pahintulot</string>
   <string name="flags">Mga Flag</string>
   <string name="not_exported">Aktibidad ay hindi na eksport</string>
-  <string name="smb_missed">Hindi ma-load ang adaptor ng Samba: tiyaking naka-install ang Ghost Commander SMB plugin</string>
-  <string name="sftp_missed">Hindi mai-load ang SFTP adaptor: tiyaking naka-install ang Ghost Commander SFTP plugin.</string>
   <string name="donate">Gumawa ng donasyon</string>
   <string name="online_help">Online na tulong</string>
   <string name="donation">Ang isang maliit na donasyon ay sumusuporta sa karagdagang pag-unlad. \n I-tap ang \"OK\" upang ma-redirect sa site ng PayPal. \n \"Kanselahin\" upang patuloy na tangkilikin ang file na \"Ghost Commander\" nang libre
