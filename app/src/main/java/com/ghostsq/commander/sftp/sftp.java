@@ -4,14 +4,10 @@ import android.content.Context;
 import android.os.Build;
 
 import com.ghostsq.commander.BuildConfig;
-import com.ghostsq.commander.adapters.CommanderAdapter;
 
 import java.io.File;
 
 public class sftp {
-    public final static CommanderAdapter createInstance( Context ctx ) {
-        return new SFTPAdapter( ctx );
-    }
     public final static String getPackageName() {
         return BuildConfig.APPLICATION_ID;
     }
