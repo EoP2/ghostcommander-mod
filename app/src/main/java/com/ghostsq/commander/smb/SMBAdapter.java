@@ -56,7 +56,6 @@ setprop log.tag.NameServiceClientImpl VERBOSE
 
 public class SMBAdapter extends CommanderAdapterBase implements Engines.IReciever, Manipulator {
     private static final String TAG = "SMBAdapter";
-    private final static String package_name = "com.ghostsq.commander.smb";
     private final static int OP_RELOGIN = 43995;
     private Resources smb_res;
     private static Properties prop = null;
@@ -226,9 +225,6 @@ public class SMBAdapter extends CommanderAdapterBase implements Engines.IRecieve
         }
     }
 
-    public SMBAdapter() {
-    }
-    
     public SMBAdapter( Context ctx_ ) {
         super( ctx_ );
         try {
@@ -331,11 +327,6 @@ public class SMBAdapter extends CommanderAdapterBase implements Engines.IRecieve
         }
         catch( Exception e ) {
             Log.e( TAG, null, e );
-        }
-        catch( NoSuchFieldError e ) {
-            Log.e( TAG, null, e );
-            notify( "Try to install the latest version of the plugin", Commander.OPERATION_FAILED );
-            return false;
         }
         notify( "Fail", Commander.OPERATION_FAILED );
         return false;
@@ -741,9 +732,6 @@ public class SMBAdapter extends CommanderAdapterBase implements Engines.IRecieve
         } catch( IOException e ) {
             e.printStackTrace();
         }
-    }
-    static SMBAdapter createInstance() {
-        return new SMBAdapter();
     }
     
     @Override
