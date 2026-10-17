@@ -39,6 +39,10 @@
 <string name="hidden">Hidden</string>
 <string name="rescan">Rescan media</string>
 <string name="install">Install</string>
+<string name="install_succeeded">Installation succeeded</string>
+<string name="install_failed">Installation failed</string>
+<string name="install_aborted">Installation aborted</string>
+<string name="install_incompatible">Incompatible</string>
 <string name="favs">Favorites</string>
 <string name="df_dnl">Downloads</string>
 <string name="df_cam">Camera</string>
