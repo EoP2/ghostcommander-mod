@@ -7,6 +7,8 @@ import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.ghostsq.commander.R;
+
 public class APKInstallCallback extends Service {
     private static final String TAG = "APKInstallCallback";
 
@@ -28,19 +30,19 @@ public class APKInstallCallback extends Service {
                 }
                 break;
             case PackageInstaller.STATUS_SUCCESS:
-                Toast.makeText( this, "Installation succeeded", Toast.LENGTH_LONG ).show();
+                Toast.makeText( this, getString( R.string.install_succeeded ), Toast.LENGTH_LONG ).show();
                 Log.d( TAG, "Installation succeeded" );
                 break;
             case PackageInstaller.STATUS_FAILURE:
-                Toast.makeText( this, "Installation failed", Toast.LENGTH_LONG ).show();
+                Toast.makeText( this, getString( R.string.install_failed ), Toast.LENGTH_LONG ).show();
                 Log.d( TAG, "Installation failed" );
                 break;
             case PackageInstaller.STATUS_FAILURE_ABORTED:
-                Toast.makeText( this, "Installation aborted", Toast.LENGTH_LONG ).show();
+                Toast.makeText( this, getString( R.string.install_aborted ), Toast.LENGTH_LONG ).show();
                 Log.d( TAG, "Installation aborted " + in );
                 break;
             case PackageInstaller.STATUS_FAILURE_INCOMPATIBLE:
-                Toast.makeText( this, "Incompatible", Toast.LENGTH_LONG ).show();
+                Toast.makeText( this, getString( R.string.install_incompatible ), Toast.LENGTH_LONG ).show();
                 Log.d( TAG, "APK is not compatible" );
                 break;
             case -999:
